@@ -1,0 +1,20 @@
+\section{Construcción del Movimiento Browniano}
+
+Primero, damos la definición de un movimiento Browniano, y luego, se hará la construcción. Esta, se puede hacer por dos maneras distintas:
+
+\begin{enumerate}
+	\item Teoremas de existencia y continuidad de Kolmogorov.
+	\item Teorema de Donsker (Caso más general).
+\end{enumerate}
+
+En el presente trabajo, haremos la construcción usando el Teorema de Donsker, y más tarde, se enunciarán los teoremas de Kolmogorov (Sin demostración).
+
+\begin{boxDef}
+	Dado $\{ W_t \}$ un proceso estocástico, en el espacio de probabilidad $(\Omega, \mathcal{F}, P)$. El proceso $\{ W_t \}$ es un \textbf{movimiento Browniano} en una dimensión, si se cumplen las siguientes condiciones:
+
+	\begin{itemize}
+		\item Para casi todo $\omega$, los caminos $W_t (\omega)$ son continuos (En el sentido de la probabilidad).
+		\item $\{ W_t \}$ es un proceso Gaussiano, es decir, para $k \geq 1$, y todo $0 \leq t_1 \leq \cdots \leq t_k$, el vector aleatorio, $Z = (W_{t_1}, \cdots, W_{t_k}) \in \mathbb{R}^{n}$ tiene distribución multinormal (O Gaussiana).
+	\end{itemize}
+
+\end{boxDef}

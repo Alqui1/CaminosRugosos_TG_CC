@@ -1,0 +1,147 @@
+\documentclass[12pt, twocolumns]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\usepackage[many]{tcolorbox}  % for COLORED BOXES (tikz and xcolor included)
+
+
+\definecolor{sub_def}{HTML}{F8D9AC}
+\definecolor{main_def}{HTML}{FAAC41}
+
+% DEFINITION BOXES
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0.2cm,    % add extra space before the box
+    after skip = 0.5cm      % add extra space after the box
+}                           % setting global options for tcolorbox
+
+% You can copy any following box you like to your code.
+\newtcolorbox{boxDef}{
+    %fontupper = \bf,
+    colback = sub_def,
+    boxrule = 0pt,
+    leftrule = 6pt,
+    colframe = main_def % frame color
+}
+
+
+
+
+
+% Portada Temporal
+\title{Trabajo de Grado: Ecuaciones Diferenciales Estocásticas por Caminos Rugosos... ¿y métodos numéricos?}
+\author{David Alejandro Alquichire Rincón}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+Idea: Estudiar ecuaciones diferenciales estocásticas por medio de caminos rugosos.
+
+¿Hasta dónde? Peter Fritz... soluciones a PDE estocásticas... ¿Métodos Numéricos?
+
+Propuesta capítulos:
+
+
+\begin{enumerate}
+
+\item Introducción y Preliminares
+
+\begin{enumerate}
+
+	\item Conceptos de Probabilidad y Teoría de la medida (LB, D. Cohn, Protter y el otro libro). 
+	\item Conceptos en Convergencia de Procesos Estocásticos.
+	\item Conceptos de Procesos Estocásticos (Notas de Freddy, apoyo de Capinski) 
+
+	\item Integración de Riemann Stieltjes
+	\item Teoría de la medida y la integral de Lebesgue
+	\item Análisis Funcional
+	\item Ecuaciones Diferenciales Ordinarias (Existencia y Unicidad)
+	\item Ecuaciones Diferenciales Parciales
+
+\end{enumerate}
+
+\item Construcción del Movimiento Browniano
+
+\begin{enumerate}
+	\item a
+\end{enumerate}
+
+
+\item Construcción de la Integral de Itô
+
+\begin{enumerate}
+	\item a
+\end{enumerate}
+
+
+\item Ecuaciones Diferenciales Estocásticas por Itô -> Oksendal
+
+\begin{enumerate}
+
+	\item Integral de Itô, Cálculo Estocástico
+	\item Ecuaciones Diferenciales Estocásticas, Solución clásica de Itô.
+	\item Teoremas de Existencia y Unicidad.
+
+\end{enumerate}
+
+
+
+\item Ecuaciones Diferenciales Estocásticas por caminos rugosos
+
+
+
+\item EDP Estocásticas*
+\item Métodos Numéricos y Aplicaciones*
+\item Conclusiones
+\item Bibliografía
+
+\end{enumerate}
+
+
+\tableofcontents
+
+
+% ========================
+% ======= CAPÍTULO 1 =====
+% ========================
+
+\input{C1/TG_C1}
+
+% ========================
+% ========================
+% ========================
+
+
+% ========================
+% ======= CAPÍTULO 2 =====
+% ========================
+
+\input{C2/TG_C2}
+
+% ========================
+% ========================
+% ========================
+
+
+% ========================
+% ======= CAPÍTULO 3 =====
+% ========================
+
+\input{C3/TG_C3}
+
+% ========================
+% ========================
+% ========================
+
+
+
+\end{document}

@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1737045000 "TG_C1.tex" "TG_C1.pdf" "TG_C1" 1737045000
+  "/etc/texmf/web2c/texmf.cnf" 1708108668 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1717344335 1427448 2884ca29eb7b8a63977f6e45b8a7821f ""
+  "TG_C1.aux" 1737045000 32 3985256e7290058c681f74d7a3565a19 ""
+  "TG_C1.tex" 1737044999 60 46994136435ca5253bedf991f6ed8fbe ""
+  (generated)
+  "TG_C1.log"
+  "TG_C1.pdf"

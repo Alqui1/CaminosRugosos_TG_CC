@@ -1,0 +1,14 @@
+# Fdb version 3
+["pdflatex"] 1737057395 "TG_C2.tex" "TG_C2.pdf" "TG_C2" 1737057395
+  "/etc/texmf/web2c/texmf.cnf" 1708108668 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1717344335 1427448 2884ca29eb7b8a63977f6e45b8a7821f ""
+  "C2/TG_C2_1.tex" 0 -1 0 ""
+  "TG_C2.aux" 1737057395 32 3985256e7290058c681f74d7a3565a19 ""
+  "TG_C2.tex" 1737057394 567 66f245fb39d8534d33f0d9d75e9e74aa ""
+  (generated)
+  "TG_C2.log"
+  "TG_C2.pdf"

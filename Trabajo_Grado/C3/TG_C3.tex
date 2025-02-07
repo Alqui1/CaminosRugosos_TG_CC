@@ -1,0 +1,27 @@
+\chapter{La Integral de Itô}
+
+En este capítulo, comenzaremos la construcción de la integral de Itô. Para cumplir este objetivo, usaremos fuertemente los hechos vistos en el capítulo anterior del movimiento Browniano. 
+
+Ahora, ¿Por qué es necesario construir una nueva integral? Veamos el objetivo inicial, solucionar una ecuación diferencial que tiene cierto ruido:
+
+\[
+	\frac{dX}{dt} = b(t, X_t) + \sigma (t, X_t) \cdot W_t
+\]
+
+Note que el ruido se puede representar como el proceso estocástico $W_t$. Bajo experimentación, se interponen las siguientes condiciones sobre el ruido:
+
+\begin{itemize}
+	\item Dos variables del proceso $W_{t_1}$ y $W_{t_2}$ con $t_1 \neq t_2$ son independientes.
+	\item $\{ W_t \}$ es un proceso estacionario.
+	\item $\mathbb{E}[W_t] = 0$ para todo $t$.
+\end{itemize} 
+
+No hay algún proceso estocástico tradicional que cumpla las condiciones dadas. Por ende, lo podemos ver como un proceso estocástico generalizado, un \textbf{proceso de ruido blanco}, esto es, un proceso que se puede construir como medida de probabilidad en cierto espacio sútil de funcionales $\mathcal{C}[ 0, \infty )$. 
+
+Por ende, se nos sugiere que el proceso $\{W_t\}$ será el movimiento Browniano. Discretizando la ecuación inicial...
+
+\[
+	\int_0^t f(s,w) dB_s(w)
+\]
+
+%  (Oksendal 3.11, Kallianpur 1980 p.10
