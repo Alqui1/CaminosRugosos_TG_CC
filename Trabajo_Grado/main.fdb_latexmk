@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1737129252 "main.tex" "main.pdf" "main" 1737129254
+["pdflatex"] 1740512796 "main.tex" "main.pdf" "main" 1740512798
   "/etc/texmf/web2c/texmf.cnf" 1708108668 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -25,6 +25,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
@@ -150,14 +151,15 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1713487633 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1717344335 1427448 2884ca29eb7b8a63977f6e45b8a7821f ""
-  "C1/TG_C1.tex" 1737056038 667 d08ef5254a68b164040ac75b07ec9bc3 ""
+  "C1/TG_C1.tex" 1740512791 1520 ed8c29b94ec422fac3a2658015120f67 ""
   "C2/TG_C2.tex" 1737057394 567 66f245fb39d8534d33f0d9d75e9e74aa ""
   "C2/TG_C2_1.tex" 1737055486 46 1801556e8f254471b9805dd57876e2ea ""
   "C2/TG_C2_2.tex" 1737057099 1117 610e4baed49a9eb8bfc6ec3db6850b1c ""
-  "C3/TG_C3.tex" 1737129251 1174 328db5a37395583f894282127a34dab8 ""
-  "main.aux" 1737129254 1107 61a4105c4b5ae58e59cbbdb8df8ea8cf "pdflatex"
-  "main.tex" 1737127982 2991 d34dccd11e3607d5112b95917462b5e5 ""
-  "main.toc" 1737129254 468 f7998150f5aad0d35c0f87a61f96f57a "pdflatex"
+  "C3/TG_C3.tex" 1737129405 1328 9ad9150fdcfca1eaf319af79291695c8 ""
+  "abstract.tex" 1740512791 256 ebedf728c603fdaf60c1763aa3735e06 ""
+  "main.aux" 1740512798 1107 61a4105c4b5ae58e59cbbdb8df8ea8cf "pdflatex"
+  "main.tex" 1740512791 3124 997e256380c878d9c164e8f801e9105e ""
+  "main.toc" 1740512798 468 f7998150f5aad0d35c0f87a61f96f57a "pdflatex"
   (generated)
   "main.aux"
   "main.log"
