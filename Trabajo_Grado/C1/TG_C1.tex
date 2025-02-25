@@ -23,35 +23,84 @@ Definimos a $\mathcal{F}$ una $\mathbf{\sigma}$\textbf{-álgebra} es subconjunto
 		\item Dado $\{ A_i \}_{i \in I}$ una sucesión de subconjuntos de $\Omega$ a lo más contable. Luego, si para todo $i \in I$, $A_i \in \mathcal{F}$, entonces $\cup_{i \in I} A_i \in \mathcal{F}$ 
 	\end{itemize}
 
+El espacio $\left( \Omega, \mathcal{F} \right)$ se llama \textbf{espacio medible}.
+
 \end{boxDef}
 
-Los elementos en $\mathcal{F}$
+
+
+Los elementos en $\mathcal{F}$ se llamarán \textit{eventos}.
 
 
 
-Variables aleatorias.
+\textbf{Ejemplo:}
 
-Medida de probabilidad.
+\begin{itemize}
 
-Probabilidad Condicional.
+	\item Para $\Omega$ un conjunto abstracto, $\mathcal{F} = \left\{ \emptyset, \Omega \right\}$ es la $\sigma$-álgebra trivial. 
 
-Independencia de variables aleatorias.
+	\item Sea $A \subset \Omega$, entonces $\sigma(A) = \left\{ \emptyset, A, A^c, \Omega \right\}$ también es una $\sigma$-álgebra, llamada la \textbf{menor} $\mathbb{\sigma}$-\textbf{álgebra} que contiene a $A$, que se genera mediante la intersección de todas las $\sigma$-álgebras que contienen a $A$. 
 
-Inegración respecto a medida de probabilidad.
+	\item Para $\Omega = \mathbb{R}$, una $\sigma$-álgebra para este conjunto es la $\sigma$-\textbf{álgebra de Borel}, que se puede generar con intervalos de la forma $(-\infty, a]$ para todo $a \in \mathbb{Q}$. También, es la generada por todos los conjuntos abiertos (O cerrados, o semiabiertos...). Para más información consulte CITAR DONALD COHN Y PROTTER.  
 
-Variables aleatorias Gaussianas.
+\end{itemize}
 
-Convergencia de esta mondá, Ley de los grandes números.
-
-Esperanza Condicional, L2 y Espacios de Hilbert.
-
-¿Función característica, generadora de momentos, etc...?
+\begin{flushright}
+	$\Box$
+\end{flushright}
 
 
-INTEGRACIÓN.
+\begin{boxDef}
+	Una \textbf{medida de probabilidad} definida en una $\sigma$-álgebra $\mathcal{F}$ de $\Omega$, es una función $P: \mathcal{F} \rightarrow [0,1]$ que cumple:
 
-Integración usual RS, Integral de Young. Conceptos de p-variación y $\alpha$-Hölder.
+	\begin{itemize}
+		\item $P(\Omega) =  1$\\
+		\item Para toda colección contable $\left\{ F_n \right\}_{n \geq 1}$ de elementos en $\mathcal{F}$ que son disyuntos par a par, se tiene:
 
-Ecuaciones Diferenciales Ordinarias. EDO Controladas. ¿EDP?
+		\[
+			P\left( \cup_{n=1}^{\infty}  \right) = \sum_{n = 1}^{\infty} P\left( A_n \right)
+		\]
 
-Teorema de Picard, Teorema de Peano.
+		Es decir, la función es \textit{contablemente aditiva}. Se llama a $P(A)$ como la \textit{probabilidad del evento A}.
+
+	\end{itemize}
+
+La tripla $(\Omega, \mathcal{F}, P)$ se conoce como \textbf{espacio de probabilidad}.
+
+\end{boxDef}
+
+De forma general, la medida de probabilidad, es un caso específico de una \textit{función de medida}, en este caso, tendremos un \textit{espacio de medida}. Vea COHN.\\
+
+Vamos a revisar algunas propiedades de las funciones de probabilidad, sin demostración. Para consultar los detalles, puede consultar PROTTER.
+
+\begin{theorem}
+	Sea $(\Omega, \mathcal{F})$ un espacio medible.
+\end{theorem}
+
+
+
+% Variables aleatorias.
+
+% Medida de probabilidad.
+
+% Probabilidad Condicional.
+
+% Independencia de variables aleatorias.
+
+% Inegración respecto a medida de probabilidad.
+
+% Variables aleatorias Gaussianas.
+
+% Convergencia de esta mondá, Ley de los grandes números.
+
+% Esperanza Condicional, L2 y Espacios de Hilbert.
+
+% ¿Función característica, generadora de momentos, etc...?
+
+% INTEGRACIÓN.
+
+% Integración usual RS, Integral de Young. Conceptos de p-variación y $\alpha$-Hölder.
+
+% Ecuaciones Diferenciales Ordinarias. EDO Controladas. ¿EDP?
+
+% Teorema de Picard, Teorema de Peano.-
