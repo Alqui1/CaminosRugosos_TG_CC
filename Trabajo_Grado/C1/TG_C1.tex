@@ -5,12 +5,21 @@
 En este capítulo, nos dedicaremos a repasar conceptos de teoría de la probabilidad, teoría de integración y ecuaciones diferenciales estocásticas. Para una mayor información, en cada sección
 
 
-
+% ========================================
 %================ SECCIÓN 1. PROBABILIDAD
+% ========================================
 
 
 
-\section{Conceptos de Probabilidad}
+% ========================================
+%================ SECCIÓN 1.1 Espacios de probabilidad.
+% ========================================
+
+
+
+\section{Conceptos de Probabilidad.}
+
+\subsection{Espacios de probabilidad.}
 
 Sea $\Omega$ un conjunto abstracto. Denotamos por $2^{\Omega}$ el conjunto de partes de $\Omega$.
 
@@ -19,17 +28,17 @@ Definimos a $\mathcal{F}$ una $\mathbf{\sigma}$\textbf{-álgebra} es subconjunto
 
 	\begin{itemize}
 		\item $\emptyset$, $\Omega$ $\in \mathcal{F}$
-		\item Si $A \in \mathcal{F}$, luego $A^{c} \in \mathcal{F}$
-		\item Dado $\{ A_i \}_{i \in I}$ una sucesión de subconjuntos de $\Omega$ a lo más contable. Luego, si para todo $i \in I$, $A_i \in \mathcal{F}$, entonces $\cup_{i \in I} A_i \in \mathcal{F}$ 
+		\item Si $A \in \mathcal{A}$, luego $A^{c} \in \mathcal{A}$
+		\item Dado $\{ A_i \}_{i \in I}$ una sucesión de subconjuntos de $\Omega$ a lo más contable. Luego, si para todo $i \in I$, $A_i \in \mathcal{A}$, entonces $\cup_{i \in I} A_i \in \mathcal{A}$ 
 	\end{itemize}
 
-El espacio $\left( \Omega, \mathcal{F} \right)$ se llama \textbf{espacio medible}.
+El espacio $\left( \Omega, \mathcal{A} \right)$ se llama \textbf{espacio medible}.
 
 \end{boxDef}
 
 
 
-Los elementos en $\mathcal{F}$ se llamarán \textit{eventos}.
+Los elementos en $\mathcal{A}$ se llamarán \textit{eventos}.
 
 
 
@@ -37,7 +46,7 @@ Los elementos en $\mathcal{F}$ se llamarán \textit{eventos}.
 
 \begin{itemize}
 
-	\item Para $\Omega$ un conjunto abstracto, $\mathcal{F} = \left\{ \emptyset, \Omega \right\}$ es la $\sigma$-álgebra trivial. 
+	\item Para $\Omega$ un conjunto abstracto, $\mathcal{A} = \left\{ \emptyset, \Omega \right\}$ es la $\sigma$-álgebra trivial. 
 
 	\item Sea $A \subset \Omega$, entonces $\sigma(A) = \left\{ \emptyset, A, A^c, \Omega \right\}$ también es una $\sigma$-álgebra, llamada la \textbf{menor} $\mathbb{\sigma}$-\textbf{álgebra} que contiene a $A$, que se genera mediante la intersección de todas las $\sigma$-álgebras que contienen a $A$. 
 
@@ -51,11 +60,11 @@ Los elementos en $\mathcal{F}$ se llamarán \textit{eventos}.
 
 
 \begin{boxDef}
-	Una \textbf{medida de probabilidad} definida en una $\sigma$-álgebra $\mathcal{F}$ de $\Omega$, es una función $P: \mathcal{F} \rightarrow [0,1]$ que cumple:
+	Una \textbf{medida de probabilidad} definida en una $\sigma$-álgebra $\mathcal{A}$ de $\Omega$, es una función $P: \mathcal{A} \rightarrow [0,1]$ que cumple:
 
 	\begin{itemize}
 		\item $P(\Omega) =  1$\\
-		\item Para toda colección contable $\left\{ F_n \right\}_{n \geq 1}$ de elementos en $\mathcal{F}$ que son disyuntos par a par, se tiene:
+		\item Para toda colección contable $\left\{ A_n \right\}_{n \geq 1}$ de elementos en $\mathcal{A}$ que son disyuntos par a par, se tiene:
 
 		\[
 			P\left( \cup_{n=1}^{\infty}  \right) = \sum_{n = 1}^{\infty} P\left( A_n \right)
@@ -65,17 +74,74 @@ Los elementos en $\mathcal{F}$ se llamarán \textit{eventos}.
 
 	\end{itemize}
 
-La tripla $(\Omega, \mathcal{F}, P)$ se conoce como \textbf{espacio de probabilidad}.
+La tripla $(\Omega, \mathcal{A}, P)$ se conoce como \textbf{espacio de probabilidad}.
 
 \end{boxDef}
 
 De forma general, la medida de probabilidad, es un caso específico de una \textit{función de medida}, en este caso, tendremos un \textit{espacio de medida}. Vea COHN.\\
 
+Note que, podemos ver una propiedad más débil que el axioma (2) en la anterior definición. Para toda colección $\left\{  A_k \right\}_{k = 1}^{n}$ \textit{finita}, de disyuntos par a par, si tenemos:
+
+\[
+	P\left( \cup_{k=1}^n A_k \right) = \sum_{k = 1}^{n} P(A_k)
+\]
+entonces la función $P$ es \textbf{aditiva (O finitamente aditiva)}.
+
 Vamos a revisar algunas propiedades de las funciones de probabilidad, sin demostración. Para consultar los detalles, puede consultar PROTTER.
 
 \begin{theorem}
-	Sea $(\Omega, \mathcal{F})$ un espacio medible.
+	Sea $(\Omega, \mathcal{A})$ un espacio medible, y $P: \mathcal{A} \rightarrow [0,1]$ una función finitamente aditiva y $P(\Omega) = 1$. Entonces, tenemos las siguientes equivalencias:
+
+	\begin{itemize}
+		\item La función es contablemente aditiva.
+		\item Si $A_n \in \mathcal{A}$ y $A_n \downarrow \emptyset$, luego $P(A_n) \downarrow 0$.
+		\item Si $A_n \in \mathcal{A}$ y $A_n \downarrow A$, luego $P(A_n) \downarrow P(A)$.
+		\item Si $A_n \in \mathcal{A}$ y $A_n \uparrow \Omega$, luego $P(A_n) \uparrow 1$.
+		\item Si $A_n \in \mathcal{A}$ y $A_n \uparrow A$, luego $P(A_n) \uparrow P(A)$.
+	\end{itemize}
+
+	Más aún, si $P$ es una medida de probabilidad, y dado $\left\{ A_n \right\}$ sucesión de eventos que converge a $A$. Entonces $A \in \mathcal{A}$ y $\lim_{n \rightarrow \infty} P(A_n) = P(A)$ 
+
 \end{theorem}
+
+
+% ¿Colocar teorema de la clase monótona?
+
+
+% ========================================
+%================ SECCIÓN 1.2 Variables aleatorias.
+% ========================================
+
+
+
+\subsection{Variables aleatorias.}
+
+En esta sección, tommaos a $(\Omega, \mathcal{A}, P)$ un espacio abstracto, donde $\Omega$ no es necesariamente contable.
+
+\begin{boxDef}
+	Sean $(E, \mathcal{E})$ y $(F, \mathcal{F})$ dos espacios medibles (No necesariamente tienen una medida de probabilidad). Una función $X: E \rightarrow F$ es una \textbf{función medible} si $X^{-1}(\Lambda) \in \mathcal{E}$ para todo $\Lambda \in \mathcal{F}$.\\
+
+	Si $(E, \mathcal{E})$ es un espacio de probabilidad, $X$ posee el nombre de \textbf{variable aleatoria}.
+\end{boxDef}
+
+Nuevamente, tenemos varias propiedades para las funciones medibles, que enunciaremos acá, sin la demostración respectiva. Para esto, consulte, PROTTER.
+
+\begin{coro}
+	Sea $(E, \mathcal{E})$ un espacio medible aleatorio, y $(\mathbb{R}, \mathcal{B})$. Sea $X, X_n: E \rightarrow \mathbb{R}$ funciones:
+
+	\begin{itemize}
+		\item X es medible si y sólo si $\left\{ X \leq a \right\} = X^{-1}( (-\infty, a] ) \in \mathcal{E}$, para todo $a \in \mathbb{R}$.
+		\item Si cada $X_n$ es medible, luego $\sup X_n$, $\inf X_n$, $\limsup X_n$ y $\liminf X_n$ son medibles.
+		\item Si cada $X_n$ es medible, y $\left\{X_n\right\}$ converge puntualmente a $X$, luego $X$ es medible. 
+	\end{itemize}
+
+\end{coro}
+
+\begin{theorem}
+	Dasd
+\end{theorem}
+	
+
 
 
 
@@ -98,7 +164,7 @@ Vamos a revisar algunas propiedades de las funciones de probabilidad, sin demost
 % ¿Función característica, generadora de momentos, etc...?
 
 % INTEGRACIÓN.
-
+-
 % Integración usual RS, Integral de Young. Conceptos de p-variación y $\alpha$-Hölder.
 
 % Ecuaciones Diferenciales Ordinarias. EDO Controladas. ¿EDP?
