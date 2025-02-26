@@ -137,13 +137,33 @@ Nuevamente, tenemos varias propiedades para las funciones medibles, que enunciar
 
 \end{coro}
 
-\begin{theorem}
-	Dasd
+\begin{theorem} 
+	Sea $X$ medible de $(E, \mathcal{E})$ en $(F, \mathcal{F})$, y $Y$ medible de $(F, \mathcal{F})$ en $(G, \mathcal{G})$. Entonces, $Y \circ X$ es medible de $(E, \mathcal{E})$ en $(G, \mathcal{G})$.
 \end{theorem}
-	
 
+\begin{theorem}
+	Sean $(E, \mathcal{U})$ y $(F, \mathcal{V})$ espacios topológicos, y $\mathcal{E}$, $\mathcal{F}$ sus $\sigma$-álgebras de Borel (generada por los abiertos), respectivamente. Entonces, cada función continua $X: E \rightarrow F$ es medible (O también llamada, \textit{función boreliana}).
+\end{theorem}
 
+Recuerde que, \textit{la función indicadora}, $f(x) = 1_A (x)$ se define como:
 
+\[
+	1_A (x) = \left\{  \begin{array}{lc}
+		0 & x \in A \\
+		1 & x \notin A
+	\end{array} \right\}
+\]
+
+\begin{theorem}
+	Sea $(F, \mathcal{F}) = (\mathbb{R}, \mathcal{B})$ y $(E, \mathcal{E})$ un espacio medible.
+
+	\begin{itemize}
+		\item Función indicadora $1_A$ en $E$ es medible si y sólo sí $A \in \mathcal{E}$
+		\item Si $X_1, \cdots, X_n$ son funciones medibles de $(E, \mathcal{E})$ en $(\mathbb{R}, \mathcal{B})$, y si $f$ es borel en $\mathbb{R}^n$, luego $f(X_1, \cdots, X_n)$.
+		\item Si $X, Y$ son medibles, luego $X + Y$, $XY$, $\max(X,Y)$, $\min{X,Y}$ y $X/Y$ con $Y \neq 0$ son medibles.
+	\end{itemize}
+
+\end{theorem}
 
 % Variables aleatorias.
 

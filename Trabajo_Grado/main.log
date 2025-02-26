@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  25 FEB 2025 22:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  25 FEB 2025 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,13 +669,13 @@ LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19034 strings out of 480185
- 406391 string characters out of 5894214
- 707651 words of memory out of 5000000
- 36665 multiletter control sequences out of 15000+600000
+ 19035 strings out of 480185
+ 406402 string characters out of 5894214
+ 708651 words of memory out of 5000000
+ 36666 multiletter control sequences out of 15000+600000
  479948 words of font info for 68 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 99i,7n,104p,419b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,13n,104p,419b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
@@ -690,7 +690,7 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (13 pages, 183475 bytes).
+Output written on main.pdf (13 pages, 187862 bytes).
 PDF statistics:
  125 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
