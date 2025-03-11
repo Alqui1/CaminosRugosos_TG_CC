@@ -112,7 +112,7 @@ Vamos a revisar algunas propiedades de las funciones de probabilidad, sin demost
 %================ SECCIÓN 1.2 Variables aleatorias.
 % ========================================
 
-
+% AÑADIR VARIABLES ALEATORIAS DISCRETAS Y CONTINUAS
 
 \subsection{Variables aleatorias.}
 
@@ -173,13 +173,84 @@ Recordemos, para $X$ una variable aleatoria, será una función entre los espaci
 	\[
 		P^{X} (B) = P(X^{-1} (B)) =  P(\{ \omega : X(\omega) \in B \}) = P(X \in B)
 	\] 
+
+	para todo $B \in \mathcal{E}$. 
 \end{boxDef}
 
+	Como la inversa se comporta bien bajo uniones e intersecciones, no es muy dificil probar que:
+
+\begin{theorem}
+	La distribución de $X$ es una medida de probabilidad en $(E, \mathcal{E})$
+\end{theorem}
+
+	Si $X$ es una variable aleatoria en $\mathbb{R}$, $P^{X}$ es una probabilidad en los reales, caracterizada por la función:
+
+	\[
+		F_X (x) = P^{X} ( (-\infty, x] ) = P(X \leq x)
+	\]
+
+	por el hecho, que los elementos en los borelianos, $\mathcal{B}$, pueden ser generador por elementos de la forma $(-\infty, x]$. $F_X (x)$ se conoce como \textbf{función de distribución cumulativa}.
 
 
-% Variables aleatorias.
 
-% Medida de probabilidad.
+% ========================================
+%================ SECCIÓN 1.3 Valor esperado. Integración bajo el signo de la integral.
+% ========================================
+
+
+\subsection{Integración respecto a medida de probabilidad. Valor esperado.}
+
+Dada una variable aleatoria, en un espacio de probabilidad $(\Omega, \mathcal{A}, P)$, podríamos determinar un valor esperado, un promedio ponderado según la probabilidad, la imagen que se espera que tenga la variable aleatoria. \\
+
+Para una variable aleatoria discreta, tenemos la definición:
+
+% AGREGAR DEFINICIÓN PARA V.A DISCRETA
+
+Ahora, queremos hallar el valor esperado para variables aleatorias en general. Consideramos algunos casos especiales inicialmente:
+
+\begin{boxDef}
+	Una variable aleatoria $X$ es \textbf{simple} si su imagen es un conjunto finito, por ende, para una familia de conjuntos disyuntos medibles, $ \left\{ A_i  \right\} \subset \mathcal{A}$, y constantes, $a_i \in \mathbb{R}$, para $1 \leq i \leq n$, veremos que la variable aleatoria tiene la forma:
+
+	\[
+		X = \sum_{i = 1}^n a_i 1_{A_i}
+	\]
+
+	Para $X$ variable aleatoria simple, podemos definir su \textbf{integral respecto a $P$} o \textbf{valor esperado} como:
+
+	\[
+		\mathbb{E}(X) = \sum_{i = 1}^n a_i P(A_i)
+	\]
+	o también denotado por $\int X dP$.
+
+\end{boxDef}
+
+Ahora, deseamos extender la definición para funciones más generales. Para esto, tendremos en cuenta el siguiente teormea:
+
+\begin{theorem}
+	Para cada variable aleatoria positiva $X$, existe una sucesión de variables aleatorias simples $\left\{ A_n \right\}_{n \geq 1}$ tal que $X_n$ tiende a $X$ de forma creciente, para $n \rightarrow \infty$ 
+\end{theorem}
+
+\textbf{Demostración:} Podemos tomar la sucesión:
+
+\[
+	X_n (\omega) = \left\{ \begin{matrix}
+		k 2^{-n} & \text{si } k 2^{-n} \leq X(\omega) < (k+1) 2^{-n} \text{ y } 0 \leq k \leq n 2^n - 1 \\
+		n & \text{si } X(\omega) \geq n
+	\end{matrix}
+	 \right.
+\]
+
+AÑADIR UNA GRAFICA
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+
+% Variables aleatorias. OK
+
+% Medida de probabilidad. OK
 
 % Probabilidad Condicional.
 
