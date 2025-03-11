@@ -121,7 +121,7 @@ En esta sección, tommaos a $(\Omega, \mathcal{A}, P)$ un espacio abstracto, don
 \begin{boxDef}
 	Sean $(E, \mathcal{E})$ y $(F, \mathcal{F})$ dos espacios medibles (No necesariamente tienen una medida de probabilidad). Una función $X: E \rightarrow F$ es una \textbf{función medible} si $X^{-1}(\Lambda) \in \mathcal{E}$ para todo $\Lambda \in \mathcal{F}$.\\
 
-	Si $(E, \mathcal{E})$ es un espacio de probabilidad, $X$ posee el nombre de \textbf{variable aleatoria}.
+	Si $(E, \mathcal{E}, P)$ es un espacio de probabilidad, $X$ posee el nombre de \textbf{variable aleatoria}.
 \end{boxDef}
 
 Nuevamente, tenemos varias propiedades para las funciones medibles, que enunciaremos acá, sin la demostración respectiva. Para esto, consulte, PROTTER.
@@ -164,6 +164,18 @@ Recuerde que, \textit{la función indicadora}, $f(x) = 1_A (x)$ se define como:
 	\end{itemize}
 
 \end{theorem}
+
+Recordemos, para $X$ una variable aleatoria, será una función entre los espacios medibles $(\Omega, \mathcal{A})$ y $(E, \mathcal{E})$. Si dotamos al primer espacio de una probabilidad, $P$, de forma canónica podemos dotar al segundo espacio, de una medida de probabilidad, según $X$.
+
+\begin{boxDef}
+	Si $X$ es una variable aleatoria entre $(\Omega, \mathcal{A}, P)$, con valores en $(E, \mathcal{E})$, la \textbf{distribución} (O \textbf{medida de distribución}) de $X$, está definida por:
+
+	\[
+		P^{X} (B) = P(X^{-1} (B)) =  P(\{ \omega : X(\omega) \in B \}) = P(X \in B)
+	\] 
+\end{boxDef}
+
+
 
 % Variables aleatorias.
 
