@@ -218,13 +218,13 @@ Ahora, queremos hallar el valor esperado para variables aleatorias en general. C
 	Para $X$ variable aleatoria simple, podemos definir su \textbf{integral respecto a $P$} o \textbf{valor esperado} como:
 
 	\[
-		\mathbb{E}(X) = \sum_{i = 1}^n a_i P(A_i)
+		\mathbb{E}[X] = \sum_{i = 1}^n a_i P(A_i)
 	\]
 	o también denotado por $\int X dP$.
 
 \end{boxDef}
 
-Ahora, deseamos extender la definición para funciones más generales. Para esto, tendremos en cuenta el siguiente teormea:
+Ahora, deseamos extender la definición para funciones más generales. Para esto, tendremos en cuenta los siguientes resultados:
 
 \begin{theorem}
 	Para cada variable aleatoria positiva $X$, existe una sucesión de variables aleatorias simples $\left\{ A_n \right\}_{n \geq 1}$ tal que $X_n$ tiende a $X$ de forma creciente, para $n \rightarrow \infty$ 
@@ -245,6 +245,83 @@ AÑADIR UNA GRAFICA
 \begin{flushright}
 	$\Box$
 \end{flushright}
+
+
+\begin{theorem}
+	Sea $X$ una variable aleatoria positiva. Si $\left\{ X_n \right\}$ es sucesión de variables aleatorias simples que tienden de forma creciente a $X$, entonces $\mathbb{E}[X_n]$ tiende a $\mathbb{E}[X]$
+\end{theorem}
+
+Primero, podemos definir el valor esperado para variables aleatorias en positivas, esto es, que toma valores en $[0, \infty )$, como:
+
+\[
+	\int X dP = \mathbb{E}[X] = \sup \left\{ \mathbb{E}[Y] : Y \text{ es función simple con } 0 \leq Y \leq X \right\}
+\]
+
+De este modo, podemos definir:
+
+\begin{boxDef}
+	Sea $X^+ = \max (X, 0)$ y $X^- = -\min (X, 0)$. Una variable aleatoria $X$ es \textbf{integrable} si $\mathbb{E}[X^+] < \infty$ y $\mathbb{E}[X^-] < \infty$. En este caso, el \textbf{valor esperado} de $X$ se define como:
+
+	\[
+		\int X dP = \mathbb{E}[X] = \int X^+ dP + \int X^- dP = \mathbb{E}[X^+] + \mathbb{E}[X^-]
+	\] 
+
+	Tenemos que $\mathcal{L}^1$ o $\mathcal{L}^1 (\Omega, \mathcal{A}, P)$, es el conjunto de variables aleatorias que son integrables. \\ 
+
+	% Admite valor esperado?
+
+\end{boxDef}
+
+Ya estamos listos para enunciar varias propiedades importantes de las variables aleatorias.
+
+\begin{theorem}
+	\begin{itemize}
+		\item $\mathcal{L}^1$ es espacio vectorial, donde $\mathbb{E}$ es operador lineal, y para $X \in \mathcal{L}^1$ tal que $X \geq 0$, luego $\mathbb{E}[X] \geq 0$. Más aún, para $X \leq Y$, tenemos que $\mathbb{E}[X] \leq \mathbb{E}[Y]$.
+		\item $X \in \mathcal{L}^1$ si y sólo si $| X | \in \mathcal{L}^1$.
+		\item $\left\lvert \mathbb{E}[X] \right\rvert \leq \mathbb{E}[ \left\lvert X \right\rvert ]$. Mas aún, cualquier variable aleatoria acotada es integrable.
+		\item Si $X = Y$ \textit{casi siempre} (Esto es, que $P(X = Y) = P(\left\{ \omega : X(\omega) = Y(\omega) \right\}) = 1$), entonces, $\mathbb{E}[X] = \mathbb{E}[Y]$. 
+	\end{itemize}	
+
+\end{theorem}
+
+\begin{theorem}[Teorema de la convergencia monótona.]
+	Si las variables aleatorias $X_n$ son positivas y tienden de forma creciente \textit{casi siempre} a X, luego $\lim_{n \rightarrow \infty} \mathbb{E}[X_n] = \mathbb{E}[X]$.
+\end{theorem}
+
+% ¿Esto está bien?
+En este caso, $X_n$ tienden de forma creciente \textit{casi siempre} a X, si \\$P( \left\{ \omega : \lim_{n \rightarrow \infty } X_n (w) = X_n \right\} ) = 1$.
+
+\begin{lema}[Lema de Fatou]
+	Si las variables aleatorias $X_n$ satisfacen $X_n \geq Y$ \textit{casi siempre} ( $P( X_n \leq Y ) = P( \left\{ \omega : X_n(\omega) \leq Y(\omega) \right\}) = 1$ ) con $Y \in \mathcal{L}^1$, para todo $n$, entonces:
+
+	\[
+		\mathbb{E}\left[\liminf_{n \rightarrow \infty} X_n\right] \leq \liminf_{n \rightarrow \infty} \mathbb{E}[X_n]
+ 	\]
+
+ 	o se puede escribir como:
+
+ 	\[
+ 		\int_{\Omega} \liminf_{n \rightarrow \infty} X_n \leq \liminf_{n \rightarrow \infty} \int_{\Omega}  X_n
+ 	\]
+
+ 	En particular, si $X_n \leq 0$ \textit{casi siempre} para todo $n$, entonces se cumple la desigualdad.
+
+\end{lema}
+
+\begin{theorem}[Teorema de la convergencia dominada de Lebesgue]
+	Si las variables aleatorias $X_n$ convergen \textit{casi siempre} a $X$ y si $\lvert X_n \rvert \leq Y$ \textit{casi siempre} para $Y \in \mathcal{L}^1$, para todo $n$, entonces, $X_n, X \in \mathcal{L}^1$, y:
+
+	\[
+		\lim_{n \rightarrow \infty } \mathbb{E}[X_n] = \mathbb{E}[X]
+	\] 
+
+	o
+
+	\[
+		\lim_{n \rightarrow \infty } \int_{\Omega} X_n = \int_{\Omega} X_n
+	\]
+\end{theorem}
+
 
 
 
