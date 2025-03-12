@@ -1,5 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1741740130 "main.tex" "main.pdf" "main" 1741740132
+["bibtex main"] 1741744885 "main.aux" "main.bbl" "main" 1741744886
+  "/usr/share/texlive/texmf-dist/bibtex/bst/amscls/amsplain.bst" 1513722769 25798 9b3546f2f237ee0ce4724eed95f954f4 ""
+  "Bibliography/bibliography.bib" 1741744706 160 6879ead48522f2e258352e7f4c80c987 ""
+  "main.aux" 1741744886 1764 d64974cd9d946a58f19fc6cd5857b468 "pdflatex"
+  (generated)
+  "main.bbl"
+  "main.blg"
+["pdflatex"] 1741744885 "main.tex" "main.pdf" "main" 1741744886
   "/etc/texmf/web2c/texmf.cnf" 1708108668 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -152,15 +159,16 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1713487633 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1717344335 1427448 2884ca29eb7b8a63977f6e45b8a7821f ""
-  "C1/TG_C1.tex" 1741740127 14401 54db85f1ff0946d47e3575cb8f1e4007 ""
+  "C1/TG_C1.tex" 1741744780 17124 03462f0fc3b1f0b1a3828ebe2ed32437 ""
   "C2/TG_C2.tex" 1737057394 567 66f245fb39d8534d33f0d9d75e9e74aa ""
   "C2/TG_C2_1.tex" 1737055486 46 1801556e8f254471b9805dd57876e2ea ""
   "C2/TG_C2_2.tex" 1737057099 1117 610e4baed49a9eb8bfc6ec3db6850b1c ""
   "C3/TG_C3.tex" 1737129405 1328 9ad9150fdcfca1eaf319af79291695c8 ""
   "abstract.tex" 1740516583 256 ebedf728c603fdaf60c1763aa3735e06 ""
-  "main.aux" 1741740131 1506 1667fa13b645824e4f3af8d50427bc58 "pdflatex"
-  "main.tex" 1741739309 3371 502f5dcdd59e07eee19d7a9d03cf1930 ""
-  "main.toc" 1741740131 744 d3040e28300a153a894ef3af576198ce "pdflatex"
+  "main.aux" 1741744886 1764 d64974cd9d946a58f19fc6cd5857b468 "pdflatex"
+  "main.bbl" 1741744885 481 e97d768865eede8623834e4efc66f0a7 "bibtex main"
+  "main.tex" 1741744883 3613 ac6c89ffbb9dd629689e63cf9abb6eaa ""
+  "main.toc" 1741744886 835 02e96da79d561c6520a6b8d9d3e6cc05 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

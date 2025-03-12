@@ -662,6 +662,10 @@ INPUT C3/TG_C3.tex
 INPUT ./C3/TG_C3.tex
 INPUT ./C3/TG_C3.tex
 INPUT C3/TG_C3.tex
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT ./main.bbl
+INPUT main.bbl
 INPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb

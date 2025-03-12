@@ -322,6 +322,80 @@ En este caso, $X_n$ tienden de forma creciente \textit{casi siempre} a X, si \\$
 	\]
 \end{theorem}
 
+Para consultar las pruebas, sugerimos consultar \cite{Probability_Essentials}. Ahora, estos teoremas poderosos, van a traer una serie de consecuencias, que serán útiles en la práctica. Enunciamos sin demostración.
+
+\begin{theorem}
+	Sea $X_n$ una sucesión de variables aleatorias.
+
+	\begin{itemize}
+		\item Si para todo $n$, $X_n$ es positiva, entonces:
+
+		\[
+			\mathbb{E} \left[ \sum_{n = 1}^{\infty} X_n  \right] =  \sum_{n = 1}^{\infty} \mathbb{E}[X_n]
+		\]
+		o
+
+		\[
+			\int_{\Omega} \sum_{n = 1}^{\infty} X_n  dP  =  \sum_{n = 1}^{\infty} \int_{\Omega} X_n dP
+		\]
+
+		\item Si $\sum_{n = 1}^{\infty} \mathbb{E}[ \lvert X_n \rvert ] < \infty$, luego $\sum_{n = 1}^{\infty} X_n$ converge \textit{casi siempre} y la suma de esta serie es integrable. 
+	\end{itemize}
+\end{theorem}
+
+Antes de enunciar más propiedades, definimos los espacios $\mathcal{L}^p$.
+
+\begin{boxDef}
+	Para $1 < p < \infty$, definimos $\mathcal{L}^p$ el espacio de variables aleatorias tal que $\lvert X \rvert^p \in \mathcal{L}^1$.
+\end{boxDef}
+
+
+\begin{theorem}
+	\begin{itemize}
+		\item Si $X, Y \in \mathcal{L}^2$, entonces $XY \in \mathcal{L}^1$ y se cumple la desigualdad de \textit{Cauchy-Schwarz}:
+
+		\[
+			\lvert \mathbb{E}[XY] \rvert \leq \sqrt{ \mathbb{E}[X^2] \mathbb{E}[Y^2] }
+		\] 
+		\item $\mathcal{L}^2 \subset \mathcal{L}^1$. Si, $X \in \mathcal{L}^2$, luego $\left(\mathcal{E}[X] \right)^2 \leq \mathbb{E}[X^2]$.
+
+		\item $\mathcal{L}^2$ es un espacio vectorial.
+	\end{itemize}	
+\end{theorem}
+
+El siguiente resultado, permite calcular el valor esperado de cualquier función medible de una variable aleatoria.
+	
+\begin{theorem}[Regla del valor esperado.]
+	Sea $X$ una variable aleatoria en $(\Omega, \mathcal{A}, P)$, con valores en $(E, \mathcal{E})$ y distribución $P^X$. Sea $h: (E, \mathcal{E}) \rightarrow (\mathbb{R}, \mathcal{B})$ una función medible.
+
+	\begin{itemize}
+		\item $h(X) \in \mathcal{L}^1 (\Omega, \mathcal{A}, P)$ si y sólo si $h \in \mathcal{L}^1 (E, \mathcal{E}, P^X )$.
+		\item Si, $h$ es positiva, o se tienen las condiciones del inciso anterior, entonces:
+
+		\[
+			\mathbb{E}[h(X)] = \int_{\Omega} h(x) P^X(dx)
+		\] 
+	\end{itemize}
+
+\end{theorem}
+
+Finalmente, definimos varianza y mostramos una desigualdad conocida y bastante útil.
+
+\begin{boxDef}
+	Si $X \in \mathcal{L}^2$, la \textbf{varianza} de $X$, denotada por $\sigma_X^2$, está dada por:
+
+	\[
+		\sigma_X^2 = \mathbb{E}[ (X - \mathbb{E}[X])^2 ]
+	\] 
+	También llamado \textbf{segundo momento alrededor de la media} $\mu_2$.
+\end{boxDef}
+
+
+\begin{theorem}[Desigualdad de Chebyshev - Bienaymé]
+	\[ P( \lvert X\rvert \geq a ) \leq \frac{ \mathbb{E}[X^2] }{ \sigma^2 } \]
+\end{theorem}
+
+\subsection{Variables aleatorias independientes.}	
 
 
 
@@ -333,7 +407,7 @@ En este caso, $X_n$ tienden de forma creciente \textit{casi siempre} a X, si \\$
 
 % Independencia de variables aleatorias.
 
-% Inegración respecto a medida de probabilidad.
+% Inegración respecto a medida de probabilidad. OK
 
 % Variables aleatorias Gaussianas.
 
