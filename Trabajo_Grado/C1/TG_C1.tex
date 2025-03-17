@@ -5,9 +5,27 @@
 En este capítulo, nos dedicaremos a repasar conceptos de teoría de la probabilidad, teoría de integración y ecuaciones diferenciales. 
 
 
+
+
+
+
+
+
+
+
+
+
+
 % ========================================
 %================ SECCIÓN 1. PROBABILIDAD
 % ========================================
+
+
+
+
+
+
+
 
 
 
@@ -117,6 +135,24 @@ Finalmente, damos el concepto de sub-$\sigma$-álgebra.
 % ¿Colocar teorema de la clase monótona?
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % ========================================
 %================ SECCIÓN 1.2 Variables aleatorias.
 % ========================================
@@ -199,6 +235,23 @@ Recordemos, para $X$ una variable aleatoria, será una función entre los espaci
 	\]
 
 	por el hecho, que los elementos en los borelianos, $\mathcal{B}$, pueden ser generador por elementos de la forma $(-\infty, x]$. $F_X (x)$ se conoce como \textbf{función de distribución cumulativa}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -405,12 +458,42 @@ Finalmente, definimos varianza y mostramos una desigualdad conocida y bastante �
 \end{theorem}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % ========================================
 %================ SECCIÓN 1?? Probabilidad Condicional.
 % ========================================
 
 
 % \subsection{subsection name} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -598,15 +681,131 @@ Antes de acabar esta sección, vamos a ver dos teoremas importantes en probabili
 	Sea $X_n$ una sucesión de variables aleatorias independientes, definidas en $(\Omega, \mathcal{A, P})$, y sea $C_{\infty}$ la $\sigma$-álgebra cola correspondiente. Si $C \in C_{\infty}$, entonces $P(C) = 0$ o $P(C) = 1$.
 \end{theorem}
 
+
+
+
+
+
+% ========================================
+%================ SECCIÓN 1.5 Distribuciones en R, R^n. Variables multivariadas o Gaussianas.
+% ========================================
+
+
+\subsection{Distribuciones en $\mathbb{R}^n$ y variables aleatorias Gaussianas.}
+
+% Colocar acerca de la función característica.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ========================================
+%================ SECCIÓN 1.6 Convergencia de variables aleatorias.
+% ========================================
+
+
+\subsection{Convergencia de variables aleatorias.}
+
+
+
+
+
+% ========================================
+%================ SECCIÓN 1.7 Esperanza Condicional
+% ========================================
+
+\subsection{Esperanza Condicional.}
+
+Para $X, Y$ variables aleatorias (Con $Y$ tomando valores de $\mathbb{R}$ y $X$ toma valores a lo sumo contables), ya sabemos calcular el valor de $P(Y \vert X = i)$, esto es, la probabilidad condicional de $Y$ dado $X = i$. Deseamos extender este concepto, para poder calcular el valor esperado de la variable aleatoria $Y$, dado que $X = i$, esto es, una \textit{esperanza condicional.}
+
+\begin{boxDef}
+ 	Dado $X$ que toma valores en $\left\{ x_1, \cdots, x_n, \cdots \right\}$ (Conjunto a lo sumo contable), y $Y$ una variable aleatoria. Si $P(X = x_j) > 0$, entonces la \textbf{esperanza condicional de $Y$ dado $\left\{ X = x_j \right\}$} está definida por:
+
+ 	\[
+ 		\mathbb{E} [Y \vert X = x_j] = \mathbb{E}_Q [Y] = \int Y dQ
+ 	\]
+
+ 	tal que $Q(\Lambda) = P(\Lambda \vert X = x_j)$, y dado que $\mathbb{E}_Q [ \lvert Y \rvert] < \infty$.
+\end{boxDef} 
+
+Una forma clásica de calcular esta esperanza condicional, con $Y$ tomando valores de un conjunto a lo más contable, está enunciada en este teorema, que es consecuencia de la definición:
+
+\begin{theorem}
+	Asuma las condiciones de la definición anterior. Además, si $Y$ tiene valores contables $\left\{ y_1, \cdots, y_n, \cdots \right\}$ y si $P(X = x_j) > 0$, entonces:
+
+	\[
+		\mathbb{E}[Y \vert X = x_j] = \sum_{k = 1}^{\infty} y_k P(Y = y_k \vert X = x_j)
+	\]
+	dado que la serie converge absolutamente.
+\end{theorem}
+
+Sin embargo, no todas las variables aleatorias tomarán valores de un conjunto a lo más contable, deseamos extender la definición a variables aleatorias más generales. Primero, podemos definir la esperanza condicional, entre dos variables aleatorias. 
+
+\begin{boxDef}
+	Sea:
+
+	\[
+		f(x) = \left\{  
+		\begin{matrix}
+			\mathbb{E}[Y \vert X = x] & \text{ si } P(X = x) > 0 \\
+			\text{Otro valor} & \text{ si } P(X = x) = 0
+		\end{matrix} \right.
+	\]
+
+	Dado $X$ con valores contables, y $Y$ una variable aleatoria con valores en $\mathbb{R}$. La \textbf{esperanza condicional de $Y$ dado $X$} está definida por:
+
+	\[
+		\mathbb{E}[Y \vert X] = f(Y)
+	\]
+\end{boxDef}
+
+Note que la definición está dada por eventos que ocurren \textit{casi siempre (a.s)}, es decir, salvo en elementos, donde la probabilidad sea $0$. Ahora, si $X$ toma valores reales, en general los eventos $\{ X = x_j\}$ tendrán probabilidad $0$ y el enfoque dado no funciona. \\
+
+Sin embargo, lo que se realizó fue hallar una función $f$ auxiliar, para hallar la esperanza condicional, y este será el enfoque que se tomará para el caso en general. Para cumplir el objetivo, se usará el siguiente teorema.
+
+\begin{theorem}[Lema de Doob-Dynkin.]
+	Sea $X$ una variable aleatoria con valores en $\mathbb{R}^n$, y $Y$ una variable aleatoria con valores en $\mathbb{R}$. $Y$ es medible con respecto a $\sigma (X)$ (La $\sigma$-álgebra generada por $X$) si y sólo si existe una función $f: \mathbb{R}^n \rightarrow \mathbb{R}$ que sea Borel-medible tal que $Y = f(X)$.
+\end{theorem}
+
+% ¿Colocar ejemplos?
+
+
+Sea $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad, y $X: \Omega \rightarrow \mathbb{R}^n$ una variable aleatoria. Recuerde que, $\mathcal{L}^2$ es el espacio de los \textit{cuadrado-integrables}, esto es, que para $Y \in \mathcal{L}^2$, $\mathbb{E}[Y^2] < \infty$ (O $\int_{\Omega} Y^2 dP < \infty $ ). Como $\mathcal{L}^2 (\Omega, \mathcal{A}, P)$ es un \textit{espacio de Hilbert}, entonces se puede definir un producto interno en este espacio:
+
+\[
+	\langle Y, Z \rangle = \int_{\Omega} Y Z dP = \mathbb{E}[YZ]
+\]
+Como $\sigma(X) \subset \mathcal{A}$, entonces $(\Omega, \sigma(X), P)$ es también un subespacio de Hilbert. Dado estos conceptos, se procede a generalizar la esperanza condicional.
+
+\begin{boxDef}
+	Sea $Y \in \mathcal{L}^2 (\Omega, \mathcal{A}, P)$. La \textbf{esperanza condicional de $Y$ dado $X$} es el único $\hat{Y} \in \mathcal{L}^2 (\Omega, \sigma(X), P)$ tal que:
+	\[
+		\mathbb{E}[\hat{Y}X] = \mathbb{E}[YZ]
+	\]
+	para todo $Z \in \mathcal{L}^2 (\Omega, \sigma(X), P)$, se denota como $\mathbb{E}[Y \vert X] = \hat{Y}$.
+\end{boxDef}
+
+Note que la esperanza condicional de $Y$ dado $X$, será la proyección de $Y$ en el subespacio de Hilbert $\mathcal{L}^2 (\Omega, \sigma(X), P)$. Para más detalles de análisis funcional, consulte el apéndice.
+
+
 % Variables aleatorias. OK
 
 % Medida de probabilidad. OK
 
-% Probabilidad Condicional.
+% Probabilidad Condicional. ¿?
 
 % Independencia de variables aleatorias. OK
 
-% Inegración respecto a medida de probabilidad. OK
+% Integración respecto a medida de probabilidad. OK
 
 % Distribuciones en R^n. Variables aleatorias Gaussianas.
 
@@ -616,7 +815,60 @@ Antes de acabar esta sección, vamos a ver dos teoremas importantes en probabili
 
 % ¿Función característica, generadora de momentos, etc...?
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % PROCESOS ESTOCÁSTICOS
+
+
+
+% ========================================
+%================ SECCIÓN 2. PROCESOS ESTOCÁSTICOS.
+% ========================================
+
+\section{Procesos Estocásticos.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ========================================
+%================ SECCIÓN 3. PRELIMINARES DE INTEGRACIÓN Y ECUACIONES DIFERENCIALES.
+% ========================================
+
+\section{Preliminares de Integración y Ecuaciones Diferenciales.}
 
 
 % INTEGRACIÓN.
