@@ -796,6 +796,46 @@ Como $\sigma(X) \subset \mathcal{A}$, entonces $(\Omega, \sigma(X), P)$ es tambi
 
 Note que la esperanza condicional de $Y$ dado $X$, será la proyección de $Y$ en el subespacio de Hilbert $\mathcal{L}^2 (\Omega, \sigma(X), P)$. Para más detalles de análisis funcional, consulte el apéndice.
 
+Como $\hat{Y}$ es $\sigma (X)$-medible, por el lema de Doob-Dynkin, existe una función $f$ Borel medible tal que:
+
+\[
+	\mathbb{E}[Y \vert X] = f(X)
+\]
+
+Entonces, se tiene una expresión alternativa para el teorema de Doob-Dynkin; para toda función $g$ Borel-medible tal que $g(X) \in \mathcal{L}^2$:
+
+\[
+	\mathbb{E}[f(X) g(X)] = \mathbb{E}[Y g(X)]
+\]
+
+Ahora, se puede definir la esperanza condicional respecto a una $\sigma$-álgebra.
+
+\begin{boxDef}
+	Sea $Y \in \mathcal{L}^2 (\Omega, \mathcal{A}, P)$ y $\mathcal{G}$ una sub-$\sigma$-álgebra de $\mathcal{A}$. Definimos la \textbf{esperanza condicional de $Y$ respecto a $\mathcal{G}$} como el único elemento $\mathbb{E}[Y \vert \mathcal{G}] \in \mathcal{L}^2 (\Omega, \mathcal{G}, P)$ tal que:
+
+	\[
+		\mathbb{E}[Y Z] = \mathbb{E}[ \mathbb{E}[Y \vert \mathcal{G}] Z ]
+	\] 
+	para todo $Z \in \mathcal{L}^2 (\Omega, \mathcal{G}, P)$.
+\end{boxDef}
+
+Note que, $\mathbb{E}[Y \vert \mathcal{G}]$ se puede ver como la proyección de $Y$ sobre el subespacio de Hilbert $(\Omega, \mathcal{G}, P)$. \\
+
+Como dato adicional, es importante recalcar que la esperanza condicional es un elemento de $\mathcal{L}^2$, y es una \textit{clase de equivalencia} de alguna variable aleatoria. Por ende, relaciones del tipo $\mathbb{E}[Y \vert \mathcal{G}] \geq 0$ o $\mathbb{E}[Y \vert \mathcal{G}] = Z$ se sobreentienden como relaciones que se cumplen en \textit{casi siempre} o en \textit{casi todo sitio} (Esto es, se preserva la igualdad salvo en conjuntos nulos o de medida cero).\\
+
+Al igual que el operador $\mathbb{E}$ cumple varias propiedades, también $\mathbb{E}[\cdot \vert  \cdot]$ cumple propiedades similares.
+
+\begin{theorem}[Propiedades de la esperanza condicional.]
+	Sea $Y \in \mathcal{L}^2 (\Omega, \mathcal{A}, P)$ y $\mathcal{G}$ una sub-$\sigma$-álgebra de $\mathcal{A}$. Entonces, 
+
+	\begin{itemize}
+		\item Si $Y \geq 0$, luego $\mathbb{E}[Y \vert \mathcal{G}] \geq 0$.
+		\item Si $\mathcal{G} = \sigma (X)$ para cierta variable aleatoria $X$, entonces existe una función Borel medible $f$ tal que $\mathbb{E}[Y \vert \mathcal{G}] = f(X)$.
+		\item $\mathbb{E}[\mathbb{E}[Y \vert \mathcal{G}]] = \mathbb{E}[Y]$.
+		\item La función $Y \rightarrow \mathbb{E}[Y \vert \mathcal{G}]$ es lineal.
+	\end{itemize}
+\end{theorem}
+
 
 % Variables aleatorias. OK
 
@@ -845,10 +885,10 @@ Note que la esperanza condicional de $Y$ dado $X$, será la proyección de $Y$ e
 
 
 % ========================================
-%================ SECCIÓN 2. PROCESOS ESTOCÁSTICOS.
+%================ SECCIÓN ?. PROCESOS ESTOCÁSTICOS. (CAPÍTULO MOVIMIENTO BROWNIANO)
 % ========================================
 
-\section{Procesos Estocásticos.}
+%\section{Procesos Estocásticos.}
 
 
 
@@ -865,7 +905,7 @@ Note que la esperanza condicional de $Y$ dado $X$, será la proyección de $Y$ e
 
 
 % ========================================
-%================ SECCIÓN 3. PRELIMINARES DE INTEGRACIÓN Y ECUACIONES DIFERENCIALES.
+%================ SECCIÓN 2. PRELIMINARES DE INTEGRACIÓN Y ECUACIONES DIFERENCIALES.
 % ========================================
 
 \section{Preliminares de Integración y Ecuaciones Diferenciales.}

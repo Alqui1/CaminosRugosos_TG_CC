@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  16 MAR 2025 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  17 MAR 2025 09:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -739,15 +739,29 @@ a-to-ria con
 
 LaTeX Info: Redefining \. on input line 796.
 LaTeX Info: Redefining \% on input line 796.
-[22]) (./C2/TG_C2.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [23]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [24
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
 
-]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--825
+
+ []
+
+LaTeX Info: Redefining \. on input line 825.
+LaTeX Info: Redefining \% on input line 825.
+[23]
+Overfull \hbox (45.13225pt too wide) in paragraph at lines 829--830
+[]\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12 2 L[]\OT1/cmr/m/n/1
+2 (
+\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 A\OML/cmm/m/it/12 ; P\OT1/cmr/m/n/12 )$
+ []
+
+) (./C2/TG_C2.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [24]
 Cap\'{\i }tulo 2.
 (./C2/TG_C2_1.tex) (./C2/TG_C2_2.tex
 Overfull \hbox (1.87775pt too wide) in paragraph at lines 1--1
@@ -757,7 +771,9 @@ Overfull \hbox (1.87775pt too wide) in paragraph at lines 1--1
 )
 Underfull \vbox (badness 4429) has occurred while \output is active []
 
- [25])
+ [25
+
+])
 (./C3/TG_C3.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -782,7 +798,7 @@ LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
  19104 strings out of 480185
- 407484 string characters out of 5894214
+ 407492 string characters out of 5894214
  709693 words of memory out of 5000000
  36721 multiletter control sequences out of 15000+600000
  481267 words of font info for 72 fonts, out of 8000000 for 9000
@@ -803,7 +819,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (31 pages, 244432 bytes).
+Output written on main.pdf (31 pages, 246775 bytes).
 PDF statistics:
  188 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams
