@@ -2,7 +2,7 @@
 \chapter{Preliminares}
 
 
-En este capítulo, nos dedicaremos a repasar conceptos de teoría de la probabilidad, teoría de integración y ecuaciones diferenciales estocásticas. Para una mayor información, en cada sección
+En este capítulo, nos dedicaremos a repasar conceptos de teoría de la probabilidad, teoría de integración y ecuaciones diferenciales. 
 
 
 % ========================================
@@ -18,6 +18,8 @@ En este capítulo, nos dedicaremos a repasar conceptos de teoría de la probabil
 
 
 \section{Conceptos de Probabilidad.}
+
+En esta sección, daremos un breve repaso a conceptos esenciales en probabilidad, para poder entender mejor procesos estocásticos, y de igual forma, poder realizar la construcción de la integral de Itô. Para mayor información, puede consultar \cite{Probability_Essentials}, del cuál se basará la gran parte de este capítulo.
 
 \subsection{Espacios de probabilidad.}
 
@@ -505,17 +507,108 @@ Ahora, podemos generalizar el concepto de independencia a $\sigma$-álgebras, e 
 
 \end{boxDef}
 
+Enunciamos algunas propiedades para $X$ y $Y$ variables aleatorias independientes. De forma canónica, se puede extender el enunciado a un número a lo más contable de variables aleatorias independientes, $\left\{ X_i \right\}_{i \in I}$.
+
+\begin{theorem}
+	Sea $X, Y$ variables aleatorias cuya imagen son los espacios $(E, \mathcal{E})$ y $(F, \mathcal{F})$, respectivamente. $X$ y $Y$ son independientes si y sólo sí, se tiene algunas de las siguientes condiciones:
+
+	\begin{itemize}
+		\item $P(X \in A, Y \in B) = P(X \in A)P(Y \in B)$ para todo $A \in \mathcal{E}$ y $B \in \mathcal{F}$.
+		\item $P(X \in A, Y \in B) = P(X \in A)P(Y \in B)$, para todo $A \in \mathcal{C}$, $B \in \mathcal{D}$ donde $\mathcal{C}, \mathcal{D}$ son clases de conjuntos cerrados bajo intersecciones finitas, tal que $\sigma(\mathcal{C}) = \mathcal{E}$ y $\sigma( \mathcal{D} ) = \mathcal{F}$
+		\item Para $f, g$ funciones medibles, $f(X)$ y $g(X)$ son independientes.
+		\item Para $f, g$ funciones medibles positivas, o medibles acotadas, $\mathbb{E}[ f(X)g(Y) ] = \mathbb{E}[f(X)] \mathbb{E}[g(Y)]$.
+		\item Sean $E, F$ espacios métricos, y $\mathcal{E}, \mathcal{F}$ sus $\sigma$-álgebras de Borel. Entonces, $\mathbb{E}[ f(X)g(Y) ] = \mathbb{E}[f(X)] \mathbb{E}[g(Y)]$ para todas $f, g$ funciones acotadas y continuas.
+	\end{itemize}
+
+\end{theorem}
+
+En este punto, vemos que estamos comenzando a tomar conjuntos de dos o más variables aleatorias. Sería deseable hablar de una noción de \textit{conjuntamente medible}. Sean $(E, \mathcal{E})$ y $(F, \mathcal{F})$ espacios medibles. En general, $\mathcal{E} \times \mathcal{F} = \left\{ A \subseteq E \times F | A = \Lambda \times \Gamma, \Lambda \in \mathcal{E}, \Gamma \in \mathcal{F} \right\}$ no será una $\sigma$-álgebra, por ejemplo, si tomamos el producto $\mathcal{B}(\mathbb{R}) \times \mathcal{B}(\mathbb{R})$ (Producto de los conjuntos de Borel en $\mathbb{R}$), es tentador pensar que tal producto es $\sigma$-álgebra de $\mathbb{R}^2$, sin embargo, note que el elemento $[0, 1] \times [0,1] \cup [-1, -1/2] \times [0, 1]$ debe estar en la $\sigma$-álgebra de $\mathbb{R}^2$, pero no está en $\mathcal{B}(\mathbb{R}) \times \mathcal{B}(\mathbb{R})$, falla la estabilidad bajo uniones. \\
+
+Por tanto, denotaremos a:
+\[
+	\mathcal{E} \otimes \mathcal{F} = \sigma(\mathcal{E} \times \mathcal{F})
+\]
+como la menor $\sigma$-álgebra que contiene a $\mathcal{E} \times \mathcal{F}$. Tal cuál como las anteriores definiciones, enunciamos algunas propiedades y teoremas que serán de utilidad.
+
+\begin{theorem}
+	Sea $f: (E\times F, \mathcal{E} \otimes \mathcal{F}) \rightarrow (\mathbb{R}, \mathcal{R})$ función medible. Entonces, las secciones $y \rightarrow f(x, y)$ (Para todo $x \in E$) y $x \rightarrow f(x, y)$ (Para todo $y \in F$) son, respectivamente, $\mathcal{F}$-medible y $\mathcal{E}$-medible.
+\end{theorem}
+
+\begin{theorem}[Tonelli-Fubini]
+	Sea $(E, \mathcal{E}, P)$ y $(F, \mathcal{F}), Q$ espacios de probabilidad. 
+
+	\begin{itemize}
+		\item Sea $R(A \times B) = P(A)Q(B)$, para $A \in \mathcal{E}$ y $B \in \mathcal{F}$. Entonces, $R$ se extiende de forma unívoca a una probabilidad en $(E \times F, \mathcal{E} \otimes \mathcal{F})$, denotada por $P \otimes Q$.
+
+		\item Cada función $f$ que es $\mathcal{E} \otimes \mathcal{F}$-medible, positiva o integrable, respecto a $P \otimes Q$, tenemos que $x \rightarrow \int f(x,y) Q(dy)$ es $\mathcal{E}$-medible, $y \rightarrow \int f(x,y) P(dx)$ es $\mathcal{F}$-medible. Además:
+
+		\[
+			\int f dP\otimes Q = \int \left\{ \int f(x,y) Q(dy) \right\} P(dx) = \int \left\{ \int f(x,y) P(dx) \right\} Q(dy)
+		\]
+
+	\end{itemize}
+
+\end{theorem}
+
+
+Antes de acabar esta sección, vamos a ver dos teoremas importantes en probabilidad. Primero damos una definiciones:
+
+\begin{boxDef}
+	\begin{itemize}
+		\item Sea $A_n$ una sucesión de eventos en $\mathcal{A}$. Definimos:
+
+		\[
+			\limsup_{n \rightarrow \infty } A_n = \cap_{n = 1}^{\infty} (\cup_{m \geq n}) A_m = \lim_{n \rightarrow \infty} (\cup_{m \geq n} A_m)
+		\]
+		De manera probabilística, podemos interpretar este evento como:
+		\[
+			\limsup_{n \rightarrow \infty} A_n = A_n \text{ ocurre \textbf{infinitamente seguido}}
+		\]
+		o del inglés, \textit{infinitely often (i.o)}. Esto es, que el evento $A_n$ ocurre para un número infinito de $n$. Podemos escribir:
+		\[
+			\limsup_{n \rightarrow \infty} A_n = \left\{ A_n \text{ i.o } \right\}
+		\]
+
+		\item Sean $X_n$ variables aleatorias definidas en $(\Omega, \mathcal{A}, P)$. Defina las $\sigma$-álgebras:
+
+		\begin{align*}
+			B_n &= \sigma(X_n)\\
+			C_n &= \sigma(\cup_{p \geq n} B_n)\\
+			C_{\infty} = \cap_{n=1}^{\infty} C_n
+		\end{align*}
+
+		$C_{\infty}$ es la $\sigma$-\textbf{álgebra cola}.
+
+	\end{itemize}
+\end{boxDef}
+
+
+\begin{theorem}[Lema de Borel-Cantelli.]
+	Sea $A_n$ una sucesión de eventos en $(\Omega, \mathcal{A}, P)$.
+
+	\begin{itemize}
+		\item Si $\sum_{n = 1}^{\infty} P(A_n) < \infty$, luego $P(A \text{i.o}) = 0$.
+		\item Si $P(A_n \text{i.o}) = 0$ y si los eventos $A_n$ son mutuamente independientes, entonces $\sum_{n = 1}^{\infty} P(A_n) < \infty$. 
+	\end{itemize}
+
+\end{theorem}
+
+
+\begin{theorem}[Ley cero-uno de Kolmogorov.]
+	Sea $X_n$ una sucesión de variables aleatorias independientes, definidas en $(\Omega, \mathcal{A, P})$, y sea $C_{\infty}$ la $\sigma$-álgebra cola correspondiente. Si $C \in C_{\infty}$, entonces $P(C) = 0$ o $P(C) = 1$.
+\end{theorem}
+
 % Variables aleatorias. OK
 
 % Medida de probabilidad. OK
 
 % Probabilidad Condicional.
 
-% Independencia de variables aleatorias.
+% Independencia de variables aleatorias. OK
 
 % Inegración respecto a medida de probabilidad. OK
 
-% Variables aleatorias Gaussianas.
+% Distribuciones en R^n. Variables aleatorias Gaussianas.
 
 % Convergencia de esta mondá, Ley de los grandes números.
 
@@ -523,10 +616,13 @@ Ahora, podemos generalizar el concepto de independencia a $\sigma$-álgebras, e 
 
 % ¿Función característica, generadora de momentos, etc...?
 
+% PROCESOS ESTOCÁSTICOS
+
+
 % INTEGRACIÓN.
--
+
 % Integración usual RS, Integral de Young. Conceptos de p-variación y $\alpha$-Hölder.
 
 % Ecuaciones Diferenciales Ordinarias. EDO Controladas. ¿EDP?
 
-% Teorema de Picard, Teorema de Peano.-
+% Teorema de Picard, Teorema de Peano.
