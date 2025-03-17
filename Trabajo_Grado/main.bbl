@@ -7,6 +7,9 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
+\bibitem{Measure_Theory_DC}
+Donald~L. Cohn, \emph{Measure theory}, Springer-Brikhäuser, 2013.
+
 \bibitem{Probability_Essentials}
 Protter Philip and Jean Jacob, \emph{Probability essentials}, Springer-Verlag,
   2004.

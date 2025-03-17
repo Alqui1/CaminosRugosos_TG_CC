@@ -24,7 +24,7 @@ En este capítulo, nos dedicaremos a repasar conceptos de teoría de la probabil
 Sea $\Omega$ un conjunto abstracto. Denotamos por $2^{\Omega}$ el conjunto de partes de $\Omega$.
 
 \begin{boxDef}
-Definimos a $\mathcal{F}$ una $\mathbf{\sigma}$\textbf{-álgebra} es subconjunto de $2^{\Omega}$ que cumple las siguientes propiedades:
+Definimos a $\mathcal{F}$ una $\mathbf{\sigma}$\textbf{-álgebra} de $\Omega$, como un subconjunto de $2^{\Omega}$ que cumple las siguientes propiedades:
 
 	\begin{itemize}
 		\item $\emptyset$, $\Omega$ $\in \mathcal{F}$
@@ -50,7 +50,7 @@ Los elementos en $\mathcal{A}$ se llamarán \textit{eventos}.
 
 	\item Sea $A \subset \Omega$, entonces $\sigma(A) = \left\{ \emptyset, A, A^c, \Omega \right\}$ también es una $\sigma$-álgebra, llamada la \textbf{menor} $\mathbb{\sigma}$-\textbf{álgebra} que contiene a $A$, que se genera mediante la intersección de todas las $\sigma$-álgebras que contienen a $A$. 
 
-	\item Para $\Omega = \mathbb{R}$, una $\sigma$-álgebra para este conjunto es la $\sigma$-\textbf{álgebra de Borel}, que se puede generar con intervalos de la forma $(-\infty, a]$ para todo $a \in \mathbb{Q}$. También, es la generada por todos los conjuntos abiertos (O cerrados, o semiabiertos...). Para más información consulte CITAR DONALD COHN Y PROTTER.  
+	\item Para $\Omega = \mathbb{R}$, una $\sigma$-álgebra para este conjunto es la $\sigma$-\textbf{álgebra de Borel}, que se puede generar con intervalos de la forma $(-\infty, a]$ para todo $a \in \mathbb{Q}$. También, es la generada por todos los conjuntos abiertos (O cerrados, o semiabiertos...). Para más información consulte \cite{Measure_Theory_DC} Y \cite{Probability_Essentials}
 
 \end{itemize}
 
@@ -103,6 +103,13 @@ Vamos a revisar algunas propiedades de las funciones de probabilidad, sin demost
 	Más aún, si $P$ es una medida de probabilidad, y dado $\left\{ A_n \right\}$ sucesión de eventos que converge a $A$. Entonces $A \in \mathcal{A}$ y $\lim_{n \rightarrow \infty} P(A_n) = P(A)$ 
 
 \end{theorem}
+
+
+Finalmente, damos el concepto de sub-$\sigma$-álgebra.
+
+\begin{boxDef}
+	Sea $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad. Decimos que $\mathcal{T}$ es una \textbf{sub-}$\sigma$\textbf{-álgebra} si $\mathcal{T} \subseteq \mathcal{A}$ y $\mathcal{T}$ es $\sigma$-álgebra de $\Omega$
+\end{boxDef}
 
 
 % ¿Colocar teorema de la clase monótona?
@@ -395,9 +402,108 @@ Finalmente, definimos varianza y mostramos una desigualdad conocida y bastante �
 	\[ P( \lvert X\rvert \geq a ) \leq \frac{ \mathbb{E}[X^2] }{ \sigma^2 } \]
 \end{theorem}
 
+
+% ========================================
+%================ SECCIÓN 1?? Probabilidad Condicional.
+% ========================================
+
+
+% \subsection{subsection name} 
+
+
+
+
+% ========================================
+%================ SECCIÓN 1.4 Variables aleatorias independientes
+% ========================================
+
 \subsection{Variables aleatorias independientes.}	
 
+Al tener dos variables aleatorias independientes, nos dará varias propiedades, por ejemplo, al tener la esperanza del producto de esas dos variables. De igual forma, vamos a definir $\sigma$-álgebras en $\mathbb{R}^n$.
 
+\begin{boxDef}
+	Dado $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad. Dados eventos $A, B \in \mathcal{A}$, definimos la \textbf{probabilidad condicional} de $B$ dado $A$, como:
+
+	\[
+		P(B \vert A) = \frac{P(A \cap B)}{P(A)}
+	\]
+
+	siempre que $P(B) > 0$.
+
+\end{boxDef}
+
+De manera intuitiva, podemos ver que si $A$ y $B$ son dos eventos, tal que la ocurrencia de uno, no afecta a otro, o dicho de otra forma, son \textit{independientes}, entonces, sería razonable pensar que:
+
+\[
+	P(B \vert A) = P(B)
+\]
+
+porque el hecho que el evento $A$ ocurra, no afectará en nada a $B$. Formalizando, damos la siguiente definición:
+
+\begin{boxDef}
+
+	Dado $(\Omega, \mathcal{A}, P)$ y $\left\{ A_i \right\}_{i \in I}$ una colección (a lo más contable) de conjuntos medibles, que pertenecen a $\mathcal{A}$ (También llamados \textit{eventos}). Se dice que la colección es \textbf{colección independiente}, o \textbf{mutuamente independiente}, si dado $J \subset I$ conjunto finito de índices, se cumple que:
+
+	\[
+		P \left( \cap_{j \in J} A_j \right) = \prod_{j \in J} P(A_j)
+	\].
+
+	La colección es \textbf{independiente de a parejas}, si para todo $i, j \in I$, se tiene que $P(A_j \cap A_i) = P(A_j) P(A_i)$. 
+	
+\end{boxDef}
+
+Tenga en cuenta, que si la colección $\left\{ A_i \right\}_{i \in I}$ es mutuamente independiente, entonces es independiente de a parejas. Sin embargo, la recíproca no se tiene.\\
+
+Damos algunas propiedades y teoremas importantes acerca de eventos independientes.
+
+\begin{theorem}
+	Si $A, B$ son independientes, entonces:
+
+	\begin{itemize}
+		\item $A$, $B^c$
+		\item $A^c$, $B$
+		\item $A^c$, $B^c$	
+	\end{itemize}
+
+	son también independientes.
+
+\end{theorem}
+
+
+\begin{theorem}[Ley de la probabilidad total.]
+	Dado $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad. Sea $\left\{ E_n \right\}_{n \geq 1}$ una partición a lo más contable de $\Omega$. Luego, para un evento $A \in \mathcal{A}$, se cumple:
+
+	\[
+		P(A) = \sum_{n} P(A \vert E_n) P(E_n)
+	\]
+
+\end{theorem}
+
+\begin{theorem}[Teorema de Bayes.]
+	Dado $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad. Sea $\left\{ E_n \right\}_{n \geq 1}$ una partición a lo más contable de $\Omega$, y sea $P(A) > 0$. Entonces:
+
+	\[
+		P(E_n \vert A) = \frac{ P(A \vert E_n) P(E_n) }{\sum_m P(A \vert E_m)P(E_m)}
+	\]
+
+\end{theorem}
+
+Ahora, podemos generalizar el concepto de independencia a $\sigma$-álgebras, e inclusive, a variables aleatorias.
+
+\begin{boxDef}
+	Sea $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad.
+	\begin{itemize}
+		\item Dadas sub-$\sigma$-álgebras $\left\{ A_i \right\}_{i \in I}$ de $\mathcal{A}$. Decimos que esta colección es \textbf{independiente} si para todo $J \subseteq I$ con $J$ finito, y todo $A_i \in \mathcal{A}_i$, se cumple que:
+
+		\[
+			P\left( \cap_{j \in J} A_j \right) = \prod_{j \in J} P(A_j)	
+		\]
+		En este caso, hablamos de \textbf{independencia de } $\sigma$ \textbf{-álgebras}. 
+
+		\item Sea $\left\{ X_i \right\}_{i \in I}$ un conjunto de variables aleatorias en el espacio de probabilidad dado, tal que la imagen de $X_i$ es $(E_i, \mathcal{E_i})$. Decimos que las variables aleatorias son \textbf{independientes} si $\sigma (X_i) = X_i^{-1}(\mathcal{E_i})$ (Esto es, las $\sigma$-álgebras generadas por $X_i$) son independientes.
+	\end{itemize}
+
+\end{boxDef}
 
 % Variables aleatorias. OK
 

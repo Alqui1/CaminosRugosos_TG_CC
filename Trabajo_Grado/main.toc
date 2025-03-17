@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {1.1.2}Variables aleatorias.}{9}{}%
 \contentsline {subsection}{\numberline {1.1.3}Integración respecto a medida de probabilidad. Valor esperado.}{11}{}%
 \contentsline {subsection}{\numberline {1.1.4}Variables aleatorias independientes.}{16}{}%
-\contentsline {chapter}{\numberline {2}Movimiento Browniano}{17}{}%
-\contentsline {section}{\numberline {2.1}Conceptos de Procesos Estocásticos}{17}{}%
-\contentsline {section}{\numberline {2.2}Construcción del Movimiento Browniano}{17}{}%
-\contentsline {chapter}{\numberline {3}La Integral de Itô}{19}{}%
+\contentsline {chapter}{\numberline {2}Movimiento Browniano}{19}{}%
+\contentsline {section}{\numberline {2.1}Conceptos de Procesos Estocásticos}{19}{}%
+\contentsline {section}{\numberline {2.2}Construcción del Movimiento Browniano}{19}{}%
+\contentsline {chapter}{\numberline {3}La Integral de Itô}{21}{}%
