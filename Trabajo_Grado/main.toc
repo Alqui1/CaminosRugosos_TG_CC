@@ -11,5 +11,5 @@
 \contentsline {section}{\numberline {1.2}Preliminares de Integración y Ecuaciones Diferenciales.}{24}{}%
 \contentsline {chapter}{\numberline {2}Procesos Estocásticos y el Movimiento Browniano}{25}{}%
 \contentsline {section}{\numberline {2.1}Conceptos de Procesos Estocásticos}{25}{}%
-\contentsline {section}{\numberline {2.2}Construcción del Movimiento Browniano}{27}{}%
+\contentsline {section}{\numberline {2.2}Construcción del Movimiento Browniano}{28}{}%
 \contentsline {chapter}{\numberline {3}La Integral de Itô}{29}{}%

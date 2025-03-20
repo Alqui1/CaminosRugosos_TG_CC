@@ -80,4 +80,14 @@ Note que la segunda definición es mucho más fuerte que la primera definición,
 	Dado $\left\{ X_t \right\}_{t \in T}$ un proceso estocástico, se le llamará \textbf{proceso} $\mathcal{F_t}$\textbf{-adaptado} si para todo $t \in T$, $X_t$ es medible respecto a $\mathcal{F}_t$, para todo t.
 \end{boxDef}
 
-Si se toma como $\mathcal{F}_{t}^{X} = \sigma (\left\{ X_s \right\}_{s < t})$, la \textit{filtración natural de} $\left\{ X_t \right\}$, esta es la menor filtración tal que $\left\{X_t\right\}$ es un proceso adaptado a esta filtración.
+Si se toma como $\mathcal{F}_{t}^{X} = \sigma (\left\{ X_s \right\}_{s < t})$, esta es la menor filtración tal que $\left\{X_t\right\}$ es un proceso adaptado a esta filtración, conocida como \textbf{filtración natural de }$\left\{X_t\right\}_{t \in T}$.
+
+\begin{boxDef}
+	Una variable aleatoria $\tau$ en $(\Omega, \mathcal{F}, P)$ se le conoce como \textbf{tiempo de parada} respecto a la filtración $\left\{ \mathcal{F}_t\right\}_{t\in T}$ si:
+
+	\begin{itemize}
+		 \item $P[\tau < \infty] = 1$
+		 \item $\left\{ \tau \leq t \right\}  = \left\{ w \in \Omega \vert \tau(w) \leq t \right\}\in \mathcal{F}_t$
+	\end{itemize}	
+
+\end{boxDef}
