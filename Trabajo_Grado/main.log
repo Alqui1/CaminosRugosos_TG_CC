@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  17 MAR 2025 09:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  19 MAR 2025 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -763,44 +763,72 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [24]
 Cap\'{\i }tulo 2.
-(./C2/TG_C2_1.tex) (./C2/TG_C2_2.tex
+(./C2/TG_C2_1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+[25
+
+]
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+
+Overfull \hbox (55.58707pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 26 \OT1/cmr/m/sl/12 CAP[]ITULO 2.  PROCESOS ESTOC[]ASTICOS Y EL
+ MOVIMIENTO BROWNIANO
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+) (./C2/TG_C2_2.tex
 Overfull \hbox (1.87775pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/17.28 Construcci^^Son del Mo-vi-mien-to Brow-niano 
  []
 
-)
-Underfull \vbox (badness 4429) has occurred while \output is active []
-
- [25
-
-])
-(./C3/TG_C3.tex
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+[27])) (./C3/TG_C3.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [26]
+
+Overfull \hbox (55.58707pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 28 \OT1/cmr/m/sl/12 CAP[]ITULO 2.  PROCESOS ESTOC[]ASTICOS Y EL
+ MOVIMIENTO BROWNIANO
+ []
+
+[28]
 Cap\'{\i }tulo 3.
-) (./appendix/appendix_gen.tex [27
+) (./appendix/appendix_gen.tex [29
 
 ]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [28
-
-] (./appendix/hilbert_spaces.tex))
-(./main.bbl [29]
-LaTeX Info: Redefining \. on input line 8.
-LaTeX Info: Redefining \% on input line 8.
  [30
 
-]) [31] (./main.aux
+] (./appendix/hilbert_spaces.tex))
+(./main.bbl [31]
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+ [32
+
+]) [33] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19104 strings out of 480185
- 407492 string characters out of 5894214
- 709693 words of memory out of 5000000
- 36721 multiletter control sequences out of 15000+600000
+ 19117 strings out of 480185
+ 407670 string characters out of 5894214
+ 710693 words of memory out of 5000000
+ 36734 multiletter control sequences out of 15000+600000
  481267 words of font info for 72 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  99i,13n,104p,953b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -819,10 +847,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (31 pages, 246775 bytes).
+Output written on main.pdf (33 pages, 254176 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 194 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

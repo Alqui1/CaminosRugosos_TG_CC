@@ -1,1 +1,83 @@
 \section{Conceptos de Procesos Estocásticos}
+
+En esta sección, se introducirán los conceptos básicos de procesos estocásticos en general, tanto de tiempo discreto como de tiempo continuo.
+
+\begin{boxDef}
+	Un \textbf{proceso estocástico} corresponde a la colección $\left\{ X_t : \Omega \rightarrow S \right\}_{t \in T}$ de variables aleatorias definidas en un mismo espacio de probabilidad $(\Omega, \mathcal{F}, P)$. \\
+
+	A $S$ se le conoce como \textbf{espacio de estados} y $T$ se le conoce como el tiempo.	
+\end{boxDef}
+
+Si $T$ es un conjunto finito o contable, entonces el proceso corresponde a un \textit{proceso a tiempo discreto}. De otro modo, se dice que se tiene un \textit{proceso a tiempo continuo}. \\
+
+\textbf{Ejemplo: } El \textit{movimiento Browniano}, posee un espacio de estados continuo, $S = \mathbb{R}^n$, y también tiempo continuo, $T = [0, \infty)$. Otro ejemplo es el \textit{paso aleatorio simple}, tal que su espacio de estados es discreto, $S = \left\{ s_1, s_2, \cdots \right\}$ (Se puede interpretar los vértices en un grafo que se pueden visitar), y además, también tiene tiempos discretos, por ejemplo, $T = \left\{ t_1, t_2, \cdots \right\}$.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+Mayoritariamente, en procesos estocásticos, uno se interesa más en las distribuciones conjuntas de las variables aleatorias. Esto motiva la siguiente definición:
+
+\begin{boxDef}
+	Las distribuciones conjuntas de $(X_{t_1}, X_{t_2}, \cdots)$ son llamadas \textbf{distribuciones finito-dimensionales} del proceso $\left\{ X_t \right\}_{t \in T}$.
+\end{boxDef}
+
+% qué escribo acá...
+
+\begin{boxDef}
+	Dado $\left\{ X_t \right\}_{t \in T}$ un proceso con espacio de estados $S$ definido en $(\Omega, \mathcal{F}, P)$. Para cada $w \in \Omega$, se define como la \textbf{trayectoria}, a la función:
+
+	\begin{align*}
+		X(w): T &\rightarrow S \\
+		t &\mapsto X_t (w)
+	\end{align*}
+
+
+
+\end{boxDef}
+
+Note que, hay una equivalencia, entre hablar una probabilidad $\mu_X$ sobre el conjunto de las trayectorias $X: T \rightarrow S$, y una distribución conjunta de todos los tiempos $t \in T$ para el proceso $\left\{ X_t \right\}_{t \in T}$.
+
+\begin{boxDef}
+	Un proceso estocástico $\left\{ X_t \right\}_{t \in T}$ en $(\Omega, \mathcal{F})$ se llama \textbf{conjuntamente medible} si:
+
+	\begin{align*}
+		X: T \times \Omega &\rightarrow \mathbb{R} \\
+		(t, w) &\mapsto X_t (w)
+	\end{align*}
+
+	es medible respecto a la $\sigma$-álgebra producto $\mathcal{B}(T) \otimes \mathcal{F}.$
+
+\end{boxDef}
+
+\begin{boxDef}
+	Dados $\left\{ X_t \right\}_{t \in T}$ y $\left\{ Y_t \right\}_{t \in T}$ en un mismo espacio de probabilidad $(\Omega, \mathcal{F}, P)$.
+
+	\begin{itemize}
+		\item Se dice que $\left\{ Y_t \right\}$ es \textbf{versión} de $\left\{ X_t \right\}$ si:
+
+		\[
+			P( X_t = Y_t ) = P( \left\{ w \in \Omega \vert X_t (w) = Y_t(w) \right\}) = 1
+		\]
+		para todo $t \in T$, esto es para todo tiempo fijo.
+
+		\item Se dice que estos dos procesos son \textbf{indistinguibles} si:
+
+		\begin{align*}
+			P[X_t = Y_t \text{ para todo } t \in T] &= \\ 
+			P[\left\{ w \in \Omega \vert X_t (w) = Y_t (w) \text{ para todo } t \in T \right\}] =& 1
+		\end{align*}
+	\end{itemize}
+
+
+\end{boxDef}
+
+Note que la segunda definición es mucho más fuerte que la primera definición, porque dos procesos \textit{indistinguibles} tendrás trayectorias iguales (Salvo en un conjunto de puntos de medida cero, como un conjunto de puntos discreto).
+
+\begin{boxDef}
+	Una familia $\left\{ \mathcal{F}_t \right\}$ de sub-$\sigma$-álgebras de $\mathcal{F}$ se dice \textbf{filtración} en $(\Omega, \mathcal{F})$ si, para $t_1 \leq t_2$, $\mathcal{F}_{t_1} \subset \mathcal{F}_{t_2}$, esto es, una familia creciente de sub-$\sigma$-álgebras.\\
+
+	Dado $\left\{ X_t \right\}_{t \in T}$ un proceso estocástico, se le llamará \textbf{proceso} $\mathcal{F_t}$\textbf{-adaptado} si para todo $t \in T$, $X_t$ es medible respecto a $\mathcal{F}_t$, para todo t.
+\end{boxDef}
+
+Si se toma como $\mathcal{F}_{t}^{X} = \sigma (\left\{ X_s \right\}_{s < t})$, la \textit{filtración natural de} $\left\{ X_t \right\}$, esta es la menor filtración tal que $\left\{X_t\right\}$ es un proceso adaptado a esta filtración.
