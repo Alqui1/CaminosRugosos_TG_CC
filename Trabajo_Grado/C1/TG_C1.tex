@@ -816,7 +816,12 @@ Ahora, se puede definir la esperanza condicional respecto a una $\sigma$-álgebr
 	\[
 		\mathbb{E}[Y Z] = \mathbb{E}[ \mathbb{E}[Y \vert \mathcal{G}] Z ]
 	\] 
-	para todo $Z \in \mathcal{L}^2 (\Omega, \mathcal{G}, P)$.
+	para todo $Z \in \mathcal{L}^2 (\Omega, \mathcal{G}, P)$. También podemos escribir como:
+
+	\[
+		\mathbb{E}[Y \vert \mathcal{G}] = \int_{\Lambda} Y dP
+	\]
+	para todo $\Lambda in \mathcal{G}$.
 \end{boxDef}
 
 Note que, $\mathbb{E}[Y \vert \mathcal{G}]$ se puede ver como la proyección de $Y$ sobre el subespacio de Hilbert $(\Omega, \mathcal{G}, P)$. \\
@@ -837,6 +842,120 @@ Al igual que el operador $\mathbb{E}$ cumple varias propiedades, también $\math
 \end{theorem}
 
 
+\begin{theorem}
+	Sea $Y \in \mathcal{L}^{+}(\Omega, \mathcal{A}, P)$ (El espacio de variables aleatorias no negativas), y sea $\mathcal{G}$ una sub-$\sigma$-álgebra de $\mathcal{A}$. Entonces existe un único elemento $\mathbb{E}[Y \vert \mathcal{G}]$ de $\mathcal{L}^{+}(\Omega, \mathcal{G}, P)$ tal que:
+
+	\[
+		\mathbb{E}[Y X] = \mathbb{E}[ \mathbb{E}[Y \vert \mathcal{G}] X ]
+	\]
+ 	
+ 	para todo $X \in \mathcal{L}^{+}(\Omega, \mathcal{G}, P)$. Más aún, si $0 \leq Y \leq Y'$, luego:
+
+ 	\[
+ 		\mathbb{E}[Y \vert \mathcal{G}] \leq \mathbb{E}[Y' \vert \mathcal{G}],
+ 	\]
+ 	es decir, la esperanza condicional es monótona creciente.
+\end{theorem}
+
+\begin{theorem}
+	Sea $Y \in \mathcal{L}^{+}(\Omega, \mathcal{A}, P)$ y $\mathcal{G}$ una sub-$\sigma$-álgebra de $\mathcal{A}$. Entonces, existe un único elemento $\mathbb{E}[Y \vert \mathcal{G}] \in \mathcal{L}^1 (\Omega, \mathcal{G}, P)$ tal que:
+
+	\[
+		\mathbb{E}[Y X] = \mathbb{E}[ \mathbb{E}[Y \in \mathcal{G}] X ]
+	\]
+	para toda $X$ que es acotada y $\mathcal{G}$-medible. Además, se cumple:
+
+	\begin{itemize}
+		\item Si $Y \geq 0$, luego $\mathbb{E}[Y \vert \mathcal{G}] \geq 0$.
+		\item $Y \rightarrow \mathbb{E}[Y \vert \mathcal{G}]$ es un mapa lineal. 
+	\end{itemize}
+
+\end{theorem}
+
+Note que, se han visto algunas definiciones equivalentes a la esperanza condicional. \\
+
+Ahora, se puede caracterizar la esperanza condicional para diversos casos, como cuando una variable aleatoria es medible respecto a una sub-$\sigma$-álgebra.
+
+\begin{theorem}
+	Sea $Y$ una variable aleatoria positiva o integrable en $(\Omega, \mathcal{A},P)$, y sea $\mathcal{G}$ una sub-$\sigma$-álgebra. Entonces, $\mathbb{E}[Y \vert \mathcal{G}] = Y$ si y sólo si $Y$ es $\mathcal{G}$-medible.
+\end{theorem}
+
+Al tomar dos variables aleatorias, y colocar condiciones, se pueden obtener resultados interesantes.
+
+\begin{theorem}
+	Sea $Y \in \mathcal{L}^1 (\Omega, \mathcal{A}, P)$, y sea $X, Y$ independientes, luego:
+
+	\[
+		\mathbb{E}[Y \vert X] = \mathbb{E}[Y]
+	\]
+\end{theorem}
+
+
+\begin{theorem}
+	Sea $X, Y$ variables aleatorias en $(\Omega, \mathcal{A}, P)$, sea $\mathcal{G}$ una sub-$\sigma$-álgebra de $\mathcal{A}$, y suponga que $X$ es $\mathcal{G}$-medible. Si $X, Y$ y $XY$ son integrables, o si $X,Y$ son positivos, tendremos que:
+	$\mathbb{E}[XY \vert \mathcal{G}] = X \mathbb{E}[Y \vert \mathcal{G}]$
+\end{theorem}
+
+En la esperanza condicional, también se tendrán los teoremas importantes de convergencia, que se tenían para la esperanza usual.
+
+\begin{theorem}[Teoremas de convergencia para la esperanza condicional.]
+	Sea $\left\{ Y_n \right\}_{n \geq 1}$ una sucesión de variables aleatorias en $(\Omega, \mathcal{A}, P)$, y sea $\mathcal{G}$ una sub-$\sigma$-álgebra de $\mathcal{A}$.
+
+	\begin{itemize}
+		\item \textbf{(Convergencia monótona).} Si $Y_n \geq 0$, $n \geq 1$ y $Y_n \rightarrow Y$ de forma creciente, luego, \textit{casi siempre} se tiene:
+
+		\[
+			\lim_{n \rightarrow \infty} \mathbb{E}[Y_n \vert \mathcal{G}] = \mathbb{E}[Y \vert \mathcal{G}]
+		\]
+
+		\item \textbf{(Lema de Fatou).} Si $Y_n \geq 0$, $n \geq 1$, entonces:
+
+		\[
+			\mathbb{E}[ \liminf_{n \rightarrow \infty} Y_n \vert \mathcal{G} ] \leq \liminf_{n \rightarrow \infty} \mathbb{E}[Y_n \vert \mathcal{G}]
+		\]
+
+		\item \textbf{(Teorema de la convergencia dominada de Lebesgue.)} Si $\lim_{n \rightarrow \infty} Y_n = Y$ \textit{casi siempre}, y $\lvert Y_n \rvert \geq Z$, con $n \geq 1$ para algún $Z \in \mathcal{L}^1 (\Omega, \mathcal{A}, P)$, entonces, \textit{casi siempre}:
+
+		\[
+			\lim_{n \rightarrow \infty} \mathbb{E}[Y_n \vert \mathcal{G}] = \mathbb{E}[Y \vert \mathcal{G}]
+		\]
+
+
+	\end{itemize}
+
+\end{theorem}
+
+Se finaliza la sección, con algunas desigualdades importantes que involucran a la esperanza condicional.
+
+\begin{theorem}[Desigualdad de Jensen.]
+	Dada $\phi: \mathbb{R} \rightarrow \mathbb{R}$ una función convexa, y sea $X$, $\phi(X)$ variables aleatorias. Entonces, para toda sub-$\sigma$-álgebra, se tiene que:
+
+	\[
+		\phi \left( \mathbb{E}[X \vert \mathcal{G}] \right) \leq \mathbb{E}[\phi(X) \vert \mathcal{G} ]
+	\]
+\end{theorem}
+
+Como consecuencia de la desigualdad de Jensen, se tiene:
+
+\begin{theorem}[Desigualdad de Hölder.]
+	Dados $X, Y$ variables aleatorias, tal que $\mathbb{E}[ \lvert X \rvert^p ] \leq \infty$, $\mathbb{E}[ \lvert Y \rvert^q ] \leq \infty$ con $p > 1$, y $\frac{1}{p} + \frac{1}{q} = 1$. Luego:
+
+	\[
+		\mathbb{E}[ \lvert XY \rvert ] \leq \mathbb{E}[ \lvert X \rvert^p ]^{\frac{1}{p}} \mathbb{E}[ \lvert Y \rvert^q ]^{\frac{1}{q}}
+	\]
+\end{theorem}
+
+Y de igual forma, se tiene una consecuencia de la desigualdad de Hölder:
+
+\begin{theorem}[Desigualdad de Minkowski.]
+	Dada $X, Y$ variables aleatorias, $1 \leq p < \infty$ con $\mathbb{E}[ \lvert X \rvert^p ] < \infty$ y $\mathbb{E}[ \lvert Y \rvert^p ] < \infty$. Luego:
+
+	\[
+		\mathbb{E}[ \lvert X + Y \rvert^p ]^{ \frac{1}{p} } \leq \mathbb{E}[X^p]^{\frac{1}{p}} + \mathbb{E}[Y^p]^{\frac{1}{p}}
+	\]
+\end{theorem}
+
+
 % Variables aleatorias. OK
 
 % Medida de probabilidad. OK
@@ -851,9 +970,11 @@ Al igual que el operador $\mathbb{E}$ cumple varias propiedades, también $\math
 
 % Convergencia de esta mondá, Ley de los grandes números.
 
-% Esperanza Condicional, L2 y Espacios de Hilbert.
+% Esperanza Condicional, OK.
 
-% ¿Función característica, generadora de momentos, etc...?
+% -> Apéndice L2 y Espacios de Hilbert.
+
+% Sí, Función característica.
 
 
 
@@ -909,6 +1030,8 @@ Al igual que el operador $\mathbb{E}$ cumple varias propiedades, también $\math
 % ========================================
 
 \section{Preliminares de Integración y Ecuaciones Diferenciales.}
+
+
 
 
 % INTEGRACIÓN.
