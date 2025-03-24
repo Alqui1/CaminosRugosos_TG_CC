@@ -1031,7 +1031,170 @@ Y de igual forma, se tiene una consecuencia de la desigualdad de Hölder:
 
 \section{Preliminares de Integración y Ecuaciones Diferenciales.}
 
+En esta sección, se hablará un poco acerca de temas de Integración, como la integral de Riemann-Stieltjes, la integración de Young y algunos teoremas importantes para poder estudiar caminos rugosos.
 
+De igual forma, se verá una breve introducción a las ecuaciones diferenciales ordinarias, enunciando algunos teoremas de existencia y unicidad. Este será útil, al demostrar el teorema de existencia y unicidad en ecuaciones diferenciales estocásticas.
+
+
+
+
+
+% ========================================
+%================ SECCIÓN 2.1 Integración
+% ========================================
+
+
+\subsection{Integración.}
+
+
+
+
+
+
+
+
+
+
+% ========================================
+%================ SECCIÓN 2.2 Ecuaciones Diferenciales Ordinarias.
+% ========================================
+
+
+\subsection{Ecuaciones Diferenciales Ordinarias Controladas.}
+
+De forma preliminar, las ecuaciones diferenciales se han usado a lo largo de los años para modelar distintos fenómenos naturales, económicos, etc... y es natural preguntarse si es posible solucionar cierta ecuación diferencial, obtener una solución y determinar un modelo matemático a cierto fenómeno. En este apartado, se formalizará estos conceptos, y se mostrarán los teoremas de existencia y unicidad, con su demostración. \\
+
+Sea $\Omega \subset \mathbb{R} \times \mathbb{R}^n$. Definimos una \textit{norma} en $\mathbb{R} \times \mathbb{R}^n$ como:
+
+\[
+	\lvert (t,x) \rvert = \max\left\{ \lvert t \rvert, \lVert x \rVert \right\}.
+\] \\
+
+\begin{boxDef}
+	Sea $f: \Omega \rightarrow \mathbb{R}^n$ una función continua, e $I$ un intervalo conexo de $\mathbb{R}$ no reducido a un punto. Entonces, se dice que una función diferenciale $\phi: I \rightarrow \mathbb{R}^n$ es una \textbf{solución de la ecuaciín diferencial}
+
+	\[
+		\frac{dx}{dt} = f(t, x)
+	\]
+
+	en el intervalo $I$ si se cumplen las condiciones:
+
+	\begin{itemize}
+		\item $\left\{ (t, \phi(t) ) \vert t \in I  \right\} \subset \Omega$.
+		\item $\frac{d\phi}{dt} (t) = f(t, \phi(t))$ para todo $t \in T$. 
+	\end{itemize}
+
+	La ecuación diferencial mostrada, es una \textbf{ecuación diferencial de primer orden.}
+
+\end{boxDef}
+
+Ahora, consideramos el \textit{problema de Cauchy}, o específicamente, \textit{problema de valor inicial}:
+
+\[
+	\frac{dx}{dt} = f(t, x) \text{, sujeto a } x(t_0) = x_0
+\]
+
+Bajo algunas condiciones sutiles, esta ecuación diferencial tiene solución y es única. Primero, se muestran algunas definiciones y un lema importante, antes de pasar a trabajar la existencia y unicidad de la solución.
+
+\begin{boxDef}
+	Una función $f: \Omega \subset \mathbb{R} \times \mathbb{R}^n \rightarrow \mathbb{R}^n$ es una función \textbf{Lipschitz-continua} en $\Omega$ (En este caso, respecto a la segunda variable), si existe $K \in \mathbb{R}$ constante tal que:
+
+	\[
+		\lvert f(t,x) - f(t,y) \rvert \leq K \lvert x - y \rvert
+	\]
+	para toda $(t,x), (t,y) \in \Omega$.
+
+	Si para una vecindad de $(t_0, x_0) \in \Omega$, $V_{\mathbb{R}}(t_0, x_0; \epsilon)$, la función es Lipschitz-continua, entonces se dice \textbf{localmente Lipschitz-continua.}
+
+\end{boxDef}
+
+Note que, si $f$ tiene derivada parcial respecto a la segunda variable, $D_2 f$, que está acotada, $\lVert D_2 f \rVert \leq K$ y $\Omega$ es un conjunto convexo, entonces, por el teorema del valor medio, tendremos:
+
+\[
+	\lvert f(t,x) - f(t, y) \rvert \leq \sup_{0 \leq \theta \leq 1} \lVert D_2 f(t, \theta x + (1 - \theta)y) \rVert \lvert x - y \rvert \leq K \lvert x - y \rvert
+\] 
+
+\begin{lema}[Lema de la contracción (Punto fijo de Banach).]
+	Dado $(X, d)$ un espacio métrico completo, $F: X \rightarrow X$ una contracción, esto es, $d(F(x), F(y)) \leq K d(x, y)$ para $0 <  K < 1$. Entonces, $F$ tiene un único punto fijo $p$. Más aún, $F^n (x) = F(F^{n-1}(x)) \rightarrow p$ cuando $n \rightarrow \infty$ para todo $x \in X$. En este caso, $p$ se conoce como \textbf{atractor} de F.
+\end{lema}
+
+\begin{coro}
+	Dado $(X, d)$ un espacio métrico completo. Si $F: X \rightarrow X$ es continua, y para algún $m$, $F^m$ es contracción, luego existe un único punto fijo para $F$. Más aún, ese punto fijo $p$ es atractor de $F$.
+\end{coro}
+
+Ya con estos resultados, comenzamos a trabajar los teoremas de existencia y unicidad de soluciones en ecuaciones diferenciales ordinarias.
+
+\begin{theorem}[Teorema de Picard.]
+	Sea $f$ una función continua, y de Lipschitz en $\Omega = I_a \times B_b$, donde $I_a = \left\{ t \vert \lvert t - t_0 \rvert \leq a \right\}$ y $B_b = \left\{ x \vert \lVert x - x_0 \rVert \leq b \right\}$. Sea $\lvert f \rvert \leq M$, esto es, la función está acotada. Entonces, el problema:
+
+	\[
+		\frac{dx}{dt} = f(t,x),\ x(t_0) = x_0
+	\]
+	tiene solución única en $I_{\alpha}$ con $\alpha = \min \left\{ a, b/M \right\}$
+\end{theorem}
+
+\textbf{Demostración.} Sea $X = \mathcal{C}(I_a, B_b)$ el espacio métrico completo de funciones $\phi: I_a \rightarrow B_b$ continuas, equipado de la métrica uniforme;
+
+\[
+	d(\phi_1, \phi_2) = \sup_{t \in I_{\alpha}} \lvert \phi_1 (t) - \phi_2 (t) \rvert
+\]
+
+Para $\phi \in X$, sea $F(\phi): I_{\alpha} \rightarrow \mathbb{R}^n$ definida como:
+
+\[
+	F(\phi) (t) = x_0 + \int_{t_0}^{t} f(s, \phi(s)) ds
+\]
+
+con $t \in I_{\alpha}$. Podemos verificar lo siguiente:
+
+\begin{itemize}
+	\item $F(X) \subseteq X$.
+
+	Tomando $t \in I_{\alpha}$, tenemos:
+
+	\begin{align*}
+		\lvert F(\phi)(t) - x_0 \rvert &= \left\lvert \int_{t_0}^t f(s, \phi(s)) ds \right\rvert \quad  \text{, definición de } F \\
+		&\leq M \alpha \quad  \text{, } f \text{ está acotado y } \lvert t - t_0 \rvert\leq \alpha \\
+		&\leq b \quad \text{ porque } M\alpha = \min \left\{ M a, b \right\}
+	\end{align*}
+
+	y así, $F(\phi)(t) \in B_b$, y como $F(\phi)$ es continua, tenemos que $F(X) \subset X.$
+
+	\item Para $n$ suficientemente grande, $F^n (X)$ es contracción.
+
+	Tomando $\phi_1, \phi_2 \in X$, y $n \geq 0$. La idea es probar que:
+
+	\[
+		\left\lvert F^{(n)} (\phi_1)(t) - F^{(n)} (\phi_2)(t) \right\rvert \leq \frac{K^n (t-t_0)^n}{n!} d(\phi_1, \phi_2)
+	\]
+
+	con $t \in I_{\alpha}$. La prueba es por inducción sobre $n$. El caso $n = 0$ es trivial. Suponer que se tiene lo deseado para $n = k$, entonces, se prueba para $k + 1$;
+
+	\begin{align*}
+		\lvert F^{(k+1)} (\phi_1)(t) - F^{(k+1)}(\phi_2)(t) \rvert &= \lvert F( F^{(k)}(\phi_1) )(t) - F( F^{(k)}(\phi_2) )(t) \rvert \\
+		&\leq \left\lvert \int_{t_0}^t \lvert f(s, F^{(k)} (\phi_1)(s) ) - f(s, F^{(k)} (\phi_2)(s) )  \rvert \right\rvert \\
+		&\leq \left\lvert \int_{t_0}^t K \lvert F^{(k)} (\phi_1)(s) - F^{(k)} (\phi_2)(s) \rvert \right\rvert \\
+		&\leq K \left\lvert \int_{t_0}^t \frac{K^k (t_0 - s)^k}{k!} d(\phi_1, \phi_2) ds \right\rvert\\
+		&= \frac{K^{k+1} \lvert t_ - t_0 \rvert^{k+1} }{(k+1)!} d(\phi_1, \phi_2)
+	\end{align*}
+
+	donde este último paso se obtiene al realizar la integral. Entonces, ya queda probado que:
+
+	\[
+		d( F^{(n)} (\phi_1), F^{(n)} (\phi_2) ) \leq \frac{K^n \alpha^n}{n!} d(\phi_1, \phi_2)
+	\]
+
+	para $n$ suficientemente grande. Además, también para un $n$ grande, se tendrá que $\frac{K^n \alpha^n}{n!} \leq 1$, porque el término de este serie debe converger a $e^{k\alpha}$, si fuera mayor a $1$, la serie no converge.
+
+	Así, queda probado que $F^{n}$ es contracción de $X$.
+
+\end{itemize}
+
+Entonces, por el corolario consecuencia del lema de contracción, existe una función $\phi \in X$ tal que $F(\phi) = \phi$, y de esta forma, queda demostrado lo deseado.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
 
 
 % INTEGRACIÓN.
