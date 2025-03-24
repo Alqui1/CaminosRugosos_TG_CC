@@ -9,9 +9,9 @@
 \contentsline {subsection}{\numberline {1.1.6}Convergencia de variables aleatorias.}{21}{}%
 \contentsline {subsection}{\numberline {1.1.7}Esperanza Condicional.}{21}{}%
 \contentsline {section}{\numberline {1.2}Preliminares de Integración y Ecuaciones Diferenciales.}{26}{}%
-\contentsline {subsection}{\numberline {1.2.1}Integración.}{27}{}%
-\contentsline {subsection}{\numberline {1.2.2}Ecuaciones Diferenciales Ordinarias Controladas.}{27}{}%
-\contentsline {chapter}{\numberline {2}Procesos Estocásticos y el Movimiento Browniano}{31}{}%
-\contentsline {section}{\numberline {2.1}Conceptos de Procesos Estocásticos}{31}{}%
-\contentsline {section}{\numberline {2.2}Construcción del Movimiento Browniano}{34}{}%
-\contentsline {chapter}{\numberline {3}La Integral de Itô}{35}{}%
+\contentsline {subsection}{\numberline {1.2.1}Ecuaciones Diferenciales Ordinarias Controladas e Integración..}{27}{}%
+\contentsline {subsection}{\numberline {1.2.2}Teoremas de Existencia y Unicidad.}{29}{}%
+\contentsline {chapter}{\numberline {2}Procesos Estocásticos y el Movimiento Browniano}{35}{}%
+\contentsline {section}{\numberline {2.1}Conceptos de Procesos Estocásticos}{35}{}%
+\contentsline {section}{\numberline {2.2}Construcción del Movimiento Browniano}{38}{}%
+\contentsline {chapter}{\numberline {3}La Integral de Itô}{39}{}%

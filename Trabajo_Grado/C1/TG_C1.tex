@@ -1040,29 +1040,15 @@ De igual forma, se verá una breve introducción a las ecuaciones diferenciales 
 
 
 % ========================================
-%================ SECCIÓN 2.1 Integración
+%================ SECCIÓN 2.1 Ecuaciones Diferenciales Ordinarias e Integración.
 % ========================================
 
 
-\subsection{Integración.}
+\subsection{Ecuaciones Diferenciales Ordinarias Controladas e Integración..}
 
 
+En esta sección, se hablarán algunos aspectos breves acerca de las ecuaciones diferenciales controladas, y ciertos problemas que estas pueden poseer. También se hablará brevemente \textit{integral de Riemann-Stieltjes} (Para un tratamiento más extenso, consulte \cite{Mathematical_Analysis_Apostol}) y también sobre la \textit{integral de Young}, y finalmente, se observará que estas integrales en ciertas ocasiones no son suficientes al tener caminos poco regulares.
 
-
-
-
-
-
-
-
-% ========================================
-%================ SECCIÓN 2.2 Ecuaciones Diferenciales Ordinarias.
-% ========================================
-
-
-\subsection{Ecuaciones Diferenciales Ordinarias Controladas.}
-
-De forma preliminar, las ecuaciones diferenciales se han usado a lo largo de los años para modelar distintos fenómenos naturales, económicos, etc... y es natural preguntarse si es posible solucionar cierta ecuación diferencial, obtener una solución y determinar un modelo matemático a cierto fenómeno. En este apartado, se formalizará estos conceptos, y se mostrarán los teoremas de existencia y unicidad, con su demostración. \\
 
 Sea $\Omega \subset \mathbb{R} \times \mathbb{R}^n$. Definimos una \textit{norma} en $\mathbb{R} \times \mathbb{R}^n$ como:
 
@@ -1071,7 +1057,7 @@ Sea $\Omega \subset \mathbb{R} \times \mathbb{R}^n$. Definimos una \textit{norma
 \] \\
 
 \begin{boxDef}
-	Sea $f: \Omega \rightarrow \mathbb{R}^n$ una función continua, e $I$ un intervalo conexo de $\mathbb{R}$ no reducido a un punto. Entonces, se dice que una función diferenciale $\phi: I \rightarrow \mathbb{R}^n$ es una \textbf{solución de la ecuaciín diferencial}
+	Sea $f: \Omega \rightarrow \mathbb{R}^n$ una función continua, e $I$ un intervalo conexo de $\mathbb{R}$ no reducido a un punto. Entonces, se dice que una función diferenciale $\phi: I \rightarrow \mathbb{R}^n$ es una \textbf{solución de la ecuación diferencial}
 
 	\[
 		\frac{dx}{dt} = f(t, x)
@@ -1084,9 +1070,87 @@ Sea $\Omega \subset \mathbb{R} \times \mathbb{R}^n$. Definimos una \textit{norma
 		\item $\frac{d\phi}{dt} (t) = f(t, \phi(t))$ para todo $t \in T$. 
 	\end{itemize}
 
-	La ecuación diferencial mostrada, es una \textbf{ecuación diferencial de primer orden.}
+	La ecuación diferencial mostrada, es una \textbf{ecuación diferencial ordinaria de primer orden.}
 
 \end{boxDef}
+
+En general, se observa que las ecuaciones diferenciales ordinarias, son un tipo de \textbf{sistema controlado de ecuaciones diferenciales}:
+
+\[
+	dY_t = f(Y_t) dX_t
+\]
+
+donde $f$ se puede pensar como un campo vectorial, $Y: [0, T] \rightarrow \mathbb{R}^n$ es la solución y $X: [0, T] \rightarrow \mathbb{R}^d$ es una \textit{señal de entrada}. Si tenemos que $X_t$ es absolutamente continua, se tendrá una EDO. Pero, ¿Qué pasa si $X_t$ toma otra forma? De forma integral, la expresión de arriba se puede reescribir como:
+
+\[
+	Y_t = Y_0 + \int_0^t f(Y_s) dX_s
+\]
+
+y el problema es sobre cómo definir la integral $\int f dX_s$, por ejemplo, si $X_t$ es una función con baja regularidad, como un movimiento de ruido blanco, u otro proceso estocástico. Una solución a medias, bajo una topología sutil se podría aproximar por caminos suaves $X_n \rightarrow X$ y $Y_n \rightarrow Y$, como:
+
+\[
+	\int_0^t f(Y_s) dX_s = \lim_{n \rightarrow \infty} f(Y^n_s) dX^n_s
+\]
+
+Por ejemplo, al tener funciones continuas, se podría tomar la norma del supremo, que es la topología de la convergencia uniforme. Comenzando por el caso más simple, se puede definir la integral de Riemann-Stieljes:
+
+\begin{boxDef}
+	Sea $\pi = \left\{ 0 = t_0, t_1, \cdots, t_N  = T\right\}$ una partición de $[0,T]$. Sea $\pi_n  = \left\{ 0 = t_0^n, t_1^n, \cdots, t_N^n  = T\right\} $ una sucesión de particiones tal que $\lvert \pi_n \rvert \rightarrow 0$ para $n \rightarrow \infty$, con $u_i^n \in [t_i^n, t_{i+1}^n]$. Para $Y$ camino continuo, y $X$ camino de variación acotada, definimos la \textbf{integral de Riemann-Stieljes} como:
+
+	\[
+		\int_0^T Y_s dX_s = \lim_{n \rightarrow \infty} \sum_{i = 0}^{N_{n-1} } Y_{u_i^n} (X_{t_{i+1}^n} -  X_{t_i^n})
+	\]
+
+\end{boxDef}
+
+Gracias a las condiciones de los caminos $Y$ y $X$, la integral no dependerá del punto $u_i^n$ seleccionado en el intervalo de la partición, lo que es una gran ventaja. Sin embargo, este lujo se pierde al hacer los caminos menos regulares.
+
+Se puede debilitar la condición de continuidad de los caminos, por un concepto más débil.
+
+\begin{boxDef}
+	Para $\alpha \in (0, 1]$, un camino $X: [0, T] \rightarrow \mathbb{R}^d$ es $\alpha$\textbf{-Hölder continuo} si existe $C$ constante tal que:
+
+	\[
+		\lvert X_t - X_s \rvert \leq C \lvert t - s \rvert^{\alpha}
+	\]
+
+	para todo $t, s \in [0, T]$ con $s < t$.
+\end{boxDef}
+
+De esta forma, definimos la \textbf{integración de Young}.
+
+\begin{theorem}[Integración de Young.]
+	Sea $\alpha, \beta \in (0, 1]$ tal que:
+
+	\[
+		\alpha + \beta > 1
+	\]
+
+	Sea $X$ una función $\alpha$-Hölder continua, y $Y$ $\beta$-Hölder continua. Sea $\pi_n = \{ t_0^n, \cdots, t_N^n  \}$ sucesión de particiones con $\lvert \pi_n \rvert \rightarrow 0$ para $n \rightarrow 0$. Para todo $n \geq 1$, e $i = 0, 1, \cdots, N - 1$, tomando $u_i^n \in [t_i^n, t_{i+1}^n]$. Luego el límite
+
+	\[
+		\int_0^T Y_s dX_s = \lim_{n \rightarrow \infty} \sum_{i = 0}^{N_n - 1} Y_{u_n^i} (X_{t_{i+i}^n} - X_{t_i^n} )
+	\] 
+	llamada \textbf{integral de Young}, existe, y no depende de la sucesión $\{ \pi_n \}$, ni de la elección del punto $u_i^n$.
+
+\end{theorem}
+
+Al trabajar en ecuaciones diferenciales estocásticas, usualmente el integrador es $X_s = B_s$, un movimiento Browniano, que tiene muy baja regularidad. Por el teorema de continuidad de Kolmogorov (Capítulo 2), las trayectorias del Browniano son \textit{casi siempre} $\alpha$-Hölder continuas para $\alpha < \frac{1}{2}$. En este caso, no se pueden cumplir siempre las condiciones de la integral de Young, por ende, es mejor cambiar el enfoque.
+
+Más adelante, en el presente trabajo, se hablará acerca del movimiento Browniano, y la construcción de la integral de Itô, como una solución para atacar la baja regularidad.
+
+
+
+
+% ========================================
+%================ SECCIÓN 2.2 Teoremas de Existencia y Unicidad
+% ========================================
+
+
+\subsection{Teoremas de Existencia y Unicidad.}
+
+De forma preliminar, las ecuaciones diferenciales se han usado a lo largo de los años para modelar distintos fenómenos naturales, económicos, etc... y es natural preguntarse si es posible solucionar cierta ecuación diferencial, obtener una solución y determinar un modelo matemático a cierto fenómeno. En este apartado, se formalizará estos conceptos, y se mostrarán los teoremas de existencia y unicidad, con su demostración. \\
+
 
 Ahora, consideramos el \textit{problema de Cauchy}, o específicamente, \textit{problema de valor inicial}:
 
@@ -1192,10 +1256,48 @@ con $t \in I_{\alpha}$. Podemos verificar lo siguiente:
 
 Entonces, por el corolario consecuencia del lema de contracción, existe una función $\phi \in X$ tal que $F(\phi) = \phi$, y de esta forma, queda demostrado lo deseado.
 
+% colocar dibujo!!!!
+
+
 \begin{flushright}
 	$\Box$
 \end{flushright}
 
+En el teorema de Picard, se puede relajar las hipótesis, y se puede retirar la condición de Lipschitz, para obtener otra versión del teorema más general. Para ello, se presentan primero dos teoremas necesarios (Sin demostración) usados en la prueba del teorema general.
+
+\begin{theorem}[Teorema de Ascoli-Arzelá.]
+	Sea $(X, d)$ un espacio métrico compacto. Sea $F$ una familia equicontinua de funciones $\phi: X \rightarrow \mathbb{R}$ (Esto es, para todo $\epsilon > 0$, existe un $\delta > 0$ tal que si $d(x, y) < \delta$, luego $\lvert \phi(x) - \phi(y) \rvert < \epsilon$, para toda $\phi \in F$). Sea $F$ uniformemente acotada (Existe $M > 0$ tal que para todo $\phi \in F$, $\lvert \phi \rvert < M$), entonces, toda sucesión $\left\{ \phi_n \right\}$ en $F$, tiene subsucesión uniformemente convergente en $X$.
+\end{theorem}
+
+\begin{theorem}[Teorema de la aproximación de Weierstrass.]
+	Para cualquier $\epsilon > 0$ y para cualquier función $f$ continua en un intervalo $[a,b] \subset \mathbb{R}$, existe un polinomio de coeficientes reales $p$ tal que
+
+	\[
+		\sup_{x \in [a,b]} \lvert f(x) - p(x) \rvert < \epsilon	
+	\]
+\end{theorem}
+
+Esto es, se puede aproximar una función por una sucesión de polinomios con coeficientes reales, tal que converjan uniformemente.
+
+\begin{theorem}[Teorema de Peano.]
+	Sea $F$ continua en $\Omega = I_a \times B_b$, definidos como en el teorema de Picard. Si $\lvert f \rvert < M$ en $\Omega$, luego la ecuación diferencial:
+
+	\[
+		\frac{dx}{dt} = f(t, x) \text{, } x(t_0) = x_0
+	\]
+
+tiene al menos una solución en $I_{\alpha}$ con $\alpha = \min \left\{ a, b/M \right\}$
+
+\end{theorem}
+
+\textbf{Demostración:} PENDIENTE.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+Para finalizar esta sección, se hablará un poco de ecuaciones diferenciales controladas, que también, son parte importante al hablar de caminos rugosos...
 
 % INTEGRACIÓN.
 

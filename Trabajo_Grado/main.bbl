@@ -7,6 +7,9 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
+\bibitem{Mathematical_Analysis_Apostol}
+Tom~M. Apostol, \emph{Análisis matemática}, Editorial Reverté, 1976.
+
 \bibitem{Measure_Theory_DC}
 Donald~L. Cohn, \emph{Measure theory}, Springer-Brikhäuser, 2013.
 
