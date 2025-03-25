@@ -1,27 +1,101 @@
-\chapter{La Integral de Itô}
+\chapter{Ecuaciones diferenciales estocásticas: Enfoque de Itô.}
 
-En este capítulo, comenzaremos la construcción de la integral de Itô. Para cumplir este objetivo, usaremos fuertemente los hechos vistos en el capítulo anterior del movimiento Browniano. 
+En este capítulo, se comenzará la construcción de la integral de Itô. Para cumplir este objetivo, usaremos fuertemente los hechos vistos en el capítulo anterior del movimiento Browniano. Pero antes, se verán algunos ejemplos de ecuaciones diferenciales estocásticas, que poseen cierto ruido.
 
-Ahora, ¿Por qué es necesario construir una nueva integral? Veamos el objetivo inicial, solucionar una ecuación diferencial que tiene cierto ruido:
+\begin{enumerate}
+	\item Se puede considerar un modelo de crecimiento poblacional, sujeto a un ruido:
 
-\[
-	\frac{dX}{dt} = b(t, X_t) + \sigma (t, X_t) \cdot W_t
-\]
+	\[
+		\frac{dN}{dt} = (r(t) + \textit{Ruido})N(t)
+	\] 
+	con la condición inicial $N(0) = N_0$. El término $(r(t) + \textit{Ruido})$ corresponde a la tasa de crecimiento, esta puede variar en función de una distribución de probabilidad.
 
-Note que el ruido se puede representar como el proceso estocástico $W_t$. Bajo experimentación, se interponen las siguientes condiciones sobre el ruido:
+	\item Otro problema conocido, es el \textbf{problema de filtrado}. Suponga que se hacen observaciones $Z(s)$ de, por ejemplo, la carga electrica en cierto medio, cuya función es denotada por $Q(s)$, para $s \leq t$. Se puede ver la relación entre ambas funciones como:
 
-\begin{itemize}
-	\item Dos variables del proceso $W_{t_1}$ y $W_{t_2}$ con $t_1 \neq t_2$ son independientes.
-	\item $\{ W_t \}$ es un proceso estacionario.
-	\item $\mathbb{E}[W_t] = 0$ para todo $t$.
-\end{itemize} 
+	\[
+		Z(s) = Q(s) + \textit{Ruido}	
+	\]
 
-No hay algún proceso estocástico tradicional que cumpla las condiciones dadas. Por ende, lo podemos ver como un proceso estocástico generalizado, un \textbf{proceso de ruido blanco}, esto es, un proceso que se puede construir como medida de probabilidad en cierto espacio sútil de funcionales $\mathcal{C}[ 0, \infty )$. 
+	donde el ruido proviene de errores al realizar las mediciones. Realmente, uno obtiene una versión peturbada de $Q(s)$. El problema consiste en determinar: \textit{¿Cuál es la mejor estimación de} $Q(t)$ \textit{que cumple la relación dada, basado en las observaciones} $Z(s)$ \textit{?}. En otras palabras, se desea filtrar el ruido, y obtener la medición más precisa. Este problema se puede plantear como una ecuación diferencial lineal con ruido.
 
-Por ende, se nos sugiere que el proceso $\{W_t\}$ será el movimiento Browniano. Discretizando la ecuación inicial...
+	\item En matemáticas financiera, es muy común el uso de estas ecuaciones diferenciales para modelar diferentes fenómenos financieros. Por ejemplo, suponga que una persona tiene dos posibles inversiones:
 
-\[
-	\int_0^t f(s,w) dB_s(w)
-\]
+	\begin{enumerate}
+		\item Una inversión riesgosa, donde el precio $p_1 (t)$ satisface la ecuación diferencial estocástica (Modelo poblacional estocástico):
+
+		\[
+			\frac{dp_1}{dt} = (a + \alpha \cdot \textit{Ruido})p_1
+		\]
+		donde $a > 0$ y $\alpha \in \mathbb{R}$.
+
+		\item Una inversión segura, donde el precio $p_2 (t)$ crece exponencialmente:
+
+		\[
+			\frac{dp_2}{dt} = bp_2	
+		\]
+
+		donde $0 < b < a$.
+
+	\end{enumerate}
+
+	La persona, en cada instante $t$ desea saber qué porcentaje $u_t$ de su fortuna, sea $X_t$, colocar en la inversión riesgosa. Así, coloca $(1 - u_t)X_t$ de su fortuna en la inversión segura. Dada una \textit{función de utilidad} $U$ y un tiempo final $T$, se desea hallar la \textit{cartera} óptima $u_t \in [0, 1]$ que maximizar la utilidad de la fortuna terminal, esto es:
+
+	\[
+		\max_{0 \leq u_t \leq 1} \left\{  \mathbb{E}[ U(X_T^{(n)}) ] \right\}
+	\]
+
+	Si se supone que la inversión riesgosa, es una \textit{opción de llamada Europea}, se deriva la famosa ecuación de \textbf{Black-Scholes}.
+
+
+\end{enumerate}
+
+
+Con estos ejemplos, ya se sabe el por qué es necesario, en algunos casos, recurrir a estas ecuaciones diferenciales con ruido. En este capítulo, siguiendo el tratamiento de \cite{EDE_Oksendal}, se verá un enfoque \textit{probabilístico} para solucionar estas ecuaciones, y en el próximo capítulo, se verán algunas desventajas de usar este método, proponiendo un método más analítico.
+
+% ========================
+% ======= SECCIÓN 1: La integral de Itô =====
+% ========================
+
+\input{C3/TG_C3_1}
+
+% ========================
+% ========================
+% ========================
+
+
+
+
+
+
+
+
+
+% ========================
+% ======= SECCIÓN 2: Fórmula de Itô =====
+% ========================
+
+
+% ========================
+% ========================
+% ========================
+
+
+
+
+
+
+
+% ========================
+% ======= SECCIÓN 3: Ecuaciones Diferenciales Estocásticas =====
+% ========================
+
+
+% ========================
+% ========================
+% ========================
+
+
+
+
 
 %  (Oksendal 3.11, Kallianpur 1980 p.10

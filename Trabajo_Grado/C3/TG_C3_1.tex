@@ -1,0 +1,65 @@
+\section{La integral de Itô.}
+
+Ahora, ¿Por qué es necesario construir una nueva integral? Veamos el objetivo inicial, solucionar una ecuación diferencial que tiene cierto ruido:
+
+\[
+	\frac{dX}{dt} = b(t, X_t) + \sigma (t, X_t) \cdot W_t
+\]
+
+Note que el ruido se puede representar como el proceso estocástico $W_t$. Bajo experimentación, se interponen las siguientes condiciones sobre el ruido:
+
+\begin{itemize}
+	\item Dos variables del proceso $W_{t_1}$ y $W_{t_2}$ con $t_1 \neq t_2$ son independientes.
+	\item $\{ W_t \}$ es un proceso estacionario.
+	\item $\mathbb{E}[W_t] = 0$ para todo $t$.
+\end{itemize} 
+
+No hay algún proceso estocástico tradicional que cumpla las condiciones dadas. Por ende, lo podemos ver como un proceso estocástico generalizado, un \textbf{proceso de ruido blanco}, esto es, un proceso que se puede construir como medida de probabilidad en cierto espacio sútil de funcionales $\mathcal{C}[ 0, \infty )$. Por ende, se nos sugiere que el proceso $\{W_t\}$ será el movimiento Browniano. 
+
+Ahora, la ecuación diferencial estocástica se puede representar forma integral, usando el hecho que $W_t$ será el movimiento Browniano, como:
+
+\[
+	X_t = X_0 + \int_0^t b(s, X_s) ds + \int_0^t  \sigma (s, X_s) \cdot B_s
+\]
+
+Sin embargo, el inconveniente se presenta con la segunda integral de la derecha, cuyo integrador no es de variación acotada, y por ende, no existe la \textit{integral de Riemann-Stieljes } en este caso:
+
+
+\[
+	\int_0^t f(s,w) dB_s(w)
+\]
+
+Por ende, se debe realizar una construcción nueva. La idea será análoga a construir la integral de Lebesgue (Consulte \cite{Measure_Theory_DC}). Esto es, definir la integral para un conjunto de funciones simples, luego tomar sucesión de funciones simples uniformemente convergente a una función positiva (Donde ya se conoce que existe esta sucesión), y luego ver el caso para funciones en general.\\
+
+Sea $f$ de la forma:
+
+\[
+	\phi (t, w) = \sum_{j \geq 0} e_j (w) \chi_{ [j \cdot 2^{-n}, (j+1)\cdot 2^{-n}  ] }(t)
+\]
+para $n \in \mathbb{N}$. Entonces, se define la integral en este caso como:
+
+\[
+	\int_S^T \phi(t,w) dB_t(w) = \sum_{j \geq 0} e_j (w) [B_{t_{j+1}} - B_{t_j}] (t)
+\]
+
+donde
+
+\[
+	t_k = t_k^{(n)} = \left\{  \begin{array}{lr}
+		k \cdot 2^{-n} & \text{ Si } S \leq k \cdot 2^{-n} \leq T \\
+		S & \text{ Si } k \cdot 2^{-n} < S \\
+		T & \text{ Si } T < k \cdot 2^{-n}
+	\end{array} \right.
+\]
+
+pero, si no hay condiciones adicionales sobre $e_j$, habrán ciertos problemas. Suponga, que tenemos:
+
+\[
+	\phi_1(t,w)  = \sum_{j \geq 0} B_{j \cdot 2^{-n} } (w) \cdot \chi_{ [j \cdot 2^{-n}, (j+1) \cdot 2^{-n} ]  } (t)
+\]
+
+y
+
+\[
+	\phi_2(t,w)  = \sum_{j \geq 0} B_{(j+1) \cdot 2^{-n} } (w) \cdot \chi_{ [j \cdot 2^{-n}, (j+1) \cdot 2^{-n} ]  } (t)
+\]
