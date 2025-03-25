@@ -1,20 +1,114 @@
 \section{Construcción del Movimiento Browniano}
 
-Primero, damos la definición de un movimiento Browniano, y luego, se hará la construcción. Esta, se puede hacer por dos maneras distintas:
+Primero, se da la definición de un movimiento Browniano, y luego, se hará la construcción. Esta, se puede hacer por tres métodos distintas (Consulte \cite{Brownian_Motion_Karatzas}):
 
 \begin{enumerate}
 	\item Teoremas de existencia y continuidad de Kolmogorov.
-	\item Teorema de Donsker (Caso más general).
+	\item Construcción propuesta por Levý, Wiener y Ciesielski, que usa fuertemente conceptos de espacios de Hilbert, aprovechando que el movimiento Browniano es Gaussiano. Usando funciones de Haar.
+	\item Principo de invarianza de Donsker, donde se busca una convergencia débil a una medida de Wiener.
 \end{enumerate}
 
-En el presente trabajo, haremos la construcción usando el Teorema de Donsker, y más tarde, se enunciarán los teoremas de Kolmogorov.
+En el presente trabajo, se enunciarán los teoremas de Kolmogorov, y en el apéndice se discutirán brevemente las demás construcciones.
 
 \begin{boxDef}
 	Dado $\{ W_t \}$ un proceso estocástico, en el espacio de probabilidad $(\Omega, \mathcal{F}, P)$. El proceso $\{ W_t \}$ es un \textbf{movimiento Browniano} en una dimensión, si se cumplen las siguientes condiciones:
 
 	\begin{itemize}
 		\item Para casi todo $\omega$, los caminos $W_t (\omega)$ son continuos (En el sentido de la probabilidad).
-		\item $\{ W_t \}$ es un proceso Gaussiano, es decir, para $k \geq 1$, y todo $0 \leq t_1 \leq \cdots \leq t_k$, el vector aleatorio, $Z = (W_{t_1}, \cdots, W_{t_k}) \in \mathbb{R}^{n}$ tiene distribución multinormal (O Gaussiana).
+		\item $\{ W_t \}$ es un proceso Gaussiano, es decir, para $k \geq 1$, y todo $0 \leq t_1 \leq \cdots \leq t_k$, el vector aleatorio, $Z = (W_{t_1}, \cdots, W_{t_k}) \in \mathbb{R}^{n}$ tiene distribución multinormal (O Gaussiana), con media el vector $0$, y la matriz de covarianza como $B(t_i, t_j) = \mathbb{E}[W_{t_i} W_{t_j}] = \min(t_i, t_j)$.
 	\end{itemize}
 
 \end{boxDef}
+
+Más general, podemos considerar el movimiento Browniano respecto a una filtración.
+
+\begin{boxDef}
+	Un proceso $W_t$ en un espacio de probabilidad $(\Omega,\mathcal{F}, P)$ adaptado a una filtración $(\mathcal{F}_t)_{t > 0}$ es un \textbf{movimiento Browniano relativo a la filtración} $\mathcal{F}_t$, si:
+
+	\begin{itemize}
+		\item Los caminos $W_t(\omega)$ son trayectorias continuas de $t$ para casi todo $\omega$.
+		\item $W_0 (\omega) = 0$ para casi todo $\omega$.
+		\item Para $0 \leq s \leq t$, los incrementos $W_t - W_s$ son variables aleatorias Faussianas con media $0$ y varianza $t - s$.
+		\item Para $0 \leq s \leq t$, los incrementos $W_T - W_s$ son independientes de las $\sigma$-álgebras $\mathcal{F}_s$.
+	\end{itemize}
+
+\end{boxDef}
+
+Una pregunta que natural, es acerca de la existencia y de la unicidad de este proceso. Kolmogorov propone dos teoremas para verificar que el proceso existe y es único (En el sentido de distribuciones). Antes, se define el concepto de familia \textit{consistente}.
+
+\begin{boxDef}
+	Sea $T$ un conjunto de sucesiones finitas $\tilde{t} = (t_1, \cdots, t_n)$ de números positivos distintos. Suponga que para cada $\tilde{t}$ de longitud $n$, existe una medida de probabilidad $Q_{\tilde{t}}$ en $(\mathbb{R}, \mathcal{B}(\mathbb{R}^n))$. Luego, $\left\{ Q_{\tilde{t}} \right\}_{\tilde{t} \in T}$ es una \textbf{familia de distribuciones finito-dimensionales}. La familia se dice \textbf{consistente} si cumple las siguientes condiciones:
+
+	\begin{itemize}
+		\item Si $\tilde{s} = (t_{i_1}, \cdots, t_{i_n})$ es una permutación de $\tilde{t} = (t_1, \cdots, t_n)$, luego para todo $A_i \in \mathcal{B}(\mathbb{R})$ con $i = 1, \cdots, n$ tenemos:
+
+		\[
+			Q_{\tilde{t}} (A_1 \times \cdots \times A_n) = Q_{\tilde{s}} (A_{i_1} \times \cdots \times A_{i_n})
+		\]
+
+		esto es, es invariante bajo permutaciones.
+
+		\item Si $\tilde{t} = (t_1, \cdots, t_n)$ con $n \geq 1$, y $\tilde{s} = (t_1, \cdots, t_{n-1})$, con $A \in \mathcal{B}(\mathbb{R}^{n-1})$, luego:
+
+		\[
+			Q_{\tilde{t}} (A \times \mathbb{R}) = Q_{\tilde{s}} (A)
+		\]
+	\end{itemize}
+
+\end{boxDef}
+
+Note que, al tener un espacio de probabilidad, $(\mathbb{R}^{[0, \infty)}, \mathcal{B}(\mathbb{R}^{[0, \infty)} ), P )$, se puede definir una familia de distribuciones finito-dimensionales:
+
+\[
+	Q_{\tilde{t}} (A) = P[ \left\{ w \in \mathbb{R}^{ [0,\infty) } \vert ( w(t_1), \cdots, w(t_n) ) \in A  \right\} ]
+\]
+
+Para construir el movimiento Browniano, se usará el hecho, de tener las distribuciones finito-dimensaionales, para construir una medida de probabilidad en el espacio, como primer paso. Para ello, se usa el siguiente teorema:
+
+
+\begin{theorem}[Teorema de consistencia de Kolmogorov y Daniell.]
+	Sea $\left\{ Q_{ \tilde{t} } \right\}$ una familia de distribuciones finito-dimensonales consistentes. Así, existe una medida de probabilidad $P$ en $(\mathbb{R}^{ [0, \infty) }, \mathcal{B}(\mathbb{R}^{ [0, \infty) })  )$ tal que:
+
+	\[
+		Q_{\tilde{t}} (A) = P[ \left\{ w \in \mathbb{R}^{ [0,\infty) } | (w(t_1), w(t_2), \cdots, w(t_n)) \right\} ]
+	\] 	
+	se cumpla para todo $\tilde{t} = \left\{ t_1, t_2, \cdots, t_n \right\} \in T$.
+\end{theorem}
+
+Como consecuencia, se tiene el siguiente resultado:
+
+\begin{coro}
+	Existe una medida de probabilidad $P$ en $(\mathbb{R}^{ [0, \infty) }, \mathcal{B}(\mathbb{R}^{ [0, \infty) })  )$ tal que el proceso: 
+
+	\[
+		B_t (w) = w(t) \text{, } w \in \mathbb{R}^{[0, \infty)}, t \geq 0	
+	\]
+	tiene incrementos estacionarios e independientes. Además, los incrementos $B_t - B_s$, con $0 \leq s \leq t$, es normalmente distribuido con media $0$ y varianza $t - s$,
+
+\end{coro}
+
+Ya se tiene una medida de probabilidad. Ahora, se debe construir el proceso en todo el espacio $\mathbb{R}^{[0, \infty)}$. Sin embargo, hay que notar que $C[0, \infty) \notin \mathcal{B}( \mathbb{R}^{ [0, \infty) } )$, y por ende, se debe construir una modificación continua del proceso. Se tiene entonces, el segundo teorema de Kolmogorov.
+
+\begin{theorem}[Teorema de continuidad de Kolmogorov y Chenstov.]
+	Suponga que un proceso $X = \left\{  X_t \vert 0 \leq t \leq T \right\}$ en un espacio de probabilidad $(\Omega, \mathcal{F}, P)$ cumple la condición:
+
+	\[
+		\mathbb{E}[ \lvert X_t - X_s \rvert^{\alpha} ] \leq C \lvert t - s \rvert^{ 1 + \beta}
+	\]
+	con $0 \leq s, t \leq T$, para constantes positivas $\alpha$, $\beta$ y $C$. Entonces, existe una modificación $\tilde{X} = \left\{ \tilde{X_t} \vert  0 \leq t \leq T  \right\}$ de $X$, que es localmente Hölder-continua, con exponente $\gamma$, para todo $\gamma \in (0, \beta / \alpha)$, esto es:
+
+	\[
+		P \left[ w \vert \sup_{  0 < t - s < h(w)\text{, } s,t\in [0,T]}  \frac{\lvert  \tilde{X_t}(w) - \tilde{X_s}(w) \rvert }{\lvert t - s \rvert^{\gamma}}  \leq \delta \right] = 1
+	\]
+
+	donde $h(w)$ es una variable aleatoria positiva \textit{casi siempre}m y $\delta > 0$ una constante apropiada.
+
+\end{theorem}
+
+Como resultado final, tendremos:
+
+\begin{coro}
+	Hay una medida de probabilidad $P$ en $(\mathbb{R}^{ [0, \infty) }, \mathcal{B}(\mathbb{R}^{ [0, \infty) })  )$ y un proceso estocástico $W = \left\{ W_t, \mathcal{F}_t^W \vert t \leq 0 \right\}$ en el mismo espacio, tal que $W$ es un movimiento Browniano respecto a $P$.
+\end{coro}
+
+Como consecuencia, cada trayectoria del movimiento Browniano $\left\{ W_t(w) \vert 0 \leq t < \infty \right\}$ es localmente Hölder-continua con exponente $\gamma$, para $\gamma \in \left(0, \frac{1}{2}\right)$.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  24 MAR 2025 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  24 MAR 2025 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -525,22 +525,22 @@ LaTeX Info: Redefining \% on input line 8.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Info: Redefining \. on input line 52.
-LaTeX Info: Redefining \% on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Info: Redefining \. on input line 53.
+LaTeX Info: Redefining \% on input line 53.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count309
@@ -563,13 +563,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -921,9 +921,8 @@ Overfull \hbox (1.87775pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/17.28 Construcci^^Son del Mo-vi-mien-to Brow-niano 
  []
 
-)) (./C3/TG_C3.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 36.
+LaTeX Info: Redefining \% on input line 36.
 
 Overfull \hbox (55.58707pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/12 38 \OT1/cmr/m/sl/12 CAP[]ITULO 2.  PROCESOS ESTOC[]ASTICOS Y EL
@@ -931,29 +930,76 @@ Overfull \hbox (55.58707pt too wide) has occurred while \output is active
  []
 
 [38]
-Cap\'{\i }tulo 3.
-) (./appendix/appendix_gen.tex [39
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ [39]
+Overfull \hbox (16.06395pt too wide) in paragraph at lines 70--71
+[]\OT1/cmr/m/it/12 Sea
+ []
+
+
+Overfull \hbox (1.95969pt too wide) in paragraph at lines 70--71
+[]$ \OT1/cmr/m/it/12 una fa-mi-lia de dis-tri-bu-cio-nes finito-dimensonales co
+n-sis-ten-tes. As^^S^^P, exis-
+ []
+
+
+Overfull \hbox (10.76933pt too wide) in paragraph at lines 93--94
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+
+Overfull \hbox (55.58707pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 40 \OT1/cmr/m/sl/12 CAP[]ITULO 2.  PROCESOS ESTOC[]ASTICOS Y EL
+ MOVIMIENTO BROWNIANO
+ []
+
+[40])
+Overfull \hbox (54.71246pt too wide) in paragraph at lines 114--25
+[]\OT1/cmr/m/n/12 Como con-se-cuen-cia, ca-da tra-yec-to-ria del mo-vi-mien-to 
+Brow-niano $[]$
+ []
+
+) (./C3/TG_C3.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [40
+ [41]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (55.58707pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 42 \OT1/cmr/m/sl/12 CAP[]ITULO 2.  PROCESOS ESTOC[]ASTICOS Y EL
+ MOVIMIENTO BROWNIANO
+ []
+
+[42
+
+]
+Cap\'{\i }tulo 3.
+) (./appendix/appendix_gen.tex [43]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [44
 
 ] (./appendix/hilbert_spaces.tex))
-(./main.bbl [41]
+(./main.bbl [45]
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [42
+ [46
 
-]) [43] (./main.aux
+]) [47] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19138 strings out of 480185
- 408036 string characters out of 5894214
- 710697 words of memory out of 5000000
- 36754 multiletter control sequences out of 15000+600000
+ 19143 strings out of 480185
+ 408117 string characters out of 5894214
+ 710701 words of memory out of 5000000
+ 36759 multiletter control sequences out of 15000+600000
  481626 words of font info for 73 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  99i,13n,104p,953b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -972,12 +1018,13 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (43 pages, 312717 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (47 pages, 332527 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
