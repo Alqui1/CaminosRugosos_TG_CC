@@ -6,7 +6,34 @@ La teoría de caminos rugosos (Vea, por ejemplo \cite{Rough_Paths_TL})  permite 
 	d Y_t = f(Y_t) dX_t, \quad Y_0 = \zeta
 \]
 
-Si la ecuación determinística admite solución única, entonces se denota como $Y = I_f(X, \zeta)$, y se conoce a $I_f$ como \textbf{mapeo de Itô asociado a $f$}. Los caminos rugosos se plantean como solución a:
+Si la ecuación determinística admite solución única, entonces se denota como $Y = I_f(X, \zeta)$, y se conoce a $I_f$ como \textbf{mapeo de Itô asociado a $f$}. Podemos expresar, de forma \textit{integral} la solución de esta ecuación diferencial como:
+
+\[
+	Y_t = Y_0 + \int_{0}^t f(Y_s) dX_s
+\]
+
+Y, el problema de solucionar la ecuación diferencial, implica en definir la integral:
+
+\[
+	\int_{0}^t f(Y_s) dX_s	
+\]
+
+Recordando el Capítulo 1, se sabe que el integrador $X_s$ debe, en principio, cumplir algunas condiciones de regularidad (Que sea $\alpha$-Hölder, con $\alpha \geq \frac{1}{2}$) para permitir que exista su integral de Young (Consulte teorema \ref{thm:Young}).
+
+Sin embargo, suponga que $X_t$ es un camino mucho menos regular, como las trayectorias de un movimiento Browniano, que son $\alpha$-Hölder con $\alpha \in \right(\frac{1}{3}, \frac{1}{2} \left]$. Se puede usar el enfoque de integración estocástica propuesto por Itô, pero en este caso, el mapa de Itô, carecerá de continuidad. Además, la integral de Young, no estará bien definida en este caso, por lo que dependerá de la elección de la partición, y más aún, el límite puede no existir. También, otro problema de la integral de Itô, es acerca de la elección de puntos, que puede afectar el valor de la integral, puesto que, las trayectorías tienen una variación muy rápida, y una integral como la de Riemann-Stieljes no es capaz de capturar esta información y más en intervalos de tiempos pequeños.
+
+Sea $f: \mathbb{R}^d \rightarrow \mathbb{R}$ una función suave, $X: [0,T]\rightarrow \mathbb{R}^d$ un camino $\alpha$-Hölder continuo. Suponga que se desea darle un significado a
+
+\[
+	\int_0^T f(X_r) dX_r
+\]
+
+Para eso, se usará la expansión de Taylor. Tomando $[s,t] \subset [0, T]$ un intervalo de tiempo lo suficientemente pequeño y $r \in [s,t]$, tenemos:
+
+\[
+	f(X_r) = f(X_s)
+\]
+
 
 Problemas con integral de Itô, motivación a la integración rugosa.
 
