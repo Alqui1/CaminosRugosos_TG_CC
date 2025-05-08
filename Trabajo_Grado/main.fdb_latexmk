@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1746465519 "main.aux" "main.bbl" "main" 1746465522
+["bibtex main"] 1746708297 "main.aux" "main.bbl" "main" 1746708515
   "/usr/share/texlive/texmf-dist/bibtex/bst/amscls/amsplain.bst" 1513722769 25798 9b3546f2f237ee0ce4724eed95f954f4 ""
   "Bibliography/bibliography.bib" 1745717777 947 5bb7aac50d8b42333f463842ff73d223 ""
-  "main.aux" 1746465521 3428 39d4f95f3be72a486f8ae87866fb07be "pdflatex"
+  "main.aux" 1746708514 3544 4f2da72095baa544811bd847cba86345 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1746465519 "main.tex" "main.pdf" "main" 1746465522
+["pdflatex"] 1746708512 "main.tex" "main.pdf" "main" 1746708515
   "/etc/texmf/web2c/texmf.cnf" 1708108668 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -142,6 +142,8 @@
   "/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty" 1642805374 6107 429b3b241150e53f86ce666eb492861e ""
   "/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1642022539 6758 7d9d899cbbfc962fbc4bb93f4c69eec2 ""
   "/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
+  "/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty" 1643838029 59397 1bfeb7c4239ba9206737fca9cf861c65 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty" 1616101747 5582 a43dedf8e5ec418356f1e9dfe5d29fc3 ""
   "/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1601326656 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1601326656 410 615550c46f918fcbee37641b02a862d9 ""
   "/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1601326656 21013 f4ff83d25bb56552493b030f27c075ae ""
@@ -161,6 +163,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex" 1641594609 12115 e5c629f8fc57dbe150d3e766d27d7036 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex" 1641594609 10268 aea9efa85cfd20ae6815db478bbfc844 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty" 1641594609 90399 93200a4832e517564b5aa5dc46e12177 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty" 1622581934 10214 00ce62e730d0cfe22b35e8f1c84949c7 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty" 1622581934 7392 39729ae6a807e217edf1442cf8fab2c2 ""
   "/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty" 1253232110 1380 971a51b00a14503ddf754cab24c3f209 ""
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1635798903 56029 3f7889dab51d620aa43177c391b7b190 ""
@@ -174,14 +177,14 @@
   "C2/TG_C2_2.tex" 1742868166 7050 2c78e78427631f246d07d5d11424a383 ""
   "C3/TG_C3.tex" 1742911508 3800 0043265ce9005d75ba0c02bb000beb4f ""
   "C3/TG_C3_1.tex" 1742912489 2751 e3b276e84960f497ae326fc1b8db4147 ""
-  "C4/TG_C4.tex" 1746465515 1478 bed4565cc36058eb01b76b8fc086d619 ""
+  "C4/TG_C4.tex" 1746708509 6260 3b1144d5995ba72ee2a0ececb2afd314 ""
   "abstract.tex" 1740516583 256 ebedf728c603fdaf60c1763aa3735e06 ""
   "appendix/appendix_gen.tex" 1742180681 183 1cd0e11e365df66be9e02a6c99202ccb ""
   "appendix/hilbert_spaces.tex" 1742180699 32 87b29fe29cc4e210aea6a1a44a5d1638 ""
-  "main.aux" 1746465521 3428 39d4f95f3be72a486f8ae87866fb07be "pdflatex"
-  "main.bbl" 1746465519 1056 8adef4f5fbe664ba445de546d4be8ab8 "bibtex main"
-  "main.tex" 1744374126 4022 20ccefbdce848913dce485a48cd7722d ""
-  "main.toc" 1746465521 1644 49db470ab8921cbc524a2bef12ab2b6b "pdflatex"
+  "main.aux" 1746708514 3544 4f2da72095baa544811bd847cba86345 "pdflatex"
+  "main.bbl" 1746708297 1056 8adef4f5fbe664ba445de546d4be8ab8 "bibtex main"
+  "main.tex" 1746708290 4046 3eb1840532893b306bf0406007b1f8d8 ""
+  "main.toc" 1746708514 1719 8f90c207577a57ec6939d98e36ac8fa2 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
