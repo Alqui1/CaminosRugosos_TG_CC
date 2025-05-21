@@ -251,7 +251,7 @@ Y de manera análoga,
 
 %========================%========================
 
-Con esto, obtener otra cota para la norma $\alpha$-Hólder de $X$:
+Con esto, obtener otra cota para la norma $\alpha$-Hölder de $X$:
 
 \begin{align*}
 	\frac{ \lvert X_{s,t} \rvert }{ \lvert t - s \rvert^{\alpha} } &\leq 2 \sum_{n = m + 1}^{\infty} \frac{K_n}{2^{-(m+1) \alpha}} \quad \lvert t - s \rvert \geq 2^{-(m+1)} \\
@@ -272,7 +272,92 @@ Esta es la variable aleatoria deseada. Observe, finalmente que:
 
 Este último es, debibo a que tendremos una serie geométrica. Note que, por hipótesis, $\beta > \frac{1}{q}$ o $\beta - \frac{1}{q} > 0$. Como $\alpha \in \left[ 0, \beta - \frac{1}{q} \right)$, $\beta - \frac{1}{q} > \alpha$ o $\beta - \frac{1}{q} - \alpha > 0$, por ende, la serie es convergente.
 
-Con esto, queda probado que $\lVert K_{\alpha} \rVert_{L^q}$. Ahora, queda probar el resultado análogo para la variable aleatoria $\mathbb{K}_{\alpha}$.
+Con esto, queda probado que $\lVert K_{\alpha} \rVert_{L^q}$. Ahora, queda probar el resultado análogo para la variable aleatoria $\mathbb{K}_{\alpha}$. Haciendo los trámites correspondientes:
+
+\begin{align*}
+	\frac{ \mathbb{X}_{s,t} }{ \lvert t - s \rvert^{2\alpha} } &\leq \frac{1}{2^{-2(m+1)\alpha}} \left[ 2 \sum_{n = m + 1}^{\infty} \mathbb{K}_n + \left( 2 \sum_{n = m + 1}^{\infty} K_n \right)^2 \right] \quad \text{Usando resultados anteriores, expandiendo...} \\
+	&= 2 \sum_{n = m + 1}^{\infty} \frac{ \mathbb{K}_n }{ 2^{-2(m+1)\alpha} } + \left( 2 \sum_{n = m + 1}^{\infty} \frac{K_n}{2^{-(m+1)\alpha}} \right)^2 \quad \text{Use las cuentas anteriores} \\
+	&\leq 2 \sum_{n = m + 1}^{\infty} \frac{ \mathbb{K}_n }{ 2^{-2(m+1)\alpha} } + K_{\alpha}^2 =: \mathbb{K}_{\alpha}
+\end{align*}
+
+Y análogo a la variable aleatoria $K_{¸\alpha}$, hallamos su norma $\lVert \cdot \rVert_{L^{q/2}}$.
+
+\begin{align*}
+	\lVert \mathbb{K}_{\alpha} \rVert_{L^{q/2}} &\leq \left\lVert 2 \sum_{n = m + 1}^{\infty} \frac{ \mathbb{K}_n }{ 2^{-2(m+1)\alpha} } + K_{\alpha}^2 \right\rVert_{L^{q/2}} \quad \text{Aplicando la cota del ejercicio anterior, aplicamos desigualdad triangular} \\
+	&\leq 2 \sum_{n = m + 1}^{\infty} \frac{ \lVert \mathbb{K}_n \rVert_{L^{q/2}} }{ 2^{-2(m+1)\alpha} } + \lVert K^2_{\alpha} \rVert_{L^{q/2}} \quad \text{Aplicar definición de norma} \\
+	%========
+	&= 2 \sum_{n = m + 1}^{\infty} \frac{ \mathbb{E}[ \mathbb{K}_n^{q/2} ]^{2/q} }{ 2^{-2(m+1)\alpha} } + \lVert K^2_{\alpha} \rVert_{L^{q/2}} \quad \text{Aplicar cota para el valor esperado de } \mathbb{K}_n^{q/2} \\
+	%=======
+	&\leq 2 \sum_{n = m + 1}^{\infty} \frac{ \left( C^{q/2} 2^{-n(q\beta - 1)} \right)^{2/q} }{ 2^{-2(m+1)\alpha} } + \lVert K^2_{\alpha} \rVert_{L^{q/2}} \quad \text{Cuentas, verificar si la serie es geométrica} \\
+	%=======
+	&= 2 \sum_{n = m + 1}^{\infty} \frac{  C \cdot 2^{-2n(\beta - \frac{1}{q})} }{ 2^{-2(m+1)\alpha} } + \lVert K^2_{\alpha} \rVert_{L^{q/2}} \quad \text{Reindexar, suma de términos positivos} \\
+	%=======
+	&= 2 C \sum_{n = 0}^{\infty} 2^{-2n(\beta - \frac{1}{q} - \alpha)}  + \lVert K^2_{\alpha} \rVert_{L^{q/2}} < \infty
+\end{align*}
+
+Porque la serie es geométrica, con $\beta - \frac{1}{q} - \alpha > 0$, y sabemos que $\lVert K^2_{\alpha} \rVert_{L^{q/2}} < \infty$. Así, queda probado que $\mathbb{K}_{\alpha} \in L^{q/2}$.
+
+Note que únicamente, se ha probado el enunciado para los elementos en la partición diádica. Como tarea final, se extenderá el resultado a todo el intervalo $[0, T]$ con $T = 1$.
+
+Note que, el conjunto de todas las particiones diádicas $\cup_{n = 0}^{\infty} \mathcal{D}_n$ de $[0,1]$ es denso en el conjunto $[0, 1]$, de tal forma, que la clausura, el conjunto de puntos de adherencia, es todo el intervalo $[0, 1]$. Entonces, para todo elemento en este conjunto, es posible hallar una sucesión de tal forma que converja a este elemento. Formalizando, sea $t \in [0, 1]$, existe $\left\{ t_k \right\}_{k \geq 1} \subset \cup_{n \geq 0} \mathcal{D}_n$ sucesión en el conjunto de particiones diádicas, de tal forma que $t_k \rightarrow t$. Por las cuentas anteriores, sabemos que $X$ es $\alpha$-Hölder continua en $\cup_{n \geq 0} \mathcal{D}_n$, de tal forma que se define $\tilde{X}_t = \lim_{k \rightarrow \infty} X_{t_k}$ (Este límite existe). Por lema de Fatou:
+
+\begin{align*}
+	\lVert \tilde{X}_t - X_t \rVert_{L^q} &\leq \liminf_{k\rightarrow \infty} \lVert X_{t, t_k}\rVert_{L^q} \quad \text{Aplicar hipótesis del problema} \\
+	%=============
+	&\leq \liminf_{k\rightarrow \infty} C \lvert t - t_k \rvert^{\beta} = 0
+\end{align*}
+
+De esta forma, $\tilde{X}_t = X_t$ en casi todo punto, por ende, $\tilde{X}$ es modificación de $X$. Queda verificar que $\tilde{X}_t$, en casi todo punto, no depende de la elección de la sucesión. Sea $s_k \rightarrow s$ y $t_k \rightarrow t$, con $s_k, t_k \in \cup_{n \geq 0} \mathcal{D}_n$, se tiene:
+
+\[
+	\lvert \tilde{X}_{s,t} \rvert = \lim_{k \rightarrow \infty} \lvert X_{s_k, t_k} \rvert \leq \lim_{k \rightarrow \infty} K_{\alpha} \lvert t_k - s_k \rvert^{\alpha} = K_{\alpha} \lvert t - s \rvert^{\alpha}
+\]
+
+Lo que prueba lo deseado.
+
+Finalmente (Ahora sí, te juro que sí), queda demostrar $\tilde{\mathbb{X}}_{s,t}$ es una modificación de $\mathbb{X}$. En este caso, se toman cuatro casos distintos:
+
+\begin{itemize}
+
+	\item Sea $(s,t) \in \Delta_{[0,1]}$ de tal forma que $0 < s \leq t < 1$. Defina $\{ s_k \}_{k \geq 1}, \{ t_k \}_{k \geq 1} \subset \cup_{n \leq 0} \mathcal{D}_n$ sucesiones, de tal forma que $s_k \nearrow s$ y $t_k \searrow t$ para $k \rightarrow \infty$. 
+
+	\item
+
+\end{itemize}
+
+Defina $\tilde{X}_{s,t} = \lim_{k \rightarrow \infty} \mathbb{X}_{s_k, t_k}$. Como $s_k \leq s \leq t \leq t_k$, se puede aplicar la desigualdad de Chen:
+
+	\begin{align*}
+		\mathbb{X}_{s_k, t_k} - \mathbb{X}_{s,t} &= \mathbb{X}_{s_k, s} + \mathbb{X}_{s, t_k} + X_{s_k, s} \otimes X_{s, t_k} - \mathbb{X}_{s, t} \quad \text{Nuevamente relación de Chen} \\
+		% ===============================0
+		&= \mathbb{X}_{s_k, s} + \mathbb{X}_{s, t} + \mathbb{X}_{t, t_k} + X_{s, t} \otimes X_{t, t_k} + X_{s_k, s} \otimes X_{s, t_k} - \mathbb{X}_{s, t} \\
+		&= \mathbb{X}_{s_k, s} + \mathbb{X}_{t, t_k} + X_{s, t} \otimes X_{t, t_k} + X_{s_k, s} \otimes X_{s, t_k}
+	\end{align*}
+
+	Calculando la norma en $\lVert \cdot \rVert_{L^{q/2}}$, queda:
+
+	\begin{align*}
+		\lVert \mathbb{X}_{s_k, t_k} - \mathbb{X}_{s,t} \rVert_{L^{q/2}} &= \lVert \mathbb{X}_{s_k, s} + \mathbb{X}_{t, t_k} + X_{s, t} \otimes X_{t, t_k} + X_{s_k, s} \otimes X_{s, t_k} \rVert_{L^{q/2}} \quad \text{Desigualdad triangular} \\
+		&\leq \lVert \mathbb{X}_{s_k, s} \rVert_{L^{q/2}} + \lVert \mathbb{X}_{t, t_k} \rVert_{L^{q/2}} + \lVert X_{s, t} \rVert_{L^{q}} \lVert X_{t, t_k} \rVert_{L^{q}} + \lVert X_{s_k, s} \rVert_{L^{q}} \lVert X_{s, t_k} \rVert_{L^{q}} \quad \text{Usando lo que ya tenemos para } \mathcal{D}_n \\
+		&\leq C \lvert s - s_k \rvert^{2\beta} + C\lvert t_k - t \rvert^{2\beta} + C^2 \lvert s - s_k \rvert^{\beta} \lvert t_k - s \rvert^{\beta} + C^2 \lvert t - s \rvert^{\beta} \lvert t_k - t \rvert^{\beta}
+	\end{align*}
+
+	Por lema de Fatou, aplicando límites a ambos lados, implicará que:
+
+	\[
+		\lVert \tilde{\mathbb{X}}_{s, t} - X_{s,t} \rVert \rightarrow 0
+	\]
+
+	en casi toda pareja $(s,t) \in \Delta_{[0, T]}$. Finalmente, note que:
+
+	\begin{align*}
+		\lvert \tilde{\mathbb{X}}_{s,t} \rvert &= \lim_{n \rightarrow \infty} \lvert \mathbb{X}_{s_k, t_k} \rvert \\
+			% =======================
+			&\leq \lim_{k \rightarrow \infty} \mathbb{K}_{\alpha} \lvert t_k - s_k \rvert^{2\alpha} \\
+			&= \mathbb{K}_{\alpha} \lvert t - s \rvert^{2\alpha}
+ 	\end{align*}
+
+ 	de tal forma que, en casi todo punto, $\tilde{\mathbb{X}}$ cumple la condición dada. Con esto, ya pruebe lo deseado.
 
 
 % Integración, Lema de Costura, Integración de Young.

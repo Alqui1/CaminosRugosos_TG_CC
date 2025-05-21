@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  21 MAY 2025 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  21 MAY 2025 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,12 +1072,55 @@ Overfull \hbox (37.66899pt too wide) detected at line 271
 []
  []
 
-) (./appendix/appendix_gen.tex
+
+Overfull \hbox (129.52376pt too wide) detected at line 281
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 281.
+LaTeX Info: Redefining \% on input line 281.
+[54]
+
+LaTeX Warning: Command \c invalid in math mode on input line 283.
+
+
+Overfull \hbox (211.89734pt too wide) detected at line 296
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 303.
+LaTeX Info: Redefining \% on input line 303.
+[55]
+Overfull \hbox (15.24301pt too wide) in paragraph at lines 322--323
+[]\OT1/cmr/m/n/12 Sea $(\OML/cmm/m/it/12 s; t\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12
+ 2 \OT1/cmr/m/n/12 ^^A[]$ de tal for-ma que $0 \OML/cmm/m/it/12 < s \OMS/cmsy/m
+/n/12 ^^T \OML/cmm/m/it/12 t < \OT1/cmr/m/n/12 1$. De-fi-na $\OMS/cmsy/m/n/12 f
+\OML/cmm/m/it/12 s[]\OMS/cmsy/m/n/12 g[]\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\O
+ML/cmm/m/it/12 t[]\OMS/cmsy/m/n/12 g[] ^^Z
+ []
+
+
+Overfull \hbox (24.69885pt too wide) detected at line 335
+[]
+ []
+
+
+Overfull \hbox (240.16046pt too wide) detected at line 343
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 349.
+LaTeX Info: Redefining \% on input line 349.
+[56]) (./appendix/appendix_gen.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [54] (./appendix/measureTheory.tex [55
+ [57]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [58
 
-])
+] (./appendix/measureTheory.tex
+[59])
 Overfull \hbox (0.51761pt too wide) in paragraph at lines 49--11
 []\OT1/cmr/m/n/12 Consulte: https://en.wikipedia.org/wiki/Quotient[]space[](lin
 ear[]algebra).
@@ -1091,17 +1134,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--11
 (./appendix/hilbert_spaces.tex)) (./main.bbl
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [56]) [57
+ [60]) [61
 
 ] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19790 strings out of 480185
- 420190 string characters out of 5894214
- 725496 words of memory out of 5000000
- 37386 multiletter control sequences out of 15000+600000
+ 19792 strings out of 480185
+ 420214 string characters out of 5894214
+ 728496 words of memory out of 5000000
+ 37388 multiletter control sequences out of 15000+600000
  482873 words of font info for 78 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  99i,13n,104p,953b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1123,10 +1166,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (57 pages, 372920 bytes).
+Output written on main.pdf (61 pages, 381659 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
+ 300 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
