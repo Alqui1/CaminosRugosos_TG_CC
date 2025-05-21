@@ -1,0 +1,49 @@
+\section{Teoría de la Medida}
+
+Algunas notas acerca de teoría de la medida, usadas para el presente trabajo de grado.
+
+\subsection{Funciones $L^p$ y $\mathcal{L}^p$}
+
+Sea $(X, \mathcal{A}, \mu)$ un espacio de medida, con $1 < p < \infty$ ($p$ no necesariamente entero). Denotará a:
+
+\[
+	\mathcal{L}^p (X, \mathcal{A}, \mu, \mathbb{R})
+\]
+
+el conjunto de funciones medibles respecto a $\mathcal{A}$, tal que $f: X \rightarrow \mathbb{R}$, donde $\lvert f \rvert^p$ es integrable, esto es:
+
+\[
+	\int \lvert f \rvert^p d\mu < \infty
+\]
+
+Ese conjunto conforma un espacio vectorial sobre $\mathbb{R}$ (¿Por qué?). Más aún, $\mathcal{L}^p (X, \mathcal{A}, \mu, \mathbb{C})$ también es un espacio vectorial sobre $\mathbb{C}$.
+
+Si $p = \infty$, $\mathcal{L}^p (X, \mathcal{A}, \mu, \mathbb{R})$ es el conjunto de funciones acotadas y medibles respecto a $\mathcal{A}$ (O \textit{esencialmente acotada}).
+
+Podemos definir una \textbf{seminorma} en $\mathcal{L}^p$ como:
+
+\[
+	\lVert f \rVert_p = \left( \int \lvert f \rvert^p d\mu \right)^{1/p}
+\]
+
+Falla al ser norma al pedir que $\lVert x \rVert = 0 \Leftrightarrow x = 0$. Podemos construir a partir de este espacio, un espacio Banach normado, $L^p (X, \mathcal{A}, \mu)$. Sea $\mathcal{N}^p (X, \mathcal{A}, \mu) \subset \mathcal{L}^p (X, \mathcal{A}, \mu)$ las funciones que cumplen:
+
+\[
+	f \in \mathcal{L}^p (X, \mathcal{A}, \mu) \text{ y } \lVert f \rVert_p = 0
+\] 
+
+Esto es, funciones que en casi todo punto se anulan para $1 < p < \infty$. Si $p = \infty$, son funciones acotadas medibles respecto a $\mathcal{A}$ en X, tal que se anulan en casi todo punto localmente. $\mathcal{N}^p$ es subespacio lineal de $\mathcal{L}^p$. Defina:
+
+\[
+	L^p (X, \mathcal{A}, \mu) = \mathcal{L}^p (X, \mathcal{A}, \mu) / \mathcal{N}^p (X, \mathcal{A}, \mu)
+\]
+
+Esto es, una colección de cosets, que están definidos por la relación de equivalencia definida por:
+
+\[
+	f \tilde g \Leftrightarrow f - g \in \mathcal{N}^p
+\]
+
+Esto es, si las funciones son iguales en casi todo punto. (Para $p = \infty$, corresponde a las funciones iguales en casi todo punto localmente). En este caso, $\lVert \cdot \rVert_p$ es una norma en $L^p (X, \mathcal{A}, \mu)$.
+
+Consulte: https://en.wikipedia.org/wiki/Quotient\_space\_(linear\_algebra).

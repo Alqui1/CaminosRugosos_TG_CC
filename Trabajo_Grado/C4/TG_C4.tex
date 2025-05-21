@@ -137,7 +137,7 @@ En primer lugar, se va a demostrar el teorema fuerte de esta sección, que corre
 
 \begin{theorem}[Criterio de Kolmogorov para caminos rugosos]
 
-Sea $(X, \mathbb{X}): \Omega \times [0, T] \rightarrow \mathbb{R}^d \times \mathbb{R}^{d \times d}$ un proceso estocástico medible (Respecto a la $\sigma$-álgebra producto $\mathcal{F} \otimes \mathcal{B}[0, T]$) que, para casi todo $\omega \in \Omega$, satisface la relación de Chen. Sea $q \leq 2$ y $\beta > \frac{1}{q}$. Suponga que existe una constante $C > 0$, tal que, para todo $(s,t)\in \Delta_{[0,T]} $,
+Sea $(X, \mathbb{X}): \Omega \times [0, T] \rightarrow \mathbb{R}^d \times \mathbb{R}^{d \times d}$ un proceso estocástico medible (Respecto a la $\sigma$-álgebra producto $\mathcal{F} \otimes \mathcal{B}[0, T]$) que, para casi todo $\omega \in \Omega$, satisface la relación de Chen. Sea $q \geq 2$ y $\beta > \frac{1}{q}$. Suponga que existe una constante $C > 0$, tal que, para todo $(s,t)\in \Delta_{[0,T]} $,
 
 \[
 	\lVert X_{s,t} \rVert_{L^q} \leq C \lvert t-s \rvert^{\beta}, \quad \lVert \mathbb{X}_{s,t} \rVert_{L^{q/2}} \leq C \lvert t - s \rvert^{2\beta}
@@ -181,8 +181,8 @@ Echando cuentas, tenemos:
 
 \begin{align*}
 	\mathbb{E}[K^q_n] &= \mathbb{E}\left[  \max_{t \in \mathcal{D}_n} \lvert X_{t, t + 2^{-n}} \rvert^q \right] \quad \text{Sumar sobre los otros términos positivos de } \mathcal{D}_n \\
-	&\leq \mathbb{E} \left[ \sum_{t \in \mathcal{D}_n} \lvert X_{t, t + 2^{-n}} \rvert^q \right] \quad \text{Aplicar desigualdad triangular} \\
-	&\leq \sum_{t \in \mathcal{D}_n} \mathbb{E} [ \lvert X_{t, t + 2^{-n}} \rvert^q ] \quad \text{Recuerde} \lVert X_{s,t} \rVert_{L^q} = \mathbb{E}[ \lvert X_{s,t} \rvert^q ]^{1/q} \\
+	&\leq \mathbb{E} \left[ \sum_{t \in \mathcal{D}_n} \lvert X_{t, t + 2^{-n}} \rvert^q \right] \quad \text{Aplicar ¿DT?} \\
+	&= \sum_{t \in \mathcal{D}_n} \mathbb{E} [ \lvert X_{t, t + 2^{-n}} \rvert^q ] \quad \text{Recuerde} \lVert X_{s,t} \rVert_{L^q} = \mathbb{E}[ \lvert X_{s,t} \rvert^q ]^{1/q} \\
 	&= \sum_{t \in \mathcal{D}_n} \lVert X_{t,t+ 2^{-n}} \rVert^q \quad \text{Use las hipótesis acerca de la norma}  \\
 	&\leq \sum_{t \in \mathcal{D}_n} C^q \lvert t - (t - 2^{-n}) \rvert^{q \beta} \quad \text{ Hay } 2^n \text{elementos en la partición} \\
 	&= C^q \lvert 2^{-n} \rvert^{q \beta} \cdot 2^n \\
@@ -192,8 +192,88 @@ Echando cuentas, tenemos:
 Puede repetir esta cuenta con el levantamiento $\mathbb{K}_n$, ¡Vamos a ello!: 
 
 \begin{align*}
-	\mathbb{E}[ \mathbb{K}_n^q ] &= \mathbb{E}[ \max_{t \in \mathcal{D}_n} \lvert \mathbb{X}_{t, t + 2^{-n}}  \rvert^q ] 
+	\mathbb{E}[ \mathbb{K}_n^{q/2} ] &= \mathbb{E}[ \max_{t \in \mathcal{D}_n} \lvert \mathbb{X}_{t, t + 2^{-n}}  \rvert^{q/2} ] \quad \text{Sumar sobre los otros términos } \mathcal{D}_n \\
+	&\leq \mathbb{E}\left[ \sum_{t \in \mathcal{D}_n}  \lvert \mathbb{X}_{t, t + 2^{-n}} \rvert^{q/2} \right] \\
+	&= \sum_{t \in \mathcal{D}_n} \mathbb{E} [\lvert \mathbb{X}_{t, t + 2^{-n}} \rvert^{q/2}] \quad \text{Definición de norma} \\
+	&= \sum_{t \in \mathcal{D}_n} \lVert X_{t, t + 2^{-n}} \rVert_ {L^{q/2}}^{q/2} \quad \text{Aplicar hipótesis, cota para } \mathbb{X} \\
+	&\leq \sum_{t \in \mathcal{D}_n} C^{q/2} 2^{-n \cdot q/2 \cdot 2\beta} \\
+	&= C^{q/2} 2^{-nq\beta + n} = C^{q/2} 2^{-n(q \beta - 1 )}
 \end{align*}
+
+
+Ya tenemos cotas para los valores esperados de $K_n^q$ y $\mathbb{K}_n^q$! ¿Y ahora? La idea es, con estas cotas, mostrar que $K_{\alpha} \in L^p$ y $\mathbb{K}_{\alpha} \in L^(p/2)$ (\textbf{VEA, EN EL APÉNDICE, ESPACIOS} $L^p$ ).
+
+
+%========================%========================
+
+\begin{comment}
+
+Fije $s < t$ en $\cup_{n \leq 0} \mathcal{D}_n$ (La unión de todos los elementos en la partición diádica, esto es, $t = \frac{k}{2^n}$ para algún $k, n$). Seleccione $m$, de tal forma que $2^{-(m+1)} < t - s < 2^{-m} $. 
+
+Note que, $[s,t]$ se puede expresar como la unión finita de intervalos de la forma $[u, v] \in \mathcal{D}_n$, con $n > m + 1$ donde no hay tres intervalos con el mismo tamaño. (Creo que ya entendí :D... ). Dicho de otra forma, tenemos una partición de $[s, t]$ de la forma
+
+\[
+	s = u_0 < u_1 < \cdots < u_N = t
+\]
+
+donde $[u_i, u_{i+1}] \in \mathcal{D}_n$ para algún $n > m + 1$, y para cada $n \geq m + 1$, hay a lo sumo, dos intervalos tomados de $\mathcal{D_n}$. Argumento de descomposición multiescala: Argumento de encadenamiento.
+
+\[
+	\lvert X_{s,t} \rvert \leq \max_{0 \leq i < N} \lvert X_{s, u_{i+1} } \rvert \leq \sum_{i = 0}^{N-1} \lvert X_{u_i, u_{i+1} } \rvert \leq 2 \sum_{n = m+1}^{\infty} K_n
+\]
+
+\end{comment}
+
+Dados $s < t$, elementos tomados de $\cup_{n \leq 0} \mathcal{D}_n$ (La unión de todos los elementos en la partición diádica, esto es, $t = \frac{k}{2^n}$ para algún $k, n$). Seleccione algún $m$, de tal forma que 
+
+\[
+	2^{-(m + 1)} < t - s < 2^{-m}
+\]
+
+Para cada $n \geq m+1$, tome $u_n, v_n \in \mathcal{D}_n$, tal que $u_n < v_n$, $[u_n, v_n] \subset [s,t]$ y $\cup [u_n, v_n] = [s,t]$, esto es, una partición. Note que, no es posible que existan 3 subintervalos con el mismo tamaño, ¿Por qué? Graficando esta situación tenemos:
+
+
+En este caso, se aplicó unrgumento de descomposición multiescala: Argumento de encadenamiento. Luego, tenemos
+
+\[
+	\lvert X_{s,t} \rvert \leq \max_{0 \leq i < N} \lvert X_{s, u_{i+1} } \rvert \leq \sum_{i = 0}^{N-1} \lvert X_{u_i, u_{i+1} } \rvert \leq 2 \sum_{n = m+1}^{\infty} K_n
+\]
+
+Y de manera análoga,
+
+\begin{align*}
+	\lvert \mathbb{X}_{s,t} \rvert &= \left\lvert \sum_{i = 0}^{N - 1} (\mathbb{X}_{u_i, u_{i+1}}) + X_{s,u_i} \otimes X_{u_i, u_{i + 1}} \right\rvert \quad \text{Aplique desigualdad triangular dos veces} \\
+	&\leq \sum_{i = 0}^{N - 1} \lvert \mathbb{X}_{u_i, u_{i+1}} \rvert + \lvert X_{s, u_i} \rvert \lvert X_{u_i, u_{i + 1}} \rvert \quad \text{Saque el máximo} \\
+	&\leq \sum_{i = 0}^{N - 1} \lvert \mathbb{X}_{u_i, u_{i+1}} \rvert + \left( \max_{0 \leq i < N} \lvert X_{s, u_i} \rvert \right) \sum_{i = 0}^{N - 1} \lvert X_{u_i, u_{i + 1}} \rvert \quad \text{Use las consecuencias de lo anterior} \\
+	&= 2 \sum_{i = m + 1}^{\infty} \mathbb{K}_n + 2 \sum_{i = m + 1}^{\infty} K_n \cdot 2 \sum_{i = m + 1}^{\infty} K_n \\
+	&=  2 \sum_{i = m + 1}^{\infty} \mathbb{K}_n + \left( 2 \sum_{i = m + 1}^{\infty} K_n \right)^2
+\end{align*}
+
+%========================%========================
+
+Con esto, obtener otra cota para la norma $\alpha$-Hólder de $X$:
+
+\begin{align*}
+	\frac{ \lvert X_{s,t} \rvert }{ \lvert t - s \rvert^{\alpha} } &\leq 2 \sum_{n = m + 1}^{\infty} \frac{K_n}{2^{-(m+1) \alpha}} \quad \lvert t - s \rvert \geq 2^{-(m+1)} \\
+	&\leq 2 \sum_{n = m + 1}^{\infty} \frac{K_n}{2^{-n \alpha}} \quad \text{Porque } 2^{-n} < 2^{-(m+1)} \\
+	&\leq 2 \sum_{n = 0}^{\infty} \frac{K_n}{2^{-n \alpha}} =: K_{\alpha} \quad \text{Porque } 2^{-n} < 2^{-(m+1)} \\
+\end{align*}
+
+Esta es la variable aleatoria deseada. Observe, finalmente que:
+
+\begin{align*}
+	\lVert K_{\alpha} \rVert_{L^q} &= \left\lVert 2 \sum_{n=0}^{\infty} \frac{K_n}{2^{-n\alpha}} \right\rVert \quad \text{Aplicar desigualdad triangular} \\
+	&\leq 2 \sum_{n=0}^{\infty} \frac{ \lVert K_n \rVert_{L^q} }{ 2^{-n\alpha} } \quad \text{Definición de la norma} \\
+	&= 2 \sum_{n=0}^{\infty} \frac{ \mathbb{E}[K_n^q]^{1/q} }{ 2^{-n\alpha} }\\
+	&\leq 2 \sum_{n=0}^{\infty} \frac{  \left(C^q 2^{-n(\beta q - 1)} \right)^{1/q}  }{ 2^{-n\alpha} } \quad \text{Por el resultado anterior. Hagamos más cuentas!} \\
+	&= 2 \sum_{n=0}^{\infty} \frac{  C \cdot 2^{-n(\beta - \frac{1}{q})}  }{ 2^{-n\alpha} } \\
+	&= 2C \sum_{n=0}^{\infty} 2^{-n(\beta - \frac{1}{q} - \alpha}) < \infty
+\end{align*}
+
+Este último es, debibo a que tendremos una serie geométrica. Note que, por hipótesis, $\beta > \frac{1}{q}$ o $\beta - \frac{1}{q} > 0$. Como $\alpha \in \left[ 0, \beta - \frac{1}{q} \right)$, $\beta - \frac{1}{q} > \alpha$ o $\beta - \frac{1}{q} - \alpha > 0$, por ende, la serie es convergente.
+
+Con esto, queda probado que $\lVert K_{\alpha} \rVert_{L^q}$. Ahora, queda probar el resultado análogo para la variable aleatoria $\mathbb{K}_{\alpha}$.
+
 
 % Integración, Lema de Costura, Integración de Young.
 
