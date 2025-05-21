@@ -1,14 +1,15 @@
 # Fdb version 3
-["pdflatex"] 1745717779 "TG_C4.tex" "TG_C4.pdf" "TG_C4" 1745717779
+["pdflatex"] 1747847583 "TG_C4.tex" "TG_C4.pdf" "TG_C4" 1747847584
   "/etc/texmf/web2c/texmf.cnf" 1708108668 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1713487633 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1717344335 1427448 2884ca29eb7b8a63977f6e45b8a7821f ""
   "TG_C4.aux" 1744376797 32 3985256e7290058c681f74d7a3565a19 ""
-  "TG_C4.tex" 1744378680 658 7acf254995e84fa3e73fd6f737c65081 ""
+  "TG_C4.tex" 1747847581 6319 b6c02b7877892a4bdd9aab72d7e0ea70 ""
   (generated)
   "TG_C4.log"
   "TG_C4.pdf"

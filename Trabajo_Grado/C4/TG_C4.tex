@@ -119,7 +119,81 @@ para $s, t \in [0,T]$ con $s < t$.
 
 % Caminos Rugosos, Caminos Rugosos Geométricos (Interpretación prof. Freddy).
 
+
+
 % Movimiento Browniano como ejemplo a camino rugosos.
+
+\section{Caminos Rugosos y el movimiento Browniano.}
+
+Recuerde, que la integral de Itô está definina como:
+
+\[
+	\int_s^t B_{s,r} dB_r
+\]
+ 
+esto es, tomando el punto izquierdo. En esta sección, se va a ver que el movimiento Browniano, en conjunto con esta integral, conforman un camino rugoso para $\alpha \in \left[\frac{1}{3}, \frac{1}{2} \right]$. Con esto, se puede aplicar la teoría de caminos rugosos e integración rugosa, a la integración estocástica, lo que abre un gran mundo de posibilidades.
+
+En primer lugar, se va a demostrar el teorema fuerte de esta sección, que corresponde al \textit{criterio de Kolmogorov de caminos rugosos}, el cuál, parafraseando, mostrará la existencia del una modificación para ciertos procesos estocásticos medibles, cuya modificación será un camino rugoso. Más específicamente, el enunciado dice:
+
+\begin{theorem}[Criterio de Kolmogorov para caminos rugosos]
+
+Sea $(X, \mathbb{X}): \Omega \times [0, T] \rightarrow \mathbb{R}^d \times \mathbb{R}^{d \times d}$ un proceso estocástico medible (Respecto a la $\sigma$-álgebra producto $\mathcal{F} \otimes \mathcal{B}[0, T]$) que, para casi todo $\omega \in \Omega$, satisface la relación de Chen. Sea $q \leq 2$ y $\beta > \frac{1}{q}$. Suponga que existe una constante $C > 0$, tal que, para todo $(s,t)\in \Delta_{[0,T]} $,
+
+\[
+	\lVert X_{s,t} \rVert_{L^q} \leq C \lvert t-s \rvert^{\beta}, \quad \lVert \mathbb{X}_{s,t} \rVert_{L^{q/2}} \leq C \lvert t - s \rvert^{2\beta}
+\]
+
+(Esta elección que constantes $q$ y $\beta$ se hace para concuerde con la definición de camino rugoso, que $X$ sea $\beta$-Hölder y el levantamiento $\mathbb{X}$ sea $2\beta$-Hölder).
+
+Entonces, para todo $\alpha \in [0, \beta - \frac{1}{q}]$, existe una modificación $(\tilde{X}, \tilde{\mathbb{X}})$ de $(X, \mathbb{X})$ y también existen variables aleatorias $K_{\alpha} \in L^q$, $\mathbb{K}_{\alpha} \in L^{q/2}$ tal que, para todo $(s,t) \in \Delta_{[0,T]}$,
+
+\[
+	\lvert \tilde{X}_{s,t} \rvert \leq K_{\alpha} \lvert t - s \rvert^{\alpha}, \quad \lvert \tilde{ \mathbb{X} }_{s,t} \rvert \leq \mathbb{K}_{\alpha} \lvert t - s \rvert^{2\alpha}
+\]
+
+(Esta relación es para casi toda $\omega \in \Omega$ ¿?). En particular, si $\beta - \frac{1}{q} > \frac{1}{3}$, entonces, para todo $\alpha \in (\frac{1}{3}, \beta - \frac{1}{q})$, tenemos que $(\tilde{X}, \tilde{\mathbb{X}})$
+
+\end{theorem}
+
+En primer lugar, se puede ver el proceso estocástico como la siguiente función:
+
+\[
+	Y_t (\omega) = (X_{s,t} (\omega), \mathbb{X}_{s,t} (\omega) )
+\]
+
+donde $\mathbb{X}_{s,t} (\omega) = \int_s^t X_{s,r} (\omega) \otimes dX_{r}$, tal que para casi todo $\omega \in \Omega$, se cumple que:
+
+\[
+	\mathbb{X}_{s,t} (\omega) = \mathbb{X}_{s,u} (\omega) + \mathbb{X}_{u,t} (\omega) + X_{s,u} (\omega) \otimes X_{u,t} (\omega)
+\]
+
+Esto es, se cumple para casi todo $\omega$ la relación del Chen.
+
+\textbf{Demostración:} En este caso, se probará primero el enunciado, para el conjunto de particiones diádicas, $\mathcal{D}_n = \left\{\ \frac{k}{2^n} \vert k = 0, 1, \cdots, 2^n - 1 \right\}$. Además, se puede, sin pérdida de generalidad, tomar $T = 1$. Defina, así:
+
+\[
+	K_n = \max_{t \in \mathcal{D}_n} \lvert X_{t, t + 2^{-n}} \rvert \quad \mathbb{K}_n = \max_{t \in \mathcal{D}_n} \lvert \mathbb{X}_{t, t + 2^{-n}} \rvert
+\]
+
+(Este corresponde a la modificación propuesta!)
+
+Echando cuentas, tenemos:
+
+\begin{align*}
+	\mathbb{E}[K^q_n] &= \mathbb{E}\left[  \max_{t \in \mathcal{D}_n} \lvert X_{t, t + 2^{-n}} \rvert^q \right] \quad \text{Sumar sobre los otros términos positivos de } \mathcal{D}_n \\
+	&\leq \mathbb{E} \left[ \sum_{t \in \mathcal{D}_n} \lvert X_{t, t + 2^{-n}} \rvert^q \right] \quad \text{Aplicar desigualdad triangular} \\
+	&\leq \sum_{t \in \mathcal{D}_n} \mathbb{E} [ \lvert X_{t, t + 2^{-n}} \rvert^q ] \quad \text{Recuerde} \lVert X_{s,t} \rVert_{L^q} = \mathbb{E}[ \lvert X_{s,t} \rvert^q ]^{1/q} \\
+	&= \sum_{t \in \mathcal{D}_n} \lVert X_{t,t+ 2^{-n}} \rVert^q \quad \text{Use las hipótesis acerca de la norma}  \\
+	&\leq \sum_{t \in \mathcal{D}_n} C^q \lvert t - (t - 2^{-n}) \rvert^{q \beta} \quad \text{ Hay } 2^n \text{elementos en la partición} \\
+	&= C^q \lvert 2^{-n} \rvert^{q \beta} \cdot 2^n \\
+	&= C^q 2^{-n \beta q + n} = C^q 2^{n (- \beta q + 1)}
+\end{align*}
+
+Puede repetir esta cuenta con el levantamiento $\mathbb{K}_n$, ¡Vamos a ello!: 
+
+\begin{align*}
+	\mathbb{E}[ \mathbb{K}_n^q ] &= \mathbb{E}[ \max_{t \in \mathcal{D}_n} \lvert \mathbb{X}_{t, t + 2^{-n}}  \rvert^q ] 
+\end{align*}
 
 % Integración, Lema de Costura, Integración de Young.
 
