@@ -4,8 +4,23 @@ Algunos conceptos, teoremas, etc... de probabilidad, procesos estocásticas que 
 
 \subsection{Semimartingalas, Martingalas locales}
 
-Conceptos necesarios para entender algunas definiciones acerca el movimiento Browniano.
+Conceptos necesarios para entender algunas definiciones acerca el movimiento Browniano. Asuma el espacio filtrado de probabilidad $(\Omega, \mathcal{F}, \mathcal{F}_t, P)$
 
+\begin{boxDef}
+	Un proceso $A$ es \textbf{creciente} o de \textbf{variación finita}, si es adaptado (A la filtración del espacio), y las trayectorias $t \mapsto A_t (\omega)$ son finitas, continuas a derecha y crecientes (O variación finita), para casi todo $\omega$
+\end{boxDef} 
+
+
+\subsection{Variación Cuadrática}
+
+\begin{boxDef}
+	Dado $\{  X_t \}$ un proceso estocástico con valores reales definidos en un espacio de probabilidad $(\Omega, \mathcal{F}, P)$. Definimos la \textbf{variación cuadrática} como:
+
+	\[
+		\langle X \rangle_t = \lim_{ \lVert P \rVert \rightarrow 0 } \sum_{k = 1}^n (X_{t_k} - X_{t_{k-1}})^2	
+	\]
+
+\end{boxDef}
 
 
 \subsection{Desigualdad de Burkholder-Davis-Gundy}
@@ -38,3 +53,31 @@ Primero, verificar la caracterización de Lévŷ para el movimiento Browniano.
 	\end{itemize}
 
 \end{theorem}
+
+\textbf{Demostración:}
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+Note que las normas $\lVert \cdot \rVert_1$ y $\lVert \cdot \rVert_2$ definido en el espacio de martingalas continuas acotadas en $L^2$, que se anulan en $0$, son equivalentes por la desigualdad de Doob's (Ver preliminares en PE):
+
+\[
+	\lVert M \rVert_1 = \mathbb{E}[M^2_{\infty}]^{1/2} = \mathbb{E}[ \langle  M, M \rangle_{\infty}]^{1/2} \qquad \lVert M \rVert_2 = \mathbb{E}[ (M^*_{\infty})^2 ]^{1/2}
+\]
+
+Con esto en mente, se enuncia la desigualdad de \textit{Burkholder-Davis-Gundy}:
+
+\begin{theorem}[Desigualdad de Burkholder-Davis-Gundy] 
+Para cualquier $p > 0$, existen dos constantes $c_p$ y $C_p$ tal que para toda martingala local continua $M$ que se anula en $0$, tenemos:
+
+\[
+	c_p \mathbb{E}[ \langle M,M \rangle_{\infty}^{p/2} ] \leq \mathbb{E}[ (M^*_{\infty})^p ] \leq C_p \mathbb{E}[ \langle M,M \rangle_{\infty}^{p/2} ]
+\]
+
+\end{theorem}
+
+45¿Qué es $M^*_{\infty}$ y $\langle M,M \rangle$?
+
+% https://math.uchicago.edu/~may/REU2019/REUPapers/Carlstein.pdf
+
