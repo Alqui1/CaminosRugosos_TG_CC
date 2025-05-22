@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  21 MAY 2025 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  22 MAY 2025 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,6 +545,7 @@ Package: xparse 2022-01-12 L3 Experimental document command parser
 \c@theorem=\count310
 \c@coro=\count311
 \c@lema=\count312
+\c@prop=\count313
 
 
 LaTeX Warning: Unused global option(s):
@@ -556,34 +557,34 @@ LaTeX Info: Redefining \% on input line 8.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count313
+\scratchcounter=\count314
 \scratchdimen=\dimen270
 \scratchbox=\box77
-\nofMPsegments=\count314
-\nofMParguments=\count315
+\nofMPsegments=\count315
+\nofMParguments=\count316
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count316
+\MPscratchCnt=\count317
 \MPscratchDim=\dimen271
-\MPnumerator=\count317
-\makeMPintoPDFobject=\count318
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
 \everyMPtoPDFconversion=\toks40
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -594,13 +595,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -641,23 +642,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 ) [4] (./main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-)
+ [5
+
+])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (./C1/TG_C1.tex [5
-
-]
+ (./C1/TG_C1.tex
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
- [6
-
-]
+ [6]
 Cap\'{\i }tulo 1.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
+ [7
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
@@ -991,7 +992,7 @@ Overfull \hbox (54.71246pt too wide) in paragraph at lines 114--115
 Brow-niano $[]$
  []
 
-)) (./C3/TG_C3.tex
+) (./C2/TG_C2_EXTRA.tex)) (./C3/TG_C3.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [41]
@@ -1109,18 +1110,29 @@ Overfull \hbox (240.16046pt too wide) detected at line 343
 []
  []
 
-LaTeX Info: Redefining \. on input line 349.
-LaTeX Info: Redefining \% on input line 349.
-[56]) (./appendix/appendix_gen.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 347.
+LaTeX Info: Redefining \% on input line 347.
+[56]
+LaTeX Info: Redefining \. on input line 392.
+LaTeX Info: Redefining \% on input line 392.
  [57]
+Overfull \hbox (296.39157pt too wide) detected at line 415
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 428.
+LaTeX Info: Redefining \% on input line 428.
+[58]) (./appendix/appendix_gen.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [58
+ [59]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [60
 
-] (./appendix/measureTheory.tex
-[59])
+]
+Cap\'{\i }tulo 5.
+(./appendix/measureTheory.tex [61])
 Overfull \hbox (0.51761pt too wide) in paragraph at lines 49--11
 []\OT1/cmr/m/n/12 Consulte: https://en.wikipedia.org/wiki/Quotient[]space[](lin
 ear[]algebra).
@@ -1131,20 +1143,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--11
 
  []
 
-(./appendix/hilbert_spaces.tex)) (./main.bbl
+(./appendix/hilbert_spaces.tex) (./appendix/probabilityAdvance.tex
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+ [62]))
+(./main.bbl
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [60]) [61
+ [63]
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+ [64
 
-] (./main.aux
+]) [65] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19792 strings out of 480185
- 420214 string characters out of 5894214
- 728496 words of memory out of 5000000
- 37388 multiletter control sequences out of 15000+600000
+ 19810 strings out of 480185
+ 420520 string characters out of 5894214
+ 727538 words of memory out of 5000000
+ 37400 multiletter control sequences out of 15000+600000
  482873 words of font info for 78 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  99i,13n,104p,953b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1166,10 +1185,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (61 pages, 381659 bytes).
+Output written on main.pdf (65 pages, 393151 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 313 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

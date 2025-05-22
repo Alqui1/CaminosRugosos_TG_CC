@@ -321,7 +321,7 @@ Finalmente (Ahora sí, te juro que sí), queda demostrar $\tilde{\mathbb{X}}_{s,
 
 	\item Sea $(s,t) \in \Delta_{[0,1]}$ de tal forma que $0 < s \leq t < 1$. Defina $\{ s_k \}_{k \geq 1}, \{ t_k \}_{k \geq 1} \subset \cup_{n \leq 0} \mathcal{D}_n$ sucesiones, de tal forma que $s_k \nearrow s$ y $t_k \searrow t$ para $k \rightarrow \infty$. 
 
-	\item
+	\item Los otros casos corresponden a tomar $s = 0$ y $t < 1$, o $0 < s$ y $t = 1$, o $s = 0$ y $t = 1$. ¿COMPLETAR?
 
 \end{itemize}
 
@@ -360,6 +360,97 @@ Defina $\tilde{X}_{s,t} = \lim_{k \rightarrow \infty} \mathbb{X}_{s_k, t_k}$. Co
  	de tal forma que, en casi todo punto, $\tilde{\mathbb{X}}$ cumple la condición dada. Con esto, ya pruebe lo deseado.
 
 
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+% ==============================
+
+\subsection{Integral de Itô}
+
+Sea $B_t \in \mathbb{R}^n$ un movimiento Browniano estándar en dimensión $n$. Ya se conoce que las trayectorias del movimiento Browniano son $\alpha$-Hölder continua para $\alpha \in \left[ \frac{1}{3}, \frac{1}{2} \right)$, entonces, se va a proponer un levantamiento que esea $2\alpha$-Hölder continua. Este levantamiento será la, ya vista en capítulos anteriores, \textit{integral de Itô}:
+
+\[
+	\mathbb{B}_{s,t} = \int_s^t B_{s,r} \otimes dB_r
+\]
+
+Se puede ver esta integral, como una suma de integrales iteradas:
+
+\[
+	\mathbb{B}_{s,t} = \sum_{i,j}^d \int_s^t	 B_{s,r}^{(i)} dB_r^{(j)}
+\]
+
+O también, de forma matricial:
+
+\[
+	\mathbb{B}_{s,j}^{(i,j)} = \int_s^t	 B_{s,r}^{(i)} dB_r^{(j)}	
+\]
+
+\begin{prop}
+	Para cualquier $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right)$, casi siempre se cumple que:
+
+	\[
+		\mathbf{B} := (B, \mathbb{B}_{s,t}) \in \mathcal{C}^{\alpha}([0,T]; \mathbb{R}^n)
+	\]
+\end{prop}
+
+\textbf{Demostración:} Para usar el criterio de Kolmogorov de caminos rugosos, en primer lugar se deben verificar las condiciones del problema.
+
+\begin{itemize}
+
+	\item En primer lugar, se conoce que $B_t$ y $\int_s^t B_{s,r} dB_r$ son medibles respecto a $\mathcal{F}_T$ (La $\sigma$-álgebra generada por $\left\{ B_s \right\}_{s \leq T}$), por ende, $(B, \mathbb{B})$ es medible respecto a $\mathcal{F} \otimes \mathcal{B}[0,T]$.
+
+	\item Verificar que cumple la relación de Chen (Casi siempre). Haciendo cuentas, para $s \leq u \leq t$, observe que:
+
+	\begin{align*}
+		\mathbb{B}_{s,t} &= \int_s^t B_{s,r} \otimes dB_r \quad \text{Aplicar propiedades integral Itô, Capítulo 3.} \\
+		&= \int_s^u B_{s,r} \otimes dB_r + \int_u^t B_{s,r} \otimes dB_r \quad \text{Sumar ceros. El primer índice de } B_{s,r} \text{ es } u. \\
+		&= \int_s^u B_{s,r} \otimes dB_r + \int_u^t \left( B_r - B_s + B_u - B_u \right) \otimes dB_r \quad \text{Aplicar aditividad de la integral de Itô para el integrando} \\
+		% ==================================
+		&= \int_s^u B_{s,r} \otimes dB_r + \int_u^t  B_{u,r} \otimes dB_r + \int_u^t B_u - B_s \otimes dB_r \quad \text{Definición del levantamiento, sacar constante de la tercera integral}  \\
+		% ==================================
+		&= \mathbb{B}_{s,u} + \mathbb{B}_{u,t} + (B_{s,u}) \otimes \int_u^t dB_r \quad \text{Por construcción de integral de Itô:} \\
+		% ==================================
+		&= \mathbb{B}_{s,u} + \mathbb{B}_{u,t} + B_{s,u} \otimes B_{u,t}
+	\end{align*} 
+
+	Por ende, la relación de Chen se cumple casi siempre.
+
+	\item Sea $q \geq 2$ (¿$q = 2$?) y $\beta > \frac{1}{q}$. Tome $(s,t) \in \Delta_{[0,T]}$. Observe:
+
+	\[
+		\lVert B_{s,t} \rVert_{L^q} = \lVert (t-s)^{1/2} B_1 \rVert_{L^q} = \lvert (t-s) \rvert^{1/2} \lVert B_1 \rVert_{L^q}
+	\]
+
+	La primera igualdad viene por la propiedades del escalamiento en el sentido de la distribución de probabilidad. Luego, se aplica homogeneidad de la norma $\lVert \cdot \rVert_{L^q}$.
+
+	Aplicamos la \textit{desigualdad de Burkhölder-David-Gundy} dos veces. Así, tendremos:
+
+	\begin{align*}
+		\mathbb{E}[ \lvert \mathbb{B}_{s,t} \rvert^{q/2} ] &= \mathbb{E} \left[ \left\lvert \int_s^t B_{s,r} \otimes dB_r \right\rvert \right] \\
+		% ==================================
+		&\leq C_q \mathbb{E} \left[ \left\lvert \int_s^t \lvert B_{s,r} \rvert^2 dr \right\rvert^{q/4} \right] \\
+		% ==================================
+		&\leq C_q \mathbb{E}\left[  \sup_{r \in [s,t]} \lvert B_{s,r} \rvert^{q/2} \right] \lvert t- s \rvert^{q/4} \\
+		% ==================================
+		&\leq C_q^2 \lvert t - s \rvert^{q/2}
+	\end{align*}
+
+	Note que este es un estimador de la norma $\lVert \cdot \rVert_{L^{q/2}}$. Así, tenemos que:
+
+	\[
+		\lVert \mathbb{B}_{s,t} \rVert_{L^{q/2}} \leq \left( C_q^2 \lvert t- s \rvert^{q/2} \right)^{2/q} = C_q^{4/q} \lvert t- s\rvert
+	\]
+ 
+
+\end{itemize}
+
+De esta forma, como se cumplen las hipótesis, tomando $\beta = \frac{1}{2}$, por el criterio de Kolmogorov (Caso particular), haciendo $q \rightarrow \infty$, para todo $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right)$, existe una modificación $(\tilde{B}, \tilde{\mathbb{B}}) \in \mathcal{C}^{\alpha} \times \mathcal{C}^{2\alpha}_2$,y queda  demostrado lo deseado.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
 % Integración, Lema de Costura, Integración de Young.
 
-% Caminos Controlados (Ejemplos) e Integración Rugosa.
+% Caminos Controlados (Ejemplos) e Integración Rugosa. 

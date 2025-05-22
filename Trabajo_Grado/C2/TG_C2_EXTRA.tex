@@ -1,0 +1,22 @@
+
+\section{Miscelánea del Movimiento Browniano (Opcional)}
+
+El movimiento Browniano satisface varias propiedades. Como
+
+\begin{itemize}
+	\item $\left\{ B_t \right\}$ es un proceso Gaussiano (Multinormal).
+	\item $\mathbb{E}[B_t] = 0$ y $\mathbb{E}[B_t B_s] = \min\{ s, t \}$
+	\item Para casi todo $\omega \in \Omega$, $t \mapsto B_t (\omega)$ es continua.
+\end{itemize}
+
+% https://www.stat.berkeley.edu/~pitman/s205s03/lecture15.pdf
+
+Observe lo siguiente:
+
+\begin{itemize}
+	\item \textbf{Escalamiento: } Para todo $s > 0$, $\left\{ s^{-1/2} B_{st} \vert t \geq 0 \right\}$ es un movimiento Browniano comenzando en 0. Más aún, se cumple que:
+
+	\[
+		\left\{ B_{s,t} \vert t \geq 0 \right\}  \stackrel{d}{=}  \left\{ s^{1/2} B_t \vert t \geq 0 \right\}
+	\]
+\end{itemize}

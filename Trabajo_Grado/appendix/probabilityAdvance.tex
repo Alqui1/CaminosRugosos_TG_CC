@@ -1,0 +1,40 @@
+\section{Temas de Probabilidad avanzados}
+
+Algunos conceptos, teoremas, etc... de probabilidad, procesos estocásticas que pueden estar algo fuera de la tesis.
+
+\subsection{Semimartingalas, Martingalas locales}
+
+Conceptos necesarios para entender algunas definiciones acerca el movimiento Browniano.
+
+
+
+\subsection{Desigualdad de Burkholder-Davis-Gundy}
+
+Usado en la demostración que el movimiento Browniano con la integral de Itô es un camino rugoso.
+
+% https://yelmaazouz.org/content/documents/BGD_inequalities.pdf
+
+%  Daniel Revuz and Marc Yor. Continuous martingales and Brownian motion,
+
+Primero, verificar la caracterización de Lévŷ para el movimiento Browniano.
+
+\begin{theorem}[Lévy]
+	Sea $X$ un proceso $d$-dimensional $\mathcal{F}_t$-adaptado y continuo, con $X_0 = 0$. Se tienen las siguientes equivalencias:
+
+	\begin{itemize}
+
+		\item $X$ es un movimiento Browniano respecto a $\mathcal{F}_t$.
+
+		\item $X$ es una martingala local continua (¿?) y $\langle X^i, X^j \rangle_t = \delta_{i,j} t$.
+
+		\item $X$ es una martingala local continua y para cada elección de funciones $f_1, \cdots, f_d \in L^2 (\mathbb{R}_+)$, el proceso
+
+		\[
+			\mathcal{E}_t = \exp \left( i \sum_{k = 1}^d \int_0^t f_k (s) dX^k_s + \frac{1}{2} \sum_{k=1}^d \sum_0^t f^2_k(s) ds \right)
+		\]
+
+		es una martingala compleja.
+	
+	\end{itemize}
+
+\end{theorem}
