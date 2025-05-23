@@ -459,7 +459,83 @@ Una pregunta natural sería verificar si $(B, \mathbb{B})$ es un camino rugoso g
 
 Esto es, está el término de variación cuadrática adicional, por ende, no puede ser un camino rugoso geométrico :(, y no puede ser aproximable por una sucesión de caminos suaves.
 
+% ======================== OPTATIVO
 
+\subsection{Integral de Stratonovich}
+
+Dados $X$, $Y$ semimartingalas continuas, puede definir la integral de Stratonovich como:
+
+\[
+	\int_0^t Y_s \circ dX_s = \int_0^t Y_s dX_s + \frac{1}{2} \langle Y, X \rangle_t
+\]
+
+Esta varianza cuadrática sale al seleccionar el punto medio, que es como se define originalmente la integral de Stratonovich. Esta satisface la fórmula de integración por partes:
+
+\[
+	X_t  Y_t = X_0 Y_0 + \int_0^t X_s \circ dY_s + \int_0^t Y_s \circ dX_s
+\]
+
+Esta puede ser una alternativa al levantamiento propuesto para el movimiento Browniano (Recuerde que acá la idea es ir proponiendo valores para el levantamiento y capturar más información del camino).
+
+\[
+	\mathbb{B}_{s,t}^{\text{Strat}} := \int_s^t B_{s,r} \otimes \circ dB_r
+\]
+
+para $(s,t) \in \Delta_{[0,T]}$. Note que, se puede demostrar que la pareja $(B, \mathbb{B}^{\text{Strat}})$ satisface la relación de Chen:
+
+\begin{align*}
+	\mathbb{B}_{s,t}^{\text{Strat}} &= \int_s^t B_{s,r} \otimes \circ dB_r \\
+	&= \int_s^t B_{s,r} \otimes dB_r + \frac{1}{2} \langle B, B \rangle_{s,t}
+\end{align*}
+
+PENDIENTE HACER LA CUENTA!!!!
+
+Podemos demostrar, que, una mejora respecto a la integral de Itô, el movimiento Browniano junto al levantamiento de Stratonovich, es un camino rugoso geométrico.
+
+\begin{prop}
+	Para $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right)$, tenemos que, casi siempre:
+
+	\[
+		(B, \mathbb{B}^{\text{Strat}}) \in \mathcal{C}_g^{0, \alpha} ([0,T]; \mathbb{R}^d)		
+	\]
+
+\end{prop}
+
+\textbf{Demostración:} Primero, sea la función $A: (s,t) \mapsto \frac{1}{2}(t - s)I$.  Verificar que es $1$-Hölder continua:
+
+\[
+	\lvert A_{s,t} \rvert = \frac{1}{2} \lvert (t-s)I \rvert = \frac{1}{2} (t-s) \leq (t-s)
+\]
+
+asumiendo que $\lvert \cdot \rvert$ es una norma matricial, que $\lvert I \rvert = 1$. Ahora, como:
+
+\[
+	\mathbb{B}_{s,t}^{\text{Strat}} = \mathbb{B}_{s,t} + \frac{1}{2} (t - s) I
+\]
+
+Por la proposición anterior, podemos ver:
+
+\begin{align*}
+	\lVert  \mathbb{B}^{\text{Strat}} \rVert_{\alpha} &= \left\lVert \mathbb{B}_{s,t} + \frac{1}{2} (t - s) I \right\rVert_{ \alpha } \\
+	&\leq \lVert \mathbb{B}_{s,t} \rVert_{\alpha} + \left\lVert \frac{1}{2}(t-s)I \right\rVert_{\alpha} \quad \text{Usar que } \mathbb{B}_{s,t} \text{ es regular 2-alpha } \\
+	&\leq C_{2\alpha} \lvert t - s \rvert^{2\alpha} + C_{1} \lvert t - s \rvert \leq \infty
+\end{align*}
+
+por ende, la regularidad del camino rugoso $(B, \mathbb{B}^{\text{Strat}})$ se hereda por $(B, \mathbb{B})$, y de este modo $(B, \mathbb{B}^{\text{Strat}}) \in \mathcal{C}^{\alpha}$.
+
+Por ende, tomando $\beta \in \left( \alpha, \frac{1}{2} \right)$, entonces, por las inclusiones dadas (Al inicio) y que $(B, \mathbb{B}^{\text{Strat}}) \in \mathcal{C}_g^{\beta}$ (El movimiento Browniano es un camino rugoso geométrico débil), entonces $(B, \mathbb{B}^{\text{Strat}}) \in \mathcal{C}^{0,\alpha}$ (Esto es, el movimiento geométrico).
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+Área de Levý.
 % Integración, Lema de Costura, Integración de Young.
+
+\section{Integración Rugosa}
+
+
+
 
 % Caminos Controlados (Ejemplos) e Integración Rugosa. 

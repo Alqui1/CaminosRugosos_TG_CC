@@ -21,11 +21,13 @@
 \contentsline {section}{\numberline {4.1}Caminos $\alpha $-Hölder}{50}{}%
 \contentsline {section}{\numberline {4.2}Caminos Rugosos y el movimiento Browniano.}{50}{}%
 \contentsline {subsection}{\numberline {4.2.1}Integral de Itô}{57}{}%
-\contentsline {chapter}{\numberline {5}Apéndice.}{61}{}%
-\contentsline {section}{\numberline {5.1}Teoría de la Medida}{61}{}%
-\contentsline {subsection}{\numberline {5.1.1}Funciones $L^p$ y $\mathcal {L}^p$}{61}{}%
-\contentsline {section}{\numberline {5.2}Temas de Probabilidad avanzados}{62}{}%
-\contentsline {subsection}{\numberline {5.2.1}Semimartingalas, Martingalas locales}{63}{}%
-\contentsline {subsection}{\numberline {5.2.2}Variación Cuadrática}{63}{}%
-\contentsline {subsection}{\numberline {5.2.3}Desigualdad de Burkholder-Davis-Gundy}{63}{}%
-\contentsline {section}{\numberline {5.3}Algunos conceptos de topología}{64}{}%
+\contentsline {subsection}{\numberline {4.2.2}Integral de Stratonovich}{60}{}%
+\contentsline {section}{\numberline {4.3}Integración Rugosa}{61}{}%
+\contentsline {chapter}{\numberline {5}Apéndice.}{63}{}%
+\contentsline {section}{\numberline {5.1}Teoría de la Medida}{63}{}%
+\contentsline {subsection}{\numberline {5.1.1}Funciones $L^p$ y $\mathcal {L}^p$}{63}{}%
+\contentsline {section}{\numberline {5.2}Temas de Probabilidad avanzados}{64}{}%
+\contentsline {subsection}{\numberline {5.2.1}Semimartingalas, Martingalas locales}{65}{}%
+\contentsline {subsection}{\numberline {5.2.2}Variación Cuadrática}{65}{}%
+\contentsline {subsection}{\numberline {5.2.3}Desigualdad de Burkholder-Davis-Gundy}{65}{}%
+\contentsline {section}{\numberline {5.3}Algunos conceptos de topología}{66}{}%
