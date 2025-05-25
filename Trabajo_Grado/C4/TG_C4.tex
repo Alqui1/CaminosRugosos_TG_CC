@@ -530,7 +530,16 @@ Por ende, tomando $\beta \in \left( \alpha, \frac{1}{2} \right)$, entonces, por 
 \end{flushright}
 
 
-Área de Levý.
+Note que, en ambos levantamientos (Itô y Stratonovich), la parte simétrica ya es conocida (Aplicando las propiedades de las integrales estocásticas). Ahora, observando la parte antisimétrica, que es más información codificada por el levantamiento del camino rugoso, $\mathbb{X}_{s,t}$, está dada por:
+
+\[
+	\text{Anti}(X_{s,t})^{ij} = \frac{1}{2} \left( \int_s^t X_{s,r}^i dX_r^j - \int_s^t X_{s,r}^j dX^i_r \right)
+\]
+
+esta se conoce como \textit{el área de Lévy}, que es un proceso estocástico que modela el área entre una trayectoria del movimiento Browniano y la cuerda.
+
+
+
 % Integración, Lema de Costura, Integración de Young.
 
 \section{Integración Rugosa}
@@ -539,3 +548,29 @@ Por ende, tomando $\beta \in \left( \alpha, \frac{1}{2} \right)$, entonces, por 
 
 
 % Caminos Controlados (Ejemplos) e Integración Rugosa. 
+
+
+
+% OPCIONALES. Comentarios acerca Hairer & Friz... y Lyons.
+
+\section{Comentarios adicionales*.}
+
+\subsection{Movimiento Browniano como camino rugoso.}
+
+Algunos comentarios, teoremas, conceptos... relacionados al capítulo, posiblemente no se incluyan en la versión final del texto.
+
+\begin{prop}
+	Considere aproximaciones lineales a trozos diádicas $\left\{ B^{n} \right\}$ a $B$ en $[0,T]$. Esto es, $B_t^n = B_t$ para $t = \frac{iT}{2^n}$ para algún entero $i$ (Se interpola en intervalos de la forma $\left[ \frac{iT}{2^n}, \frac{(i+1)T}{2^n} \right]$). Luego, en el sentido de la probabilidad:
+
+	\[
+		\left( B^n, \int_0^t B^n \otimes dB^n \right) \rightarrow (B, \mathbb{B}^{\text{Strat}})
+	\]
+
+	en $\mathcal{C}^{\alpha}_g$.
+
+\end{prop}
+
+ESto es, que en el sentido de la probabilidad (Y en $L^q$ con $q < \infty$), el camino rugoso interpolado, converge al camino rugoso del movimiento Browniano con el levantamiento de Stratonovich, con el criterio de Kolmogorovo paa la métrica rugosa. Más aún, este enfoque da cierta tasa $\theta < \frac{1}{2} - \alpha$. 
+ 
+
+\textbf{Demostración:}

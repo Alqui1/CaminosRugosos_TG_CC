@@ -1,0 +1,38 @@
+
+\section{Comentarios extras}
+
+Comentarios adicionales, que probablemente no se incluyan en la versión final del texto, pero ayudan a tener una visión más general.
+
+\subsection{Notas de Friz y Victoir}
+
+Algunos extras que nos ofrece \textit{Multidimensional Stochastic Processes as Rough Paths. Peter Friz, Nicolas Victoir}.
+
+Este material explica de forma más detallada algunos conceptos... puede servir para ver la intuición y un poco más.
+
+Sea:
+
+\[
+	\int \cdots dB
+\]
+
+Gracias a la teoría de Itô, se pueden plantear y resolver integrales de esta forma (Aunque $B_t$ tenga variación infinita y la teoría de RS no sea muy útil). En este caso, Itô usa fuertemente que $B$ es una martingala. Más aún, se puede extender a una integración respecto a semimartíngalas, de forma canónica.
+
+% INTERÉS!!!!
+
+Ahora, se puede extender una generalización Gausiana. Movimiento Browniano fraccionario con parámetro Hurst $H > \frac{1}{2}$, de esta manera estudiar el comportamiento ergódico de sistemas no markovianos (Mercados libres).
+
+De igual manera, se puede hacer una generalización Markoviana. Reemplazar el movimiento Browniano por un proceso de Markov $X^a$ con \textit{generador elíptico uniforme} en forma de divergencia:
+
+\[
+	\frac{1}{2} \sum_{i,j} \partial_i (a^{ij} \partial_j)
+\]
+
+sin regularidad en la matriz simétrica.
+
+Tanto el proceso Gaussiano como el Markoviano pueden estar arbitrariamente cerca de una trayectoria Browniana. ¡Se rompe teoría de Itô! ¿Por qué?
+
+Teoría Lyons -> Trabajar para tales procesos que no son semimartíngalas, para una solución en el sentido de los caminos rugosos.
+
+Modelo flexible y robusto. Solución de Stratonovich de la EDE se puede ver como \textit{área estocástica Lévy (Apéndice)}. Esto simplifica mucho algunos resultados como el \textit{teorema de Stroock-Varadhan} y \textit{estimadores de Freidlin-Wentzell}, resultados a nivel de flujos estocásticos.
+
+Además, el mapa de Itô - Lyons (Camino Rugoso a solución), suele ser regular en ciertas peturbaciones del camino rugosos $\mathbf{x}$, en el espacio de Cameron-Martin, donde juega el cálculo de Malliavin.

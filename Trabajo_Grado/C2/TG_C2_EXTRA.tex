@@ -1,5 +1,11 @@
 
-\section{Miscelánea del Movimiento Browniano (Opcional)}
+\section{Miscelánea de Procesos Estocásticos (Opcional)}
+
+\subsection{Procesos Markovianos.}
+
+
+
+\subsection{Movimiento Browniano.}
 
 El movimiento Browniano satisface varias propiedades. Como
 
@@ -20,4 +26,22 @@ Observe lo siguiente:
 		\left\{ B_{s,t} \vert t \geq 0 \right\}  \stackrel{d}{=}  \left\{ s^{1/2} B_t \vert t \geq 0 \right\}
 	\]
 \end{itemize}
+
+\subsection{Movimiento Browniano Fraccionario}.
+
+% https://nms.kcl.ac.uk/martin.forde/FractionalBrownianMotion.pdf
+
+Corresponde a una generalización del movimiento Browniano, este último es importante en modelamiento de volatilidad y trading óptimo, además, también en mecánica cuántica.
+
+\begin{boxDef}
+	Un proceso $X$ se dice \textbf{gaussiano} si para todo $t_1 < \cdots < t_n$, $X_{t_1}, \cdots, X_{t_n}$ tiene una distribución normal multivariada. Un proceso Gaussiano $W_t^H$ con media $0$, es un \textbf{movimiento Browniano fraccionario estándar} (fBM) con \textbf{exponente/parámero de Hurst} $H \in (0,1)$ si tiene la función de covarianza:
+
+	\[
+		\mathbb{E}( W_t^H W_s^H ) - \mathbb{E}(W_t^H) \mathbb{E}(W_s^H) = \frac{1}{2} (  \lvert t \rvert^{2H} + \lvert s \rvert^{2H} - \lvert t - s \rvert^{2H} )
+	\]
+\end{boxDef}
+
+
+El fBM preserva propiedades de incrementos estacionarios, autosimilaridad (¿?) y distribuciones finito-dimensionales Gaussianas.
+% https://nms.kcl.ac.uk/martin.forde/ConditionalLawLCGF.pdf
 

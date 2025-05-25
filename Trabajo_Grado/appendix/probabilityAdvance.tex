@@ -11,6 +11,18 @@ Conceptos necesarios para entender algunas definiciones acerca el movimiento Bro
 \end{boxDef} 
 
 
+Recuerde conceptos de martingalas y tiempos de parada (Cuándo debo parar, información hasta el momento presente). Puede ver las martingalas locales, como un proceso estocástico que localmente es una martingala. 
+
+\begin{boxDef}
+	(Wikipedia) Un proceso $X$ es una \textbf{martingala local} si existe una sucesión de tiempos de parada $T_n$ con $T_n \nearrow \infty$ siempre, $T_n < T $ casi siempre en $\left\{ T > 0 \right\}$ y $\lim_{n \rightarrow \infty} T_n = T$ casi siempre.
+
+	Otra definición! (Science Direct) $X$ es \textbf{martingala local} si existe una sucesión creciente $\left\{ T_n \right\}$ de tiempos de parada con $T_n \nearrow \infty$ a.s, tal que para cada $n$, $X^{T_n}$ es una martingala.
+
+	(Stochastic Calculus, Capinski) Dado $\left\{ X_t \right\}$ un proceso adaptado a $\mathcal{F}_t$ es una \textbf{martingala local} si existe una sucesión $\left\{ \tau_n \right\}_{n \leq 1}$ de tiempos de parada, tal que para todo $\omega$ existe un $N(\omega)$ (Constante), tal que $n \leq N(\omega)$ implica $\tau_n (\omega) \leq T $ (casi siempre eventualmente), tal que para cada $n$, $X_{\tau_n}$ es una martingala respecto a $\mathcal{F}_t$
+\end{boxDef}
+
+
+
 \subsection{Variación Cuadrática}
 
 \begin{boxDef}
@@ -23,11 +35,16 @@ Conceptos necesarios para entender algunas definiciones acerca el movimiento Bro
 \end{boxDef}
 
 
+
+
+
+
+
 \subsection{Desigualdad de Burkholder-Davis-Gundy}
 
 Usado en la demostración que el movimiento Browniano con la integral de Itô es un camino rugoso.
 
-% https://yelmaazouz.org/content/documents/BGD_inequalities.pdf
+% 2
 
 %  Daniel Revuz and Marc Yor. Continuous martingales and Brownian motion,
 
@@ -80,4 +97,106 @@ Para cualquier $p > 0$, existen dos constantes $c_p$ y $C_p$ tal que para toda m
 45¿Qué es $M^*_{\infty}$ y $\langle M,M \rangle$?
 
 % https://math.uchicago.edu/~may/REU2019/REUPapers/Carlstein.pdf
+
+
+
+% =========================================
+
+\subsection{Área de Lévy}
+
+Proceso estocástico que describe el área encerrada entre una trayectoria del movimiento Browniano y su cuerda. Introducido por Paul Lévy en $1940$.
+
+%  Lévy, Paul M. (1940). "Le Mouvement Brownien Plan". American Journal of Mathematics. 62 (1): 487–550. doi:10.2307/2371467. JSTOR 2371467. 
+
+Tiene relación curiosda como con las soluciones por solitones de la ecuación KdV (Korteweg-De Vries), y la función zeta de Riemann.
+
+Para $W = (W_s^1, W_s^2)_{s \leq 0}$ un movimiento Browniano en $2$ dimensiones, se define el \textbf{área estocástica de Lévy} como:
+
+\[
+	S(t, W) = \frac{1}{2} \int_0^t (W_s^1 dW_s^2 - W_s^2 dW_s^1)
+\]
+
+donde se usa la integral de Itô.
+
+\subsubsection{La KdV y el área de Lévy.}
+
+% The Itˆo–Nisio theorem, quadratic Wiener functionals, and 1-solitons
+
+
+
+\subsection{Análisis Gaussiano, Espacios de Wiener Abstractos.}
+
+ % Consultar http://www.tjsullivan.org.uk/pdf/MA482_Stochastic_Analysis.pdf
+
+% Análisis Gaussiano
+
+¿Por qué trabajar con estas medidas? POr el teorema del límite central... una maravilla.
+
+
+Dimensión finita. 
+
+\begin{boxDef}
+	Sea $n \in N$, $B_0 (\mathbb{R}^n)$ la completez (Hacer todos los conjuntos nulos medibles) de la $\sigma$-álgebra de Borel en $\mathbb{R}^n$. Sea $\lambda^n: B_0 (\mathbb{R}^n) \rightarrow [0, \infty]$ la medida de Lebesgue usual $n$-dimensional. Defina \textbf{medida Gaussiana estándar} $\gamma^n: B_0 (\mathbb{R}^n) \rightarrow [0,1]$ como:
+
+	\[
+		\gamma^n (A) = \frac{1}{\sqrt{(2\pi)^n}} \exp \left( -\frac{1}{2} \lVert x \rVert_{\mathbb{R}^n}^2 \right) d \lambda^n (x)
+	\]
+\end{boxDef}
+
+O en función de la derivada de \textit{Radon-Nikodym} (Relación entre dos medidas, en un mismo espacio)
+
+\[
+	\frac{d\gamma^n}{d\lambda^n} (x) = \frac{1}{(\sqrt{2\pi})^n} \exp\left( -\frac{1}{2} \lVert x \rVert_{\mathbb{R}^n}^2 \right)
+\]
+
+Y para medidas Gaussianas con media $\mu \in \mathbb{R}^n$ y varianza $\sigma^2 > 0$
+
+\[
+	\gamma_{\mu, \sigma^2}^n (A) = \frac{1}{\sqrt{(2\pi \sigma^2)^n}} \int_A \exp\left( -\frac{1}{2\sigma^2} \lVert x - \mu \rVert_{\mathbb{R}^n}^2 \right) d\lambda^n (x)
+\]
+
+
+\begin{boxDef}
+	Una \textbf{medida $\mu$ Gaussiana con media cero}, en un espacio de Banach separable $E$ equipado con una $\sigma$-álgebra $\mathcal{B}$ y una norma $\lvert \cdot \rvert$, es una medida en $(E, \mathcal{B})$ tal que la distribución de cada funcional lineal (Elemento del dual, función del espacio al cuerpo asociado) en $E$ es una variable aleatoria Gaussiana con media cero.
+\end{boxDef}
+
+
+
+\subsection{Teorema del Soporte de Stroock-Varadhan}
+
+
+
+
+\begin{theorem}[Teorema de soporte de Stroock-Varadhan]
+	Sea $V = \left( V_1, \cdots, V_d \right)$ una colección de campos vectoriales $\text{Lip}^2$ en $\mathbb{R}^e$, y $V_0$ es $\text{Lip}^1 (\mathbb{R}^e)$. Sea $B$ un movimiento Browniano $d$-dimensional, y sea (Bajo indistiguibilidad) la única solución de Stratonovich de la ecuación diferencial estocástica $Y$ en $[0,T]$ en:
+
+	\[
+		dY = \sum_{i = 1}^d V_i(Y) \circ dB^i + V_0 (Y) dt, \quad Y_0 = y_0 \in \mathbb{R}^e
+	\]
+
+	o de forma integral:
+
+	\[
+		Y_t = Y_0 + \sum_{i = 1}^d  \int_0^t V_i(Y) \circ dB^i + \int_0^t V_0 (Y) dt, \quad Y_0 = y_0 \in \mathbb{R}^e
+	\]
+
+	(Suma incluye una suma de integrales estocásticas de Stratonovich para los términos $\text{Lip}^2$).
+
+	Escribamos $y^h = \pi_{(V, V_0)} (0, y_0; (h,t))$ (Mapa de Itô) para la solución de la ecuación diferencial ordinaria (asociada)
+
+	\[
+		dy = \sum_{i = 1}^d V_i (Y) dh^i + V_0 (Y) dt
+	\]
+
+	comenzando en $y_0 \in \mathbb{R}^e$ donde $h$ es un camino de \textit{Cameron-Martin} (Esto es, $h \in W_0^{1,2} ([0,T], \mathbb{R}^d)$).
+
+	Entonces, para $\alpha \in \left[ 0, 1/2 \right)$, y cualquier $\delta > 0$,
+
+	\[
+		\lim_{\epsilon \rightarrow 0} \mathbb{P} \left( \lVert Y - y^h \rVert_{ \alpha }  \leq \delta \quad \vert \quad \lvert B - h \rvert_{\infty, [0,T]}  \leq \epsilon \right) \rightarrow 1
+	\]
+
+	(Del lado derecho, tenemos norma Euclídea $\lvert B - h \rvert_{\infty, [0,T]} $).
+
+\end{theorem}
 
