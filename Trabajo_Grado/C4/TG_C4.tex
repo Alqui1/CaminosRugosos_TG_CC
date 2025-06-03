@@ -668,8 +668,54 @@ para $k \rightarrow 0$. De esto podemos deducir que $\{ A_{s,t}^n \}_{n \geq 0}$
 \[
 	\Gamma_{s,t} = \lim_{n \rightarrow \infty} A^n_{s,t}
 \]
-que sabemos que existe.
+que sabemos que existe. Luego:
 
+\begin{align*}
+	\lVert \Gamma_{s,t} - A_{s,t}^k \rVert &= \left\lVert \sum_{ n = k }^{ \infty } (A_{s,t}^n - A_{s,t}^{n+1}) \right\rVert \\
+	&\leq \lambda \lvert t - s \rvert^{1 + \epsilon} \frac{2^{-k\epsilon}}{1 - 2^{-\epsilon}}  
+\end{align*}
+
+y por ende, la convergencia es uniforme en $(s,t) \in \Delta_{[0,T]}$, y más aún:
+
+\begin{align*}
+	\lVert \Gamma_{s,t} - A^n_{s,t} \rVert \leq \frac{\lambda \lvert t - s \rvert^{1 + \epsilon}}{ 1 - 2^{ -\epsilon} }
+\end{align*}
+
+Como $A^n$ es continua, entonces, $\Gamma$ es continua. Note que:
+
+\[
+	\Gamma_{s,u} + \Gamma_{u,t} = \lim_{n \rightarrow \infty} A_{s,u}^n + \lim_{n \rightarrow \infty } A_{u,t}^n = \lim_{n \rightarrow \infty} A_{s,t}^n = \Gamma_{s,t}
+\]
+
+por porque $A_{s,u}^n + A_{u,t}^n = A_{s,t}^n$. ¿DUDAS DE LOS ESTIMADORES DE ARRIBA?
+
+Esto se tiene para todas las particiones diádicas $s \leq u \leq t$, y por la continuidad (El límite de una sucesión es un punto de acumulación, y las particiones diádicas son un conjunto denso en los reales), se tiene para todo los intervalos de tiempo $s \leq u \leq t$. Note que, $\Gamma$ son los incrementos de un camino continuo (¿Por qué?). Esto es, para $\gamma_t = \Gamma_{0,t}$ para $t \in [0,T]$, entonces tenemos que:
+
+\[
+	\gamma_t - \gamma_s = \Gamma_{s,t}, \quad \text{Para todo} (s,t) \in \Delta_{[0,T]}
+\]
+
+y en particular, que $\gamma_0 = 0$. Podemos reescribir la desigualdad de arriba como:
+
+\[
+	\lVert \gamma_t - \gamma_s - A_{s,t} \rVert \leq \frac{ \gamma \lvert t - s \rvert^{ 1 + \epsilon } }{1 - 2^{-\epsilon}}
+\]
+
+de tal forma que, haciendo $C = \frac{1}{1 - 2^{\epsilon}}$, tenemos la primera desigualdad. Finalmente, para cualquier $(s,t) \in \Delta_{[0,T]}$ y cualquier partición $\pi = \left\{  s = t_0 < t_1 < \cdots < t_N = t \right\}$ de $[s,t]$, tenemos:
+
+\begin{align*}
+	\left \lVert \gamma_t - \gamma_s - \sum_{ i = 0 }^{N-1} A_{t_i, t_{i+1}} \right\rVert &= \left \lVert \sum_{i = 0}^{N - 1} \gamma_{t_{i+1}} - \gamma_{t_i} - A_{t_i, t_{i+1}} \right \rVert \\
+	&\leq \frac{\lambda}{1 - 2^{-\epsilon}} \sum_{ i = 0 }^{N-1} \lvert t_{i+1} - t_i \rvert^{1 + \epsilon} \text{, por la última desigualdad.}\\
+	&\leq \frac{\lambda}{1 - 2^{-\epsilon}} \lvert t - s \rvert \lvert \pi \rvert^{\epsilon}
+\end{align*}
+
+de tal forma que $\sum_{i = 0}^{N - 1} A_{t_i, t_{i+1}} \rightarrow \gamma_t - \gamma_s$ para $\lvert \pi \rvert \rightarrow 0$.
+
+¡¡¡REVISAR DEMOSTRACIÓN!!!
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
 
 \subsection{Apuntes del Martin Hairer}
 
