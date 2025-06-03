@@ -155,10 +155,39 @@ Y para medidas Gaussianas con media $\mu \in \mathbb{R}^n$ y varianza $\sigma^2 
 	\gamma_{\mu, \sigma^2}^n (A) = \frac{1}{\sqrt{(2\pi \sigma^2)^n}} \int_A \exp\left( -\frac{1}{2\sigma^2} \lVert x - \mu \rVert_{\mathbb{R}^n}^2 \right) d\lambda^n (x)
 \]
 
+Ahora, más general en dimensión infinita:
+
 
 \begin{boxDef}
 	Una \textbf{medida $\mu$ Gaussiana con media cero}, en un espacio de Banach separable $E$ equipado con una $\sigma$-álgebra $\mathcal{B}$ y una norma $\lvert \cdot \rvert$, es una medida en $(E, \mathcal{B})$ tal que la distribución de cada funcional lineal (Elemento del dual, función del espacio al cuerpo asociado) en $E$ es una variable aleatoria Gaussiana con media cero.
+
+	Esto es, dado $f \in E*$, o véalo como:
+
+	\[
+		(E, \mathcal{B}, \mu_f) \stackrel{f}{\rightarrow} (\mathbb{R}, \mathcal{B}(\mathbb{R}), \lambda)
+	\]
+
+	Tal que, el segundo espacio tiene una medida de probabilidad inducida (Usualmente, la medida de Lebesgue, $\lambda$). Entonces:
+
+	\[
+		\mu_f (A) = \gamma^n_{0, \sigma^2} (A)
+	\]
+
+	para todo $A \in \mathcal{B}$. 
 \end{boxDef}
+
+Tenemos:
+
+\[
+	\sigma^2 = \sup_{\zeta \in E*, \lvert \zeta \rvert \leq 1} \int \langle \zeta, x \rangle^2 d\mu(x) < \infty
+\]
+
+Tome el mapa de "inyección", $i: E* \rightarrow L^2 (\mu) = L^2 (E, \mathcal{B}, \mu; \mathbb{R})$, $\sigma$ es la norma del operador $i$, acotada por el teorema de la gráfica cerrada (¿El qué?).
+
+...
+
+
+% https://math.stackexchange.com/questions/4363726/why-do-we-study-cameron-martin-space-and-what-is-the-motivation-behind-it
 
 
 

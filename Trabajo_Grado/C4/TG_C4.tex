@@ -112,12 +112,67 @@ para $s, t \in [0,T]$ con $s < t$.
 
 
 
+
+
+
 % Problemas con integral de Itô, motivación a la integración rugosa.
 
 % Espacios de Hölder, Propiedades.
 % Colocar simulaciones.
 
 % Caminos Rugosos, Caminos Rugosos Geométricos (Interpretación prof. Freddy).
+
+
+
+
+
+% ========================================
+%================ SECCIÓN 2. CAMINOS RUGOSOS
+% ========================================
+
+Una vez con los preliminares en trayectorias $\alpha$-Hölder, se comienza a trabajar acerca de caminos rugosos.
+
+
+\begin{boxDef}
+	Para $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, un \textbf{camino rugoso $\alpha$-Hölder} corresponde a una $\mathbf{X} = (X, \mathbb{X})$, donde:
+
+	\begin{itemize}
+		\item $X: [0,T] \rightarrow \mathbb{R}^d$ es una trayectoria $\alpha$-Hölder continua.
+		\item $\mathbb{X}: \Delta_{[0,T]} \rightarrow \mathbb{R}^{d \times d}$ es $2\alpha$-Hölder continua.
+	\end{itemize}
+
+	Además, se cumple la \textit{relación de Chen}:
+
+	\[
+		\mathbb{X}_{s,t} = \mathbb{X}_{s,u} + \mathbb{X}_{u,t} + X_{s,u} \otimes X_{u,t}
+	\]
+
+	para todo $0 \leq s \leq u \leq t \leq T$.
+\end{boxDef}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ========================================
+%================ SECCIÓN 3. MOVIMIENTO BROWNIANO
+% ========================================
+
+
 
 
 
@@ -539,10 +594,112 @@ Note que, en ambos levantamientos (Itô y Stratonovich), la parte simétrica ya 
 esta se conoce como \textit{el área de Lévy}, que es un proceso estocástico que modela el área entre una trayectoria del movimiento Browniano y la cuerda.
 
 
-
+% ==============================================000
 % Integración, Lema de Costura, Integración de Young.
+% ===================================================
+
 
 \section{Integración Rugosa}
+
+% CONSULTAR NOTAS SERGIO NÚÑEZ!!!!
+
+La idea de esta sección, es comenzar a trabajar acerca de la integración respecto a un camino rugoso. Primero, se va a ver un lema, que nos permite obtener unas estimaciones de dos trayectorias que aproximan a una función continua.
+
+\begin{theorem}[Lema de Costura]
+
+	Sea $(E, \lVert \cdot \rVert)$ un espacio de Banach (Espacio vectorial normado completo), y sea $A: \Delta_{[0,T]} \rightarrow E$ una función continua. Para cada tripla $0 \leq s \leq u \leq t \leq T$, sea $\delta A_{s,u,t} := A_{s,t} - A_{s,u} - A_{u,t}$. Suponga que existe constantes $\lambda \leq 0$ y $\epsilon > 0$ tal que:
+
+	\[
+			\lVert \delta A_{s,u,t} \rVert \leq \lambda \lvert t - s \rvert^{1 + e}
+	\]
+
+	para todo $0 \leq s \leq u \leq t \leq T$. ($\delta A_{s,u,t}$ indica la diferencia entre el área total y el área particionada. La norma es un estimador del error).
+
+	Entonces, existe un camino continuo $\gamma: [0,T] \rightarrow E$, con $ \gamma_0 = 0$, tal que:
+
+	\[
+		\lVert \gamma_t - \gamma_s - A_{s,t} \rVert \leq C \lambda \lvert t - s \rvert^{1 + \epsilon}
+	\]
+
+	para todo $(s,t) \in \Delta_{[0,T]}$, donde las constantes $C$ depende sólo de $\epsilon$. Más aún, para todo $(s,t) \in \Delta_{[0,T]}$, tenemos que:
+
+	\[
+		\lim_{\lvert \pi \rvert \rightarrow 0} \sum_{  [u,v] \in \pi } A_{u,v} = \gamma_t - \gamma_s 
+	\]
+
+	donde el límite es tomado sobre un descuento de partición $\pi$ del intervalo $[s,t]$ con el tamaño de malla $\lvert \pi \rvert \rightarrow 0$.
+
+\end{theorem}
+
+Este teorema nos permite dar una aproximación a una función de dos parámetros, con dos funciones de un parámetro.
+
+\textbf{Demostración:} Sea $(s,t) \in \Delta_{[0,T]}$. Para cada $n \leq 0$, sea $\{ s = t_0^n < t_1^n < \cdots < t_{2^n}^n  = t  \}$ una partición, tal que $t_i^n = s + \frac{i}{2^n}(t - s)$, que tiene un tamaño de malla $\lvert \pi^n \rvert = \lvert t_{i + 1}^n - t_i^n \rvert = 2^{-n} \lvert t - s \rvert $. Sea:
+
+\[
+	A_{s,t}^n = \sum_{i = 0}^{2^n - 1} A_{ t_i^n, t_{i+1}^n }
+\]
+
+Para cada $n$, y cada $i$, sea $u_i^n$ el punto medio del intervalo $[t_i^n, t_{i+1}^n]$, esto es, $u_i^n = \frac{t_{i+1}^n - t_i^n}{2}$. Tenemos que:
+
+\begin{align*}
+	A^n_{s,t} - A^{n + 1}_{s,t} &= \sum_{i = 0}^{2^n - 1} A_{t_i^n,t_{i+1}^n} - \sum_{i = 0}^{2^{n+1} - 1} A_{t^n_i, t^n_{i + 1}} \\
+	&= \sum_{i = 0}^{2^n - 1} A_{t_i^n, t_{i+1}^n} - A_{t_i^n, u_i^n} -  A_{u_i^n, t_{i+1}^n} \text{, ¿Cómo sale esta cuenta? PENDIENTE} \\
+	&= \sum_{n = 0}^{2^n - 1} \delta A_{t_i^n, u_i^n, t_{i+1}^n}
+\end{align*}
+
+y por ende;
+
+\begin{align*}
+	\lVert  A_{s,t}^n - A_{s,t}^{n+1} \rVert &\leq \sum_{i = 0}^{2^n - 1} \lVert \delta A_{ t_i^n, u_i^n, t_{i+1}^n } \rVert, \text{ desigualdad triangular. Norma del Espacio Banach.} \\
+	&\leq \sum_{i = 0}^{2^n - 1} \lambda \lvert  t_{i + 1}^n - t_i^n \rvert^{1+ \epsilon} \text{ hipótesis. } \\
+	&= \lambda \lvert t - s \rvert^{1 + \epsilon} \sum_{i = 0}^{2^n - 1} 2^{-n(1 + \epsilon)} \text{ , la longitud de la partición } \\
+	&= \lambda \lvert t - s \rvert^{1 + \epsilon} 2^{ -n\epsilon} \text{ sacar término de la sumatoria, queda suma de unos, da } 2^n.
+\end{align*}
+
+
+Luego, con esta estimación:
+
+\[
+	\sum_{n = k}^{\infty} \lVert A_{s,t}^n - A_{s,t}^{n+1} \rVert \leq \lambda \lvert t - s \rvert^{1 + \epsilon} \sum_{n = k}^{\infty} 2^{-n\epsilon} = \lambda \lvert t - s \rvert^{1 + \epsilon} \frac{2^{-k \epsilon}}{1 - 2^{-\epsilon}} \rightarrow 0
+\]
+
+para $k \rightarrow 0$. De esto podemos deducir que $\{ A_{s,t}^n \}_{n \geq 0}$ es una sucesión de Cauchy. Como $A^n$ es un espacio de Banach, esta sucesión de Cauchy converge, y denotamos al límite:
+
+\[
+	\Gamma_{s,t} = \lim_{n \rightarrow \infty} A^n_{s,t}
+\]
+que sabemos que existe.
+
+
+\subsection{Apuntes del Martin Hairer}
+
+Problema de dar significado a la expreión $\int Y_t dX_t$ para $X \in \mathscr{C}^{\alpha} ([0,T], V)$ y $Y$ alguna función continua con valores en $\mathcal{L}(V,W)$ ($Y$ será un \textit{camino controlado}), este es el espacio de operadores lineales acotados de $V$ a otro espacio de Banach $W$. 
+
+¿Qué funciones harán que la integral sea definida? Además, toca que:
+
+\[
+	(X,Y) \mapsto \int Y dX
+\]
+
+sea continua en topologías relevantes. ¿Cuáles son esos buenos integrandos para el camino rugoso $X$?. Integral de Young, tomando caminos $\alpha$ y $\beta$ tal que $\alpha + \beta > 1$, el operador es continuo, la integral converga! :D. Desigualdad de Young. 
+
+¿Y qué obtenemos con los caminos rugosos? Romper esa barrera de los $\alpha + \beta > 1$, al obtener una mayor estructura del problema. Postular valores para $\mathbb{X}$ de la integral de $''\int X dX ''$. Más aún, ver a $\int Y dX$ cuando $Y$ es parecida a $X$, al menos en pequeñas escalas.
+
+¿Y cómo? Teniendo a $Y_t = F(X_t)$ para alguna función suave $F: V \rightarrow \mathcal{L}(V,W)$, llamada \textbf{1-forma}.
+
+
+1-FORMA -> GEOMETRÍA DIFERENCIAL. (Como $f(x) dx$).
+
+\subsubsection{Integración en 1-Formas}
+
+Integrar $Y = F(X)$ en contra de $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$. Para $F: V \rightarrow \mathcal{L}(V,W)$ en $\mathcal{C}^1$, una aproximación en series de Taylor da
+
+\[
+	F(X_r) \approx F(X_s) + DF(X_s) X_{s,r}
+\]
+
+
+
 
 
 
@@ -573,4 +730,83 @@ Algunos comentarios, teoremas, conceptos... relacionados al capítulo, posibleme
 ESto es, que en el sentido de la probabilidad (Y en $L^q$ con $q < \infty$), el camino rugoso interpolado, converge al camino rugoso del movimiento Browniano con el levantamiento de Stratonovich, con el criterio de Kolmogorovo paa la métrica rugosa. Más aún, este enfoque da cierta tasa $\theta < \frac{1}{2} - \alpha$. 
  
 
-\textbf{Demostración:}
+\textbf{Demostración:} Tomando partición diádica. Sea $B^n$ definida como:
+
+\[
+	B^n = \mathbb{E}(B \quad \vert \quad \sigma\{ B_{kT 2^{-n}}  : 0 \leq k \leq 2^n  \})
+\]
+
+Porque el movimiento Browniano es una martingala. Por la independencia de $B^i$, $B^j$ para $i \neq j$, se cumple para $\mathbb{B}^{\text{Strat}}$ fuera de la diagonal (¿?). Para los elementos de la diagonal $\mathbb{B}^{\text{Strat}, (i,i)}_{s,t} = \frac{1}{2} (B_{s,t}^i)^2$. Por convergencia de martingala, se tiene la convergencia deseada.
+
+Más aún, por el criterio de Kolmogorov, tenemos:
+
+\[
+	\lvert B^i_{s,t} \rvert \leq K_{\alpha} (\omega) \lvert t - s \rvert^{\alpha}, \qquad \lvert \mathbb{B}_{s,t}^{\text{Strat}, (i,j)} \rvert \leq \mathbb{K}_{\alpha} (\omega) \lvert t - s \rvert^{2\alpha}
+\]
+
+y la probabilidad condicional respecto a $\sigma \left\{ B_{kT2^{-n}} : 0 \leq k \leq 2^n \right\}$, se tienen las mismas cotas para $B^{n,i}$ y para $\int_0^{.} B^{n,i} dB^{n,j}$. De hecho, $K_{\alpha}$, $\mathbb{K}_{\alpha}$ tienen la suficiente integrabilidad para aplicar la \textit{desigualdad maximal de Doob}. Esto nos dará que, con probabilidad 1:
+
+\[
+	\sup_n \left\lVert B^{(n)}, \int_0^{.} B^{(n)} \otimes dB^{(n)} \right\rVert < \infty
+\]
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+\subsection{Apuntes en el Lyons acerca de los caminos rugosos.}
+
+
+\subsection{Geometría de Carnot-Caratheodory}
+
+Se desea obtener un poco más de conocimiento acerca de los caminos rugosos, por lo que se proceden a usar más integrales iteradas. Dado $x \in \mathcal{C}^{\infty} ([0,T], \mathbb{R}^d)$, generalizar:
+
+\[
+	\mathbf{x}_t := S_n (x)_{0, t} := \left( 1, \int_0^t dx, \int_{\Delta_{[0,t]}^2 } dx \otimes dx, \cdots, \int_{ \Delta_{[0,t]}^N  } dx \otimes \cdots \otimes dx \right)
+\]
+
+que es la \textbf{signatura/firma de paso $N$} de $x$ sobre $[0,t]$, dado $x$ el control o la trayectoria. Toma valores de las álgebras tensoriales truncadas (¿de Lie?):
+
+\[
+	T^N (\mathbb{R}^d) := \mathbb{R} \oplus \mathbb{R}^d \oplus \left( \mathbb{R}^d \right)^{\otimes 2} \oplus \cdots (\mathbb{R}^d)^{\otimes N}
+\]
+
+Estructura de álgebra tensorial con producto tensorial $\otimes$, usando la base estándar $\left\{ e_1, \cdots, e_d \right\}$ de $\mathbb{R}^d$. Esta álgebra se usa con el fin de extender:
+
+\[
+	x_{s,t} \equiv (-x_s) + x_t = \int_s^t dx =: x_{s,t}
+\]
+
+
+a:
+
+\[
+	\mathbf{x}_{s,t} \equiv \mathbf{x}_s^{-1} \otimes \mathbf{x}_t = \left( 1, \int_s^t dx, \int_{ \Delta_{[s,t]}^2 } dx \otimes dx, \cdots, \int_{ \Delta_{[s,t]}^N } dx \otimes \cdots \otimes dx \right)
+\]
+
+El cuál nos deja como enseñanza la \textit{relación de Chen}, qué nos indica como se pueden \textit{unir} integrales iteradas sobre intervalos adyacentes. 
+
+Note que, el levantamiento de $N$-pasos (La signatura) del camino suave $x$, toma valores en el grupo de Lie de paso libre $N$ nilpotente con $d$ generadores, domo restricción de $T^N (\mathbb{R}^d)$ a 
+
+\[
+	G^N (\mathbb{R}^d) = \exp \left( \mathbb{R}^d \oplus \left[ \mathbb{R}^d, \mathbb{R}^d \right] \oplus \left[ \mathbb{R}^d, \left[ \mathbb{R}^d, \mathbb{R}^d \right] \right] \oplus \cdots \right) \equiv \exp( \mathfrak{g}^N (\mathbb{R}^d) )
+\]
+
+¿Qué es $\mathfrak{g}^N (\mathbb{R}^d)$? es una álgebra de Lie nilpotente de N-pasos libres, y $\exp$ se define usando la serie basada en $\otimes$.
+
+\begin{boxDef}
+	Un \textbf{álgebra de Lie} es un espacio vectorial $\mathfrak{g}$ equipada con un mapeo bilineal alternante $[\cdot, \cdot] $(Esto es, si $x_1, x_2 \in \mathfrak{g}$ son linealmente dependientes, $[x_1, x_2] = 0$, note que esto es \"equivalente\" a decir que si los argumentos son iguales, es igual a 0 por la bilinealidad). Este mapa se conoce como \textbf{corchete de Lie}. \\
+
+	Sea ahora $X$ un conjunto y $i: X \rightarrow L$ un morfismo de conjuntos (.\_.) de $X$ a $L$ que es un álgebra de Lie. El álgebra de Lie $L$ se dice \textbf{libre en X}, si $i$ es el morfismo universal (Para toda álgebra de Lie $A$ con $f: X \rightarrow A$ morfismo, existe un único morfimo de álgebras de Lie $g: L \rightarrow A$ tal que $f = g \circ i$, todo morfismo será composición del morfismo con el morfismo universal). \\
+
+	\textbf{Álgebra de Lie nilpotente}, serie central baja.
+\end{boxDef}
+
+
+...
+
+
+
+
+
