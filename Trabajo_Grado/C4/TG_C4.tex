@@ -717,34 +717,63 @@ de tal forma que $\sum_{i = 0}^{N - 1} A_{t_i, t_{i+1}} \rightarrow \gamma_t - \
 	$\Box$
 \end{flushright}
 
-\subsection{Apuntes del Martin Hairer}
+Ya luego, de revisar el lema de costura, este teorema es un resultado muy fuerte, que permitirá determinar algunos estimadores al integrar en trayectorias $\alpha$-Hölder.
 
-Problema de dar significado a la expreión $\int Y_t dX_t$ para $X \in \mathscr{C}^{\alpha} ([0,T], V)$ y $Y$ alguna función continua con valores en $\mathcal{L}(V,W)$ ($Y$ será un \textit{camino controlado}), este es el espacio de operadores lineales acotados de $V$ a otro espacio de Banach $W$. 
+El primer caso dónde se aplicará el lema de costura, será para demostrar la existencia de la integral de Young.
 
-¿Qué funciones harán que la integral sea definida? Además, toca que:
+\begin{prop}[Integración de Young]
+	Sea $X \in \mathcal{C}^{\alpha}$ y $Y \in \mathcal{C}^{\beta}$ para $\alpha, \beta \in (0, 1]$, donde se cumple la condición $\alpha + \beta > 1$. Entonces, el límite:
+
+	\[
+		\int^t_0 Y_u dX_u := \lim_{ \lvert \pi \rvert \rightarrow 0} \sum_{ [u, v] \in \pi  } Y_u X_{u,v}
+	\]
+
+	existe para cualquier $t \in [0,T]$, donde el límite se toma sobre cualquier sucesión de particiones $\pi$ de $[0,t]$ cuya longitud tiende a 0, esto es, $\lvert \pi \rvert \rightarrow 0$. Este límite se conoce como \textbf{integral de Young} de $Y$ respecto a $X$, dónde tenemos la estimación:
+
+	\[
+		\left\lvert \int_s^t Y_u dX_u - Y_s X_{s,t} \right\rvert \leq C \lVert Y \rVert_{\beta} \lVert X \rVert_{\alpha} \lvert t - s \rvert^{\alpha + \beta}
+	\]
+
+	para todo $(s,t) \in \Delta_{[0,T]}$. Además, la constante $C$ depende de $\alpha + \beta$
+
+\end{prop}
+
+\textbf{Demostración:} La idea es aplicar el lema de costura. De forma natural, se toma $A_{s,t} = Y_s X_{s,t}$, de tal forma que la función es continua. Luego, para $0 \leq s \leq u \leq t \leq T$, tenemos:
+
+\begin{align*}
+	\delta A_{s,u,t} &= A_{s,t} - A_{s,u} - A_{u,t} \text{ por la definición. } \\
+	&= Y_s X_{s,t} - Y_s X_{s,u} - Y_u X_{u,t} \\
+	&= Y_s ( X_{s,t} - X_{s,u}  ) - Y_u X_{u,t} \\
+	&= Y_s X_{u,t} - Y_u X_{u,t} \\
+	&= Y_{u,s} X_{u,t} \\
+	&= -Y_{s,u} X_{u,t}
+\end{align*}
+
+realizando las cuentas respectivas. Por ende, tenemos la siguiente cota:
+
+\begin{align*}
+	\lVert \delta A_{s,u,t} \rVert &= \lvert Y_{s,u} X_{u,t} \rvert \\
+	&= \frac{ \lvert Y_{s,u} \rvert }{ \lvert u - s \rvert^{\beta} } \frac{ \lvert X_{u,t} \rvert  }{ \lvert t - u \rvert^{\alpha} } \lvert u - s \rvert^{\beta} \lvert t - u \rvert^{\alpha} \\
+	&\leq \lVert Y \rVert_{\beta} \lVert X \rVert_{\alpha} \lvert t - s \rvert^{\alpha + \beta}
+\end{align*}
+
+tomando máximos, y por el hecho que la función exponencial es creciente. Por ende, por el lema de costura al tomar $\lambda = \lVert Y \rVert_{\beta} \lVert X \rVert_\gamma$ y $\epsilon = \alpha + \beta - 1$, existe una trayectoria continua $\gamma_{t} = \int_0^t Y_u dX_u$, tal que
 
 \[
-	(X,Y) \mapsto \int Y dX
+	\left \lVert \int_s^t Y_u dX_u - Y_u X_{s,t} \right \rVert \leq C \lVert X \rVert_{\alpha} \lVert Y \rVert_{\beta} \lvert t - s \rvert^{\alpha + \beta} 
 \]
 
-sea continua en topologías relevantes. ¿Cuáles son esos buenos integrandos para el camino rugoso $X$?. Integral de Young, tomando caminos $\alpha$ y $\beta$ tal que $\alpha + \beta > 1$, el operador es continuo, la integral converga! :D. Desigualdad de Young. 
-
-¿Y qué obtenemos con los caminos rugosos? Romper esa barrera de los $\alpha + \beta > 1$, al obtener una mayor estructura del problema. Postular valores para $\mathbb{X}$ de la integral de $''\int X dX ''$. Más aún, ver a $\int Y dX$ cuando $Y$ es parecida a $X$, al menos en pequeñas escalas.
-
-¿Y cómo? Teniendo a $Y_t = F(X_t)$ para alguna función suave $F: V \rightarrow \mathcal{L}(V,W)$, llamada \textbf{1-forma}.
-
-
-1-FORMA -> GEOMETRÍA DIFERENCIAL. (Como $f(x) dx$).
-
-\subsubsection{Integración en 1-Formas}
-
-Integrar $Y = F(X)$ en contra de $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$. Para $F: V \rightarrow \mathcal{L}(V,W)$ en $\mathcal{C}^1$, una aproximación en series de Taylor da
+donde $C$ depende de $\alpha + \beta$ únicamente. Además, se cumple:
 
 \[
-	F(X_r) \approx F(X_s) + DF(X_s) X_{s,r}
+	\lim_{ \lvert \pi \rvert \rightarrow 0 } \sum_{ [u,v] \in \pi } Y_u X_{u,v} = \int_s^t Y_u dX_u
 \]
 
+y queda demostrado todo lo deseado
 
+\begin{flushright}
+	$\Box$
+\end{flushright}
 
 
 
@@ -853,6 +882,33 @@ Note que, el levantamiento de $N$-pasos (La signatura) del camino suave $x$, tom
 ...
 
 
+
+\subsection{Apuntes del Martin Hairer}
+
+Problema de dar significado a la expreión $\int Y_t dX_t$ para $X \in \mathscr{C}^{\alpha} ([0,T], V)$ y $Y$ alguna función continua con valores en $\mathcal{L}(V,W)$ ($Y$ será un \textit{camino controlado}), este es el espacio de operadores lineales acotados de $V$ a otro espacio de Banach $W$. 
+
+¿Qué funciones harán que la integral sea definida? Además, toca que:
+
+\[
+	(X,Y) \mapsto \int Y dX
+\]
+
+sea continua en topologías relevantes. ¿Cuáles son esos buenos integrandos para el camino rugoso $X$?. Integral de Young, tomando caminos $\alpha$ y $\beta$ tal que $\alpha + \beta > 1$, el operador es continuo, la integral converga! :D. Desigualdad de Young. 
+
+¿Y qué obtenemos con los caminos rugosos? Romper esa barrera de los $\alpha + \beta > 1$, al obtener una mayor estructura del problema. Postular valores para $\mathbb{X}$ de la integral de $''\int X dX ''$. Más aún, ver a $\int Y dX$ cuando $Y$ es parecida a $X$, al menos en pequeñas escalas.
+
+¿Y cómo? Teniendo a $Y_t = F(X_t)$ para alguna función suave $F: V \rightarrow \mathcal{L}(V,W)$, llamada \textbf{1-forma}.
+
+
+1-FORMA -> GEOMETRÍA DIFERENCIAL. (Como $f(x) dx$).
+
+\subsubsection{Integración en 1-Formas}
+
+Integrar $Y = F(X)$ en contra de $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$. Para $F: V \rightarrow \mathcal{L}(V,W)$ en $\mathcal{C}^1$, una aproximación en series de Taylor da
+
+\[
+	F(X_r) \approx F(X_s) + DF(X_s) X_{s,r}
+\]
 
 
 
