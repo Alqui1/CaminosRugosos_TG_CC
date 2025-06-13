@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  9 JUN 2025 21:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  12 JUN 2025 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1186,76 +1186,140 @@ LaTeX Info: Redefining \% on input line 724.
 LaTeX Info: Redefining \. on input line 761.
 LaTeX Info: Redefining \% on input line 761.
  [66]
-LaTeX Info: Redefining \. on input line 815.
-LaTeX Info: Redefining \% on input line 815.
- [67]
-LaTeX Info: Redefining \. on input line 859.
-LaTeX Info: Redefining \% on input line 859.
- [68]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 868
-.
+Overfull \hbox (54.86519pt too wide) detected at line 798
+[]
+ []
+
+
+Overfull \hbox (22.65402pt too wide) in paragraph at lines 800--801
+[]\OT1/cmr/m/n/12 Y no-te que, el ^^Sulti-mo t^^Sermino, mien-tras $\OMS/cmsy/m
+/n/12 j\OML/cmm/m/it/12 ^^Y\OMS/cmsy/m/n/12 j ! \OT1/cmr/m/n/12 0$, lue-go $\OM
+S/cmsy/m/n/12 k\OML/cmm/m/it/12 Y\OMS/cmsy/m/n/12 k[]k\OML/cmm/m/it/12 X\OMS/cm
+sy/m/n/12 k[]\OML/cmm/m/it/12 T\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ^^Y\OMS/cmsy/
+m/n/12 j[] !
+ []
+
+LaTeX Info: Redefining \. on input line 802.
+LaTeX Info: Redefining \% on input line 802.
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 815--816
+
+ []
+
+
+Overfull \hbox (84.50247pt too wide) detected at line 824
+[][] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C []
+ []
+
+LaTeX Info: Redefining \. on input line 837.
+LaTeX Info: Redefining \% on input line 837.
+[68]
+Overfull \hbox (2.14162pt too wide) in paragraph at lines 851--852
+[]\OT1/cmr/m/n/12 Entonces, por el le-ma de cos-tu-ra, to-man-do $\OML/cmm/m/it
+/12 ^^U \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12
+ ^^@ []k[]k\OML/cmm/m/it/12 X\OMS/cmsy/m/n/12 k[]\OT1/cmr/m/n/12 +\OMS/cmsy/m/n
+/12 k[]k[]k\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^@
+ []
+
+
+Overfull \hbox (97.61937pt too wide) detected at line 868
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 868.
+LaTeX Info: Redefining \% on input line 868.
+[69]
+Overfull \hbox (185.45088pt too wide) detected at line 893
+[]
+ []
+
+
+Overfull \hbox (151.71396pt too wide) detected at line 900
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 928.
+LaTeX Info: Redefining \% on input line 928.
+[70]
+LaTeX Info: Redefining \. on input line 971.
+LaTeX Info: Redefining \% on input line 971.
+ [71]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 100
+0.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 874--875
+Underfull \hbox (badness 10000) in paragraph at lines 1006--1007
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 876--877
+Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
 
  []
 
-LaTeX Info: Redefining \. on input line 889.
-LaTeX Info: Redefining \% on input line 889.
-[69]) (./appendix/appendix_gen.tex
+LaTeX Info: Redefining \. on input line 1012.
+LaTeX Info: Redefining \% on input line 1012.
+[72]
+LaTeX Info: Redefining \. on input line 1041.
+LaTeX Info: Redefining \% on input line 1041.
+ [73]) (./appendix/appendix_gen.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [70]
+ [74]
 Cap\'{\i }tulo 5.
-(./appendix/questions.tex) (./appendix/measureTheory.tex [71
+(./appendix/questions.tex) (./appendix/measureTheory.tex [75
 
 ]
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
+ [76]
 Overfull \hbox (0.51761pt too wide) in paragraph at lines 49--50
 []\OT1/cmr/m/n/12 Consulte: https://en.wikipedia.org/wiki/Quotient[]space[](lin
 ear[]algebra). 
  []
 
 ) (./appendix/hilbert_spaces.tex) (./appendix/probabilityAdvance.tex
-LaTeX Info: Redefining \. on input line 5.
-LaTeX Info: Redefining \% on input line 5.
- [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 36.
-LaTeX Info: Redefining \% on input line 36.
- [73]
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+ [77]
+LaTeX Info: Redefining \. on input line 66.
+LaTeX Info: Redefining \% on input line 66.
+
+[78]
 Overfull \hbox (16.44371pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/it/12 Para cual-quier
  []
 
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
-[74]
-LaTeX Info: Redefining \. on input line 145.
-LaTeX Info: Redefining \% on input line 145.
- [75]
-LaTeX Info: Redefining \. on input line 183.
-LaTeX Info: Redefining \% on input line 183.
- [76]
+LaTeX Info: Redefining \. on input line 136.
+LaTeX Info: Redefining \% on input line 136.
+[79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 178.
+LaTeX Info: Redefining \% on input line 178.
+ [80]
 Overfull \hbox (52.32861pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 V \OT1/cmr/m/n/12 = []$
  []
 
-) (./appendix/topologyConcepts.tex
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
- [77])) (./main.bbl
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+[81]) (./appendix/topologyConcepts.tex
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ [82])) (./main.bbl
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [78]) [79
+ [83]
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+ [84
 
-] (./main.aux
+]) [85]
+(./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
@@ -1266,7 +1330,7 @@ Here is how much of TeX's memory you used:
  37479 multiletter control sequences out of 15000+600000
  485444 words of font info for 91 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 99i,13n,104p,953b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,13n,104p,953b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/t
@@ -1287,10 +1351,10 @@ t/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (79 pages, 457073 bytes).
+Output written on main.pdf (85 pages, 467518 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
+ 388 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -775,6 +775,138 @@ y queda demostrado todo lo deseado
 	$\Box$
 \end{flushright}
 
+La integral de Young cumple varias propiedades. Una de ellas, que viene desde la integral de Riemann-Stieljes, es la posibilidad de tomar cualquier punto en el intervalo, sin que esto afecte el valor de la integral.
+
+\begin{lema}
+Sea $X \in \mathcal{C}^{\alpha}$ y $Y \in \mathcal{C}^{\beta}$ para $\alpha, \beta \in (0,1]$ con $\alpha + \beta > 1$. Sea $\pi$ una partición, $[u,v]$ un intervalo en la partición y $r \in [u,v]$ un punto arbitrario del intervalo. Entonces, la integral de Young de $Y$ respecto a $X$ es igual a:
+
+\[
+	\int_0^t Y_u d X_u = \lim_{ \lvert \pi \rvert \rightarrow 0} \sum_{ [u,v] \in \pi } Y_r X_{u,v}
+\]
+
+para cualquier $t \in [0,T]$
+
+\end{lema}
+
+\textbf{Demostración:} Tenemos:
+
+\begin{align*}
+	\left \lvert  \sum_{ [u,v] \in \pi  } Y_{u,r} X_{u,v}  \right \rvert &\leq  \sum_{ [u,v] \in \pi  } \lvert Y_{u,r} \rvert \lvert X_{u,v} \rvert \\
+	&\leq \lVert Y \rVert_{\beta} \lVert X \rVert_{\alpha} \sum_{ [u,v] \in \pi } \lvert v - u \rvert^{ \alpha + \beta } \text{ tomando supremos en la seminorma } \lVert \cdot \rVert_{\alpha} \\
+	&\leq \lVert Y \rVert_{\beta} \lVert X \rVert_{ \alpha } \sum_{ [u,v] \in \pi } \lvert \pi \rvert^{\alpha + \beta} \text{ tomando supremos } \\
+	&\leq \lVert Y \rVert_{\beta} \lVert X \rVert_{ \alpha } \frac{T}{\lvert \pi \rvert} \lvert \pi \rvert^{\alpha + \beta} \text{ por el número de intervalos en la partición }
+\end{align*}
+
+Y note que, el último término, mientras $\lvert \pi \rvert \rightarrow 0$, luego $\lVert Y \rVert_{\beta} \lVert X \rVert_{ \alpha } T \lvert \pi \rvert^{\alpha + \beta -1} \rightarrow 0$. Entonces, para $r \in [u,v]$:
+
+\begin{align*}
+	\lim_{ \lvert \pi \rvert \rightarrow 0} \sum_{ [u,v] \in \pi } Y_r X_{u,v} &= \lim_{ \lvert \pi \rvert \rightarrow 0} \left( \sum_{ [u,v] \in \pi } Y_u X_{u,v} + \sum_{ [u,v] \in \pi } Y_{u,r} X_{u,v}  \right)  \\
+	&= \lim_{\lvert \pi \rvert \rightarrow 0} \sum_{[u,v] \in \pi} Y_u X_{u,v} \text{, el término de la derecha se anula } \\
+	&= \int_0^t Y_u dX_u
+\end{align*}
+
+lo que demuestra lo deseado.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+Con ambos resultados, entonces ya se tiene una forma de integral respecto a caminos $\alpha$-Hölder, tal que al tomar sumas de Riemann-Stieltjes, mientras la partición va disminuyendo la longitud, la suma converge, sin importar la elección del punto. \\
+
+Ahora, procedemos a revisar algunas propiedades de la integral de Young. Primero, se estudia una cota superior para la integral respecto a trayectorias $\alpha$-Hölder y $\beta$-Hölder distintas.
+
+\begin{prop}
+	Sea $X, \tilde{X} \in \mathcal{C}^{\alpha}$ y $Y, \tilde{Y} \in \mathcal{C}^{\beta}$ para $\alpha, \beta \in (0,1]$ con $\alpha + \beta > 1$. Entonces, existe constante $C$ dependiente de $\alpha, \beta$ y $T$, tal que:
+
+	\[
+		\left \lVert \int_0^t Y_u dX_u - \int_0^t \tilde{Y}_u d\tilde{X}_u \right \rVert_{\alpha} \leq C \left[  \left( \lvert Y_0 - \tilde{Y}_0 \rvert +   \lVert Y - \tilde{Y} \rVert_{\beta} \right) \lVert X \rVert_{\alpha} + \left(  \lvert \tilde{Y}_0 \rvert + \lVert \tilde{Y} \rVert_{\beta} \right) \lVert X - \tilde{X} \rVert_{\alpha} \right]
+	\] 
+\end{prop}
+
+\textbf{Demostración:} Para la demostración, se usará el lema de costura. Tomando $A_{s,t} = Y_s X_{s,t}$, $\tilde{A}_{s,t} = \tilde{Y}_s \tilde{X}_{s,t}$, $\Delta = A - \tilde{A}$ y $\delta \Delta_{s,u,t} = \Delta_{s,t} - \Delta_{s,u} - \Delta_{u,t}$, entonces:
+
+\begin{align*}
+	\delta \Delta_{s,u,t} &= \Delta_{s,t} - \Delta_{s,u} - \Delta_{u,t} \\
+	&= A_{s,t} - \tilde{A}_{s,t} - A_{s,u} + \tilde{A}_{s,u} - A_{u,t} + \tilde{A}_{u,t} \\
+	&= A_{s,t} - A_{s,u} - A_{u,t} - \tilde{A}_{s,t}  + \tilde{A}_{s,u}  + \tilde{A}_{u,t} \\
+	&= \delta A_{s,u,t} - \delta \tilde{A}_{s,u,t} \\
+	&= Y_s X_{s,t} - Y_s X_{s,u} - Y_u X_{u,t} - \tilde{Y}_s \tilde{X}_{s,t} + \tilde{Y}_s \tilde{X}_{s,u}  + \tilde{Y}_u \tilde{X}_{u,t} \\
+	&= Y_s X_{u,t} - Y_u X_{u,t} - \tilde{Y}_s \tilde{X}_{u,t} + \tilde{Y}_u \tilde{X}_{u,t} \\
+	&= - (Y_{s,u} X_{u,t} - \tilde{Y}_{s,u} \tilde{X}_{u,t})
+\end{align*}
+
+tal que 
+
+
+\begin{align*}
+	\lvert \delta \Delta_{s,u,t} \rvert &\leq \lvert Y_{s,u} X_{u,t} - \tilde{Y}_{s,u} \tilde{X}_{u,t} \rvert \\
+	&\leq \lvert Y_{s,u} X_{u,t} - \tilde{Y}_{s,u} X_{u,t} + \tilde{Y}_{s,u} X_{u,t} - \tilde{Y}_{s,u} \tilde{X}_{u,t} \rvert \\
+	&\leq \lvert Y_{s,u} - \tilde{Y}_{s,u}  \rvert \lvert X_{u,t} \rvert + \lvert X_{u,t} - \tilde{X}_{u,t} \rvert \lvert \tilde{Y}_{s,u}  \rvert \\
+	&\leq \left(  \frac{ \lvert Y_{s,u} - \tilde{Y}_{s,u}  \rvert }{ \lvert  u - s \rvert^{\beta}  }  \frac{ \lvert X_{u,t} \rvert }{ \lvert t - u \rvert^{\alpha}   } + \frac{ \lvert X_{u,t} - \tilde{X}_{u,t} \rvert }{ \lvert t - u \rvert^{\beta} } \frac{ \lvert \tilde{Y}_{s,u}  \rvert}{\lvert u - s \rvert^{\beta}} \right) \lvert u - s \rvert^{\beta} \lvert t - u \rvert^{\alpha}  \\ 
+	&\leq \left(   \lVert Y - \tilde{Y} \rVert_{\beta} \rVert X \lVert_{\alpha} + \lVert \tilde{Y} \rVert_{\beta} \lVert X - \tilde{X} \rVert_{\alpha}  \right) \lvert t - s \rvert^{\alpha + \beta}
+\end{align*}
+
+
+Entonces, por el lema de costura, tomando $\lambda = \lVert Y - \tilde{Y} \rVert_{\beta} \rVert X \lVert_{\alpha} + \lVert \tilde{Y} \rVert_{\beta} \lVert X - \tilde{X} \rVert_{\alpha}$ y $\epsilon = \alpha + \beta - 1$, existe una trayectoría $\gamma$ y una constante $C$ tal que:
+
+\[
+	\lvert \gamma_t - \gamma_s - \Delta_{s,t} \rvert \leq C \left( \lVert Y - \tilde{Y} \rVert_{\beta} \rVert X \lVert_{\alpha} + \lVert \tilde{Y} \rVert_{\beta} \lVert X - \tilde{X} \rVert_{\alpha}  \right) \lvert t - s \rvert^{\alpha + \beta}
+\]
+
+y, al tomar $\pi$ una partición del intervalo $[s,t]$, queda, aplicando la definiciones de las hipótesis:
+
+\begin{align*}
+	\gamma_t - \gamma_s &= \lim_{\lvert \pi \rvert \rightarrow 0} \sum_{ [u,v] \in \pi } \Delta_{u,v} = \lim_{ \lvert \pi \rvert \rightarrow 0 } \left(  \sum_{ [u,v]\in \pi } A_{u,v} - \sum_{ [u,v] \in \pi } \tilde{A}_{u,v} \right) \\
+	&= \lim_{ \lvert \pi \rvert \rightarrow 0 } \left(  \sum_{ [u,v]\in \pi } Y_u X_{u,v} - \sum_{ [u,v] \in \pi } \tilde{Y}_u \tilde{X}_{u,v} \right) = \int_s^t Y_u dX_u - \int_s^t \tilde{Y}_u d\tilde{X}_u
+\end{align*}
+
+De esta forma, se tendrá:
+
+\begin{align*}
+	\left\lvert \int_s^t Y_u dX_u - \int_s^t \tilde{Y}_u d\tilde{X}_u - (Y_s X_{s,t} - \tilde{Y}_s \tilde{X}_{s,t}) \right\rvert \leq C \left( \lVert Y - \tilde{Y} \rVert_{\beta} \rVert X \lVert_{\alpha} + \lVert \tilde{Y} \rVert_{\beta} \lVert X - \tilde{X} \rVert_{\alpha}  \right) \lvert t - s \rvert^{\alpha + \beta}
+\end{align*}
+
+Más aún:
+
+\[
+	\lvert Y_s X_{s,t} - \tilde{Y}_s \tilde{X}_{s,t} \rvert \leq \left( \lVert Y - \tilde{Y} \rVert_{\infty} \rVert X \lVert_{\alpha} + \lVert \tilde{Y} \rVert_{\infty} \lVert X - \tilde{X} \rVert_{\alpha}  \right) \lvert t - s \rvert^{\alpha}
+\]
+
+Obtenemos otras dos cotas:
+
+\[
+	\lVert \tilde{Y} \rVert_{\infty} \leq \lvert \tilde{Y}_0 \rvert + T^{\beta} \lVert \tilde{Y} \rVert_{\beta}
+\]
+
+y
+
+\[
+	\lVert Y - \tilde{Y} \rVert_{\infty} \leq \lvert  Y_0 - \tilde{Y}_0 \rvert + T^{\beta} \lVert Y - \tilde{Y} \rVert_{\beta}
+\]
+
+por lema de interpolación. Además, se sigue que, para todo $t$, se tiene:
+
+\begin{align*}
+	\left\lvert \int_s^t Y_u dX_u - \int_s^t \tilde{Y}_u d\tilde{X}_u \right\rvert & \\
+	&\leq (1 + C)(1 + T^{\beta} ) \left[ \left(  \lvert Y_0 - \tilde{Y}_0 \rvert + \lVert Y - \tilde{Y} \rVert_{\beta} \right) \lVert X \rVert_{\alpha} +  \left(  \lvert \tilde{Y}_0\rvert +  \lVert \tilde{Y} \rVert_{\beta}  \right)  \lVert X - \tilde{X} \rVert_{\alpha}  \right] \lvert t - s \rvert^{\alpha}
+\end{align*}
+
+Y por ende:
+
+\begin{align*}
+	\left\lVert \int_s^t Y_u dX_u -  \int_s^t \tilde{Y}_u d\tilde{X}_u \right\rVert & \\
+	&\leq (1 + C)(1 + T^{\beta} ) \left[ \left(  \lvert Y_0 - \tilde{Y}_0 \rvert + \lVert Y - \tilde{Y} \rVert_{\beta} \right) \lVert X \rVert_{\alpha} +  \left(  \lvert \tilde{Y}_0\rvert +  \lVert \tilde{Y} \rVert_{\beta}  \right)  \lVert X - \tilde{X} \rVert_{\alpha}  \right] 
+\end{align*}
+
+Y queda demostrado lo deseado.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+
 
 
 
