@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  12 JUN 2025 19:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  14 JUN 2025 11:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1238,96 +1238,138 @@ Overfull \hbox (151.71396pt too wide) detected at line 900
 []
  []
 
-LaTeX Info: Redefining \. on input line 928.
-LaTeX Info: Redefining \% on input line 928.
+LaTeX Info: Redefining \. on input line 920.
+LaTeX Info: Redefining \% on input line 920.
 [70]
-LaTeX Info: Redefining \. on input line 971.
-LaTeX Info: Redefining \% on input line 971.
+LaTeX Info: Redefining \. on input line 961.
+LaTeX Info: Redefining \% on input line 961.
  [71]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 100
-0.
+Underfull \hbox (badness 10000) in paragraph at lines 965--966
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--988
+
+ []
+
+
+Overfull \hbox (9.88148pt too wide) in paragraph at lines 998--999
+[]\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 2 C[]$\OT1/cmr/m/it
+/12 , y $\OML/cmm/m/it/12 Y; K \OMS/cmsy/m/n/12 2
+ []
+
+LaTeX Info: Redefining \. on input line 1000.
+LaTeX Info: Redefining \% on input line 1000.
+[72]
+Overfull \hbox (37.23897pt too wide) detected at line 1010
+\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Z[]\OMS/cmsy/m/n/12 j \OT1/cmr/m/n/12 = [] \
+OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C\OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 K\OMS/
+cmsy/m/n/12 k[]k\OML/cmm/m/it/12 X\OMS/cmsy/m/n/12 k[]j\OML/cmm/m/it/12 t \OMS/
+cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 s\OMS/cmsy/m/n/12 j[] \OT1/cmr/m/n/12 + \OMS/c
+msy/m/n/12 k\OML/cmm/m/it/12 K\OMS/cmsy/m/n/12 k[]k\OML/cmm/m/it/12 X\OMS/cmsy/
+m/n/12 k[]j\OML/cmm/m/it/12 t \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 s\OMS/cmsy/
+m/n/12 j[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
+
+ []
+
+LaTeX Info: Redefining \. on input line 1065.
+LaTeX Info: Redefining \% on input line 1065.
+[73]
+LaTeX Info: Redefining \. on input line 1100.
+LaTeX Info: Redefining \% on input line 1100.
+ [74]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 113
+8.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1006--1007
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
 
  []
 
-LaTeX Info: Redefining \. on input line 1012.
-LaTeX Info: Redefining \% on input line 1012.
-[72]
-LaTeX Info: Redefining \. on input line 1041.
-LaTeX Info: Redefining \% on input line 1041.
- [73]) (./appendix/appendix_gen.tex
+LaTeX Info: Redefining \. on input line 1150.
+LaTeX Info: Redefining \% on input line 1150.
+[75]
+LaTeX Info: Redefining \. on input line 1171.
+LaTeX Info: Redefining \% on input line 1171.
+ [76]) (./appendix/appendix_gen.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [74]
-Cap\'{\i }tulo 5.
-(./appendix/questions.tex) (./appendix/measureTheory.tex [75
+ [77]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [78
 
 ]
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
- [76]
+Cap\'{\i }tulo 5.
+(./appendix/questions.tex [79]) (./appendix/measureTheory.tex
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+ [80]
 Overfull \hbox (0.51761pt too wide) in paragraph at lines 49--50
 []\OT1/cmr/m/n/12 Consulte: https://en.wikipedia.org/wiki/Quotient[]space[](lin
 ear[]algebra). 
  []
 
 ) (./appendix/hilbert_spaces.tex) (./appendix/probabilityAdvance.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1546) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- [77]
+ [81]
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
 
-[78]
+[82]
 Overfull \hbox (16.44371pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/it/12 Para cual-quier
  []
 
 LaTeX Info: Redefining \. on input line 136.
 LaTeX Info: Redefining \% on input line 136.
-[79]
+[83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 178.
 LaTeX Info: Redefining \% on input line 178.
- [80]
+ [84]
 Overfull \hbox (52.32861pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 V \OT1/cmr/m/n/12 = []$
  []
 
 LaTeX Info: Redefining \. on input line 213.
 LaTeX Info: Redefining \% on input line 213.
-[81]) (./appendix/topologyConcepts.tex
+[85]) (./appendix/topologyConcepts.tex
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [82])) (./main.bbl
+ [86])) (./main.bbl
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [83]
+ [87]
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [84
+ [88
 
-]) [85]
+]) [89]
 (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19913 strings out of 480185
- 422766 string characters out of 5894214
+ 19914 strings out of 480185
+ 422782 string characters out of 5894214
  730638 words of memory out of 5000000
- 37479 multiletter control sequences out of 15000+600000
+ 37480 multiletter control sequences out of 15000+600000
  485444 words of font info for 91 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  99i,13n,104p,953b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1351,10 +1393,10 @@ t/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (85 pages, 467518 bytes).
+Output written on main.pdf (89 pages, 475342 bytes).
 PDF statistics:
- 388 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
+ 400 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

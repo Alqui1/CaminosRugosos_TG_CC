@@ -905,10 +905,148 @@ Y queda demostrado lo deseado.
 	$\Box$
 \end{flushright}
 
+La integral de Young satisface algunas reglas del cálculo clásico, como la integración por partes.
+
+\begin{lema}[Integración por partes (Young)]
+	Sea $X \in \mathcal{C}^{\alpha}$ y $Y \in \mathcal{C}^{\beta}$ para algún $\alpha, \beta \in (0,1]$ con $\alpha + \beta > 1$. Entonces:
+
+	\[
+		X_T Y_T = X_0 Y_0 + \int_0^T X_u dY_u + \int_0^T Y_u dX_u
+	\]
+
+\end{lema}
+
+\textbf{Demostración:} Aplicando la definición de integral de Young y aplicando también el hecho de la elección cualquiera del punto sobre la partición:
+
+\begin{align*}
+	X_T Y_T - X_0 Y_0 &= \lim_{ \lvert \pi \rvert \rightarrow 0 } \sum_{ [s,t] \in \pi } (X_t Y_t - X_s Y_s) \\
+	&= \lim_{ \lvert \pi \rvert \rightarrow 0 } \sum_{ [s,t] \in \pi } ( X_t Y_{s,t} + Y_s X_{s,t}) \\
+	&= \int_0^T X_u dY_u + \int_0^T Y_u dX_u
+\end{align*}
+
+que muestra lo deseado.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+Ahora, se van a mostrar unas propiedades que se preservan de la integral de Young, en funciones que son $\alpha$-Hölder \textit{locales.}
+
+
+\begin{boxDef}
+	Para $\alpha \in (0,1]$, se dice que $f$ es \textbf{localmente} $\mathbb{\alpha}$\textbf{-Hölder continua}, sí para todo subconjunto acotado $K \subset \mathbb{R}^d$, existe $C$ constante tal que:
+
+	\[
+		\lvert f(x) - f(y) \rvert \leq C \lvert x - y \rvert^{\alpha}
+	\]
+
+	para todo $x, y \in K$.
+
+\end{boxDef}
+
+Para $k \in \mathbb{N}$ y $\alpha \in (0,1]$, se denota $\mathcal{C}^{k + \alpha} = \mathcal{C}^{k + \alpha} (\mathbb{R}^d; \mathbb{R})$ si $f \in \mathcal{C}^k$ (k-ésima derivada continua), y $D^k f$ es localmente $\alpha$-Hölder continua.
+
+
+\begin{lema}
+	Sea $X \in \mathcal{C}^{\alpha} ([0,T]; \mathbb{R}^d)$ y $f \in \mathcal{C}^{1 + \gamma}$ para ciertos índices $\alpha, \gamma \in (0, 1]$ tal que $\alpha (\gamma + 1) > 1$. Luego:
+
+	\[
+		\int_0^T D f(X_u) dX_u
+	\]
+
+	existe (Es una integral de Young bien definida), y más aún:
+
+	\[
+		f(X_T) = f(X_0) + \int_0^T Df (X_u) dX_u 	
+	\]
+
+\end{lema}
+
+\textbf{Demostración:} (Ejercicio del libro). Sea $X: [0,T] \rightarrow \mathbb{R}^d$ una trayectoría $\alpha$-Hölder continua. Como el dominio de $X$ es acotado y cerrado (Esto es, compacto en $\mathbb{R}$), luego, $X$ será continua, y por ende, uniformemente continua. Esto implica que $X([0,T]) \subset \mathbb{R}^d$ será un conjunto compacto, y en específico, acotado. Por ende, existe algún $R > 0$ y $p \in \mathbb{R}^d$, tal que $X([0,T]) \subseteq B(p, R)$. \\
+
+Entonces, observe que, para algún $u, v \in [0,T]$, como $X_u, X_v \in B(p, R)$ que es un conjunto acotado de $\mathbb{R}^d$, se cumple la hipótesis que $D f$ sea localmente $\gamma$-Hölder continua:
+
+\begin{align*}
+	\lvert D f(X_u) - D f(X_v) \rvert &\leq C_1 \lvert X_u - X_v \rvert^{\gamma}
+\end{align*}
+
+Para alguna constante $C_1$, se usa el hecho que $X$ es $\alpha$-Hölder continua:
+
+\begin{align*}
+	\lvert D f(X_u) - D f(X_v) \rvert &\leq C_1 \lvert X_u - X_v \rvert^{\gamma} \\
+	&\leq C_1 \left( C_2 \lvert u - v \rvert^{\alpha}  \right)^{\gamma} \\
+	&\leq C_1 C_2 \lvert u - v \rvert^{\alpha \cdot \gamma}
+\end{align*}
+
+para otra constante $C_2$, y de esta forma, $D f(X_t) \in \mathcal{C}^{\alpha \cdot \gamma} ([0,T]; \mathbb{R})$ con $C* = C_1 \cdot C_2$. Entonces, por la definición de integral de Young, como $\alpha + \alpha \gamma > 1$ y $\alpha \gamma \in (0,1]$, se cumple:
+
+\[
+	\int_0^T Df(X_u) dX_u = \lim_{\lvert \pi \rvert \rightarrow 0} \sum_{ [u,v] \in \pi } Df(X_u) X_{u,v}
+\]
+
+y la integral existe, por lo que queda demostrada la primera parte. \\
+
+Para demostrar la segunda parte... pendiente.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+Se termina la sección con una propiedad de la integral de Young, sobre la \textit{asociatividad}.
+
+\begin{lema}[Asociatividad en la integral de Young.]
+	Sea $X \in \mathcal{C}^{\alpha}$, y $Y, K \in \mathcal{C}^{\beta}$ para algún $\alpha, \beta \in (0,1]$ con $\alpha + \beta > 1$. Sea $Z_t = \int_0^{t} K_u dX_u$. Luego $Z \in \mathcal{C}^{\alpha}$ y se cumple:
+
+	\[
+		\int_0^T Y_u dZ_u = \int_0^T Y_u K_u dX_u
+	\]
+
+\end{lema}
+
+\textbf{Demostración:} Por la cota superior en la definición de la integral de Young, tenemos:
+
+\[
+	\lvert Z_{s,t} \rvert = \left\lvert \int_s^t K_u dX_u - K_s X_{s,t} + K_s X_{s,t} \right\rvert \leq C \lVert K \rVert_{\beta} \lVert X \rVert_{\alpha} \lvert t - s \rvert^{\alpha - \beta} + \lVert K \rVert_{\infty} \lVert X \rVert_{\alpha} \lvert t - s \rvert^{\alpha}
+\]
+
+y tomando supremos, se cumple
+
+\[
+	\lVert Z \rVert_{\alpha} \leq C \lVert K \rVert_{\beta} \lVert X \rVert_{\alpha} T^{\beta} + \lVert K \rVert_{\infty} \lVert X \rVert_{\alpha} < \infty
+\]
+
+y por ende, $Z \in \mathcal{C}^{\alpha}$. Como $Y \in \mathcal{C}^{\beta}$, cumple la condición de Young, y la integral está bien definida. \\
+
+Para probar la igualdad restante, usamos el estimador de la integral de Young:
+
+\begin{align*}
+	\left\lvert \int_s^t Y_u dZ_u - \int_s^t Y_u K_u dX_u \right\rvert &= \left\lvert \int_s^t Y_u dZ_u - Y_s K_s X_{s,t} \right\rvert \\
+	&=  \left \lvert \int_s^t Y_u dZ_u - Y_s Z_{s,t} \right \rvert\\
+	&\leq C \lVert Y \rVert_{\beta} \lVert Z \rVert_{\alpha} \lvert t - s \rvert^{\alpha + \beta}
+\end{align*}
+
+y tomando $\lvert \pi \rvert \rightarrow 0$, y sumando sobre $[s,t] \in \pi$, se tiene lo deseado. 
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+Usando la notación $Y \bullet X = \int_s^t Y_u dX_u$, el teorema anterior se puede reescribir como:
+
+\[
+	Y \bullet (K \bullet X) = (Y K) \bullet X
+\] 
+
+dónde medianamente, se puede ver la propiedad asociativa.
 
 
 
 
+
+
+
+
+\section{Caminos Controlados.}
 
 
 % Caminos Controlados (Ejemplos) e Integración Rugosa. 
