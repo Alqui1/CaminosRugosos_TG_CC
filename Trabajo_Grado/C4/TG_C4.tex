@@ -1045,8 +1045,9 @@ dónde medianamente, se puede ver la propiedad asociativa.
 
 
 
+% Caminos Controlados (Ejemplos) e Integración Rugosa. 
 
-\section{Caminos Controlados.}
+\subsection{Caminos Controlados.}
 
 
 Recuerde la motivación inicial, al tomar expansión en series de Taylor, se tiene una expresión de la forma:
@@ -1066,21 +1067,21 @@ Note que, si se establece tal límite, se podría establecer algún tipo de inte
 Observe, que el integrando es una función de la trayectoría $X$. Esta función, debe cumplir ciertas condiciones, que aunque a primera vista parece restrictiva, en la práctica usualmente las funciones consideradas cumplen la condición. Estos se conocen como \textit{trayectorias controladas}.
 
 \begin{boxDef}
-	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y $X \in \mathcal{C}^{\alpha}([0,T]; \mathbb{R}^d)$. Se dice que $(Y, Y')$ es una \textbf{trayectoría controlada} respecto a $X$, si $Y \in \mathbb{C}^{\alpha}([0,T]; \mathbb{R}^m)$ y $Y' \in \mathbb{C}^{\alpha}([0,T]; \mathcal{L}(\mathbb{R}^d; \mathbb{R}^m))$, y existe $R^Y \in \mathbb{C}^{2\alpha}_2 ([0,T]; \mathbb{R}^m)$, con $R^Y: \Delta_{[0,T]} \rightarrow \mathbb{R}^m$ se define como:
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y $X \in \mathcal{C}^{\alpha}([0,T]; \mathbb{R}^d)$. Se dice que $(Y, Y')$ es una \textbf{trayectoría controlada} respecto a $X$, si $Y \in \mathcal{C}^{\alpha}([0,T]; \mathbb{R}^m)$ y $Y' \in \mathcal{C}^{\alpha}([0,T]; \mathcal{L}(\mathbb{R}^d; \mathbb{R}^m))$, y existe $R^Y \in \mathcal{C}^{2\alpha}_2 ([0,T]; \mathbb{R}^m)$, con $R^Y: \Delta_{[0,T]} \rightarrow \mathbb{R}^m$ se define como:
 
 	\[
 		Y_{s,t} = Y'_{s} X_{s,t} + R^Y_{s,t}	
 	\]
 
-	para $(s,t) \in \Delta_{[0,T]}$. Se denota a $\mathfrak{D}_X^{2\alpha}([0,T];\mathbb{R}^m)$ o simplemente $\mathfrak{D}_X^{2\alpha}$ el espacio de trayectorías controladas. El término $Y'$ se conoce como \textbf{derivada de Gubinelli.}
+	para $(s,t) \in \Delta_{[0,T]}$. Se denota a $\mathscr{D}_X^{2\alpha}([0,T];\mathbb{R}^m)$ o simplemente $\mathscr{D}_X^{2\alpha}$ el espacio de trayectorías controladas. El término $Y'$ se conoce como \textbf{derivada de Gubinelli.}
 
 \end{boxDef}
 
 
-El espacio $\mathfrak{D}_X^{2\alpha}$ se puede equipar con la norma:
+El espacio $\mathscr{D}_X^{2\alpha}$ se puede equipar con la norma:
 
 \[
-	\lVert Y, Y' \rVert_{\mathfrak{D}_X^{2\alpha}} = \lvert Y_0 \rvert + \lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha} + \lVert R^Y \rVert_{2\alpha}
+	\lVert Y, Y' \rVert_{\mathscr{D}_X^{2\alpha}} = \lvert Y_0 \rvert + \lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha} + \lVert R^Y \rVert_{2\alpha}
 \]
 
 y más aún, será un espacio de Banach.
@@ -1094,14 +1095,89 @@ Sea $\mathcal{C}_b^k$ el espacio de funciones $f$ tal que $f$ y sus primeras $k$
 
 \textbf{Ejemplo:} Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2}  \right]$ y $X \in \mathcal{C}^{\alpha}$. La trayectoría $(f(X), Df(X))$ es un camino controlado respecto a $X$. Más aún, $R^{f(X)}_{s,t} := f(X_t) - f(X_s) - Df(X_s) X_{s,t}$.
 
-\textbf{Ejemplo:} Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2}  \right]$ y $X \in \mathcal{C}^{\alpha}$. Sea $(Y, Y'), (Z, Z') \in \mathfrak{D}_X^{2\alpha}$ caminos controlados. Observe que, al tomar $(YZ)' = Y' Z + Y Z'$:
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+\textbf{Ejemplo:} Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2}  \right]$ y $X \in \mathcal{C}^{\alpha}$. Sea $(Y, Y'), (Z, Z') \in \mathfrak{D}_X^{2\alpha}$ caminos controlados. Observe que, al tomar $(YZ)' = Y' Z + Y Z'$, haciendo las respectivas cuentas:
 
 \begin{align*}
 	R^{YZ}_{s,t} &= (YZ)_{s,t} - (YZ)'_s X_{s,t}\\
-	&= (YZ)_{s,t} - (Y'Z)_s X_{s,t} - (YZ')_s X_{s,t} \\
-	&= Y_t Z_t - Y_s Z_s - 
+	&= Y_t Z_t - Y_s Z_s - (Y'Z)_s X_{s,t} - (YZ')_s X_{s,t} \\
+	&= Y_t Z_t - Y_s Z_s + Y_s Z_t - Y_s Z_t + Y_t Z_s - Y_t Z_s + Y_s Z_s - Y_s Z_s - (Y'_s Z_s + Y_s Z'_s ) X_{s,t} \\
+	&= Y_s Z_{s,t} + Y_{s,t} Z_s + Y_{s,t} Z_{s,t} - (Y'_s Z_s + Y_s Z'_s ) X_{s,t} \\
+	&= Y_s ( Z_{s,t} - Z'_s X_{s,t} ) + Z_s (Y_{s,t} - Y'_s X_{s,t}) + Y_{s,t} Z_{s,t} \\
+	&= Y_s R^Z_{s,t} + Z_s R^Y_{s,t} + Y_{s,t} Z_{s,t}
 \end{align*}
 
+y por ende, estimando:
+
+\[
+	\lVert R^{YZ} \rVert_{2 \alpha} \leq \lVert Y \rVert_{\infty} \lVert R^{Z} \rVert_{2 \alpha} + \lVert R^Y \rVert_{2\alpha} \lVert Z \rVert_{\infty} + \lVert Y \rVert_{\infty} \lVert Z \rVert_{\infty} < \infty
+\]
+
+
+Por ende, el residuo $R^{YZ}$ como se define, cumple $R^{YZ} \in \mathcal{C}^{2\alpha}_2$ y se tiene lo deseado.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+
+\subsection{Integración Rugosa.}
+
+Una vez estudiados los caminos controlados, ya es base suficiente para comenzar a estudiar la integración rugosa; esto es, integrar respecto a un camino rugoso. Esta es la base principal para solucionar ecuaciones diferenciales rugosas (Y en específico, ecuaciones diferenciales estocásticas, usando un enfoque distinto al clásico de Itô).
+
+Note que, el lema de costura funciona cuando las trayectorías $X \in \mathcal{C}^{\alpha}$ y $Y \in \mathcal{C}^{\beta}$, los índices cumple $\alpha + \beta > 1$ o $\alpha > \frac{1}{2}$. Sin embargo, al tomar $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, es probable que no se tenga la desigualdad. En este caso, la idea es usar el \textit{levantamiento} $\mathbb{X}$, la información adicional del camino para que se pueda cumplir lo deseado. Formalmente, tenemos:
+
+\begin{prop}
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha} ([0,T]; \mathbb{R}^d)$ un camino rugoso. Sea $(Y, Y') \in \mathscr{D}^{2\alpha}_X ([0,T]; \mathcal{L}( \mathbb{R}^d, \mathbb{R}^m  ))$ un camino controlado y sea $R^Y$ el residuo. Luego el límite:
+
+	\[
+		\int_0^t Y_u d\mathbf{X}_u := \lim_{ \lvert \pi \rvert \rightarrow 0 } \sum_{ [u,v] \in \pi } Y_u X_{u,v} + Y'_u \mathbb{X}_{u,v}	
+	\]
+
+	existe para todo $t \in [0,T]$, donde el límite se toma sobre cualquier sucesión de particiones $\pi$ del intervalo $[0,t]$ tal que $\lvert \pi \rvert \rightarrow 0$. El límite se conoce como \textbf{integral rugosa} de $(Y, Y')$ respecto a $\mathbf{X}$. Más aún, se tiene el estimador:
+
+	\[
+		\left\lvert \int_s^t Y_u d \mathbf{X}_u - Y_s X_{s,t} - Y'_s \mathbb{X}_{s,t} \right\rvert \leq C \left(  \lVert R^Y \rVert_{2\alpha} \lVert X \rVert_{\alpha} + \lVert Y' \rVert_{\alpha} \lVert \mathbb{X} \rVert_{2\alpha} \right) \lvert t - s \rvert^{3 \alpha}
+	\]
+
+	para todo $(s,t) \in \Delta_{[0,T]}$, donde $C$ depende únicamente de $\alpha$.
+
+\end{prop}
+
+La proposición ya permite una forma de integración respecto a un camino rugoso. Note que, el conjunto de integrandos para el cuál es válida la integral, son para \textit{caminos controlados}; sin embargo, cómo se discutió en la sección anterior, en la práctica no suele ser muy restrictiva la condición.
+
+\textbf{Demostración:} Al igual que la integral de Young, se usa el lema de costura. Tome $A_{s,t} = Y_s X_{s,t} + Y' \mathbb{X}_{s,t}$, y sea $\delta A_{s,u,t} = A_{s,t} - A_{s,u} - A_{u,t}$, para $s \leq u \leq t$. Entonces:
+
+\begin{align*}
+	\delta A_{s,u,t} &= A_{s,t} - A_{s,u} - A_{u,t} \\
+	&= Y_s X_{s,t} - Y_s X_{s,u} - Y_u X_{u,t} + Y'_s \mathbb{X}_{s,t} - Y'_s \mathbb{X}_{s,u} - Y'_u \mathbb{X}_{u,t} \\
+	&= Y_s X_{u,t} - Y_u X_{u,t} + Y'_s ( \mathbb{X}_{s,t} - \mathbb{X}_{s,u} ) - Y'_u \mathbb{X}_{u,t} \text{, aplicar relación de Chen.}\\
+	&= - Y_{s,u} X_{u,t} + Y'_s (\mathbb{X}_{u,t} + X_{s,u} \otimes X_{u,t}) - Y'_u \mathbb{X}_{u,t} \text{, acomodar de forma conveniente.} \\
+	&= (-Y_{s,u} + Y'_s X_{s,u}) X_{s,u} - Y'_{s,u} \mathbb{X}_{u,t} \\
+	&= -R^Y_{s,u} X_{s,u} - Y'_{s,u} \mathbb{X}_{u,t}
+\end{align*}
+
+y razonando de forma análoga como en los teoremas anteriores:
+
+\[
+	\lvert \delta A_{s,u,t} \rvert \leq \left(  \lVert R^Y \rVert_{2\alpha} \lVert X \rVert_{\alpha} + \lVert Y' \rVert_{\alpha}  \lVert \mathbb{X} \rVert_{2\alpha} \right) \lvert t - s \rvert^{3\alpha}
+\]
+
+Tomando a $\epsilon = 3\alpha - 1$ y $\lambda = \lVert R^Y \rVert_{2\alpha} \lVert X \rVert_{\alpha} + \lVert Y' \rVert_{\alpha}  \lVert \mathbb{X} \rVert_{2\alpha}$, como $3 \alpha > 1$, se cumple el lema de costura. Por ende, existe una trayectoría continua $\gamma: [0,T] \rightarrow E$, tal que $\gamma_t = \int_0^t Y_u d \mathbb{X}_u$ que cumple todas las condiciones deseadas.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+Note que, uno integra una pareja $(Y, Y')$ que representa a un camino controlado, contra $\mathbb{X} = (X, \mathbb{X})$ que es el camino rugoso. Usualmente, la derivada de Gubinelli $Y'$ es clara del contexto, y se obvia de la notación.
+
+\textbf{Ejemplo:} Sea 
 
 
 
@@ -1110,7 +1186,11 @@ Sea $\mathcal{C}_b^k$ el espacio de funciones $f$ tal que $f$ y sus primeras $k$
 
 
 
-% Caminos Controlados (Ejemplos) e Integración Rugosa. 
+
+
+
+
+
 
 
 
