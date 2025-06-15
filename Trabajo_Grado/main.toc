@@ -29,12 +29,13 @@
 \contentsline {subsection}{\numberline {4.2.2}Integral de Stratonovich}{60}{}%
 \contentsline {section}{\numberline {4.3}Integración Rugosa}{62}{}%
 \contentsline {section}{\numberline {4.4}Caminos Controlados.}{74}{}%
-\contentsline {section}{\numberline {4.5}Comentarios adicionales*.}{74}{}%
-\contentsline {subsection}{\numberline {4.5.1}Movimiento Browniano como camino rugoso.}{74}{}%
-\contentsline {subsection}{\numberline {4.5.2}Apuntes en el Lyons acerca de los caminos rugosos.}{75}{}%
-\contentsline {subsection}{\numberline {4.5.3}Geometría de Carnot-Caratheodory}{75}{}%
-\contentsline {subsection}{\numberline {4.5.4}Apuntes del Martin Hairer}{76}{}%
-\contentsline {subsubsection}{Integración en 1-Formas}{77}{}%
+\contentsline {section}{\numberline {4.5}Comentarios adicionales*.}{75}{}%
+\contentsline {subsection}{\numberline {4.5.1}Movimiento Browniano como camino rugoso.}{75}{}%
+\contentsline {subsection}{\numberline {4.5.2}Apuntes en el Lyons acerca de los caminos rugosos.}{76}{}%
+\contentsline {subsection}{\numberline {4.5.3}Geometría de Carnot-Caratheodory}{76}{}%
+\contentsline {subsection}{\numberline {4.5.4}Apuntes del Martin Hairer}{78}{}%
+\contentsline {subsubsection}{Integración en 1-Formas}{78}{}%
+\contentsline {subsection}{\numberline {4.5.5}Extra de la derivada de Gubinelli.}{78}{}%
 \contentsline {chapter}{\numberline {5}Apéndice.}{79}{}%
 \contentsline {section}{\numberline {5.1}FAQ}{79}{}%
 \contentsline {section}{\numberline {5.2}Teoría de la Medida}{80}{}%

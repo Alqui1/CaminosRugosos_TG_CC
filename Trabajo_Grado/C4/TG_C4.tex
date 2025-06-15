@@ -1049,6 +1049,67 @@ dónde medianamente, se puede ver la propiedad asociativa.
 \section{Caminos Controlados.}
 
 
+Recuerde la motivación inicial, al tomar expansión en series de Taylor, se tiene una expresión de la forma:
+
+\[
+	\int_s^t f(X_r) dX_r \simeq f(X_s) X_{s,t} + D f(X_s) \int_s^t X_{s,r} \otimes dX_r
+\] 
+
+Es normal preguntarse si es posible (Bajo alguna topología), establecer el límite:
+
+\[
+	\int_0^T f(X_r) dX_r = \lim_{ \lvert \pi \rvert \rightarrow 0 } \sum_{ [s,t] \in \pi } f(X_s) X_{s,t} + D f(X_s) \mathbb{X}_{s,t}
+\]
+
+Note que, si se establece tal límite, se podría establecer algún tipo de integración rugosa.
+
+Observe, que el integrando es una función de la trayectoría $X$. Esta función, debe cumplir ciertas condiciones, que aunque a primera vista parece restrictiva, en la práctica usualmente las funciones consideradas cumplen la condición. Estos se conocen como \textit{trayectorias controladas}.
+
+\begin{boxDef}
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y $X \in \mathcal{C}^{\alpha}([0,T]; \mathbb{R}^d)$. Se dice que $(Y, Y')$ es una \textbf{trayectoría controlada} respecto a $X$, si $Y \in \mathbb{C}^{\alpha}([0,T]; \mathbb{R}^m)$ y $Y' \in \mathbb{C}^{\alpha}([0,T]; \mathcal{L}(\mathbb{R}^d; \mathbb{R}^m))$, y existe $R^Y \in \mathbb{C}^{2\alpha}_2 ([0,T]; \mathbb{R}^m)$, con $R^Y: \Delta_{[0,T]} \rightarrow \mathbb{R}^m$ se define como:
+
+	\[
+		Y_{s,t} = Y'_{s} X_{s,t} + R^Y_{s,t}	
+	\]
+
+	para $(s,t) \in \Delta_{[0,T]}$. Se denota a $\mathfrak{D}_X^{2\alpha}([0,T];\mathbb{R}^m)$ o simplemente $\mathfrak{D}_X^{2\alpha}$ el espacio de trayectorías controladas. El término $Y'$ se conoce como \textbf{derivada de Gubinelli.}
+
+\end{boxDef}
+
+
+El espacio $\mathfrak{D}_X^{2\alpha}$ se puede equipar con la norma:
+
+\[
+	\lVert Y, Y' \rVert_{\mathfrak{D}_X^{2\alpha}} = \lvert Y_0 \rvert + \lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha} + \lVert R^Y \rVert_{2\alpha}
+\]
+
+y más aún, será un espacio de Banach.
+
+
+Sea $\mathcal{C}_b^k$ el espacio de funciones $f$ tal que $f$ y sus primeras $k$-ésimas derivadas son uniformemente acotadas. Se define la norma como:
+
+\[
+	\lVert f \rVert_{C_b^k} = \lVert f \rVert_{\infty} + \lVert D f \rVert_{\infty} + \cdots + \lVert D^k f \rVert_{\infty}
+\]
+
+\textbf{Ejemplo:} Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2}  \right]$ y $X \in \mathcal{C}^{\alpha}$. La trayectoría $(f(X), Df(X))$ es un camino controlado respecto a $X$. Más aún, $R^{f(X)}_{s,t} := f(X_t) - f(X_s) - Df(X_s) X_{s,t}$.
+
+\textbf{Ejemplo:} Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2}  \right]$ y $X \in \mathcal{C}^{\alpha}$. Sea $(Y, Y'), (Z, Z') \in \mathfrak{D}_X^{2\alpha}$ caminos controlados. Observe que, al tomar $(YZ)' = Y' Z + Y Z'$:
+
+\begin{align*}
+	R^{YZ}_{s,t} &= (YZ)_{s,t} - (YZ)'_s X_{s,t}\\
+	&= (YZ)_{s,t} - (Y'Z)_s X_{s,t} - (YZ')_s X_{s,t} \\
+	&= Y_t Z_t - Y_s Z_s - 
+\end{align*}
+
+
+
+
+
+
+
+
+
 % Caminos Controlados (Ejemplos) e Integración Rugosa. 
 
 
@@ -1182,3 +1243,7 @@ Integrar $Y = F(X)$ en contra de $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{
 
 
 
+
+\subsection{Extra de la derivada de Gubinelli.}
+
+C6 -> Friz Hairer. Una trayectoría lejos de ser suave, tendrá derivada de Gubinelli definida de forma única.
