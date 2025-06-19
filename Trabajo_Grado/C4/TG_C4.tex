@@ -1177,7 +1177,63 @@ Tomando a $\epsilon = 3\alpha - 1$ y $\lambda = \lVert R^Y \rVert_{2\alpha} \lVe
 
 Note que, uno integra una pareja $(Y, Y')$ que representa a un camino controlado, contra $\mathbb{X} = (X, \mathbb{X})$ que es el camino rugoso. Usualmente, la derivada de Gubinelli $Y'$ es clara del contexto, y se obvia de la notación.
 
-\textbf{Ejemplo:} Sea 
+\textbf{Ejemplo:} En este ejemplo, veremos que la pareja $(Z, Z') := \left( \int_0^t Y_u d \mathbf{X}_u, Y \right)$ es un camino controlado con respecto a $X$, donde $\mathbf{X} = (X, \mathbb{X}) \in \mathcal{C}^{\alpha}$ y $(Y, Y') \in \mathscr{D}^{2 \alpha}_X$. Como $R^Z_{s,t} := Z_{s,t} - Z'_s X_{s,t}$, entonces, aplicando el estimador de la integración rugosa, se tiene:
+
+\begin{align*}
+	\lvert R^Z_{s,t} \rvert &= \left\lvert \int_s^t Y d\mathbb{X}_u - Y_s X_{s,t} \right\rvert \\
+	&\leq \lvert Y'_s \mathbb{X}_{s,t} \rvert + C \left( \lVert R^Y \rVert_{2 \alpha} \lVert X \rVert_{\alpha} + \lVert Y' \rVert_{\alpha} \lVert \mathbb{X} \rVert_{2 \alpha}  \right) \lvert t - s \rvert^{3 \alpha} \\
+	&\leq \lVert Y \rVert_{\infty} \lVert \mathbb{X} \rVert_{2 \alpha} \lvert t - s  \rvert^{2 \alpha} + C \left( \lVert R^Y \rVert_{2 \alpha} \lVert X \rVert_{\alpha} + \lVert Y' \rVert_{\alpha} \lVert \mathbb{X} \rVert_{2 \alpha}  \right) \lvert t - s \rvert^{3 \alpha} 
+\end{align*}
+
+y en este modo, $\lVert R^Z \rVert_{2 \alpha} < \infty$, por ende, a integral rugosa es un camino controlado, y su derivada de Gubinelli está dada por $Y$.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+\begin{lema}
+	Para $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, para $F \in \mathcal{C}^{2 \alpha}$ una trayectoría $2 \alpha$-Hölder continua, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$ y $\tilde{ \mathbf{X} } = (\tilde{X}, \tilde{ \mathbb{X} }) \in \mathscr{C}^{\alpha}$ dos caminos rugosos tal que:
+
+	\[
+		\tilde{X}_t = X_t
+	\]
+
+	y también:
+
+	\[
+		\tilde{ \mathbb{X}  }_{s,t} = \mathbb{X}_{s,t} + F_{s,t}
+	\]
+
+	Sea $(Y, Y') \in \mathscr{D}^{2 \alpha}_X = \mathscr{D}^{2 \alpha}_X$. Luego:
+
+	\[
+		\int_0^T Y_u d \tilde{ \mathbf{X} }_u = \int_0^T Y_u d \mathbf{X}_u + \int_0^T Y'_u dF_U
+	\]
+
+
+\end{lema}
+
+\textbf{Demostración:} (Ejercicio para el lector). Por las hipótesis dadas, las integrales rugosas $\int_0^T Y_u d \mathbf{X}_u$ y $\int_0^T Y_u d \tilde{\mathbf{X}}_u$ existe; más aún, $\int_0^T Y'_u dF_u$ es integral de Young, porque $\alpha + 2\alpha > \frac{1}{3}$. Entonces, tenemos:
+
+\begin{align*}
+	\int_0^T Y_u d \tilde{ \mathbf{X} }_u &= \lim_{\lvert \pi \rvert \rightarrow 0} \sum_{ [u,v] \in \pi } \left( Y_u \tilde{X}_{u,v} + Y'_u \tilde{\mathbb{X}}_{u,v} \right) \\ 
+	&= \lim_{\lvert \pi \rvert \rightarrow 0} \sum_{ [u,v] \in \pi } \left( Y_u X_{u,v} + Y'_u ( \mathbb{X}_{s,t} + F_{s,t} ) \right) \text{, distribuir la suma y el límite} \\
+	&= \lim_{\lvert \pi \rvert \rightarrow 0} \sum_{ [u,v] \in \pi }  \left( Y_u X_{u,v} + Y'_u \mathbb{X}_{s,t} \right) + \lim_{\lvert \pi \rvert \rightarrow 0} \sum_{ [u,v] \in \pi } Y'_u  F_{s,t} \\
+	&= \int_0^T Y_u d\mathbd{X}_u + \int_0^T Y'_u d F_u
+\end{align*}
+
+Y tenemos lo deseado. 
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+En el siguiente teorema, veremos una condición un poco más débil que la continuidad del mapa de Itô.
+
+\begin{theorem}[Estabilidad de la integración rugosa.]
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$ y $\tilde{ \mathbf{X} } = ( \tilde{X}, \tilde{ \mathbb{X} } ) \in \mathscr{C}^{\alpha}$ caminos rugosos. Sea $(Y, Y') \in \mathscr{D}_X^{2 \alpha}$ y $(\tilde{Y}, \tilde{Y}') \in \mathscr{D}_X^{2\alpha}$
+\end{theorem}
 
 
 Estabilidad Integración Rugosa -> Discusión Freddy.
