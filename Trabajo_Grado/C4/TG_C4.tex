@@ -1269,12 +1269,78 @@ el cuál nos da el primer estimador. \\
 
 Para el otro caso, sea $A_{s,t} = Y_s X_{s,t} + \tilde{Y}'_s \mathbb{X}_{s,t} $, $\tilde{A}_{s,t} = \tilde{Y}_s \tilde{X}_{s,t}$, $\Delta = A - \tilde{A}$, y $\delta \Delta_{s,u,t} = \Delta_{s,t} - \Delta_{s,u} - \Delta_{u,t}$. Entonces;
 
+\[
+	\delta \Delta_{s,u,t} = \delta A_{s,u,t} - \delta \tilde{A}_{s,u,t} = - \left( R^Y_{s,u} X_{s,u} + Y'_{s,u} \mathbb{X}_{u,t} - R^{\tilde{Y}}_{s,u} \tilde{X}_{u,t} - \tilde{Y}_{s,u} \tilde{X}_{u,t} - \tilde{Y}'_{s,u} \tilde{ \mathbb{X} }_{u,t} \right)
+\]
 
+¿Cuentas? ...
+
+De tal forma que:
+
+\begin{align*}
+	\lvert \delta \Delta_{s,u,t} \rvert &= \lvert R^Y_{s,u} X_{s,u} + Y'_{s,u} \mathbb{X}_{u,t} - R^{\tilde{Y}}_{s,u} \tilde{X}_{u,t} - \tilde{Y}_{s,u} \tilde{X}_{u,t} - \tilde{Y}'_{s,u} \tilde{ \mathbb{X} }_{u,t} \rvert \\
+	&\leq \lvert R^Y_{s,u} - R^{\tilde{Y}}_{s,u} \rvert \lvert X_{u,t} \rvert + \lvert R^{ \tilde{Y} }_{s,u} \rvert \lvert X_{u,t} - \tilde{X}_{u,t} \rvert + \lvert Y'_{s,u} - \tilde{Y}'_{s,u} \rvert \lvert \mathbb{X}_{u,t} \rvert + \lvert \tilde{Y}'_{s,u} \rvert \lvert \mathbb{X}_{u,t} - \tilde{X}_{u,t} \rvert \\
+	&\leq \left( \lVert R^Y - R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X \rVert_{\alpha} + \lVert R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X - \tilde{X} \rVert_{\alpha} \right. \\
+	&\qquad \left. + \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert \tilde{Y}' \rVert_{\alpha} \lVert \mathbb{X} - \tilde{ \mathbb{X}}  \rVert_{2 \alpha} \right) \lvert t - s \rvert^{3 \alpha}
+\end{align*}
+
+al tomar supremos. Por ende, tomando $\lambda = \lVert R^Y - R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X \rVert_{\alpha} + \lVert R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X - \tilde{X} \rVert_{\alpha}  + \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert \tilde{Y}' \rVert_{\alpha} \lVert \mathbb{X} - \tilde{ \mathbb{X}}  \rVert_{2 \alpha}$ y $\epsilon = 3 \alpha - 1 $, podemos usar el lema de costura, para mostrar que existe una trayectoria $\gamma$ y una constante $C$ tal que:
+
+\begin{align*}
+	\lvert \gamma_t - \gamma_s - \Delta_{s,t} \rvert &\leq C \left( \lVert R^Y - R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X \rVert_{\alpha} + \lVert R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X - \tilde{X} \rVert_{\alpha}  \right. \\
+	&\left. + \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert \tilde{Y}' \rVert_{\alpha} \lVert \mathbb{X} - \tilde{ \mathbb{X}}  \rVert_{2 \alpha} \right) \lvert t - s \rvert^{3 \alpha}
+\end{align*}
+
+y, al tomar $\pi$ la partición del intervalo $[s,t]$,
+
+\[
+	\gamma_t - \gamma_s = \lim_{ \lvert \pi \rvert \rightarrow 0 } \sum_{ [u,v] \in \pi } \Delta_{u,v} = \lim_{ \lvert \pi \rvert  \rightarrow 0 } \left( \sum_{ [u,v] \in \pi } A_{u,v} - \sum_{ [u,v] \in \pi } \tilde{A}_{u,v} \right) = \int_s^t Y_u d \mathbf{X}_u - \int_s^t \tilde{Y}_u d \tilde{ \mathbf{X} }_u
+\]
+
+Además, de forma análoga a los estimadores de la integral rugosa, 
+
+\begin{align*}
+	&\left\lvert \int_s^t Y_u d \mathbf{X}_u - \int_s^t \tilde{Y}_u - ( Y_s X_{s,t} + Y'_s \mathbb{X}_{s,t} - \tilde{Y}_s \tilde{X}_{s,t} - \tilde{Y}'_s \tilde{ \mathbb{X} }_{s,t}  ) \right \rvert \\
+	&\leq C \left( \lVert R^Y - R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X \rVert_{\alpha} + \lVert R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X - \tilde{X} \rVert_{\alpha} \right. \\
+	&\qquad \left. + \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert \tilde{Y}' \rVert_{\alpha} \lVert \mathbb{X} - \tilde{ \mathbb{X}}  \rVert_{2 \alpha} \right) \lvert t - s \rvert^{3 \alpha}
+\end{align*}
+
+Además,
+
+\begin{align*}
+	\lvert Y'_s \mathbb{X}_{s,t} - \tilde{Y}'_s \tilde{ \mathbb{X} }_{s,t} \rvert &\leq \lvert Y'_s \tilde{Y}'_s \rvert \lvert \mathbb{X}_{s,t} \rvert + \lvert \tilde{Y}'_s \rvert \lvert \mathbb{X}_{s,t} - \tilde{X}_{s,t} \rvert \\ 
+	&\leq \left( \lVert Y' - \tilde{Y}'  \rVert_{\infty} \lVert \mathbb{X} \rVert_{2\alpha} + \lVert \tilde{Y}' \rVert_{\infty} \lVert \mathbb{X} - \tilde{ \mathbb{X} } \rVert_{2 \alpha} \right) \lvert t - s \rvert^{2 \alpha}
+\end{align*}
+
+Al combinar las dos anteriores, y aplicar desigualdad triangular:
+
+\begin{align*}	
+	\lVert R^{ \int_0^{\cdot} Y_u d \mathbf{X}_u} - R^{\int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u }_{s,t}  \rVert &= \left\lvert \int_s^t Y_u d \mathbf{X}_u  - Y_s X_{s,t} - \int_s^t \tilde{Y}_u d \tilde{ \mathbf{X} }_u + \tilde{Y}_s \tilde{X}_{s,t} \right\rvert \\
+	&= \left\lvert \int_s^t Y_u d \mathbf{X}_u  - \int_s^t \tilde{Y}_u d \tilde{ \mathbf{X} }_u - (Y_s X_{s,t}  + Y'_s \mathbb{X}_{s,t} - \tilde{Y}_s \tilde{X}_{s,t} - \tilde{Y}'_s \tilde{ \mathbb{X} }_{s,t} ) \right. \\
+	& \qquad \quad \left. + (Y'_s \mathbb{X}_{s,t} - \tilde{Y}'_s \tilde{ \mathbb{X} }_{s,t})  \right\rvert \\ 
+	&\leq \left( \lVert Y' - \tilde{Y}' \rVert_{\infty} \lVert \mathbb{X} \rVert_{2 \alpha} + \lVert \tilde{Y}' \rVert_{\infty} \lVert \mathbb{X} - \tilde{ \mathbb{X} } \rVert_{2 \alpha} \right) \lvert t - s \rvert^{2 \alpha} \\
+	&\quad + C \left( \lVert R^Y - R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X \rVert_{\alpha} + \lVert R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X - \tilde{X} \rVert_{\alpha} \right. \\
+	&\quad \left. + \lVert Y' - \tilde{Y}' \rVert \lVert \mathbb{X} \rVert_{2\alpha} + \lVert \tilde{Y}' \rVert_{\alpha} \lVert \mathbb{X} - \tilde{ \mathbb{X} } \rVert_{2\alpha} \right) \lvert t - s \rvert^{3 \alpha}
+\end{align*}	
+
+Al dividir por $\lvert t - s \rvert^{2 \alpha}$ y tomar supremos, si llamamos a $K_1 = \lVert Y' - \tilde{Y}' \rVert_{\infty} \lVert \mathbb{X} \rVert_{2 \alpha} + \lVert \tilde{Y}' \rVert_{\infty} \lVert \mathbb{X} - \tilde{ \mathbb{X} } \rVert_{2 \alpha}$ y a $K_2 = \lVert R^Y - R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X \rVert_{\alpha} + \lVert R^{ \tilde{Y} } \rVert_{2 \alpha} \lVert X - \tilde{X} \rVert_{\alpha} + \lVert Y' - \tilde{Y}' \rVert \lVert \mathbb{X} \rVert_{2\alpha} + \lVert \tilde{Y}' \rVert_{\alpha} \lVert \mathbb{X} - \tilde{ \mathbb{X} } \rVert_{2\alpha}$, para de tal forma:
+
+\[
+	\lVert R^{ \int_0^{\cdot} Y_u d \mathbf{X}_u} - R^{\int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u }_{s,t}   \rVert_{ 2 \alpha } \leq K_1 + C K_2 T^{\alpha}
+\]
+
+y tenemos los deseado.
 
 
 \begin{flushright}
-	
+	$\Box$
 \end{flushright}
+
+Antes de finalizar esta sección, hablaremos acerca de la continuidad del mapa de Itô en la integración rugosa.
+
+\begin{coro}
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$ y $\tilde{  \mathbf{X} } = (\tilde{X}, \tilde{ \matbhbb{X} }) \in \mathscr{C}^{\alpha}$ una trayectoría rugosa. Sea $(Y, Y') \in \mathscr{D}_X^{2 \alpha}$ y $(\tilde{Y}, \tilde{Y}') \in \mathscr{D}_X^{2 \alpha} \in \mathscr{D}_X^{2\alpha}$ trayectorías controladas, y sean $R^Y$ y $R^{\tilde{Y}}$ los residuos correspondientes. 
+\end{coro}
 
 
 Estabilidad Integración Rugosa -> Discusión Freddy.
