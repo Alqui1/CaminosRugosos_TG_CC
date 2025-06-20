@@ -30,23 +30,23 @@
 \contentsline {section}{\numberline {4.3}Integración Rugosa}{62}{}%
 \contentsline {subsection}{\numberline {4.3.1}Caminos Controlados.}{74}{}%
 \contentsline {subsection}{\numberline {4.3.2}Integración Rugosa.}{75}{}%
-\contentsline {section}{\numberline {4.4}Comentarios adicionales*.}{78}{}%
-\contentsline {subsection}{\numberline {4.4.1}Movimiento Browniano como camino rugoso.}{78}{}%
-\contentsline {subsection}{\numberline {4.4.2}Apuntes en el Lyons acerca de los caminos rugosos.}{79}{}%
-\contentsline {subsection}{\numberline {4.4.3}Geometría de Carnot-Caratheodory}{79}{}%
-\contentsline {subsection}{\numberline {4.4.4}Apuntes del Martin Hairer}{81}{}%
-\contentsline {subsubsection}{Integración en 1-Formas}{82}{}%
-\contentsline {subsection}{\numberline {4.4.5}Extra de la derivada de Gubinelli.}{82}{}%
-\contentsline {chapter}{\numberline {5}Apéndice.}{83}{}%
-\contentsline {section}{\numberline {5.1}FAQ}{83}{}%
-\contentsline {section}{\numberline {5.2}Teoría de la Medida}{84}{}%
-\contentsline {subsection}{\numberline {5.2.1}Funciones $L^p$ y $\mathcal {L}^p$}{84}{}%
-\contentsline {section}{\numberline {5.3}Temas de Probabilidad avanzados}{85}{}%
-\contentsline {subsection}{\numberline {5.3.1}Semimartingalas, Martingalas locales}{85}{}%
-\contentsline {subsection}{\numberline {5.3.2}Variación Cuadrática}{86}{}%
-\contentsline {subsection}{\numberline {5.3.3}Desigualdad de Burkholder-Davis-Gundy}{86}{}%
-\contentsline {subsection}{\numberline {5.3.4}Área de Lévy}{87}{}%
-\contentsline {subsubsection}{La KdV y el área de Lévy.}{88}{}%
-\contentsline {subsection}{\numberline {5.3.5}Análisis Gaussiano, Espacios de Wiener Abstractos.}{88}{}%
-\contentsline {subsection}{\numberline {5.3.6}Teorema del Soporte de Stroock-Varadhan}{89}{}%
-\contentsline {section}{\numberline {5.4}Algunos conceptos de topología}{90}{}%
+\contentsline {section}{\numberline {4.4}Comentarios adicionales*.}{79}{}%
+\contentsline {subsection}{\numberline {4.4.1}Movimiento Browniano como camino rugoso.}{79}{}%
+\contentsline {subsection}{\numberline {4.4.2}Apuntes en el Lyons acerca de los caminos rugosos.}{80}{}%
+\contentsline {subsection}{\numberline {4.4.3}Geometría de Carnot-Caratheodory}{80}{}%
+\contentsline {subsection}{\numberline {4.4.4}Apuntes del Martin Hairer}{82}{}%
+\contentsline {subsubsection}{Integración en 1-Formas}{83}{}%
+\contentsline {subsection}{\numberline {4.4.5}Extra de la derivada de Gubinelli.}{83}{}%
+\contentsline {chapter}{\numberline {5}Apéndice.}{85}{}%
+\contentsline {section}{\numberline {5.1}FAQ}{85}{}%
+\contentsline {section}{\numberline {5.2}Teoría de la Medida}{86}{}%
+\contentsline {subsection}{\numberline {5.2.1}Funciones $L^p$ y $\mathcal {L}^p$}{86}{}%
+\contentsline {section}{\numberline {5.3}Temas de Probabilidad avanzados}{87}{}%
+\contentsline {subsection}{\numberline {5.3.1}Semimartingalas, Martingalas locales}{87}{}%
+\contentsline {subsection}{\numberline {5.3.2}Variación Cuadrática}{88}{}%
+\contentsline {subsection}{\numberline {5.3.3}Desigualdad de Burkholder-Davis-Gundy}{88}{}%
+\contentsline {subsection}{\numberline {5.3.4}Área de Lévy}{89}{}%
+\contentsline {subsubsection}{La KdV y el área de Lévy.}{90}{}%
+\contentsline {subsection}{\numberline {5.3.5}Análisis Gaussiano, Espacios de Wiener Abstractos.}{90}{}%
+\contentsline {subsection}{\numberline {5.3.6}Teorema del Soporte de Stroock-Varadhan}{91}{}%
+\contentsline {section}{\numberline {5.4}Algunos conceptos de topología}{92}{}%

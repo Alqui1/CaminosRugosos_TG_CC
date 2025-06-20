@@ -1232,8 +1232,49 @@ Y tenemos lo deseado.
 En el siguiente teorema, veremos una condición un poco más débil que la continuidad del mapa de Itô.
 
 \begin{theorem}[Estabilidad de la integración rugosa.]
-	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$ y $\tilde{ \mathbf{X} } = ( \tilde{X}, \tilde{ \mathbb{X} } ) \in \mathscr{C}^{\alpha}$ caminos rugosos. Sea $(Y, Y') \in \mathscr{D}_X^{2 \alpha}$ y $(\tilde{Y}, \tilde{Y}') \in \mathscr{D}_X^{2\alpha}$
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$ y $\tilde{ \mathbf{X} } = ( \tilde{X}, \tilde{ \mathbb{X} } ) \in \mathscr{C}^{\alpha}$ caminos rugosos. Sea $(Y, Y') \in \mathscr{D}_X^{2 \alpha}$ y $(\tilde{Y}, \tilde{Y}') \in \mathscr{D}_X^{2\alpha}$ caminos controlados respecto a $X$, y sean $R^Y_X$ y $R^{\tilde{Y}_X}$ sus respectivos residuos. Entonces, existe una constante $C$ que depende sólo de $\alpha$ y $T$, tal que:
+
+	\begin{align*}
+		 \lVert Y - \tilde{Y} \rVert &\leq C \left[ \left( \lvert Y'_0 - \tilde{Y}'_0 \rvert + \lVert \tilde{Y} - \tilde{Y'} \rVert_{\alpha} \right) \lVert X \rVert_{\alpha} \right. \\ 
+		 &+ \left. \left( \lvert Y'_0 \rvert + \lVert \tilde{Y'} \rVert_{\alpha}  \right) \lVert X - \tilde{X} \rVert_{\alpha} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha}  T^{\alpha} \right]
+	\end{align*}
+
+	y
+
+	\begin{align*}
+		\lVert R^{ \int_0^{\cdot} Y_u d \mathbf{X}_u } - R^{ \int_0^{\cdot} \tilde{Y}_u d \mathbf{\tilde{X}}_u } \rVert_{2 \alpha} &\leq C \left[  \left(  \lvert Y'_0 - \tilde{Y'}_0 \rvert + \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha} \right) \lvert \lVert  \mathbf{X} \rVert \rvert_{\alpha} \right. \\
+		&+ \left. \left(  \lvert Y'_0 \rvert + \lVert \tilde{Y}' \rVert_{\alpha} +  \lVert R^{\tilde{Y}} \rVert_{2\alpha} \right) \lVert \mathbf{X}; \mathbf{\tilde{X}} \rVert_{\alpha} \right]
+	\end{align*}
 \end{theorem}
+
+En el teorema, vemos que, al tomar caminos controlados, será la derivada la que tome el lugar de integrador. Más aún, obtenemos cierta estabilidad en el mapa de Itô, el cuál permitirá la continuidad.
+
+\textbf{Demostración:} En estas páginas, para definir y lograr encontrar cotas para varias integrales, se ha usado el lema de costura fuertemente, y este caso no será la excepción.
+
+Se tiene:
+
+\begin{align*}
+	\lvert Y_{s,t} - \tilde{Y}_{s,t} \rvert &= \lvert Y'_s X_{s,t} + R^Y_{s,t} - \tilde{Y}'_s \tilde{X}_{s,t} - R^{\tilde{Y}}_{s,t} \rvert \\
+	&\leq \lvert Y'_s - \tilde{Y}'_s \rvert \lvert  X_{s,t} \rvert + \lvert \tilde{Y}'_s \rvert \lvert X_{s,t} - \tilde{X}_{s,t} \rvert + \lvert R^Y_{s,t} - R^{\tilde{Y}}_{s,t} \rvert \\
+	&\leq \left(  \lVert Y' - \tilde{Y}' \rVert_{\infty} \lVert X \rVert_{\alpha} + \lVert \tilde{Y}' \rVert_{\infty} \lVert X - \tilde{X} \rVert_{ \infty } \right) \lvert t - s \rvert^{\alpha} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha} \lvert t - s \rvert^{2 \alpha}
+\end{align*}
+
+al aplicar desigualdad triangular y definiciones de las respectivas normas. Entonce, tomando supremos, queda:
+
+\begin{align*}
+	\lVert Y - \tilde{Y} \rVert_{ \alpha } \leq \lVert Y' - \tilde{Y}' \rVert_{\infty} \lVert X \rVert_{\alpha} + \lVert \tilde{Y}' \rVert_{ \infty } \lVert X - \tilde{X} \rVert_{ \alpha } + \lVert R^Y - R^{\tilde{Y}} \rVert_{2 \alpha} T^{\alpha}
+\end{align*}
+
+el cuál nos da el primer estimador. \\
+
+Para el otro caso, sea $A_{s,t} = Y_s X_{s,t} + \tilde{Y}'_s \mathbb{X}_{s,t} $, $\tilde{A}_{s,t} = \tilde{Y}_s \tilde{X}_{s,t}$, $\Delta = A - \tilde{A}$, y $\delta \Delta_{s,u,t} = \Delta_{s,t} - \Delta_{s,u} - \Delta_{u,t}$. Entonces;
+
+
+
+
+\begin{flushright}
+	
+\end{flushright}
 
 
 Estabilidad Integración Rugosa -> Discusión Freddy.
