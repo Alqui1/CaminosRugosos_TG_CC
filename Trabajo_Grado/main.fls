@@ -765,6 +765,13 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
+INPUT ./C5/TG_C5.tex
+INPUT ./C5/TG_C5.tex
+INPUT ./C5/TG_C5.tex
+INPUT C5/TG_C5.tex
+INPUT ./C5/TG_C5.tex
+INPUT ./C5/TG_C5.tex
+INPUT C5/TG_C5.tex
 INPUT ./appendix/appendix_gen.tex
 INPUT ./appendix/appendix_gen.tex
 INPUT ./appendix/appendix_gen.tex

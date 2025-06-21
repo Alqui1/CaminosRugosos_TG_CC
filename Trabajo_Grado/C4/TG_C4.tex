@@ -1339,11 +1339,62 @@ y tenemos los deseado.
 Antes de finalizar esta sección, hablaremos acerca de la continuidad del mapa de Itô en la integración rugosa.
 
 \begin{coro}
-	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$ y $\tilde{  \mathbf{X} } = (\tilde{X}, \tilde{ \matbhbb{X} }) \in \mathscr{C}^{\alpha}$ una trayectoría rugosa. Sea $(Y, Y') \in \mathscr{D}_X^{2 \alpha}$ y $(\tilde{Y}, \tilde{Y}') \in \mathscr{D}_X^{2 \alpha} \in \mathscr{D}_X^{2\alpha}$ trayectorías controladas, y sean $R^Y$ y $R^{\tilde{Y}}$ los residuos correspondientes. 
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$ y $\tilde{  \mathbf{X} } = (\tilde{X}, \tilde{ \mathbb{X} }) \in \mathscr{C}^{\alpha}$ una trayectoría rugosa. Sea $(Y, Y') \in \mathscr{D}_X^{2 \alpha}$ y $(\tilde{Y}, \tilde{Y}') \in \mathscr{D}_X^{2 \alpha} \in \mathscr{D}_X^{2\alpha}$ trayectorías controladas, y sean $R^Y$ y $R^{\tilde{Y}}$ los residuos correspondientes. Entonces, existe una constante $C(\alpha, T)$ (Que depende de $\alpha$ y $T$) tal que:
+
+	\begin{align*}
+		\left\lVert \int_0^{\cdot} Y_u d\mathbf{X}_u - \int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u \right\rVert &\leq C \left( 1 + \lVert X \rVert_{\alpha} + \lVert \tilde{X} \rVert_{\alpha} \right) \left(  \lVert \tilde{Y}, \tilde{Y}' \rVert_{ \mathscr{D}^{2\alpha}_X  } \lVert \mathbf{X}, \tilde{ \mathbf{X} } \rVert_{ \alpha } \right. \\
+		& \quad \left. + \left(  \lvert Y_0 + \tilde{Y}_0 \rvert + \lvert Y'_0 - \tilde{Y}'_0 \rvert + \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2 \alpha} \right) \right) \lvert \lVert \mathbf{X} \rVert \rvert_{\alpha}
+	\end{align*}
+
 \end{coro}
 
+\textbf{Demostración:} Como $( \int_0^{\cdot} Y_u d \textbf{X}_u, Y ) \in \mathscr{D}_X^{2 \alpha}$ y $( \int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u, \tilde{Y} ) \in \mathscr{D}^{2 \alpha}_X$ son caminos controlados, al aplicar la definición y las diferentes cotas, tenemos:
 
-Estabilidad Integración Rugosa -> Discusión Freddy.
+\begin{align*}
+	\left\lvert   \int_s^t Y_u \right. &  \left. d \mathbf{X}_u - \int_s^t \tilde{Y}_u d \tilde{ \mathbf{X} }_u \right \rvert = \lvert Y_s X_{s,t} + R^{\int_0^{\cdot} Y_u d \mathbf{X}_u } - \tilde{Y}_s \tilde{X}_{s,t} - R^{ \int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u } \rvert \\
+	&\leq \lvert Y_s - \tilde{Y}_s \rvert \lvert X_{s,t} \rvert + \lvert \tilde{Y}_s \rvert \lvert X_{s,t} - \tilde{X}_{s,t} \rvert + \lvert R^{\int_0^{\cdot} Y_u d \mathbf{X}_u } - R^{ \int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u } \rvert\\
+	&\leq \left(   \lVert Y - \tilde{Y} \rVert_{\alpha} \lVert X \rVert_{\alpha} + \lVert \tilde{Y} \rVert_{\infty} \lVert X - \tilde{X} \rVert_{\alpha} \right) \lvert t - s \rvert^{\alpha} + \lVert  R^{\int_0^{\cdot} Y_u d \mathbf{X}_u } - R^{ \int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u } \rVert_{2 \alpha} \lvert t - s \rvert^{2 \alpha}
+\end{align*}
+
+
+De tal forma, que al dividir por $\lvert t - s \rvert^{\alpha}$ y tomar supremos, tenemos:
+
+\begin{align*}
+	\left\lVert \int_0^{\cdot} Y_u d \right. & \left. \mathbf{X}_u - \int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u \right\rVert_{\alpha} \\
+	&\leq \  \lVert Y - \tilde{Y} \rVert_{\alpha} \lVert X \rVert_{\alpha} + \lVert \tilde{Y} \rVert_{\infty} \lVert X - \tilde{X} \rVert_{\alpha} + \lVert  R^{\int_0^{\cdot} Y_u d \mathbf{X}_u } - R^{ \int_0^{\cdot} \tilde{Y}_u d \tilde{ \mathbf{X} }_u } \rVert_{2 \alpha} T^{\alpha}
+\end{align*}
+
+Finalmente, puede ver que, al hacer $\tilde{Y}_t = \tilde{Y}_0 + \tilde{Y}_{0,t}$, por desigualdad triangular, al tomar supremos:
+
+\[
+	\lVert \tilde{Y} \rVert_{\infty} \leq \lvert Y_0 - \tilde{Y}_0 \rvert + \lVert Y - \tilde{Y} \rVert_{\alpha} T^{\alpha}
+\] 
+
+y también:
+
+\[
+	\lVert Y - \tilde{Y} \rVert_{\infty} \leq \lvert Y_0 - \tilde{Y}_0  \rvert + \lVert Y - \tilde{Y} \rVert_{\alpha} T^{\alpha}
+\]
+
+De igual forma, tomando $\tilde{Y}_{s,t} = \tilde{Y}'_s X_{s,t + R^{\tilde{Y}}_{s,t} }$ tal que:
+
+\[
+	\lVert \tilde{Y} \rVert_{\alpha} \leq \left( \lvert \tilde{Y}'_0 \rvert + \lVert \tilde{Y}' \rVert_{\alpha} T^{\alpha} \right) \lVert \tilde{X} \rVert_{\alpha} + \lVert R^{\tilde{Y}} \rVert_{2 \alpha} T^{\alpha}
+\]
+
+por la desigualdad anterior. Uniendo estas desigualdades, con las desigualdades de la estabilidad de integración rugosa, tenemos lo deseado.
+
+¡PENDIENTE ECHAR LAS CUENTAS!
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+
+%Estabilidad Integración Rugosa -> Discusión Freddy.
+
+Este fue el último comentario acerca de la integración rugosa. Ya con esta cantidad de estimadores, será suficiente para hablar de ecuaciones diferenciales rugosas, y un poco su relación con las ecuaciones diferenciales estocásticas comparado con el enfoque de Itô.
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  20 JUN 2025 16:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  21 JUN 2025 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1390,34 +1390,65 @@ Overfull \hbox (58.11069pt too wide) detected at line 1324
 LaTeX Info: Redefining \. on input line 1327.
 LaTeX Info: Redefining \% on input line 1327.
 [80]
-LaTeX Info: Redefining \. on input line 1390.
-LaTeX Info: Redefining \% on input line 1390.
- [81]
-LaTeX Info: Redefining \. on input line 1434.
-LaTeX Info: Redefining \% on input line 1434.
+Overfull \hbox (84.47752pt too wide) detected at line 1347
+[]
+ []
+
+
+Overfull \hbox (77.99127pt too wide) detected at line 1357
+[]
+ []
+
+
+Overfull \hbox (9.72568pt too wide) detected at line 1365
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 1371.
+LaTeX Info: Redefining \% on input line 1371.
+[81]
+LaTeX Info: Redefining \. on input line 1435.
+LaTeX Info: Redefining \% on input line 1435.
  [82]
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1445
+LaTeX Info: Redefining \. on input line 1475.
+LaTeX Info: Redefining \% on input line 1475.
+ [83]
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1446--1447
+Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
 
  []
 
-LaTeX Info: Redefining \. on input line 1462.
-LaTeX Info: Redefining \% on input line 1462.
-[83]) (./appendix/appendix_gen.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1507.
+LaTeX Info: Redefining \% on input line 1507.
+ [84]
+LaTeX Info: Redefining \. on input line 1536.
+LaTeX Info: Redefining \% on input line 1536.
+
+[85]) (./C5/TG_C5.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [84]
+ [86]
 Cap\'{\i }tulo 5.
-(./appendix/questions.tex [85
+) (./appendix/appendix_gen.tex [87
 
-]) (./appendix/measureTheory.tex
+]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [88
+
+]
+Cap\'{\i }tulo 6.
+(./appendix/questions.tex [89]) (./appendix/measureTheory.tex
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
- [86]
+ [90]
 Overfull \hbox (0.51761pt too wide) in paragraph at lines 49--50
 []\OT1/cmr/m/n/12 Consulte: https://en.wikipedia.org/wiki/Quotient[]space[](lin
 ear[]algebra). 
@@ -1428,50 +1459,50 @@ Underfull \vbox (badness 1546) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- [87]
+ [91]
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
 
-[88]
+[92]
 Overfull \hbox (16.44371pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/it/12 Para cual-quier
  []
 
 LaTeX Info: Redefining \. on input line 136.
 LaTeX Info: Redefining \% on input line 136.
-[89]
+[93]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 178.
 LaTeX Info: Redefining \% on input line 178.
- [90]
+ [94]
 Overfull \hbox (52.32861pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 V \OT1/cmr/m/n/12 = []$
  []
 
 LaTeX Info: Redefining \. on input line 213.
 LaTeX Info: Redefining \% on input line 213.
-[91]) (./appendix/topologyConcepts.tex
+[95]) (./appendix/topologyConcepts.tex
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [92])) (./main.bbl
+ [96])) (./main.bbl
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [93]
+ [97]
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [94
+ [98
 
-]) [95]
+]) [99]
 (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19918 strings out of 480185
- 422834 string characters out of 5894214
- 731638 words of memory out of 5000000
- 37484 multiletter control sequences out of 15000+600000
+ 19924 strings out of 480185
+ 422909 string characters out of 5894214
+ 732638 words of memory out of 5000000
+ 37486 multiletter control sequences out of 15000+600000
  485444 words of font info for 91 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  99i,13n,104p,953b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1497,10 +1528,10 @@ ype1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/rsfs/rsfs10.pfb>
-Output written on main.pdf (95 pages, 517301 bytes).
+Output written on main.pdf (99 pages, 523295 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
+ 442 PDF objects out of 1000 (max. 8388607)
+ 292 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
