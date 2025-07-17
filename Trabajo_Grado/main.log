@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  21 JUN 2025 10:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  17 JUL 2025 08:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1436,19 +1436,53 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [86]
 Cap\'{\i }tulo 5.
-) (./appendix/appendix_gen.tex [87
+
+Overfull \hbox (6.66383pt too wide) in paragraph at lines 18--18
+[]\OT1/cmr/bx/n/17.28 Ejemplos de Ecua-cio-nes Di-fe-ren-cia-les Ru-
+ []
+
+[87
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Overfull \hbox (3.50378pt too wide) in paragraph at lines 68--68
+[]\OT1/cmr/bx/n/17.28 Funciones de ca-mi-nos con-tro-la-dos y ecua-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
+[88]
+Overfull \hbox (32.73138pt too wide) detected at line 98
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+[89]
+Overfull \hbox (27.59157pt too wide) detected at line 106
+[]
+ []
+
+) (./appendix/appendix_gen.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [88
-
-]
+ [90]
 Cap\'{\i }tulo 6.
-(./appendix/questions.tex [89]) (./appendix/measureTheory.tex
+(./appendix/questions.tex [91
+
+]) (./appendix/measureTheory.tex
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
- [90]
+ [92]
 Overfull \hbox (0.51761pt too wide) in paragraph at lines 49--50
 []\OT1/cmr/m/n/12 Consulte: https://en.wikipedia.org/wiki/Quotient[]space[](lin
 ear[]algebra). 
@@ -1459,41 +1493,41 @@ Underfull \vbox (badness 1546) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- [91]
+ [93]
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
 
-[92]
+[94]
 Overfull \hbox (16.44371pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/it/12 Para cual-quier
  []
 
 LaTeX Info: Redefining \. on input line 136.
 LaTeX Info: Redefining \% on input line 136.
-[93]
+[95]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 178.
 LaTeX Info: Redefining \% on input line 178.
- [94]
+ [96]
 Overfull \hbox (52.32861pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 V \OT1/cmr/m/n/12 = []$
  []
 
 LaTeX Info: Redefining \. on input line 213.
 LaTeX Info: Redefining \% on input line 213.
-[95]) (./appendix/topologyConcepts.tex
+[97]) (./appendix/topologyConcepts.tex
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [96])) (./main.bbl
+ [98])) (./main.bbl
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [97]
+ [99]
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [98
+ [100
 
-]) [99]
+]) [101]
 (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
@@ -1501,7 +1535,7 @@ LaTeX Info: Redefining \% on input line 8.
 Here is how much of TeX's memory you used:
  19924 strings out of 480185
  422909 string characters out of 5894214
- 732638 words of memory out of 5000000
+ 731640 words of memory out of 5000000
  37486 multiletter control sequences out of 15000+600000
  485444 words of font info for 91 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
@@ -1528,10 +1562,10 @@ ype1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/rsfs/rsfs10.pfb>
-Output written on main.pdf (99 pages, 523295 bytes).
+Output written on main.pdf (101 pages, 533191 bytes).
 PDF statistics:
- 442 PDF objects out of 1000 (max. 8388607)
- 292 compressed objects within 3 object streams
+ 448 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

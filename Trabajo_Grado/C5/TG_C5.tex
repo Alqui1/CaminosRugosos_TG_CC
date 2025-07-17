@@ -1,3 +1,137 @@
 \chapter{Ecuaciones Diferenciales Rugosas}
 
 Vea el siguiente ejemplo...
+
+PENDIENTES!!!
+
+\begin{itemize}
+	\item  \textbf{Capítulo 1:} Limpiar. Teorema de Peano. Gráficas $\alpha$-Hölder
+	\item \textbf{Capítulo 2:} Limpiar. Propiedades MB.
+	\item \textbf{Capítulo 3:} Lectura Oksendal. CH1, CH3, CH4, CH5. Enfocarnos en ejemplos, integral de Itô y EDE. Ejemplos, suprimir algunas demostraciones.
+	\item \textbf{Capítulo 4:} Limpiar (Verificar no repetición). Gráficas Lema de Costura.
+	\item \textbf{Capítulo 5:} ¿CH6?, CH7 y CH8. Suprimir algunas demostraciones. Gráficas.  
+	\item \textbf{Apéndice.} Tensores, ¿CH6?... no sé si hace falta algo más xd.
+\end{itemize}
+
+
+
+\section{Ejemplos de Ecuaciones Diferenciales Rugosas.}
+
+Las ecuaciones diferenciales rugosas, se pueden ver como una generalización de las ecuaciones diferenciales controlados. Cuando tenemos un control, cuya regularidad es $\alpha$-Hölder con $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, podemos inducir un levantamiento:
+
+\[
+	dY_t = f(Y_t) dX_t \rightarrow  dY_t = f(Y_t) d\mathbf{X}_t
+\]
+
+donde $\mathbf{X}_t = (X_t, \mathbb{X}_t)$. Al escribir el problema de forma integral, se tendrá definida la integral rugosa, que se vió en capítulos anteriores. \\
+
+Antes de pasar a los teoremas de existencia y unicidad, primero se estudian algunos ejemplos.
+
+\begin{itemize}
+
+	\item Dado $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y $\mathbf{X} \in \mathscr{C}^{\alpha}$. La siguiente ecuación diferencial rugosa:
+
+	\[
+		V_t = 1 + \int_0^t V_u d\mathbf{X}_u
+	\]
+
+	tiene como solución única:
+
+	\[
+		V_t = \exp \left( X_t - \frac{1}{2} \left[ \mathbf{X} \right]_t \right)
+	\]
+
+	y se conoce como la \textbf{exponencial rugosa}. El corchete $[\mathbf{X}]_t$ se conoce como \textbf{corchete de camino rugoso}, y para verificar la solución, se usa la fórmula de Itô para caminos rugosos (Ver el apéndice).
+
+	\item Una ecuación similar a la anterior, está dada por:
+
+	\[
+		V_t = 1 + \int_0^t V_u K_u d\mathbf{X}_u
+	\]
+
+	En este caso, poseemos un camino controlado $(K, K') \in \mathscr{D}^{2\alpha}_X$, donde $\int_0^{\cdot} K_u d\mathbf{X}_u$ toma valores reales. La solución está dada por:
+
+	\[
+		V_t = \exp \left( \int_0^t K_u d\mathbf{X}_u - \frac{1}{2} \int_0^t (K_u \otimes K_u) d[\mathbf{X}]_u  \right)
+	\]
+
+\end{itemize}
+
+
+
+
+
+\section{Ecuaciones Diferenciales de Young*}
+
+
+
+\section{Funciones de caminos controlados y ecuaciones diferenciales rugosas.}
+
+Antes de enunciar el teorema más poderoso e interesante de la teoría de caminos rugosos, se van a enunciar unos resultados usados en la demostración, que involucran a las funciones de caminos controlados (Que, son los integrandos trabajados en la integral rugosa). \\
+
+\begin{lema}
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$ y $\mathbf{X} \in (X, \mathbb{X}) \in \mathscr{C}^{\alpha}$. Sea $f \in C^2_b$. Para $(Y, Y') \in \mathscr{D}^{2\alpha}_X$, la pareja:
+
+	\[
+		\left(  \int_0^{\cdot} f(Y_u) d\mathbf{X}_u, f(Y)  \right) \in \mathscr{D}^{2\alpha}_X
+	\]
+
+	es un camino controlado. Más aún, tenemos los estimadores para la derivada de Gubinelli y el residuo:
+
+	\begin{align*}
+		\lVert f(Y) \rVert_{\alpha} &\leq C \left(  ( \lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha} )  \right \lVert X \rVert_{\alpha} + \lVert R^Y \rVert_{2\alpha} T^{\alpha}  ) \\
+		\lVert R^{ \int_0^{\cdot} f(Y_u) d\mathbf{X}_u } \rVert_{2\alpha} &\leq C \left(  1 + \lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha} + \lVert R^Y \rVert_{2\alpha} \right)^{2} (1 + \lVert X \rVert_{\alpha})^2 \lVert \lvert X \rvert \rVert_{\alpha}
+	\end{align*}
+
+	donde $C$ depende de $\alpha$, T y $\lVert f \rVert_{C^2_b}$.
+
+\end{lema}
+
+El teorema anterior, se puede interpretar de forma intuitiva, al tomar la trayectoria $\mathbf{X}$ como una trayectoria lo suficientemente suave, cuya integral $\int_0^{\cdot} f(Y_u) dX_u$ exista en el sentido de Riemann-Stieljes. Así, al usar el teorema fundamental del cálculo, la derivada de Gubinelli (O la derivada usual, en este caso), estará dado por $f(Y)$.
+
+\begin{lema}
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$ y $\mathbf{X} = (X, \mathbb{X}),  \tilde{ \mathbf{X} } = (\tilde{X}, \tilde{ \mathbb{X} }) \in \mathscr{C}^{\alpha} $. Sea $(Y, Y') \in \mathscr{D}^{2\alpha}_X$, $(\tilde{Y}, \tilde{Y'}) \in \mathscr{D}^{2\alpha}_{ \tilde{X} }$ y $f \in C^3_b$. Sea $M > 0$ una constante tal que $\lVert X \rVert_{\alpha} \leq M$, $\lVert \tilde{X} \rVert_{\alpha} \leq M$, $\lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha} + \lVert R^Y \rVert_{2\alpha} \leq M$ y $\lvert \tilde{Y}'_0 \rvert + \lVert \tilde{Y}' \rVert_{\alpha} + \lVert R^{ \tilde{Y} } \rVert_{2\alpha} \leq M$. Entonces:
+
+	\begin{align*}
+		&\lVert f(Y) - f( \tilde{Y} ) \rVert_{\alpha} \\
+		&\leq C \left(  \lvert Y_0 - \tilde{Y}_0 \rvert + ( \lvert Y'_0 - \tilde{Y}'_0 \rvert +  \lVert Y' - \tilde{Y}' \rVert_{\alpha}  )  \lVert X \rVert_{\alpha}  + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha} T^{\alpha} + \lVert X - \tilde{X} \rVert_{\alpha}   \right)
+	\end{align*}
+
+	y
+
+	\begin{align*}
+		&\lVert R^{ \int_0^{\cdot} f(Y_u) d\mathbf{X}_u  } - R^{ \int_0^{\cdot} f( \tilde{Y}_u ) d\tilde{ \mathbf{ {X} }}_u }  \rVert_{2\alpha} \\
+		&\leq C \left(  ( \lvert Y_0 - \tilde{Y}_0 \rvert + \lvert Y'_0 - \tilde{Y}'_0 \rvert  + \lVert  Y' - \tilde{Y}' \rVert_{\alpha} + \lVert  R^Y - R^{\tilde{Y}}  \rVert_{2\alpha}  + \lVert  X - \tilde{X} \rVert_{\alpha} )  \lVert \lvert \mathbf{X} \rvert \rVert_{\alpha} + \right. \\
+		&\left. \lVert \mathbf{X}; \tilde{\mathbf{X}} \rVert_{\alpha}  \right)
+	\end{align*}
+
+
+\end{lema}
+
+
+Este lema muestra, la posibilidad de acotar dos funciones de caminos controlados y dos residuos, usando las trayectorías controladas, lo que, de forma preliminar, va a generar una dependencia a los datos iniciales.
+
+\subsection{Existencia y unicidad en ecuaciones diferenciales rugosas.}
+
+Dado un campo vectorial $f$, lo suficientemente regular. Sea la ecuación diferencial rugosa:
+
+\[
+	dY_t = f(Y_t) d\mathbf{X}_t
+\]
+
+El siguiente teorema, indica la existencia y unicidad de la solución de ecuaciones de este tipo.
+
+\begin{theorem}
+	Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$, y sea $\mathbf{X} = (X, \mathbb{X}) \in \mathscr{C}^{\alpha} ([0,T], \mathbb{R}^d)$ un camino rugoso. Sea $f \in C^3_b ( \mathbb{R}^m; \mathscr{L}( \mathbb{R}^d; \mathbb{R}^m ) )$, y $y \in \mathbb{R}^m$. Entonces, existe una solución única, un camino controlado $(Y, Y') \in \mathscr{D}^{2 \alpha}_X$, tal que $Y' = f(Y)$, y tal que:
+
+	\[
+		Y_t = y + \int_0^t f(Y_s) d\mathbf{X}_s	
+	\]
+	para todo $t \in [0,T]$
+
+\end{theorem}
+
+
+La demostración es similar al teorema de Picard. Usando una iteración de punto fijo en un espacio de Banach adecuado.
+
+\textbf{Demostración:}
