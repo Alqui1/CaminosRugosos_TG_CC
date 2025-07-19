@@ -42,16 +42,17 @@
 \contentsline {section}{\numberline {5.2}Ecuaciones Diferenciales de Young*}{89}{}%
 \contentsline {section}{\numberline {5.3}Funciones de caminos controlados y ecuaciones diferenciales rugosas.}{89}{}%
 \contentsline {subsection}{\numberline {5.3.1}Existencia y unicidad en ecuaciones diferenciales rugosas.}{90}{}%
-\contentsline {chapter}{\numberline {6}Apéndice.}{93}{}%
-\contentsline {section}{\numberline {6.1}FAQ}{93}{}%
-\contentsline {section}{\numberline {6.2}Teoría de la Medida}{94}{}%
-\contentsline {subsection}{\numberline {6.2.1}Funciones $L^p$ y $\mathcal {L}^p$}{94}{}%
-\contentsline {section}{\numberline {6.3}Temas de Probabilidad avanzados}{95}{}%
-\contentsline {subsection}{\numberline {6.3.1}Semimartingalas, Martingalas locales}{95}{}%
-\contentsline {subsection}{\numberline {6.3.2}Variación Cuadrática}{96}{}%
-\contentsline {subsection}{\numberline {6.3.3}Desigualdad de Burkholder-Davis-Gundy}{96}{}%
-\contentsline {subsection}{\numberline {6.3.4}Área de Lévy}{97}{}%
-\contentsline {subsubsection}{La KdV y el área de Lévy.}{98}{}%
-\contentsline {subsection}{\numberline {6.3.5}Análisis Gaussiano, Espacios de Wiener Abstractos.}{98}{}%
-\contentsline {subsection}{\numberline {6.3.6}Teorema del Soporte de Stroock-Varadhan}{99}{}%
-\contentsline {section}{\numberline {6.4}Algunos conceptos de topología}{100}{}%
+\contentsline {section}{\numberline {5.4}Ecuaciones diferenciales estocásticas en el contexto de caminos rugosos.}{93}{}%
+\contentsline {chapter}{\numberline {6}Apéndice.}{95}{}%
+\contentsline {section}{\numberline {6.1}FAQ}{95}{}%
+\contentsline {section}{\numberline {6.2}Teoría de la Medida}{96}{}%
+\contentsline {subsection}{\numberline {6.2.1}Funciones $L^p$ y $\mathcal {L}^p$}{96}{}%
+\contentsline {section}{\numberline {6.3}Temas de Probabilidad avanzados}{97}{}%
+\contentsline {subsection}{\numberline {6.3.1}Semimartingalas, Martingalas locales}{97}{}%
+\contentsline {subsection}{\numberline {6.3.2}Variación Cuadrática}{98}{}%
+\contentsline {subsection}{\numberline {6.3.3}Desigualdad de Burkholder-Davis-Gundy}{98}{}%
+\contentsline {subsection}{\numberline {6.3.4}Área de Lévy}{99}{}%
+\contentsline {subsubsection}{La KdV y el área de Lévy.}{100}{}%
+\contentsline {subsection}{\numberline {6.3.5}Análisis Gaussiano, Espacios de Wiener Abstractos.}{100}{}%
+\contentsline {subsection}{\numberline {6.3.6}Teorema del Soporte de Stroock-Varadhan}{101}{}%
+\contentsline {section}{\numberline {6.4}Algunos conceptos de topología}{102}{}%

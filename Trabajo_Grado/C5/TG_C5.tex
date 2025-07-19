@@ -186,13 +186,73 @@ Sea $M = $. Note que, si $(Y, Y') \in \mathscr{B}_t$, luego $\lvert Y'_0 \rvert 
 
 	\item $\mathbf{\mathcal{M}_t}$ \textbf{es una contracción.} Sea $(Y, Y'), ( \tilde{Y}, \tilde{Y}' ) \in \mathcal{B}_{t}$ para algún $t \in [0,t_1)$. Por el lema anterior (CITAR!), tenemos:
 
+	\begin{comment}
 	\begin{align*}
 		\lVert  \mathcal{M}_t (Y, Y') - \mathcal{M}_t (\tilde{Y}, \tilde{Y}') \rVert_{X, \alpha} &=  \lVert f(Y) - f(\tilde{Y}) \rVert_{\alpha} + \lVert R^{\int_0^{\cdot} f(Y_s) d\mathbf{X}_s} - R^{\int_0^{\cdot} f( \tilde{Y}_s ) d \mathbf{ \tilde{X} }_s }  \rVert_{2 \alpha} \\
-		&\lesssim ( \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha} )( \lVert \lvert \mathbf{X} \rvert \rVert  )
+		&\lesssim ( \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha} )( \lVert \lvert \mathbf{X} \rvert \rVert_{\alpha} + t^{\alpha}  ) 
 	\end{align*}
+	\end{comment}
+
+	% tal que
+
+	\begin{align*}
+		&\lVert \mathcal{M}_t (Y, Y') - \mathcal{M}_t (\tilde{Y}, \tilde{Y}')  \rVert_{X, \alpha, [0,t]} \\
+		&\leq C_2 ( \lVert Y' - \tilde{Y}' \rVert_{\alpha, [0,t]} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha, [0,t]} ) ( \lVert \lvert \mathbf{X} \rvert \rVert_{\alpha, [0,t]} + t^{\alpha} ) \\
+		&\leq C_2 ( \lVert Y' - \tilde{Y}' \rVert_{\alpha, [0,t]} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha, [0,t]} ) ( \lVert X \rVert_{\beta, [0,t]} t^{\beta - \alpha} + \lVert \mathbb{X} \rVert_{2\beta, [0,t]} t^{2(\beta - \alpha)} + t^{\alpha} )
+	\end{align*}
+
+	para alguna constante $C_2$ que depende de $M$. Entonces:
+
+	\begin{comment}
+	\begin{align*}
+		&\lVert \mathcal{M}_t (Y, Y') - \mathcal{M}_t (\tilde{Y}, \tilde{Y}')  \rVert_{X, \alpha, [0,t]} \\
+		&\leq C_2 ( \lVert Y' - \tilde{Y}' \rVert_{\alpha, [0,t]} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha, [0,t]} ) ( \lVert X \rVert_{\beta, [0,t]} t^{\beta - \alpha} + \lVert \mathbb{X} \rVert_{2\beta, [0,t]} t^{2(\beta - \alpha)} + t^{\alpha} )
+	\end{align*}
+	\end{comment}
+	
+	Seleccione $t = t_2 \in (0, t_1]$ suficientemente pequeño, podemos garantizar que:
+
+	\[
+		\lVert \mathcal{M}_t (Y, Y') - \mathcal{M}_t (\tilde{Y}, \tilde{Y}')  \rVert_{X, \alpha, [0,t_2]} \leq \frac{1}{2} \lVert (Y, Y') - (\tilde{Y}, \tilde{Y}') \rVert_{X, \alpha, [0,t_2]}
+	\]
+
+	Y por ende, queda verificado que $\mathcal{M}_{t_2}$ es una contracción $\mathcal{B}_{t_2}$.
 
 \end{itemize}
 
+Entonces por el teorema del punto fijo de Banach, existe un único punto fijo, que es un único elemento $(Y, Y') \in \mathscr{D}^{2\alpha}_X$ de la ecuación diferencial rugosa en el intervalo $[0, t_2]$ que cumple $Y' = f(Y)$. Además, como las constantes $C_1$ y $C_2$ no dependen de las condiciones iniciales, entonces se puede aplicar el argumento para el otro intervalo $[t_2, 2t_2]$. De esta forma, se puede deducir la existencia de solución única $(Y, Y') \in \mathscr{D}^{2\alpha}_X$ sobre todo $[0,T]$. \\
+
+Finalmente, note que únicamente se tiene que $(Y, Y') ,\mathscr{D}^{2\alpha}_X$. Sin embargo, como $\mathbf{X} \in \mathscr{C}^{\beta}$, tenemos que $(Y, Y') \in \mathscr{D}^{2\beta}_X$. Se debe verificar que esta solución es única en $\mathscr{D}^{2\beta}_X$. Entonces, como $Y_{s,t} = Y'_s X_{s,t} + R^Y_{s,t}$, y $X \in C^{\beta}$, vemos que $Y \in C^{\beta}$, y como $Y' = f(Y)$ y $f$ es Lipschitz, tenemos $Y' \in C^{\beta}$. Más aún, como:
+
+\begin{align*}
+	\lvert R^Y_{s,t} \rvert = \lvert Y_{s,t} - Y'_s X_{s,t} \rvert &= \left\lvert \int_s^t f(Y_u) d\mathbf{X}_u - f(Y_s) X_{s,t} \right\rvert \\
+	&\lesssim \lVert Df(Y) Y' \rVert_{\infty} \lvert \mathbb{X}_{s,t} \rvert + O( \lvert t - s \rvert^{3\alpha} )
+\end{align*}
+
+y como $\mathbb{X} \in \mathcal{C}^{2\beta}_2$, entonces también $R^Y \in \mathcal{C}^{2\beta}_2$. COmo $\mathscr{D}^{2\beta}_X \subset \mathscr{D}^{2\alpha}_X$, se tiene que $(Y,Y')$ es la única solución $\mathscr{D}^{2\beta}_X$.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+		
+
+Ya una vez probado la existencia y unicidad de soluciones en ecuaciones diferenciales rugosas, se puede demostrar la continuidad del mapa de Itô-Lyons:
+
+\[
+	\mathbf{X} \mapsto (Y, Y')
+\]
+
+Este es el resultado más importante de la teoría.
+
+\begin{theorem}[Continuidad del mapa de Itô-Lyons.]
+	Sea $\beta \in \left( \frac{1}{3}, \frac{1}{2} \right]$ y $f \in C^3_b$. Sea $\mathbf{X} = (X, \mathbb{X})$, $\tilde{\mathbf{X}} = (\tilde{X}, \tilde{\mathbb{X}}) \in \mathscr{C}^{\beta}$ y $y, \tilde{y} \in \mathbb{R}^m$, y dado $(Y, Y') \mathscr{D}_X^{2\beta}$, $(\tilde{Y}, \tilde{Y'}) \in \mathscr{D}_{\tilde{X}}^{2\beta}$, que sean soluciones a la EDR del teorema anterior, con los datos $(y, \mathbf{X})$ y $(\tilde{y}, \tilde{\mathbf{X}})$ respectivamente. Sea $M > 0$ tal que $\lvert \lVert \mathbf{X} \rVert \rvert_{\beta}, \lvert \lVert \mathbf{ \tilde{X} } \rVert \rvert_{\beta} \leq M$. Entonces, para $\alpha \in \left( \frac{1}{3}, \beta \right)$, existe constante $C_M(\alpha, T, \lVert f \rVert_{C^3_b}, M) > 0$, tal que:
+
+    \[
+        \lVert Y - \tilde{Y} \rVert_{\alpha} + \lVert Y' - \tilde{Y'} \rVert_{\alpha} + \lVert R^Y - R^{\tilde{Y}}\rVert_{2\alpha} \leq C_M \left( \lvert y - \tilde{y} \rvert + \lVert \mathbf{X}; \mathbf{ \tilde{X} } \rVert_{\alpha} \right)
+    \]
+
+\end{theorem}
 
 
+\section{Ecuaciones diferenciales estocásticas en el contexto de caminos rugosos.}
 
