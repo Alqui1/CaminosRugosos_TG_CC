@@ -1,0 +1,13 @@
+PWD /home/alqui/Documents/LaTeX_Documents/CaminosRugosos_TG_CC/Trabajo_Grado/C5
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT TG_C5.tex
+OUTPUT TG_C5.log
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+OUTPUT TG_C5.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map

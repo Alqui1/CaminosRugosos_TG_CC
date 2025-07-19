@@ -134,4 +134,65 @@ El siguiente teorema, indica la existencia y unicidad de la solución de ecuacio
 
 La demostración es similar al teorema de Picard. Usando una iteración de punto fijo en un espacio de Banach adecuado.
 
-\textbf{Demostración:}
+\textbf{Demostración:} Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right]$. Defina el mapa $\mathcal{M}_t : \mathscr{D}^{2\alpha}_X ([0,t]; \mathbb{R}^m) \mapsto \mathscr{D}^{2\alpha}_X ([0,t]; \mathbb{R}^m)$, dado por:
+
+\[
+	\mathcal{M}_t (Y, Y') = \left( y + \int_0^{\cdot} f( Y_s ) d\mathbf{X}_s, f(Y)  \right)
+\]
+
+
+que por el resultado presentado en esta sección, es un camino controlado. Sea:
+
+\[
+	\mathcal{B}_t = \left\{  (Y, Y') \in \mathscr{D}^{2\alpha}_X ([0,t]; \mathbb{R}^m) : Y_0 = y, Y'_0 = f(y), \lVert Y, Y' \rVert_{ X, \alpha, [0,t] } \leq 1 \right\}
+\]
+
+donde, se define la seminorma de trayectorias controladas como:
+
+\[
+	\lVert Y, Y' \rVert_{X, \alpha} = \lVert  Y' \rVert_{\alpha} + \lVert R^Y \rVert_{2\alpha}
+\]
+
+Como $\mathcal{B}_t$ es un subconjunto cerrado del espacio de Banach $\mathscr{D}^{2\alpha}_X$, entonces es un espacio métrico inducido con la norma $\lVert \cdot, \cdot \rVert_{X, \alpha}$. También, como la trayectoría $s \mapsto (y + f(y)X_{0,s}, f(y)) \in \mathcal{B}_t$, el conjunto es no vacio.
+
+Sea $M = $. Note que, si $(Y, Y') \in \mathscr{B}_t$, luego $\lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha} + \lVert R^Y \rVert_{2 \alpha} = \lvert f(y) \rvert + \lVert Y, Y' \rVert_{X, \alpha} \leq 1 + \lVert f \rVert_{C^3_b} + \lVert X \rVert_{ \alpha, [0,T] } $, y se cumple el lema anterior (CITAR!!). Con estas herramientas, se mostrará que $\mathcal{M}_t$ es una aplicación contractiva, para luego aplicar el teorema del punto fijo de Banach. De ahora en adelante, se tiene que $\lesssim$ dependiendo de una constante multiplicativa, que depende de $M = 1 + \lVert f \rVert_{C^3_b} + \lVert X \rVert_{ \alpha, [0,T] }$:
+
+\begin{itemize}
+	\item $\mathbf{ \mathcal{M}_t }$ \textbf{es invariante}. Esto es, que va de un espacio, al mismo espacio. Sea $(Y, Y') \in \mathcal{B}_t$. Por el lema 7.6 CITAR, tenemos:
+
+	\begin{align*}
+		\lVert \mathcal{M}_t (Y, Y') \rVert_{X, \alpha} =& \lVert f(Y) \rVert_{\alpha} + \lVert R^{\int_0^{\cdot} f(Y_s) d\mathbf{X}_s }  \rVert_{2\alpha} \\
+		&\lesssim ( \lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha}  )\lVert X \rVert_{\alpha} + \lVert R^Y \rVert_{2\alpha} t^{\alpha} \\
+		&+ (1 + \lvert Y'_0 \rvert + \lVert Y' \rVert_{\alpha} + 
+		 \lVert  R^Y \rVert_{2\alpha})^{2} (1 + \lVert X \rVert_{\alpha})^2 \lVert \lvert \mathbf{X} \rvert \rVert_{\alpha} \\
+		&\lesssim  \lVert \lvert \mathbf{X} \rvert \rVert_{\alpha} + t^{\alpha}
+	\end{align*}
+
+	y así, para alguna constante $C_1$, se tiene:
+
+	\[
+		\lVert \mathcal{M}_t (Y,Y') \rVert_{ X, \alpha, [0,t] } \leq C_1 \left(  \lVert  \lvert \mathbf{X} \rvert  \rVert_{\alpha, [0,t]} + t^{\alpha} \right)
+	\]
+
+	Entonces:
+
+	\begin{align*}
+		\lVert \mathcal{M}_t (Y,Y') \rVert_{X, \alpha, [0,t]} &\leq  C_1 ( \lVert X \rVert_{\alpha, [0,t]} + \lVert \mathbb{X} \rVert_{2\alpha, [0,t]} + t^{\alpha} ) \\
+		&\leq C_1 ( \lVert X \rVert_{\beta, [0,t]} t^{\beta - \alpha} + \lVert \mathbb{X} \rVert_{2 \beta, [0,t]} t^{2 (\beta - \alpha)} + t^{\alpha} )
+	\end{align*}
+
+	Finalmente, tomando $t = t_1 > 0$, lo suficientemente pequeño, se tendrá que $\lVert \mathcal{M}_{t_1} (Y, Y') \rVert_{X, \alpha, [0, t_1]} \leq 1$ para todo elemento en $\mathcal{B}_{t_1}$. Por ende, ya se tiene la invarianza.
+
+
+	\item $\mathbf{\mathcal{M}_t}$ \textbf{es una contracción.} Sea $(Y, Y'), ( \tilde{Y}, \tilde{Y}' ) \in \mathcal{B}_{t}$ para algún $t \in [0,t_1)$. Por el lema anterior (CITAR!), tenemos:
+
+	\begin{align*}
+		\lVert  \mathcal{M}_t (Y, Y') - \mathcal{M}_t (\tilde{Y}, \tilde{Y}') \rVert_{X, \alpha} &=  \lVert f(Y) - f(\tilde{Y}) \rVert_{\alpha} + \lVert R^{\int_0^{\cdot} f(Y_s) d\mathbf{X}_s} - R^{\int_0^{\cdot} f( \tilde{Y}_s ) d \mathbf{ \tilde{X} }_s }  \rVert_{2 \alpha} \\
+		&\lesssim ( \lVert Y' - \tilde{Y}' \rVert_{\alpha} + \lVert R^Y - R^{\tilde{Y}} \rVert_{2\alpha} )( \lVert \lvert \mathbf{X} \rvert \rVert  )
+	\end{align*}
+
+\end{itemize}
+
+
+
+
