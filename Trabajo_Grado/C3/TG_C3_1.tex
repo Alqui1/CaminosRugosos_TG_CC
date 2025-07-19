@@ -63,3 +63,28 @@ y
 \[
 	\phi_2(t,w)  = \sum_{j \geq 0} B_{(j+1) \cdot 2^{-n} } (w) \cdot \chi_{ [j \cdot 2^{-n}, (j+1) \cdot 2^{-n} ]  } (t)
 \]
+
+
+
+\begin{theorem}[3.2.1]
+Sea $ f, g \in \mathcal{V}(0, T) $ y  $ 0 \leq S < U < T $. Entonces:
+
+\begin{enumerate}
+    \item[(i)] \[ 
+        \int_{S}^{T} f \, dB_t = \int_{S}^{U} f \, dB_t + \int_{U}^{T} f \, dB_t \quad \text{para casi toda } \omega.
+    \]
+    
+    \item[(ii)] \[
+        \int_{S}^{T} (c f + g) \, dB_t = c \cdot \int_{S}^{T} f \, dB_t + \int_{S}^{T} g \, dB_t \quad (c \text{ constante}) \quad \text{para casi toda } \omega.
+    \]
+    
+    \item[(iii)] \[
+        E \left[ \int_{S}^{T} f \, dB_t \right] = 0.
+    \]
+    
+    \item[(iv)] \[
+        \int_{S}^{T} f \, dB_t \text{ es } \mathcal{F}_T\text{-medible}.
+    \]
+\end{enumerate}
+\end{theorem}
+

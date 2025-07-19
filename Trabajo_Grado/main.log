@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  19 JUL 2025 09:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  19 JUL 2025 15:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1038,7 +1038,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
-[45])) (./C4/TG_C4.tex
+[45]
+Overfull \hbox (20.25261pt too wide) detected at line 79
+[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 cf \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 g\O
+T1/cmr/m/n/12 ) \OML/cmm/m/it/12 dB[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 c \OMS
+/cmsy/m/n/12 ^^A [][] \OML/cmm/m/it/12 f dB[] \OT1/cmr/m/n/12 + [][] \OML/cmm/m
+/it/12 g dB[] \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c[]\OT1/cmr/m/n/12 ) []\OML/cmm
+/m/it/12 !:
+ []
+
+)) (./C4/TG_C4.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -1495,26 +1504,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
 LaTeX Info: Redefining \. on input line 226.
 LaTeX Info: Redefining \% on input line 226.
-[92]) (./appendix/appendix_gen.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+[92]
+Overfull \hbox (2.85416pt too wide) detected at line 264
+[]
+ []
 
-Overfull \hbox (171.50981pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 5.4.  ECUACIONES DIFERENCIALES ESTOC[]ASTICAS EN EL CONTEXTO D
-E CAMINOS RUGOSOS. \OT1/cmr/m/n/12 93
+LaTeX Info: Redefining \. on input line 264.
+LaTeX Info: Redefining \% on input line 264.
+
+Overfull \hbox (147.02386pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 5.3.  FUNCIONES DE CAMINOS CONTROLADOS Y ECUACIONES DIFERENCIA
+LES RUGOSAS. \OT1/cmr/m/n/12 93
  []
 
 [93]
+Overfull \hbox (56.90201pt too wide) detected at line 270
+[]
+ []
+
+LaTeX Info: Redefining \. on input line 308.
+LaTeX Info: Redefining \% on input line 308.
+[94]
+LaTeX Info: Redefining \. on input line 339.
+LaTeX Info: Redefining \% on input line 339.
+
+Overfull \hbox (171.50981pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 5.4.  ECUACIONES DIFERENCIALES ESTOC[]ASTICAS EN EL CONTEXTO D
+E CAMINOS RUGOSOS. \OT1/cmr/m/n/12 95
+ []
+
+[95]
+LaTeX Info: Redefining \. on input line 379.
+LaTeX Info: Redefining \% on input line 379.
+ [96]
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
+
+ []
+
+LaTeX Info: Redefining \. on input line 418.
+LaTeX Info: Redefining \% on input line 418.
+
+Overfull \hbox (171.50981pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 5.4.  ECUACIONES DIFERENCIALES ESTOC[]ASTICAS EN EL CONTEXTO D
+E CAMINOS RUGOSOS. \OT1/cmr/m/n/12 97
+ []
+
+[97]) (./appendix/appendix_gen.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [94
-
-]
+ [98]
 Cap\'{\i }tulo 6.
-(./appendix/questions.tex [95]) (./appendix/measureTheory.tex
+(./appendix/questions.tex [99
+
+]) (./appendix/measureTheory.tex
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
- [96]
+ [100]
 Overfull \hbox (0.51761pt too wide) in paragraph at lines 49--50
 []\OT1/cmr/m/n/12 Consulte: https://en.wikipedia.org/wiki/Quotient[]space[](lin
 ear[]algebra). 
@@ -1525,50 +1570,50 @@ Underfull \vbox (badness 1546) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- [97]
+ [101]
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
 
-[98]
+[102]
 Overfull \hbox (16.44371pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/it/12 Para cual-quier
  []
 
 LaTeX Info: Redefining \. on input line 136.
 LaTeX Info: Redefining \% on input line 136.
-[99]
+[103]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 178.
 LaTeX Info: Redefining \% on input line 178.
- [100]
+ [104]
 Overfull \hbox (52.32861pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 V \OT1/cmr/m/n/12 = []$
  []
 
 LaTeX Info: Redefining \. on input line 213.
 LaTeX Info: Redefining \% on input line 213.
-[101]) (./appendix/topologyConcepts.tex
+[105]) (./appendix/topologyConcepts.tex
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [102])) (./main.bbl
+ [106])) (./main.bbl
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [103]
+ [107]
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [104
+ [108
 
 ])
-[105] (./main.aux
+[109] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19924 strings out of 480185
- 422909 string characters out of 5894214
- 732640 words of memory out of 5000000
- 37486 multiletter control sequences out of 15000+600000
+ 19925 strings out of 480185
+ 422924 string characters out of 5894214
+ 731640 words of memory out of 5000000
+ 37487 multiletter control sequences out of 15000+600000
  485444 words of font info for 91 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  99i,13n,104p,953b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1594,10 +1639,10 @@ ype1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/rsfs/rsfs10.pfb>
-Output written on main.pdf (105 pages, 545343 bytes).
+Output written on main.pdf (109 pages, 561789 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 305 compressed objects within 4 object streams
+ 476 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

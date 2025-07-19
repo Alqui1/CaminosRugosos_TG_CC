@@ -254,5 +254,192 @@ Este es el resultado más importante de la teoría.
 \end{theorem}
 
 
+\textbf{Demostración:} Por el teorema anterior, solución local $(Y, Y')$ de la ecuación diferencial rugosa sobre el intervalo de tiempo $[0, t_2]$ es un elemento de $\mathcal{B}_{t_2}$, lo que significa que $\| Y, Y' \|_{\mathcal{X}, \alpha, [0, t_2]} \leq 1$. De manera similar, tenemos que $\| \tilde{Y}, \tilde{Y}' \|_{\mathcal{X}, \alpha, [0, \tilde{t}_2]} \leq 1$ para algún $\tilde{t}_2 > 0$.
+
+Por el lema anterior (CITAR!!!), para todo $t \in (t_2 \wedge \tilde{t}_2]$, se tiene
+
+\begin{align*}
+	&\| Y' - \tilde{Y}' \|_{\alpha} = \| f(Y) - f(\tilde{Y}) \|_{\alpha} \\ 
+	& \lesssim  | Y_0 - \tilde{Y}_0 | + ( | Y_0' - \tilde{Y}_0' | + \| Y' - \tilde{Y}' \|_{\alpha} ) \| X \|_{\alpha} + \| R^Y - R^{\tilde{Y}} \|_{2\alpha} t^{\alpha} + \| X - \tilde{X} \|_{\alpha}
+\end{align*}
+y
+
+\begin{align*}
+	&\| R^Y - R^{\tilde{Y}} \|_{2\alpha} = \left\| R^{ \int_0^{\cdot} f(Y_u)  d\mathbf{X}_u} -  R^{ \int_0^{\cdot} f( \tilde{Y}_u ) d\mathbf{ \tilde{X} }_u } \right\|_{2\alpha} \\
+	& \lesssim ( |Y_0 - \tilde{Y}_0| + | Y_0' - \tilde{Y}_0' | + \| Y' - \tilde{Y}' \|_{\alpha} + \| R^Y - R^{\tilde{Y}} \|_{2\alpha} + \| X - \tilde{X} \|_{\alpha} ) \| | \mathbf{X} | \|_{\alpha} + \lVert \mathbf{X}; \mathbf{ \tilde{X} } \rVert_{\alpha}
+\end{align*}
+
+Observando que $|Y_0' - \tilde{Y}_0'| = |f(Y_0) - f(\tilde{Y}_0)| \lesssim |Y_0 - \tilde{Y}_0|$, se tiene
+
+\begin{align*}
+	&\| Y' - \tilde{Y}' \|_{\alpha} + \| R^Y - R^{\tilde{Y}} \|_{2\alpha}\\
+	&\leq C_3 \left( |Y_0 - \tilde{Y}_0| + (\| Y' - \tilde{Y}' \|_{\alpha} + \| R^Y - R^{\tilde{Y}} \|_{2\alpha}) (\| | \mathbf{X} | \|_{\alpha} + t^{\alpha}) + \| \mathbf{X}; \tilde{\mathbf{X}} \|_{\alpha} \right)
+\end{align*}
+
+para alguna constante $C_3$. Tenemos que
+
+\[
+\| | \mathbf{X} | \|_{\alpha, [0,t]} + t^{\alpha} \leq \| X \|_{\beta, [0,t]} t^{\beta - \alpha} + \| \mathbb{X} \|_{2\beta, [0,t]} t^{2(\beta - \alpha)} + t^{\alpha}
+\]
+
+Eligiendo $t = t_3 \in (t_2 \wedge \tilde{t}_2]$ lo suficientemente pequeño, de tal forma que: 
+
+\[
+	C_3 \left( \| X \|_{\beta, [0,t_3]} t_3^{\beta - \alpha} + \| \mathbb{X} \|_{2\beta, [0,t_3]} t_3^{2(\beta - \alpha)} + t_3^{\alpha} \right) \leq \frac{1}{2}
+\]
+
+y reordenando, obtenemos
+
+\[
+\| Y' - \tilde{Y}' \|_{\alpha, [0,t_3]} + \| R^Y - R^{\tilde{Y}} \|_{2\alpha, [0,t_3]} \lesssim |Y_0 - \tilde{Y}_0| + \| \mathbf{X}; \tilde{\mathbf{X}} \|_{\alpha, [0,t_3]}.
+\]
+
+Entonces, por estimador de la estabilidad de la integración rugosa se concluye que:
+
+\[
+\| Y - \tilde{Y} \|_{\alpha, [0,t_3]} \lesssim |Y_0 - \tilde{Y}_0| + \| \mathbf{X} - \tilde{\mathbf{X}} \|_{\alpha, [0,t_3]}.
+\]
+
+Se sigue que existe un $\delta > 0$, que depende de $\alpha$, $T$, $\| f \|_{C_b^3}$ y $M$, tal que, para cualquier intervalo $[s,t] \subset [0,T]$ con $|t-s| \leq \delta$, se tiene
+
+\begin{align}
+\| Y' - \tilde{Y}' \|_{\alpha, [s,t]} + \| R^Y - R^{\tilde{Y}} \|_{2\alpha, [s,t]} &\lesssim |Y_0 - \tilde{Y}_0| + \| \mathbf{X} ; \tilde{\mathbf{X}} \|_{\alpha, [s,t]} \\ %, \tag{7.5} \\
+\| Y - \tilde{Y} \|_{\alpha, [s,t]} &\lesssim |Y_0 - \tilde{Y}_0| + \| \mathbf{X} ; \tilde{\mathbf{X}} \|_{\alpha, [s,t]}. % \tag{7.6}
+\end{align}
+
+Tomemos una partición $\pi$ del intervalo $[0,T]$ donde $|\pi| \leq \delta$. Las estimaciones proporcionadas entonces se mantienen en cada intervalo $[s,t] \in \pi$, y al combinar las estimaciones en diferentes intervalos se puede deducir que las mismas estimaciones se mantienen sobre todo el intervalo $[0,T]$, tal cuál se hizo en el teorema anterior.
+
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+El teorema anterior, como se mencionaba previamente, es uno de los más importantes, ya que, según el control de la ecuación diferencial, $\mathbf{X}, \mathbf{\tilde{X}}$, y las condiciones iniciales $y, \tilde{y}$.
+
+
 \section{Ecuaciones diferenciales estocásticas en el contexto de caminos rugosos.}
 
+Ahora, una vez probada la existencia y unicidad de solución de ecuaciones diferenciales rugosas, se retoma el contexto de las ecuaciones diferenciales estocásticas. Para finalizar, se va a mostrar que el cálculo estocástico de Itô, y las soluciones fuertes que presentan para las EDE, coincidirán con las obtenidas al trabajar por el método de camino rugosos.
+
+En primer lugar, se verifica que la integral de Itô está bien definida.
+
+
+\begin{prop}
+	Sea $(\Omega, \mathcal{F}, \left\{ \mathcal{F}_t \right\}_{t \in [0O,T]}, \mathbb{P}  )$ un espacio de probabilidad filtrado. Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right)$ y sea $\mathbf{X} = \mathbf{B}^{\text{Itô}} = (B, \mathbb{B}) = (B, \mathbb{B}^{\text{Itô}})$ un camino rugoso Browniano con el levantamiento de Itô $\mathcal{F}_t$-adaptado, tal que $\mathbf{B} \in \mathscr{C}^{\alpha}$ casi siempre. Sea $(Y, Y')$ un proceso estocástico adaptado, tal que $(Y(\omega), Y'(\omega)) \in \mathscr{D}^{2\alpha}_{B(w)}$ para casi todo $\omega \in \Omega$. Entonces:
+
+	\[
+		\int_0^T Y_u d\mathbf{B}_u = \int_0^T Y_u dB_u
+	\]
+
+	casi siempre.
+\end{prop}
+
+
+\textbf{Demostración: } Sea $(\pi^{n})_{n\geq 1}$ una sucesión de particiones con $|\pi^{n}|\to 0$ cuando $n\to\infty$. Recordemos que la integral de Itô con respecto al movimiento browniano puede escribirse como el límite en probabilidad, en norma $L^2$ para el espacio de probabilidad:
+
+\[
+\sum_{[s,t]\in\pi^{n}}Y_{s}B_{s,t}\stackrel{\mathbb{P}}{\longrightarrow}\int_{0}^{T}Y_{u}\,\mathrm{d}B_{u}
+\]
+
+cuando $n \rightarrow \infty$. Existe entonces una subsucesión $(n_{k})_{k\geq 1}$ tal que
+
+\[
+\sum_{[s,t]\in\pi^{n_{k}}}Y_{s}B_{s,t} \to \int_{0}^{T}Y_{u}\,\mathrm{d}B_{u}
+\]
+
+cuando $k \rightarrow \infty$, casi siempre. Como
+
+\[
+	\int_0^T Y_u d\mathbf{B}_u (\omega) = \lim_{ \lvert \pi \rvert \rightarrow 0 } \sum_{ [s,t] \in \pi } Y_s (\omega) B_{s,t} (\omega) + Y'_s(\omega) \mathbb{B}_{s,t} (\omega)
+\]
+
+tenemos que
+
+\[
+\sum_{[s,t]\in\pi^{n_{k}}}Y^{\prime}_{s}\mathbb{B}_{s,t} \to \int_{0}^{T}Y_{u}\,\mathrm{d}\mathbf{B}_{u} - \int_{0}^{T}Y_{u}\,\mathrm{d}B_{u} 
+\]
+
+cuando $k \rightarrow \infty$ casi siempre. Dado que la integral de Itô $\int_{0}^{\cdot}B_{u}\otimes\mathrm{d}B_{u}$ es una martingala, se aplica la ortogonalidad de los incrementos de martingala. Es decir, para $[u,v],[s,t]\in\pi$ con $v\leq s$, se tiene: 
+
+\[
+\mathbb{E}[Y^{\prime}_{u}\mathbb{B}_{u,v}Y^{\prime}_{s}\mathbb{B}_{s,t}]=\mathbb{E}\big[\mathbb{E}[Y^{\prime}_{u}\mathbb{B}_{u,v}Y^{\prime}_{s}\mathbb{B}_{s,t}\,|\,\mathcal{F}_{s}]\big]=\mathbb{E}[Y^{\prime}_{u}\mathbb{B}_{u,v}Y^{\prime}_{s}\mathbb{E}[\mathbb{B}_{s,t}\,|\,\mathcal{F}_{s}]]=0.
+\]
+
+Para cualquier partición $\pi$, se tiene que
+
+\[
+\mathbb{E}\bigg[\bigg|\sum_{[s,t]\in\pi}Y^{\prime}_{s}\mathbb{B}_{s,t}\bigg|^{2}\bigg]=\sum_{[s,t]\in\pi}\mathbb{E}\big[|Y^{\prime}_{s}\mathbb{B}_{s,t}|^{2}\big].
+\]
+
+
+que es análoga a la isometría de Itô. Supongamos por el momento que $\|Y^{\prime}\|_{L^{\infty}(\Omega\times[0,T])}\leq M$ para alguna constante $M>0$. Por la demostración del levantamiento de Itô representa un camino rugoso (CITAR!!!), se tiene que $\mathbb{E}[\left|\mathbb{B}_{s,t}\right|^{2}]\leq C|t-s|^{2}$ para una constante $C$. Entonces
+
+\[
+\mathbb{E}\bigg[\bigg|\sum_{[s,t]\in\pi}Y^{\prime}_{s}\mathbb{B}_{s,t}\bigg|^{2}\bigg]=\sum_{[s,t]\in\pi}\mathbb{E}\big[|Y^{\prime}_{s}\mathbb{B}_{s,t}|^{2}\big]\leq CM^{2}\sum_{[s,t]\in\pi}|t-s|^{2}\leq CM^{2}T|\pi|. % \tag{8.4}
+\]
+
+Aplicando esto con $\pi=\pi^{n_{k}}$, se tiene que
+
+\[
+\sum_{[s,t]\in\pi^{n_{k}}}Y^{\prime}_{s}\mathbb{B}_{s,t}\,\xrightarrow{L^{2}(\mathbb{P})}\,0\quad \text{cuando}\;\;k\to\infty.
+\]
+
+Entonces, como esta sucesión de variables aleatorias convergen casi siempre, entonces los límites deben ser iguales casi siempre.
+
+Si $\|Y^{\prime}\|_{L^{\infty}(\Omega\times[0,T])}$ no es finita, se puede usar un argumento de localización: Sea $M>0$ y el tiempo de parada $\tau_{M}=T\wedge\inf\{t\in[0,T]:|Y^{\prime}_{t}|\geq M\}$. Por el argumento anterior con los procesos parados $(Y^{\prime})^{\tau_{M}}$ y $\mathbf{B}^{\tau_{M}}=(B^{\tau_{M}},\mathbb{B}^{\tau_{M}})$, se deduce que $\int_{0}^{\tau_{M}}Y_{u}\,\mathrm{d}\mathbf{B}_{u}=\int_{0}^{\tau_{M}}Y_{u}\,\mathrm{d}B_{u}$ casi siempre. Como $\tau_{M}\to T$ cuando $M\to\infty$ casi siempre. Al hacer $M \rightarrow \infty$, se tiene lo deseado.
+
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+Este resultado, se tiene también para las integrales estocásticas de Stratonovich.
+
+
+\begin{prop}
+	Sea $(\Omega, \mathcal{F}, \left\{ \mathcal{F}_t \right\}_{t \in [0O,T]}, \mathbb{P}  )$ un espacio de probabilidad filtrado. Sea $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right)$ y sea $\mathbf{X} = \mathbf{B}^{\text{Strat}} = (B, \mathbb{B}) = (B, \mathbb{B}^{\text{Strat}})$ un camino rugoso Browniano con el levantamiento de Stratonovich $\mathcal{F}_t$-adaptado, tal que $\mathbf{B} \in \mathscr{C}^{\alpha}$ casi siempre. Sea $(Y, Y')$ un proceso estocástico adaptado, tal que $(Y(\omega), Y'(\omega)) \in \mathscr{D}^{2\alpha}_{B(w)}$ para casi todo $\omega \in \Omega$. Entonces:
+
+	\[
+		\int_0^T Y_u d\mathbf{B}_u = \int_0^T Y_u \circ dB_u
+	\]
+
+	casi siempre.
+\end{prop}
+
+La demostración es análoga a la anterior. \\
+
+Ahora, dada la consistencia de la integral rugosa y estocástica, entonces, no es muy dificil demostrar la consistencia de ecuaciones diferenciales rugosas y estocásticas.
+
+\begin{prop}
+	Sea $(\Omega, \mathcal{F}, \left\{ \mathcal{F}_t \right\}_{t \in [0O,T]}, \mathbb{P}  )$ un espacio de probabilidad filtrado. Sea $f \in C^3_b$, $\alpha \in \left( \frac{1}{3}, \frac{1}{2} \right)$ y $y \in L^2 (\mathbb{P})$. Sea $B$ un movimiento Browniano $d$-dimensional.
+
+	\begin{itemize}
+		\item Sea $\mathbf{B}^{\text{Itô}} = (B, \mathbb{B}^{\text{Itô}}) \in \mathscr{C}^{\alpha}$ es un camino rugoso con el levantamiento de Itô, y $(Y, Y')$ a solución a la ecuación diferencial rugosa
+
+		\[
+			dY_t = f(Y_t) d\mathbf{B}^{\text{Itô}}_t, \qquad Y_0 = y	
+		\]
+
+		entonces $Y$ es la única solución fuerte de la ecuación diferencial estocástica (En el sentido de Itô):
+
+		\[
+			dY_t = f(Y_t) dB_t, \qquad Y_0 = y
+		\]
+
+		\item Sea $\mathbf{B}^{\text{Strat}} = (B, \mathbb{B}^{\text{Strat}}) \in \mathscr{C}^{0, \alpha}_g$ es un camino rugoso con el levantamiento de Stratonovich, y $(Y, Y')$ a solución a la ecuación diferencial rugosa
+
+		\[
+			dY_t = f(Y_t) d\mathbf{B}^{\text{Itô}}_t, \qquad Y_0 = y	
+		\]
+
+		entonces $Y$ es la única solución fuerte de la ecuación diferencial estocástica (En el sentido de Stratonovich):
+
+		\[
+			dY_t = f(Y_t) \circ dB_t, \qquad Y_0 = y
+		\]
+
+	\end{itemize}
+
+\end{prop}
+
+Se acabú la tesis.
