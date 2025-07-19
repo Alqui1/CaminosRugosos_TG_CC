@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  19 JUL 2025 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.2)  19 JUL 2025 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1023,8 +1023,8 @@ Cap\'{\i }tulo 3.
 [43
 
 ] (./C3/TG_C3_1.tex
-LaTeX Info: Redefining \. on input line 5.
-LaTeX Info: Redefining \% on input line 5.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
 Overfull \hbox (88.86723pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/12 44 \OT1/cmr/m/sl/12 CAP[]ITULO 3.  ECUACIONES DIFERENCIALES EST
@@ -1036,10 +1036,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-LaTeX Info: Redefining \. on input line 38.
-LaTeX Info: Redefining \% on input line 38.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
 [45]
-Overfull \hbox (20.25261pt too wide) detected at line 79
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+
+Overfull \hbox (88.86723pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 46 \OT1/cmr/m/sl/12 CAP[]ITULO 3.  ECUACIONES DIFERENCIALES EST
+OC[]ASTICAS: ENFOQUE DE IT[]O.
+ []
+
+[46]
+LaTeX Info: Redefining \. on input line 131.
+LaTeX Info: Redefining \% on input line 131.
+ [47]
+Overfull \hbox (20.25261pt too wide) detected at line 148
 [][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 cf \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 g\O
 T1/cmr/m/n/12 ) \OML/cmm/m/it/12 dB[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 c \OMS
 /cmsy/m/n/12 ^^A [][] \OML/cmm/m/it/12 f dB[] \OT1/cmr/m/n/12 + [][] \OML/cmm/m
@@ -1052,21 +1064,21 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
 Overfull \hbox (88.86723pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 46 \OT1/cmr/m/sl/12 CAP[]ITULO 3.  ECUACIONES DIFERENCIALES EST
+\OT1/cmr/m/n/12 48 \OT1/cmr/m/sl/12 CAP[]ITULO 3.  ECUACIONES DIFERENCIALES EST
 OC[]ASTICAS: ENFOQUE DE IT[]O.
  []
 
-[46]
+[48]
 Cap\'{\i }tulo 4.
-[47
+[49
 
 ]
 LaTeX Info: Redefining \. on input line 54.
 LaTeX Info: Redefining \% on input line 54.
- [48] [49]
+ [50] [51]
 LaTeX Info: Redefining \. on input line 190.
 LaTeX Info: Redefining \% on input line 190.
- [50]
+ [52]
 Overfull \hbox (31.01445pt too wide) in paragraph at lines 195--196
 []\OT1/cmr/m/it/12 Sea $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; \U/msb/m/n/12 X\OT
 1/cmr/m/n/12 ) :
@@ -1074,7 +1086,7 @@ Overfull \hbox (31.01445pt too wide) in paragraph at lines 195--196
 
 LaTeX Info: Redefining \. on input line 227.
 LaTeX Info: Redefining \% on input line 227.
-[51]
+[53]
 Overfull \hbox (8.82541pt too wide) detected at line 245
 []
  []
@@ -1084,14 +1096,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 256.
 LaTeX Info: Redefining \% on input line 256.
- [52]
+ [54]
 Overfull \hbox (64.7153pt too wide) detected at line 305
 []
  []
 
 LaTeX Info: Redefining \. on input line 305.
 LaTeX Info: Redefining \% on input line 305.
-[53]
+[55]
 Overfull \hbox (37.66899pt too wide) detected at line 326
 []
  []
@@ -1101,7 +1113,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 326.
 LaTeX Info: Redefining \% on input line 326.
- [54]
+ [56]
 Overfull \hbox (129.52376pt too wide) detected at line 336
 []
  []
@@ -1116,10 +1128,10 @@ Overfull \hbox (211.89734pt too wide) detected at line 351
 
 LaTeX Info: Redefining \. on input line 351.
 LaTeX Info: Redefining \% on input line 351.
-[55]
+[57]
 LaTeX Info: Redefining \. on input line 367.
 LaTeX Info: Redefining \% on input line 367.
- [56]
+ [58]
 Overfull \hbox (15.24301pt too wide) in paragraph at lines 377--378
 []\OT1/cmr/m/n/12 Sea $(\OML/cmm/m/it/12 s; t\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12
  2 \OT1/cmr/m/n/12 ^^A[]$ de tal for-ma que $0 \OML/cmm/m/it/12 < s \OMS/cmsy/m
@@ -1140,17 +1152,17 @@ Overfull \hbox (240.16046pt too wide) detected at line 398
 
 LaTeX Info: Redefining \. on input line 416.
 LaTeX Info: Redefining \% on input line 416.
-[57]
+[59]
 Overfull \hbox (296.39157pt too wide) detected at line 470
 []
  []
 
 LaTeX Info: Redefining \. on input line 470.
 LaTeX Info: Redefining \% on input line 470.
-[58]
+[60]
 LaTeX Info: Redefining \. on input line 498.
 LaTeX Info: Redefining \% on input line 498.
- [59]
+ [61]
 Overfull \hbox (5.78488pt too wide) in paragraph at lines 509--510
 []\OT1/cmr/m/n/12 Una pre-gun-ta na-tu-ral ser^^S^^Pa ve-ri-fi-car si $(\OML/cm
 m/m/it/12 B; \U/msb/m/n/12 B\OT1/cmr/m/n/12 )$ es un ca-mino ru-go-so geom^^Set
@@ -1159,13 +1171,13 @@ ri-
 
 LaTeX Info: Redefining \. on input line 540.
 LaTeX Info: Redefining \% on input line 540.
-[60]
+[62]
 LaTeX Info: Redefining \. on input line 582.
 LaTeX Info: Redefining \% on input line 582.
- [61]
+ [63]
 LaTeX Info: Redefining \. on input line 626.
 LaTeX Info: Redefining \% on input line 626.
- [62]
+ [64]
 Overfull \hbox (46.7129pt too wide) detected at line 648
 []
  []
@@ -1180,21 +1192,21 @@ Underfull \vbox (badness 3229) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 657.
 LaTeX Info: Redefining \% on input line 657.
- [63]
+ [65]
 LaTeX Info: Redefining \. on input line 692.
 LaTeX Info: Redefining \% on input line 692.
 
-[64]
+[66]
 Overfull \hbox (6.88179pt too wide) detected at line 710
 []
  []
 
 LaTeX Info: Redefining \. on input line 724.
 LaTeX Info: Redefining \% on input line 724.
-[65]
+[67]
 LaTeX Info: Redefining \. on input line 761.
 LaTeX Info: Redefining \% on input line 761.
- [66]
+ [68]
 Overfull \hbox (54.86519pt too wide) detected at line 798
 []
  []
@@ -1210,7 +1222,7 @@ m/n/12 j[] !
 
 LaTeX Info: Redefining \. on input line 802.
 LaTeX Info: Redefining \% on input line 802.
-[67]
+[69]
 Underfull \hbox (badness 10000) in paragraph at lines 815--816
 
  []
@@ -1222,7 +1234,7 @@ Overfull \hbox (84.50247pt too wide) detected at line 824
 
 LaTeX Info: Redefining \. on input line 837.
 LaTeX Info: Redefining \% on input line 837.
-[68]
+[70]
 Overfull \hbox (2.14162pt too wide) in paragraph at lines 851--852
 []\OT1/cmr/m/n/12 Entonces, por el le-ma de cos-tu-ra, to-man-do $\OML/cmm/m/it
 /12 ^^U \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12
@@ -1237,7 +1249,7 @@ Overfull \hbox (97.61937pt too wide) detected at line 868
 
 LaTeX Info: Redefining \. on input line 868.
 LaTeX Info: Redefining \% on input line 868.
-[69]
+[71]
 Overfull \hbox (185.45088pt too wide) detected at line 893
 []
  []
@@ -1249,10 +1261,10 @@ Overfull \hbox (151.71396pt too wide) detected at line 900
 
 LaTeX Info: Redefining \. on input line 920.
 LaTeX Info: Redefining \% on input line 920.
-[70]
+[72]
 LaTeX Info: Redefining \. on input line 961.
 LaTeX Info: Redefining \% on input line 961.
- [71]
+ [73]
 Underfull \hbox (badness 10000) in paragraph at lines 965--966
 
  []
@@ -1270,7 +1282,7 @@ Overfull \hbox (9.88148pt too wide) in paragraph at lines 998--999
 
 LaTeX Info: Redefining \. on input line 1000.
 LaTeX Info: Redefining \% on input line 1000.
-[72]
+[74]
 Overfull \hbox (37.23897pt too wide) detected at line 1010
 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Z[]\OMS/cmsy/m/n/12 j \OT1/cmr/m/n/12 = [] \
 OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C\OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 K\OMS/
@@ -1288,10 +1300,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
 
 LaTeX Info: Redefining \. on input line 1055.
 LaTeX Info: Redefining \% on input line 1055.
-[73]
+[75]
 LaTeX Info: Redefining \. on input line 1097.
 LaTeX Info: Redefining \% on input line 1097.
- [74]
+ [76]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 110
 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -1303,14 +1315,14 @@ Overfull \hbox (41.48833pt too wide) detected at line 1112
 
 LaTeX Info: Redefining \. on input line 1137.
 LaTeX Info: Redefining \% on input line 1137.
-[75]
+[77]
 Overfull \hbox (51.85754pt too wide) detected at line 1163
 []
  []
 
 LaTeX Info: Redefining \. on input line 1175.
 LaTeX Info: Redefining \% on input line 1175.
-[76]
+[78]
 Overfull \hbox (7.51854pt too wide) in paragraph at lines 1180--1181
 []\OT1/cmr/bx/n/12 Ejemplo: \OT1/cmr/m/n/12 En es-te ejem-plo, ve-re-mos que la
  pa-re-ja $(\OML/cmm/m/it/12 Z; Z[]\OT1/cmr/m/n/12 ) := []$
@@ -1345,14 +1357,14 @@ Overfull \hbox (20.46606pt too wide) detected at line 1224
 
 LaTeX Info: Redefining \. on input line 1224.
 LaTeX Info: Redefining \% on input line 1224.
-[77]
+[79]
 Overfull \hbox (30.20251pt too wide) detected at line 1247
 []
  []
 
 LaTeX Info: Redefining \. on input line 1256.
 LaTeX Info: Redefining \% on input line 1256.
-[78]
+[80]
 Overfull \hbox (53.02983pt too wide) detected at line 1260
 []
  []
@@ -1384,7 +1396,7 @@ k[] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 R[]\OMS/cmsy/m/n/12 k[
 
 LaTeX Info: Redefining \. on input line 1292.
 LaTeX Info: Redefining \% on input line 1292.
-[79]
+[81]
 Overfull \hbox (36.1092pt too wide) detected at line 1298
 \OML/cmm/m/it/12 ^^M[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^M[] \OT1/cmr/m/n
 /12 = [] [] ^^A[] = [] [] = [][] \OML/cmm/m/it/12 Y[]d\OT1/cmr/bx/n/12 X[] \OMS
@@ -1398,7 +1410,7 @@ Overfull \hbox (58.11069pt too wide) detected at line 1324
 
 LaTeX Info: Redefining \. on input line 1327.
 LaTeX Info: Redefining \% on input line 1327.
-[80]
+[82]
 Overfull \hbox (84.47752pt too wide) detected at line 1347
 []
  []
@@ -1415,13 +1427,13 @@ Overfull \hbox (9.72568pt too wide) detected at line 1365
 
 LaTeX Info: Redefining \. on input line 1371.
 LaTeX Info: Redefining \% on input line 1371.
-[81]
+[83]
 LaTeX Info: Redefining \. on input line 1435.
 LaTeX Info: Redefining \% on input line 1435.
- [82]
+ [84]
 LaTeX Info: Redefining \. on input line 1475.
 LaTeX Info: Redefining \% on input line 1475.
- [83]
+ [85]
 Underfull \hbox (badness 10000) in paragraph at lines 1501--1502
 
  []
@@ -1436,21 +1448,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 1507.
 LaTeX Info: Redefining \% on input line 1507.
- [84]
+ [86]
 LaTeX Info: Redefining \. on input line 1536.
 LaTeX Info: Redefining \% on input line 1536.
 
-[85]) (./C5/TG_C5.tex
+[87]) (./C5/TG_C5.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [86]
+ [88]
 Cap\'{\i }tulo 5.
 
 Overfull \hbox (6.66383pt too wide) in paragraph at lines 18--18
 []\OT1/cmr/bx/n/17.28 Ejemplos de Ecua-cio-nes Di-fe-ren-cia-les Ru-
  []
 
-[87
+[89
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
@@ -1469,30 +1481,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
 LaTeX Info: Redefining \. on input line 71.
 LaTeX Info: Redefining \% on input line 71.
-[88]
+[90]
 Overfull \hbox (32.73138pt too wide) detected at line 98
 []
  []
 
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
-[89]
+[91]
 Overfull \hbox (27.59157pt too wide) detected at line 106
 []
  []
 
 LaTeX Info: Redefining \. on input line 141.
 LaTeX Info: Redefining \% on input line 141.
-[90]
+[92]
 LaTeX Info: Redefining \. on input line 179.
 LaTeX Info: Redefining \% on input line 179.
 
 Overfull \hbox (147.02386pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 5.3.  FUNCIONES DE CAMINOS CONTROLADOS Y ECUACIONES DIFERENCIA
-LES RUGOSAS. \OT1/cmr/m/n/12 91
+LES RUGOSAS. \OT1/cmr/m/n/12 93
  []
 
-[91]
+[93]
 Overfull \hbox (47.99161pt too wide) detected at line 202
 []
  []
@@ -1504,7 +1516,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
 LaTeX Info: Redefining \. on input line 226.
 LaTeX Info: Redefining \% on input line 226.
-[92]
+[94]
 Overfull \hbox (2.85416pt too wide) detected at line 264
 []
  []
@@ -1514,29 +1526,29 @@ LaTeX Info: Redefining \% on input line 264.
 
 Overfull \hbox (147.02386pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 5.3.  FUNCIONES DE CAMINOS CONTROLADOS Y ECUACIONES DIFERENCIA
-LES RUGOSAS. \OT1/cmr/m/n/12 93
+LES RUGOSAS. \OT1/cmr/m/n/12 95
  []
 
-[93]
+[95]
 Overfull \hbox (56.90201pt too wide) detected at line 270
 []
  []
 
 LaTeX Info: Redefining \. on input line 308.
 LaTeX Info: Redefining \% on input line 308.
-[94]
+[96]
 LaTeX Info: Redefining \. on input line 339.
 LaTeX Info: Redefining \% on input line 339.
 
 Overfull \hbox (171.50981pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 5.4.  ECUACIONES DIFERENCIALES ESTOC[]ASTICAS EN EL CONTEXTO D
-E CAMINOS RUGOSOS. \OT1/cmr/m/n/12 95
+E CAMINOS RUGOSOS. \OT1/cmr/m/n/12 97
  []
 
-[95]
+[97]
 LaTeX Info: Redefining \. on input line 379.
 LaTeX Info: Redefining \% on input line 379.
- [96]
+ [98]
 Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
@@ -1546,20 +1558,20 @@ LaTeX Info: Redefining \% on input line 418.
 
 Overfull \hbox (171.50981pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 5.4.  ECUACIONES DIFERENCIALES ESTOC[]ASTICAS EN EL CONTEXTO D
-E CAMINOS RUGOSOS. \OT1/cmr/m/n/12 97
+E CAMINOS RUGOSOS. \OT1/cmr/m/n/12 99
  []
 
-[97]) (./appendix/appendix_gen.tex
+[99]) (./appendix/appendix_gen.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [98]
+ [100]
 Cap\'{\i }tulo 6.
-(./appendix/questions.tex [99
+(./appendix/questions.tex [101
 
 ]) (./appendix/measureTheory.tex
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
- [100]
+ [102]
 Overfull \hbox (0.51761pt too wide) in paragraph at lines 49--50
 []\OT1/cmr/m/n/12 Consulte: https://en.wikipedia.org/wiki/Quotient[]space[](lin
 ear[]algebra). 
@@ -1570,50 +1582,50 @@ Underfull \vbox (badness 1546) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- [101]
+ [103]
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
 
-[102]
+[104]
 Overfull \hbox (16.44371pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/it/12 Para cual-quier
  []
 
 LaTeX Info: Redefining \. on input line 136.
 LaTeX Info: Redefining \% on input line 136.
-[103]
+[105]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 178.
 LaTeX Info: Redefining \% on input line 178.
- [104]
+ [106]
 Overfull \hbox (52.32861pt too wide) in paragraph at lines 200--201
 []\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 V \OT1/cmr/m/n/12 = []$
  []
 
 LaTeX Info: Redefining \. on input line 213.
 LaTeX Info: Redefining \% on input line 213.
-[105]) (./appendix/topologyConcepts.tex
+[107]) (./appendix/topologyConcepts.tex
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [106])) (./main.bbl
+ [108])) (./main.bbl
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [107]
+ [109]
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [108
+ [110
 
 ])
-[109] (./main.aux
+[111] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 19925 strings out of 480185
- 422924 string characters out of 5894214
+ 19926 strings out of 480185
+ 422940 string characters out of 5894214
  731640 words of memory out of 5000000
- 37487 multiletter control sequences out of 15000+600000
+ 37488 multiletter control sequences out of 15000+600000
  485444 words of font info for 91 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  99i,13n,104p,953b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1639,10 +1651,10 @@ ype1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/rsfs/rsfs10.pfb>
-Output written on main.pdf (109 pages, 561789 bytes).
+Output written on main.pdf (111 pages, 565693 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
- 315 compressed objects within 4 object streams
+ 482 PDF objects out of 1000 (max. 8388607)
+ 319 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

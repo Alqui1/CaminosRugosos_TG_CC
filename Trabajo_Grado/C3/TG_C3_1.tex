@@ -52,7 +52,9 @@ donde
 	\end{array} \right.
 \]
 
-pero, si no hay condiciones adicionales sobre $e_j$, habrán ciertos problemas. Suponga, que tenemos:
+pero, si no hay condiciones adicionales sobre $e_j$, habrán ciertos problemas, como los presentados en el siguiente ejemplo.
+
+\textbf{Ejemplo:} Suponga, que tenemos:
 
 \[
 	\phi_1(t,w)  = \sum_{j \geq 0} B_{j \cdot 2^{-n} } (w) \cdot \chi_{ [j \cdot 2^{-n}, (j+1) \cdot 2^{-n} ]  } (t)
@@ -63,6 +65,73 @@ y
 \[
 	\phi_2(t,w)  = \sum_{j \geq 0} B_{(j+1) \cdot 2^{-n} } (w) \cdot \chi_{ [j \cdot 2^{-n}, (j+1) \cdot 2^{-n} ]  } (t)
 \]
+
+Entonces
+
+\[
+\mathbb{E}\bigg[\int\limits_{0}^{T}\phi_{1}(t,\omega)\,\mathrm{d}B_{t}(\omega)\bigg] = \sum_{j \geq 0}\mathbb{E}[B_{t_{j}}(B_{t_{j+1}}-B_{t_{j}})] = 0\,,
+\]
+
+dado que $\{B_{t}\}$ tiene incrementos independientes. Pero
+
+\begin{align*}
+\mathbb{E}\bigg[\int\limits_{0}^{T}\phi_{2}(t,\omega)\,\mathrm{d}B_{t}(\omega)\bigg] &= \sum_{j\geq 0}\mathbb{E}[B_{t_{j+1}}\cdot(B_{t_{j+1}}-B_{t_{j}})] \\
+&= \sum_{j\geq 0}\mathbb{E}[(B_{t_{j+1}}-B_{t_{j}})^{2}] = T
+\end{align*}
+
+Por ser la varianza del movimiento Browniano. Entonces, aunque ambas son muy buenas aproximaciones a 
+
+\[
+	f(t, \omega) = B_t (\omega)
+\]
+
+las integrales no coinciden, y casi ni se parecen.
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+El problema al considerar las sumas de Riemann usando como integrador el movimiento Browniano, es la regularidad de la trayectoría que tendrá variaciones muy grandes respecto  las trayectorias. Además, el movimiento Browniano no es diferenciable en casi todo punto. Por ende, al tomar el límite, en el sentido de la probabilidad, de:
+
+\[
+	\sum_{j} f(t_j^*, \omega) [B_{t_{j+1}} - B_{t_j}](\omega) \rightarrow \int_S^T f(t, \omega) dB_t (\omega) 
+\]
+
+mientras $n \mapsto \infty$. Además, el punto seleccionado $t_j^*$ afectará. Al tomar el punto izquierdo $t_j^* =t_j$, se tiene la \textbf{integral de Itô}:
+
+\[
+	\int_S^T f(t, \omega) dB_t (\omega) 
+\]
+
+y al tomar el punto medio $t_j^* = \frac{t_j + t_{j + 1}}{2}$, se tiene la \textbf{integral de Stratonovich}:
+
+\[
+	\int_S^T f(t, \omega) \circ dB_t (\omega) 
+\]
+
+Se denotará, durante este capítulo a $\mathcal{F}_t$ como la menor $\sigma$-álgebra generada por $\left\{ B_s (\omega) \right\}_{s \leq t}$
+
+
+\begin{boxDef}
+	Sea $\mathcal{V} = \mathcal{V}(S,T)$ la clase de funciones:
+
+	\[
+		f(t, \omega): [0, \infty) \times \Omega \mapsto \mathbb{R}	
+	\]
+
+	tal que:
+
+	\begin{enumerate}
+		\item $(t, \omega) \mapsto f(t, \omega)$ es $\mathcal{B} \times \mathcal{F}$-medible, con $\mathcal{B}$ siendo la $\sigma$-álgebra de Borel en $[0, \infty)$
+		\item $f(t, \omega)$ es $\mathcal{F}_t$-adaptada.
+		\item $\mathbb{E}\left[ \int_S^T f^2 (t,\omega) dt \right] < \infty$ 
+	\end{enumerate}
+
+\end{boxDef}
+
+La idea, es definir la integral de Itô para este tipo de funciones.
+
+¿Construir integral de Itô?
 
 
 
