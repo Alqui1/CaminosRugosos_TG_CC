@@ -81,9 +81,89 @@ Con estos ejemplos, ya se sabe el por qué es necesario, en algunos casos, recur
 
 
 
+\section{Fórmula de Itô.}
 
+De la sección anterior, se puede intuir que las integrales no suelen ser muy útiles al evaluar, al tener que enfrentarse a numerosas cuentas que pueden resultar agobiantes. Además, no existe teoría de diferenciación, únicamente de integración.\\
 
+Sin embargo, a pesar de este panorama tan desalentador, existe una fórmula bastante útil al evaluar integrales de Itô: \textit{fórmula de Itô}.
 
+\begin{boxDef}
+	Sea $B_t$ un movimiento Browniano (En $1$-dimensión), en $(\Omega, \mathcal{F}, \mathbb{P})$. Un \textbf{proceso de Itô} o integral estocástica (En 1-dimensión) es un proceso estocástico $X_t$ en $(\Omega, \mathcal{F}, \mathbb{P})$ de la forma:
+
+	\[
+		X_t = X_0 + \int_0^t u(s, \omega) ds + \int_0^t v(s, \omega) dB_s	
+	\]
+
+	donde
+
+	\[
+		\mathbb{P}\left[ \int_0^t v(s,\omega)^2 ds < \infty \text{ para todo } t \geq 0 \right] = 1
+	\]
+
+\end{boxDef}
+
+También se puede escribir de forma diferencial:
+
+\[
+	dX_t = u dt + v dB_t
+\]
+
+\begin{theorem}[Fórmula de Itô en 1-dimensión.]
+	Sea \( X_{t} \) un proceso de Itō dado por:
+	\[
+	dX_{t} = u \, dt + v \, dB_{t}
+	\]
+	Sea \( g(t,x) \in C^{2}([0,\infty) \times \mathbb{R}) \). Entonces:
+	\[
+	Y_{t} = g(t, X_{t})
+	\]
+	es también un proceso de Itō, y se cumple:
+	\[
+	dY_{t} = \frac{\partial g}{\partial t}(t, X_{t}) \, dt + \frac{\partial g}{\partial x}(t, X_{t}) \, dX_{t} + \frac{1}{2} \frac{\partial^{2} g}{\partial x^{2}}(t, X_{t}) \cdot (dX_{t})^{2}
+	\]
+	donde \( (dX_{t})^{2} = (dX_{t}) \cdot (dX_{t}) \) se calcula mediante las reglas:
+	\[
+	dt \cdot dt = dt \cdot dB_{t} = dB_{t} \cdot dt = 0, \quad dB_{t} \cdot dB_{t} = dt
+	\]
+\end{theorem}
+
+\textbf{Ejemplo.} Suponga que se desea calcular:
+
+\[
+	\int_0^t s dB_s
+\]
+
+Se toma la función auxiliar $g(t, x) = tx$, de tal forma de obtener:
+
+\[
+	Y_t = g(t, B_t) = tB_t
+\]
+
+Aplicando la fórmula de Itô:
+
+\[
+	d(tB_t) = B_t dt + tdB_t
+\]
+
+o de forma integral:
+
+\[
+	\int_0^t s dB_s = tB_t - \int_0^t B_s ds
+\]
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+Más generalmente, se tiene:
+
+\begin{theorem}[Integración por partes.]
+	Suponga que $f(s,\omega) = f(s)$ (Únicamente depende de $s$), y $f$ es continua, y de variación acotada en $[0,t]$. Luego:
+
+	\[
+		\int_0^t f(s) dB_s = f(t) B_t - \int_0^t B_s df_s
+	\]
+\end{theorem}
 
 % ========================
 % ======= SECCIÓN 3: Ecuaciones Diferenciales Estocásticas =====
@@ -94,8 +174,82 @@ Con estos ejemplos, ya se sabe el por qué es necesario, en algunos casos, recur
 % ========================
 % ========================
 
+\section{Ecuaciones diferenciales estocásticas.}
+
+Ahora, ya se puede interpretar de una forma menos rigurosa a las ecuaciones diferenciales estocásticas:
+
+\[
+	\frac{dX_t}{dt} = b(t, X_t) + \sigma(t, X_t) W_t
+\]
+
+ya que, al escribir su forma integral, se podrá aplicar la integral de Itô.
+
+\textbf{Ejemplo:} Considere el siguiente modelo de crecimiento poblacional:
+
+\[
+	\frac{dN_t}{dt} = r N_t + \alpha N_t W_t
+\]
+
+donde $W_t$ es un proceso de ruido blanco. Al escribir el problema de forma diferencial, se obtiene:
+
+\[
+	dN_t = r N_t d_t + \alpha N_t dB_t
+\]
+
+o
+
+\[
+	\frac{dN_t}{N_t} = r d_t + \alpha dB_t
+\]
+
+Al aplicar la fórmula de Itô, con la función $g(t,x)=\ln x$, se llega a la solución:
+
+\[
+	N_t = N_0 \exp \left( \left(r - \frac{1}{2} \alpha^2 \right)t +\alpha B_t  \right)
+\]
+
+Este es un proceso estocástico del tipo \textit{movimiento Browniano geométrico.}
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+Antes de finalizar el capítulo, se presenta el teorema de existencia y unicidad de soluciones (fuertes) de ecuaciones diferenciales estocásticas.
+
+\begin{theorem}[Existencia y unicidad para ecuaciones diferenciales estocásticas.]
+	
+	Sea $ T > 0 $ y sean \( b(\cdot,\cdot): [0,T] \times \mathbb{R}^{n} \to \mathbb{R}^{n} \), \( \sigma(\cdot,\cdot): [0,T] \times \mathbb{R}^{n} \to \mathbb{R}^{n \times m} \) 
+funciones medibles que satisfacen:
+
+\begin{align*}
+|b(t,x)| + |\sigma(t,x)| &\leq C(1 + |x|); & x \in \mathbb{R}^{n},\; t \in [0,T], \\
+|b(t,x) - b(t,y)| + |\sigma(t,x) - \sigma(t,y)| &\leq D|x - y|; & x,y \in \mathbb{R}^{n},\; t \in [0,T]
+\end{align*}
+
+para constantes \( C, D > 0 \) (donde \( |\sigma|^2 = \sum |\sigma_{ij}|^2 \)). 
+
+Sea \( Z \) una variable aleatoria independiente de la \( \sigma \)-álgebra \( \mathscr{F}_{\infty}^{(m)} \) 
+generada por \( B_s(\cdot) \) con \( s \geq 0 \), y tal que:
+\[
+\mathbb{E}[|Z|^2] < \infty.
+\]
+
+Entonces, la ecuación diferencial estocástica:
+\[
+dX_t = b(t,X_t) dt + \sigma(t,X_t) dB_t, \quad 0 \leq t \leq T, \; X_0 = Z 
+\]
+
+tiene una única solución \( t \)-continua \( X_t(\omega) \) con la propiedad que $X_t (\omega)$ es adaptada a la filtración $\mathcal{F}^Z_t$ generada por $Z$ y por $B_s (\cdot)$; $s \leq t$, y además:
+
+\[
+	\mathbb{E} \left[ \int_0^T \lvert X_t \rvert^2 dt \right] < \infty
+\]
 
 
+\end{theorem}
+
+
+Los interesados en la demostración, pueden consultar \cite{EDE_Oksendal}.
 
 
 %  (Oksendal 3.11, Kallianpur 1980 p.10

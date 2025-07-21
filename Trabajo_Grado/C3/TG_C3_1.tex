@@ -129,13 +129,42 @@ Se denotará, durante este capítulo a $\mathcal{F}_t$ como la menor $\sigma$-á
 
 \end{boxDef}
 
-La idea, es definir la integral de Itô para este tipo de funciones.
+La idea, es definir la integral de Itô para este tipo de funciones. Se va a omitir la construcción rigurosa de la integral, los interesados pueden consultar \cite{EDE_Oksendal}.
 
-¿Construir integral de Itô?
+% ¿Construir integral de Itô? PREGUNTAR!!
 
+\begin{boxDef}
+	Sea \( f \in \mathcal{V}(S, T) \). La integral de Itō de \( f \) (de \( S \) a \( T \)) se define como:
+	\[
+	\int\limits_{S}^{T} f(t, \omega) \, dB_{t}(\omega) = \lim_{n \to \infty} \int\limits_{S}^{T} \phi_{n}(t, \omega) \, dB_{t}(\omega) \qquad (\text{límite en } L^{2}(P)),
+	\]
+	donde \( \{\phi_{n}\} \) es una sucesión de funciones elementales tal que:
+	\[
+	E\left[ \int\limits_{S}^{T} \big(f(t, \omega) - \phi_{n}(t, \omega)\big)^{2} \, dt \right] \to 0 \qquad \text{cuando } n \to \infty.
+	\]	
+\end{boxDef}
+	
+Una importante propiedad corresponde a la isometría de Itô:
 
+\begin{coro}[Isometría de Itô.]
+	\[
+		\mathbb{E} \left[ \left( \int_S^T f(t, \omega) dB_t \right)^2 \right] = \mathbb{E} \left[ \int_S^T f^2 (t,\omega) dt \right]
+	\]
+\end{coro}
 
-\begin{theorem}[3.2.1]
+\textbf{Ejemplo:} En \cite{EDE_Oksendal} se demuestra que:
+
+\[
+	\int_0^t B_s dB_s = \frac{1}{2} B^2_t - \frac{1}{2}t
+\]
+
+\begin{flushright}
+	$\Box$
+\end{flushright}
+
+También, se tienen las siguientes propiedades:
+
+\begin{theorem}[Propiedades de la integral de Itô.]
 Sea $ f, g \in \mathcal{V}(0, T) $ y  $ 0 \leq S < U < T $. Entonces:
 
 \begin{enumerate}
